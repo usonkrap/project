@@ -24,8 +24,8 @@
                 <form action="index.html" method="get" class="form-horizontal">
                   <div class="login-form">
                     <div class="form-group">
-                      <div class="input-group"><span class="input-group-addon"><i class="icon s7-user"></i></span>
-                        <input id="username" type="text" placeholder="Username" autocomplete="off" class="form-control">
+                      <div id="email-handler" class="input-group"><span class="input-group-addon"><i class="icon s7-mail"></i></span>
+                        <input type="email" name="email" data-parsley-trigger="change" data-parsley-errors-messages-disabled="true" data-parsley-class-handler="#email-handler" required="" placeholder="E-mail" autocomplete="off" class="form-control">
                       </div>
                     </div>
                     <div class="form-group">
@@ -34,7 +34,8 @@
                       </div>
                     </div>
                     <div class="form-group login-submit">
-                      <button data-dismiss="modal" type="submit" class="btn btn-primary btn-lg">Log me in</button>
+                      <button data-dismiss="modal" type="submit" class="btn btn-primary btn-lg">Log me in</button> &nbsp;
+                      <a href="pages-sign-up.html"><button data-dismiss="modal" type="button" class="btn btn-info btn-lg">Join</button></a> <!-- 회원가입버튼 -->
                     </div>
                     <div class="form-group footer row">
                       <div class="col-xs-6"><a href="#">Forgot Password?</a></div>
