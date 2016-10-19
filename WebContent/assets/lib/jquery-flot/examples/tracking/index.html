@@ -57,8 +57,8 @@
 			var pos = latestPosition;
 
 			var axes = plot.getAxes();
-			if (pos.x < axes.xaxis.min || pos.x > axes.xaxis.max ||
-				pos.y < axes.yaxis.min || pos.y > axes.yaxis.max) {
+			if (pos.x < axes.xaxis.min || axes.xaxis.max < pos.x ||
+				pos.y < axes.yaxis.min || axes.yaxis.max < pos.y) {
 				return;
 			}
 
