@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -51,8 +53,9 @@
 								</ul>
 							</li>
 						</ul>
+						
 						<ul class="nav navbar-nav am-nav-right">
-							<li><a>메인 페이지</a></li>
+							<li><a>만들 페이지 이름입력</a></li>
 						</ul>
 						<!-- \<ul class="nav navbar-nav am-nav-right"> 왼쪽 상단 메뉴
 							<li><a href="#">메인</a></li>
@@ -195,153 +198,12 @@
 	
 	
 	
-	   <div class="am-content"> <!-- am 컨텐츠 시작ㄴ -->
+	   <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
           <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
           
-          <div class="row"><!-- 가로줄 한줄 묶음 시작 -->
-	          <div class="col-md-8">
-			     	  <div class="widget widget-pie"><!-- 메인 화면 대표 그래프 -->
-			          <div class="widget-head"><span class="title">Top Sales</span></div>
-			          <div class="row chart-container">
-			          <div class="col-md-6">
-			          <div id="widget-top-1" class="chart" style="padding: 0px; position: relative;"><canvas class="flot-base" width="102" height="125" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 102px; height: 125px;"></canvas><canvas class="flot-overlay" width="102" height="125" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 102px; height: 125px;"></canvas></div>
-			          </div>
-			          <div class="col-md-6">
-			          <div class="legend"><table style="font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(241,121,121);overflow:hidden"></div></div></td><td class="legendLabel">Premium Purchases</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(255,220,122);overflow:hidden"></div></div></td><td class="legendLabel">Standard Plans</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(149,217,240);overflow:hidden"></div></div></td><td class="legendLabel">Services</td></tr></tbody></table></div>
-			          </div>
-			          </div>
-			          <div class="row chart-info">
-			          <div class="col-xs-4"><span class="title">New Clients</span><span data-toggle="counter" data-end="180" class="number">180</span></div>
-			          <div class="col-xs-4"><span class="title">Total Sales</span><span data-toggle="counter" data-end="500" data-prefix="$" class="number">$500</span></div>
-			          <div class="col-xs-4"><span class="title">Refunds</span><span data-toggle="counter" data-end="90" class="number">90</span></div>
-				      </div>
-		          </div>
-	          </div><!-- 메인 화면 대표 그래프 끝 -->
-            
-	            <div class="col-md-4"><!-- 메세지 위젯1-->
-	              <div class="panel panel-alt1">
-	                <div class="panel-heading">
-	                  <div class="tools"></div><span class="title">가장 많이 간 가게는?</span>
-	                </div>
-	                <div class="panel-body">
-	                  <p>코엑스 KFC - 15회</p>
-	                </div>
-	              </div>
-	            </div><!-- 메세지 위젯1-->
-	            
-	            <div class="col-md-4"><!-- 메세지 위젯2-->
-	              <div class="panel panel-alt1">
-	                <div class="panel-heading">
-	                  <div class="tools"></div><span class="title">최대 소비날</span>
-	                </div>
-	                <div class="panel-body">
-	                  <p>2016년 10월 22일 - KFC외 8건 1,000,000원</p>
-	                </div>
-	              </div>
-	            </div><!-- 메세지 위젯2-->
-	            
-	            <div class="col-md-4"><!-- 메세지 위젯3-->
-	              <div class="panel panel-alt1">
-	                <div class="panel-heading">
-	                  <div class="tools"></div><span class="title">최고 소비액</span>
-	                </div>
-	                <div class="panel-body">
-	                  <p>500,000 - KFC</p>
-	                </div>
-	              </div>
-	            </div><!-- 메세지 위젯3-->
-            
-          </div><!-- 가로줄 한줄 묶음 끝 -->
-          
-         <div class="row"><!-- 가로줄 한줄 묶음 시작 -->
-         	
-         	
-         	  <div class="col-md-3"><!-- 목표치 패널 시작-->
-	              <div class="panel panel-default">
-	                <div class="panel-heading">10월 소비 현황</div>
-	                <div class="panel-body">
-	                   <p></p>
-	                   <div class="progress">
-                		   <div style="width: 70%" class="progress-bar progress-bar-warning progress-bar-striped active">예산 70% 사용</div>
-              		   </div>
-               		   <p>총 예산 1,000,000원</p>
-               		   <p>현재 700,000원 사용</p>
-               		   <p>잔액 300,000원</p>
-               		   <p>일 30,000원씩 사용 가능</p>
-               		   <p>전체 일평균 지출액 31,154원</p>
-               		   <p>이번달 일평균 지출액 25,000원</p>
-	                </div>
-	              </div>
-	            </div><!-- 목표치 패널 끝 -->
-	            
-	            
-         	  <div class="col-md-3"><!-- 지출 내역 패널 -->
-	              <div class="panel panel-default">
-	                <div class="panel-heading">최근 지출 내역</div>
-	                <div class="panel-body">
-	                  <p>[2016-10-19 13시 26분] KFC 코엑스점 - 4800원</p>
-	                  <p>[2016-10-18 17시 12분] KFC 코엑스점 - 5200원</p>
-	                  <p>[2016-10-18 13시 21분] KFC 코엑스점 - 6500원</p>
-	                  <p>[2016-10-17 17시 04분] KFC 코엑스점 - 9900원</p>
-	                  <p>[2016-10-17 13시 17분] KFC 코엑스점 - 4800원</p>
-	                  <p>[2016-10-17 13시 17분] KFC 코엑스점 - 4800원</p>
-	                  <p>[2016-10-17 13시 17분] KFC 코엑스점 - 4800원</p>
-	                  <p>[2016-10-17 13시 17분] KFC 코엑스점 - 4800원</p>
-	                </div>
-	              </div>
-	            </div><!-- 지출 내역 패널 끝-->
-	            
-	              
-         	<div class="col-md-6"><!-- 달력 위젯 시작 -->
-              <div class="widget widget-calendar">
-                <div class="cal-container">
-                  <div class="cal-notes"><span class="day">Thursday</span><span class="date">September 24</span><span class="title">Notes<span class="icon s7-plus"></span></span>
-                    <ul>
-                      <li><span class="hour">14h</span><span class="event-name">Meeting with investors</span></li>
-                      <li><span class="hour">8h</span><span class="event-name">Dentist date</span></li>
-                    </ul>
-                  </div>
-                   <div class="cal-calendar">
-                    <div class="ui-datepicker"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12"></div>
-              </div>
-            </div><!-- 달력 위젯 끝 -->
          
          
-         </div><!-- 가로줄 한줄 묶음 끝 -->
-         
-        <div class="main-content" style="visibility: hidden;"><!-- 달력을 작동시키기 위한 더미데이터 시작-->
-          <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
-          <div class="row">
-            <div class="col-md-4">
-              <div class="widget widget-pie">
-                <div class="widget-head"></div>
-                <div class="row chart-container">
-                  <div class="col-md-6">
-                    <div id="widget-top-2" class="chart"></div>
-                  </div>
-                  <div class="col-md-6">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="widget widget-pie widget-pie-stats">
-                <div class="widget-head"></div>
-                <div class="row chart-container">
-                  <div class="col-md-6">
-                    <div id="widget-top-3" class="chart"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>        
-        </div><!-- 달력을 작동시키기 위한 더미데이터 끝-->
          
         </div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
