@@ -55,7 +55,7 @@
 						</ul>
 						
 						<ul class="nav navbar-nav am-nav-right">
-							<li><a>만들 페이지 이름입력</a></li>
+							<li><a>소비 정보</a></li>
 						</ul>
 						<!-- \<ul class="nav navbar-nav am-nav-right"> 왼쪽 상단 메뉴
 							<li><a href="#">메인</a></li>
