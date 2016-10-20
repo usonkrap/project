@@ -149,7 +149,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
             </li>
             
-            <li class="parent"><a href="#"><i class="icon s7-display1"></i><span>통계2</span></a>
+            <li class="parent"><a href="#"><i class="icon s7-graph2"></i><span>통계2</span></a>
               <!-- <ul class="sub-menu"><li class="title">차트3</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="tables-general.html">General</a>
