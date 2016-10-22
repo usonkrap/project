@@ -75,7 +75,7 @@ margin: auto;
 .h1_home{
 	font-size: 80px;
 	font-family: Lato;
-	font-weight: 300;
+	font-weight: 500;
 	letter-spacing: 6px;
 }
 
@@ -312,9 +312,10 @@ color: #ECEBEB;
 }
 
 .banner {
-	padding: 100px 0;
+	padding-top: 180px;
+	padding-bottom: 140px;
 	color: #f8f8f8;
-	background: url(../img/intro/banner-bg.jpg) no-repeat center center;
+	background: url(../img/background/background_down.jpg) no-repeat center center;
 	background-size: cover;
 }
 
