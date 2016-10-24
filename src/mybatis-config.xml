@@ -4,9 +4,8 @@
 
 	<!-- DB접속정보 값을 가지고 있는 파일 -->
 	<properties resource="db.properties" />
-
 	<typeAliases>
-	
+		<typeAlias type="vo.Customer" alias="Customer"/>
 	</typeAliases>
 
 
@@ -25,7 +24,7 @@
 
 	<!-- SQL문 정의한 파일 포함 -->
 	<mappers>
-	
+		<mapper resource="Mapper.xml"/>
 	</mappers>
 
 </configuration>

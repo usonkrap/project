@@ -19,10 +19,10 @@
 		
 		<action name="login" class="action.CustomerAction" method="login">
 			<result name="input">
-				pages-login.jsp
+				/pages-login.jsp
 			</result>
 			<result name="success">
-				default_Frame.jsp
+				/default_Frame.jsp
 			</result>
 		</action>
 		
@@ -32,7 +32,7 @@
 		
 		<action name="join" class="action.CustomerAction" method="join">
 			<result name="success">
-				index.jsp
+				/index.jsp
 			</result>
 		</action>
 	</package>
