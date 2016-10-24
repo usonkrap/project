@@ -10,9 +10,31 @@
 		<default-action-ref name="index" />
 
 		<action name="index">
-			<result type="redirect">/index.html</result>
+			<result>/index.jsp</result>
 		</action>
 		
+		<action name="loginForm">
+			<result>/pages-login.jsp</result>
+		</action>
+		
+		<action name="login" class="action.CustomerAction" method="login">
+			<result name="input">
+				pages-login.jsp
+			</result>
+			<result name="success">
+				default_Frame.jsp
+			</result>
+		</action>
+		
+		<action name="joinForm">
+			<result>/pages-sign-up.jsp</result>
+		</action>
+		
+		<action name="join" class="action.CustomerAction" method="join">
+			<result name="success">
+				index.jsp
+			</result>
+		</action>
 	</package>
 
 </struts>
