@@ -10,23 +10,23 @@
 <meta name="author" content="">
 <title>연습용</title>
 <link rel="stylesheet" type="text/css"
-	href="assets/lib/stroke-7/style.css" />
+	href="../assets/lib/stroke-7/style.css" />
 <link rel="stylesheet" type="text/css"
-	href="assets/lib/stroke-7/material-icons.css" />
+	href="../assets/lib/stroke-7/material-icons.css" />
 <link rel="stylesheet" type="text/css"
-	href="assets/lib/jquery.nanoscroller/css/nanoscroller.css" />
+	href="../assets/lib/jquery.nanoscroller/css/nanoscroller.css" />
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <script type="text/javascript" src="script/jquery-3.1.0.min.js"></script>
 <link rel="stylesheet" type="text/css"
-	href="assets/lib/select2/css/select2.min.css" />
+	href="../assets/lib/select2/css/select2.min.css" />
 <link rel="stylesheet" type="text/css"
-	href="assets/lib/bootstrap-slider/css/bootstrap-slider.css" />
+	href="../assets/lib/bootstrap-slider/css/bootstrap-slider.css" />
 <link rel="stylesheet" type="text/css"
-	href="assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css" />
-<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+	href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css" />
+<link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
 </head>
 <body>
 	<div class="am-wrapper">
@@ -55,7 +55,7 @@
 					<ul class="nav navbar-nav navbar-right am-user-nav">
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
-								<img src="assets/img/cat.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
+								<img src="../assets/img/cat.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
 								class="user-name">떼껄룩</span> <span
 								class="angle-down s7-angle-down"></span>
 						</a>
@@ -158,11 +158,11 @@
 									class="table table-striped table-hover table-fw-widget">
 									<thead>
 										<tr>
-											<th>Rendering engine</th>
-											<th>Browser</th>
-											<th>Platform(s)</th>
-											<th>Engine version</th>
-											<th>CSS grade</th>
+											<th>이름</th>
+											<th>가격</th>
+											<th>카테고리</th>
+											<th>날짜</th>
+											<th>거래처</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -863,33 +863,33 @@
 	</div>
 
 
-	<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+	<script src="../assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
 	<script
-		src="assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js"
+		src="../assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js"
 		type="text/javascript"></script>
-	<script src="assets/js/main.js" type="text/javascript"></script>
-	<script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"
+	<script src="../assets/js/main.js" type="text/javascript"></script>
+	<script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"
 		type="text/javascript"></script>
-	<script src="assets/lib/datatables/js/jquery.dataTables.min.js"
+	<script src="../assets/lib/datatables/js/jquery.dataTables.min.js"
 		type="text/javascript"></script>
-	<script src="assets/lib/datatables/js/dataTables.bootstrap.min.js"
-		type="text/javascript"></script>
-	<script
-		src="assets/lib/datatables/plugins/buttons/js/dataTables.buttons.js"
-		type="text/javascript"></script>
-	<script src="assets/lib/datatables/plugins/buttons/js/buttons.html5.js"
-		type="text/javascript"></script>
-	<script src="assets/lib/datatables/plugins/buttons/js/buttons.flash.js"
-		type="text/javascript"></script>
-	<script src="assets/lib/datatables/plugins/buttons/js/buttons.print.js"
+	<script src="../assets/lib/datatables/js/dataTables.bootstrap.min.js"
 		type="text/javascript"></script>
 	<script
-		src="assets/lib/datatables/plugins/buttons/js/buttons.colVis.js"
+		src="../assets/lib/datatables/plugins/buttons/js/dataTables.buttons.js"
+		type="text/javascript"></script>
+	<script src="../assets/lib/datatables/plugins/buttons/js/buttons.html5.js"
+		type="text/javascript"></script>
+	<script src="../assets/lib/datatables/plugins/buttons/js/buttons.flash.js"
+		type="text/javascript"></script>
+	<script src="../assets/lib/datatables/plugins/buttons/js/buttons.print.js"
 		type="text/javascript"></script>
 	<script
-		src="assets/lib/datatables/plugins/buttons/js/buttons.bootstrap.js"
+		src="../assets/lib/datatables/plugins/buttons/js/buttons.colVis.js"
 		type="text/javascript"></script>
-	<script src="assets/js/app-tables-datatables.js" type="text/javascript"></script>
+	<script
+		src="../assets/lib/datatables/plugins/buttons/js/buttons.bootstrap.js"
+		type="text/javascript"></script>
+	<script src="../assets/js/app-tables-datatables.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			//initialize the javascript
