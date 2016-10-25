@@ -158,7 +158,7 @@
 					</li>
 
 
-					<li class="parent"><a href="#"><i class="icon s7-graph"></i><span>통계
+					<li class="parent"><a href="graphForm.action"><i class="icon s7-graph"></i><span>통계
 								1</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="form-elements.html">Elements</a>
