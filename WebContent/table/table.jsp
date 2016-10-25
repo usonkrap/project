@@ -38,7 +38,7 @@
 				<div class="navbar-header">
 					<!--  ??? -->
 					<div class="page-title">
-					
+
 						<!--  ??? -->
 						<span>Dashboard</span>
 					</div>
@@ -877,11 +877,14 @@
 	<script
 		src="../assets/lib/datatables/plugins/buttons/js/dataTables.buttons.js"
 		type="text/javascript"></script>
-	<script src="../assets/lib/datatables/plugins/buttons/js/buttons.html5.js"
+	<script
+		src="../assets/lib/datatables/plugins/buttons/js/buttons.html5.js"
 		type="text/javascript"></script>
-	<script src="../assets/lib/datatables/plugins/buttons/js/buttons.flash.js"
+	<script
+		src="../assets/lib/datatables/plugins/buttons/js/buttons.flash.js"
 		type="text/javascript"></script>
-	<script src="../assets/lib/datatables/plugins/buttons/js/buttons.print.js"
+	<script
+		src="../assets/lib/datatables/plugins/buttons/js/buttons.print.js"
 		type="text/javascript"></script>
 	<script
 		src="../assets/lib/datatables/plugins/buttons/js/buttons.colVis.js"
@@ -889,12 +892,14 @@
 	<script
 		src="../assets/lib/datatables/plugins/buttons/js/buttons.bootstrap.js"
 		type="text/javascript"></script>
-	<script src="../assets/js/app-tables-datatables.js" type="text/javascript"></script>
+	<script src="../assets/js/app-tables-datatables.js"
+		type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			//initialize the javascript
 			App.init();
 			App.dataTables();
+
 		});
 	</script>
 </body>
