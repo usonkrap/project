@@ -6,16 +6,14 @@
 
 <struts>
 
-    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
 
-	<!-- 문의 게시판 관련 액션 -->
-    <package name="table" namespace="/table" extends="default">
+	<package name="table" namespace="/table" extends="default">
 
-		<!-- 문의게시판 글쓰기 폼으로 이동 -->
-        <action name="goTable" class="action.TableAction" method="goTable">
-            <result>/table/table.jsp</result>
-        </action>
- 
+		<action name="goTable" class="action.TableAction" method="goTable">
+			<result>/table/table.jsp</result>
+		</action>
+
 	</package>
 </struts>
 

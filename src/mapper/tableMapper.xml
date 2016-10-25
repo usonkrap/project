@@ -3,7 +3,7 @@
 <mapper namespace="table">
 
 <select id="billList" resultType="Bill" parameterType="String">
-select * from bill where customerId = #{loginId}
+select * from bill where customerId = #{loginId} order by BILLDATE desc
 </select> 
 
 <select id="itemList" resultType="Item" parameterType="int">
