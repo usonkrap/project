@@ -55,7 +55,7 @@
 					<ul class="nav navbar-nav navbar-right am-user-nav">
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
-								<img src="../assets/img/cat.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
+								<img src="assets/img/cat.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
 								class="user-name">떼껄룩</span> <span
 								class="angle-down s7-angle-down"></span>
 						</a>
@@ -148,7 +148,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li>
               </ul> --></li>
 
-					<li class="parent"><a href="../table/goTable.action" ><i class="icon s7-display2"></i><span>내역보기</span></a>
+					<li class="parent"><a href="#"><i class="icon s7-display2"></i><span>내역보기</span></a>
 						<!--   <ul class="sub-menu"><li class="title">차트1</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="charts-flot.html">Flot</a>
