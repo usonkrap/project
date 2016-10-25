@@ -6,7 +6,7 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import util.CustomerDAO;
+import dao.CustomerDAO;
 import vo.Customer;
 
 public class CustomerAction extends ActionSupport implements SessionAware {
