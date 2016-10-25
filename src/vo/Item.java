@@ -6,7 +6,7 @@ public class Item {
 	int billNo;
 	String customerId;
 	String name;
-	String categoryNo;
+	String category;
 	int price;
 
 	public Item() {
@@ -19,13 +19,13 @@ public class Item {
 		this.price = price;
 	}
 
-	public Item(int itemNo, int billNo, String customerId, String name, String categoryNo, int price) {
+	public Item(int itemNo, int billNo, String customerId, String name, String category, int price) {
 		super();
 		this.itemNo = itemNo;
 		this.billNo = billNo;
 		this.customerId = customerId;
 		this.name = name;
-		this.categoryNo = categoryNo;
+		this.category = category;
 		this.price = price;
 	}
 
@@ -61,12 +61,12 @@ public class Item {
 		this.name = name;
 	}
 
-	public String getCategoryNo() {
-		return categoryNo;
+	public String getCategory() {
+		return category;
 	}
 
-	public void setCategoryNo(String categoryNo) {
-		this.categoryNo = categoryNo;
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public int getPrice() {
@@ -80,7 +80,7 @@ public class Item {
 	@Override
 	public String toString() {
 		return "Item [itemNo=" + itemNo + ", billNo=" + billNo + ", customerId=" + customerId + ", name=" + name
-				+ ", categoryNo=" + categoryNo + ", price=" + price + "]";
+				+ ", category=" + category + ", price=" + price + "]";
 	}
 
 }

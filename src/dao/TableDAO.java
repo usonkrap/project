@@ -14,16 +14,15 @@ public class TableDAO {
 	SqlSessionFactory factory = MybatisConfig.getSqlSessionFactory();
 	SqlSession ss;
 
-	public List<Bill> tableList() {
+	public List<Bill> tableList(String id) {
 
-		List<Bill> billList = null;
+		List<Bill> billList = new ArrayList<>();
 
 		try {
 			ss = factory.openSession();
-			billList = ss.selectList("table.selectList");
-
+			billList = ss.selectList("table.billList", id);
 			for (Bill bill : billList) {
-				List<Item> itemList = ss.selectList("table.itemList");
+				List<Item> itemList = ss.selectList("table.itemList", bill.getBillNo());
 				bill.setItemList(itemList);
 			}
 
