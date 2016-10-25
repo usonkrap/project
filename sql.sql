@@ -11,3 +11,4 @@ create table customer(
 
 select * from customer
 
+alter table customer add(cust_target_price number(20));
