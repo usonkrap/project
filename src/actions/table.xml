@@ -16,7 +16,7 @@
             <result>/table/table.jsp</result>
         </action>
         
- 		<!-- 통계정보 -->
+ 		<!-- 통계정보  -->
  		<action name="graphForm">
  			<result>/table/pages-graph.jsp</result>
  		</action>
