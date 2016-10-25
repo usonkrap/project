@@ -30,7 +30,7 @@
 
 		<action name="join" class="action.CustomerAction" method="join">
 			<result name="success">
-				/index.jsp
+				/customer/index.jsp
 			</result>
 		</action>
 

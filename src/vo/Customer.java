@@ -8,23 +8,22 @@ public class Customer {
 	private String cust_address;
 	private String cust_birthday;
 	private String cust_gender;
-	private String cust_activity;
-	private String cust_signup_date;
+	private String cust_target_price;
 	
 	public Customer() {
 	}
 
 	public Customer(String cust_email, String cust_password, String cust_nickname, String cust_address,
-			String cust_birthday, String cust_gender, String cust_activity, String cust_signup_date) {
+			String cust_birthday, String cust_gender, String cust_target_price) {
 		this.cust_email = cust_email;
 		this.cust_password = cust_password;
 		this.cust_nickname = cust_nickname;
 		this.cust_address = cust_address;
 		this.cust_birthday = cust_birthday;
 		this.cust_gender = cust_gender;
-		this.cust_activity = cust_activity;
-		this.cust_signup_date = cust_signup_date;
+		this.cust_target_price = cust_target_price;
 	}
+
 
 	public String getCust_email() {
 		return cust_email;
@@ -74,28 +73,20 @@ public class Customer {
 		this.cust_gender = cust_gender;
 	}
 
-	public String getCust_activity() {
-		return cust_activity;
+	public String getCust_target_price() {
+		return cust_target_price;
 	}
 
-	public void setCust_activity(String cust_activity) {
-		this.cust_activity = cust_activity;
-	}
-
-	public String getCust_signup_date() {
-		return cust_signup_date;
-	}
-
-	public void setCust_signup_date(String cust_signup_date) {
-		this.cust_signup_date = cust_signup_date;
+	public void setCust_target_price(String cust_target_price) {
+		this.cust_target_price = cust_target_price;
 	}
 
 	@Override
 	public String toString() {
 		return "Customer [cust_email=" + cust_email + ", cust_password=" + cust_password + ", cust_nickname="
 				+ cust_nickname + ", cust_address=" + cust_address + ", cust_birthday=" + cust_birthday
-				+ ", cust_gender=" + cust_gender + ", cust_activity=" + cust_activity + ", cust_signup_date="
-				+ cust_signup_date + "]";
+				+ ", cust_gender=" + cust_gender + ", cust_target_price=" + cust_target_price + "]";
 	}
+	
 	
 }

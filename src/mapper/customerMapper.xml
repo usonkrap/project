@@ -3,7 +3,8 @@
 <mapper namespace="customer">
 <!-- 회원가입 -->
 <insert id="join" parameterType="Customer">
-insert into Customer values (#{cust_email}, #{cust_password}, #{cust_nickname}, #{cust_address}, #{cust_birthday}, #{cust_gender}, 'T', sysdate)
+	insert into customer(cust_email, cust_password, cust_nickname, cust_address, cust_birthday,	cust_gender, cust_target_price) 
+	values (#{cust_email}, #{cust_password}, #{cust_nickname}, #{cust_address}, #{cust_birthday}, #{cust_gender}, #{cust_target_price, jdbcType=VARCHAR})
 </insert>
 
 <!-- 로그인 -->

@@ -94,10 +94,10 @@
 			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
 					<li class="menuItem"><a href="#whatis">What is?</a></li>
-					<li class="menuItem"><a href="#useit">Use it</a></li>
+					<li class="menuItem"><a href="#useit">Feature</a></li>
 					<li class="menuItem"><a href="#signup">Sign up</a></li>
 					<!-- <li class="menuItem"><a href="#screen">Screenshot</a></li>-->
-					<li class="menuItem"><a href="#downloadlink">Download</a></li> 
+					<!-- <li class="menuItem"><a href="#downloadlink">Download</a></li> --> 
 					<li class="menuItem"><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
@@ -264,12 +264,12 @@
 
     </div>
 
-	
+	<!-- 
 	<div id="signup" class="content-section-c ">
 		<div class="container">
 			<div class="row">
 			<div class="col-md-6 col-md-offset-3 text-center white">
-				<h2>Sign Up</h2>
+				<h2>지금 시작하세요</h2>
 				<p class="lead" style="margin-top:0"></p>
 			 </div>
 			<div class="col-md-6 col-md-offset-3 text-center">
@@ -280,11 +280,11 @@
 							<div class="morph-content">
 								<div>
 									<div class="content-style-form content-style-form-4">
-										<!-- <h2 class="morph-clone">Subscribe to our Newsletter</h2>
+										<h2 class="morph-clone">Subscribe to our Newsletter</h2>
 										<form>
 											<p><label>Your Email Address</label><input type="text"/></p>
 											<p><button>Subscribe me</button></p>
-										</form> -->
+										</form>
 									</div>
 								</div>
 							</div>
@@ -294,15 +294,15 @@
 			</div>	
 			</div>
 		</div>
-	</div>	
+	</div>	 -->
 	
 	
-	<!-- Banner Download -->
-	<div id="downloadlink" class="banner">
+	<!-- Banner signup -->
+	<div id="signup" class="banner">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center wrap_title">
-				<h2>Download Free</h2>
+				<h2>지금 시작하세요</h2>
 				<p class="lead" style="margin-top:0"></p>
 				<div class="morph-button wow pulse morph-button-inflow morph-button-inflow-1" style="height: 0px;">
 							<button type="button" class="morph-clone"></button>
@@ -313,7 +313,7 @@
 								</div>
 							</div>
 						</div>
-				<p><a class="btn btn-embossed btn-primary view" role="button">Free Download</a></p> 
+				<p><a href="customer/joinForm.action" class="btn btn-embossed btn-primary view" style="width: 350px; font-size: 20px" role="button">JanZani 가입하기</a></p> 
 			 </div>
 			</div>
 		</div>
