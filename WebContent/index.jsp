@@ -64,7 +64,7 @@
 			<h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">무엇을 구매하셨나요?</h1>
 			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">당신의 소비패턴을 분석해 드립니다.</h3>
 			<ul class="list-inline intro-social-buttons">
-				<li><a href="pages-login.html" class="btn btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">JanZani 시작하기</span></a>
+				<li><a href="customer/loginForm.action" class="btn btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">JanZani 시작하기</span></a>
 				</li>
 				<!-- <li id="download" ><a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Google Play</span></a>
 				</li> -->
@@ -289,7 +289,7 @@
 								</div>
 							</div>
 						</div>
-						<p><a href="pages-sign-up.html" class="btn morph-button btn-embossed btn-primary view" style="width: 350px; font-size: 20px" role="button">JanZani 지금 사용해 보기</a></p> 
+						<p><a href="joinForm.action" class="btn morph-button btn-embossed btn-primary view" style="width: 350px; font-size: 20px" role="button">JanZani 지금 사용해 보기</a></p> 
 				</div>
 			</div>	
 			</div>

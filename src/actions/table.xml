@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+
+	<!-- 문의 게시판 관련 액션 -->
+    <package name="table" namespace="/table" extends="default">
+
+		<!-- 문의게시판 글쓰기 폼으로 이동 -->
+        <action name="goTable" class="action.TableAction" method="goTable">
+            <result>/table/table.jsp</result>
+        </action>
+ 
+	</package>
+</struts>
+
