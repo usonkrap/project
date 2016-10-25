@@ -6,11 +6,11 @@ create table customer(
 	cust_birthday date not null,
 	cust_gender char(1) default 'M' check (cust_gender='M' or cust_gender='F'), 
 	cust_activity char(1) default 'T' check (cust_activity='T' or cust_activity='F'),
-	cust_signup_date date default sysdate,
-	cust_target_price number(20)
+	cust_signup_date date default sysdate
 );
 
 select * from customer
+
 
 create table bill(
 	billNo NUMBER PRIMARY key,

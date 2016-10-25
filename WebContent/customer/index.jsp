@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
  <!-- FlatFy Theme - Andrea Galanti /-->
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
@@ -61,7 +64,7 @@
 			<h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">무엇을 구매하셨나요?</h1>
 			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">당신의 소비패턴을 분석해 드립니다.</h3>
 			<ul class="list-inline intro-social-buttons">
-				<li><a href="pages-login.html" class="btn btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">JanZani 시작하기</span></a>
+				<li><a href="customer/loginForm.action" class="btn btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">JanZani 시작하기</span></a>
 				</li>
 				<!-- <li id="download" ><a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Google Play</span></a>
 				</li> -->
@@ -91,10 +94,10 @@
 			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
 					<li class="menuItem"><a href="#whatis">What is?</a></li>
-					<li class="menuItem"><a href="#useit">Feature</a></li>
+					<li class="menuItem"><a href="#useit">Use it</a></li>
 					<li class="menuItem"><a href="#signup">Sign up</a></li>
 					<!-- <li class="menuItem"><a href="#screen">Screenshot</a></li>-->
-					<!-- <li class="menuItem"><a href="#downloadlink">Download</a></li>  -->
+					<li class="menuItem"><a href="#downloadlink">Download</a></li> 
 					<li class="menuItem"><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
@@ -162,72 +165,6 @@
 		  </div>
 		</div>
 	</div>
- 	
-<!--	What is
-	<div id="whatis" class="content-section-b" style="border-top: 0">
-		<div class="container">
-
-			<div class="col-md-6 col-md-offset-3 text-center wrap_title">
-				<h2>What is?</h2>
-				<p class="lead" style="margin-top:0">A special thanks to Death.</p>
-				
-			</div>
-			
-			<div class="row">
-			
-				<div class="col-sm-4 wow fadeInDown text-center">
-				  <img class="rotate" src="img/icon/tweet.svg" alt="Generic placeholder image">
-				  <h3>Capture</h3>
-				  <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-
-				  <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p>
-				</div>/.col-lg-4
-				
-				<div class="col-sm-4 wow fadeInDown text-center">
-				  <img  class="rotate" src="img/icon/picture.svg" alt="Generic placeholder image">
-				   <h3>Gallery</h3>
-				   <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-				   <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p>
-				</div>/.col-lg-4
-				
-				<div class="col-sm-4 wow fadeInDown text-center">
-				  <img  class="rotate" src="img/icon/retina.svg" alt="Generic placeholder image">
-				   <h3>Retina</h3>
-					<p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-				  <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p>
-				</div>/.col-lg-4
-				
-			</div>/.row
-				
-			<div class="row tworow">
-			
-				<div class="col-sm-4  wow fadeInDown text-center">
-				  <img class="rotate" src="img/icon/laptop.svg" alt="Generic placeholder image">
-				  <h3>Responsive</h3>
-				  <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-				 <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p>
-				</div>/.col-lg-4
-				
-				<div class="col-sm-4 wow fadeInDown text-center">
-				  <img  class="rotate" src="img/icon/map.svg" alt="Generic placeholder image">
-				   <h3>Google</h3>
-				   <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-				   <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p>
-				</div>/.col-lg-4
-				
-				<div class="col-sm-4 wow fadeInDown text-center">
-				  <img  class="rotate" src="img/icon/browser.svg" alt="Generic placeholder image">
-				   <h3>Bootstrap</h3>
-				 <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-				  <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p>
-				</div>/.col-lg-4
-				
-			</div>/.row
-		</div>
-	</div>
- 
-	 
-	  -->	
 	 
 	 
 	<!-- Use it -->
@@ -327,66 +264,12 @@
 
     </div>
 
-	<!-- Screenshot -->
-<!-- 	<div id="screen" class="content-section-b">
-        <div class="container">
-          <div class="row" >
-			 <div class="col-md-6 col-md-offset-3 text-center wrap_title ">
-				<h2>Screen App</h2>
-				<p class="lead" style="margin-top:0">A special thanks to Death.</p>
-			 </div>
-		  </div>
-		    <div class="row wow bounceInUp" >
-              <div id="owl-demo" class="owl-carousel">
-				
-				<a href="img/slide/1.png" class="image-link">
-					<div class="item">
-						<img  class="img-responsive img-rounded" src="img/slide/1.png" alt="Owl Image">
-					</div>
-				</a>
-				
-               <a href="img/slide/2.png" class="image-link">
-					<div class="item">
-						<img  class="img-responsive img-rounded" src="img/slide/2.png" alt="Owl Image">
-					</div>
-				</a>
-				
-				<a href="img/slide/3.png" class="image-link">
-					<div class="item">
-						<img  class="img-responsive img-rounded" src="img/slide/3.png" alt="Owl Image">
-					</div>
-				</a>
-				
-				<a href="img/slide/1.png" class="image-link">
-					<div class="item">
-						<img  class="img-responsive img-rounded" src="img/slide/1.png" alt="Owl Image">
-					</div>
-				</a>
-				
-               <a href="img/slide/2.png" class="image-link">
-					<div class="item">
-						<img  class="img-responsive img-rounded" src="img/slide/2.png" alt="Owl Image">
-					</div>
-				</a>
-				
-				<a href="img/slide/3.png" class="image-link">
-					<div class="item">
-						<img  class="img-responsive img-rounded" src="img/slide/3.png" alt="Owl Image">
-					</div>
-				</a>
-              </div>       
-          </div>
-        </div>
- 
-
-	</div>
-	-->
-	<!-- 
+	
 	<div id="signup" class="content-section-c ">
 		<div class="container">
 			<div class="row">
 			<div class="col-md-6 col-md-offset-3 text-center white">
-				<h2>지금 시작하세요</h2>
+				<h2>Sign Up</h2>
 				<p class="lead" style="margin-top:0"></p>
 			 </div>
 			<div class="col-md-6 col-md-offset-3 text-center">
@@ -397,29 +280,29 @@
 							<div class="morph-content">
 								<div>
 									<div class="content-style-form content-style-form-4">
-										<h2 class="morph-clone">Subscribe to our Newsletter</h2>
+										<!-- <h2 class="morph-clone">Subscribe to our Newsletter</h2>
 										<form>
 											<p><label>Your Email Address</label><input type="text"/></p>
 											<p><button>Subscribe me</button></p>
-										</form>
+										</form> -->
 									</div>
 								</div>
 							</div>
 						</div>
-						<p><a href="pages-sign-up.html" class="btn morph-button btn-embossed btn-primary view" style="width: 350px; font-size: 20px" role="button">JanZani 가입하기</a></p> 
+						<p><a href="joinForm.action" class="btn morph-button btn-embossed btn-primary view" style="width: 350px; font-size: 20px" role="button">JanZani 지금 사용해 보기</a></p> 
 				</div>
 			</div>	
 			</div>
 		</div>
-	</div>	 -->
+	</div>	
 	
 	
-	<!-- Banner signup -->
-	<div id="signup" class="banner">
+	<!-- Banner Download -->
+	<div id="downloadlink" class="banner">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center wrap_title">
-				<h2>지금 시작하세요</h2>
+				<h2>Download Free</h2>
 				<p class="lead" style="margin-top:0"></p>
 				<div class="morph-button wow pulse morph-button-inflow morph-button-inflow-1" style="height: 0px;">
 							<button type="button" class="morph-clone"></button>
@@ -430,8 +313,7 @@
 								</div>
 							</div>
 						</div>
-				<!-- <p><a class="btn btn-embossed btn-primary view" role="button">JanZani 가입하기</a></p>  -->
-				<p><a href="pages-sign-up.html" class="btn morph-button btn-embossed btn-primary view" style="width: 350px; font-size: 20px" role="button">JanZani 가입하기</a></p> 
+				<p><a class="btn btn-embossed btn-primary view" role="button">Free Download</a></p> 
 			 </div>
 			</div>
 		</div>

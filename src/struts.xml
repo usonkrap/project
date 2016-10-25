@@ -4,15 +4,19 @@
     "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-	<package name="default" namespace="/" extends="struts-default, json-default">
+	<package name="default" namespace="/"
+		extends="struts-default, json-default">
 
 
 		<default-action-ref name="index" />
 
 		<action name="index">
-			<result type="redirect">/index.html</result>
+			<result>/customer/index.jsp</result>
 		</action>
-		
-	</package>
 
+		
+
+	</package>
+	<include file="actions/table.xml" />
+	<include file="actions/customer.xml" />
 </struts>
