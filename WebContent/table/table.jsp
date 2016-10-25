@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -166,6 +167,24 @@
 										</tr>
 									</thead>
 									<tbody>
+										<s:iterator value="billList" var="bill">
+											<s:iterator value="bill.itemList">
+												<tr>
+												<td><s:property value="name"/></td>
+												<td><s:property value="name"/></td>
+												<td><s:property value="name"/></td>
+												<td><s:property value="name"/></td>
+												<td><s:property value="name"/></td>
+													<!-- 
+													<th><s:property value="storeName"/></th>
+													<th><s:property value="address"/></th>
+													<th><s:property value="billDate"/></th>
+													<th><s:property value="payment"/></th>
+													<th><s:property value="totalPrice"/></th>
+												    -->
+												</tr>
+											</s:iterator>
+										</s:iterator>
 										<tr class="odd gradeX">
 											<td>Trident</td>
 											<td>Internet Explorer 4.0</td>
