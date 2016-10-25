@@ -3,7 +3,6 @@ package action;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.jasper.tagplugins.jstl.core.ForEach;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -22,14 +21,14 @@ public class TableAction extends ActionSupport implements SessionAware {
 	public String goTable() {
 
 		TableDAO dao = new TableDAO();
-		billList = dao.tableList((String)session.get("loginId"));
-		
+		billList = dao.tableList((String) session.get("loginId"));
+
 		for (Bill bill : billList) {
-			
+
 			System.out.println(bill);
-			
+
 		}
-		
+
 		return SUCCESS;
 	}
 
