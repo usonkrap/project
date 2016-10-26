@@ -20,6 +20,11 @@
  		<action name="graphForm">
  			<result>/table/pages-graph.jsp</result>
  		</action>
+ 		
+ 		<!-- main.jsp 통계 -->
+ 		<action name="mainPageLoad" class="action.TableAction" method="mainPageLoad">
+ 			<result type="json"></result>
+ 		</action>
 	</package>
 </struts>
 

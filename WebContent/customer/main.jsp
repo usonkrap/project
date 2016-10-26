@@ -303,7 +303,7 @@
 								<span class="title">가장 많이 간 가게는?</span>
 							</div>
 							<div class="panel-body">
-								<p>코엑스 KFC - 15회</p>
+								<p id="mostVisit"></p>
 							</div>
 						</div>
 					</div>
@@ -317,7 +317,7 @@
 								<span class="title">최대 소비날</span>
 							</div>
 							<div class="panel-body">
-								<p>2016년 10월 22일 - KFC외 8건 1,000,000원</p>
+								<p id="mostSpendDay"></p>
 							</div>
 						</div>
 					</div>
@@ -331,7 +331,7 @@
 								<span class="title">최고 소비액</span>
 							</div>
 							<div class="panel-body">
-								<p>500,000 - KFC</p>
+								<p id="mostSpend"></p>
 							</div>
 						</div>
 					</div>
@@ -506,6 +506,7 @@
 	<script src="../assets/lib/countup/countUp.min.js" type="text/javascript"></script>
 	<script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
 	<script src="../assets/js/app-dashboard.js" type="text/javascript"></script>
+	<script src="../assets/js/main-statistics.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function() {

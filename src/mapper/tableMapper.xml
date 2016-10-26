@@ -2,13 +2,26 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="table">
 
-<select id="billList" resultType="Bill" parameterType="String">
-select * from bill where customerId = #{loginId} order by BILLDATE desc
-</select> 
+	<select id="billList" resultType="Bill" parameterType="String">
+		select * from bill where customerId = #{loginId} order by BILLDATE desc
+	</select>
 
-<select id="itemList" resultType="Item" parameterType="int">
-select * from item where billno = #{billno}
-</select> 
+	<select id="itemList" resultType="Item" parameterType="int">
+		select * from item where billno = #{billno}
+	</select>
 
-
+	<select id="mostVisitStore" resultType="hashmap"
+		parameterType="String">
+		select * from (select storename, count(*) count from bill where customerId = #{customerId} group by storename order by count desc) where rownum = 1
+	</select>
+	
+	<select id="mostSpendDay" resultType="hashmap"
+		parameterType="String">
+		select * from (select b.billdate billdate, to_char(sum(b.totalprice), '999,999,999,999,999') sum, count(*) count from (select to_char(billDate, 'YYYY-MM-DD') billDate, totalprice from bill where customerId = #{customerId}) b group by b.billdate order by sum(b.totalprice) desc) where rownum = 1
+	</select>
+	
+	<select id="mostSpendBill" resultType="hashmap"
+		parameterType="String">
+		select * from (select storename, to_char(totalprice, '999,999,999,999,999') totalprice from bill where customerId = #{customerId} order by totalprice desc) where rownum = 1
+	</select>
 </mapper>
