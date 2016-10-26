@@ -7,7 +7,15 @@
 	</select>
 
 	<select id="itemList" resultType="Item" parameterType="int">
-		select * from item where billno = #{billno}
+		select   i.itemno				as itemNo
+			, i.billno				as billNo
+	   		, i.customerid			as customerNd
+	   		, s.sub_category_name	as category
+	   		, i.name					as name
+	   		, i.price 				as price
+		from item i , SUB_CATEGORY s
+		where billno = #{billno}
+		and i.category = s.sub_category_num 
 	</select>
 
 	<select id="mostVisitStore" resultType="hashmap"
