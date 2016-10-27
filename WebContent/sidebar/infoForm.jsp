@@ -135,8 +135,8 @@
 				<div class="am-logo"></div>
 				<ul class="sidebar-elements">
 
-					<li class="parent active"><a href="#"><i
-							class="icon s7-user"></i><span>nickname님의 정보</span></a> <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
+					<li class="parent active"><a href="../table/infoForm.action"><i class="icon s7-user"></i><span>nickname님의 정보</span></a> 
+					<!-- <ul class="sub-menu"><li class="title">소비 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">
               <ul><li class="active"><a href="index.html">Version 1</a>
@@ -149,7 +149,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li>
               </ul> --></li>
 
-					<li class="parent"><a href="../table/goTable.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
+					<li class="parent"><a href="../table/spendListForm.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
 						<!--   <ul class="sub-menu"><li class="title">차트1</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="charts-flot.html">Flot</a>
@@ -159,11 +159,11 @@
 					</li>
 
 
-<<<<<<< HEAD
-					<li class="parent"><a href="../table/graphForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a> 
+
+					<li class="parent"><a href="../table/personalStatForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a> 
 					<!-- <ul class="sub-menu"><li class="title">차트2</li>
-=======
-					<li class="parent"><a href="../table/graphForm.action"><i class="icon s7-graph"></i><span>통계
+
+					<li class="parent"><a href="../table/personalStatForm.action"><i class="icon s7-graph"></i><span>통계
 								1</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
 >>>>>>> branch 'master' of https://github.com/usonkrap/project.git
                 
@@ -176,7 +176,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
 					</li>
 
-					<li class="parent"><a href="#"><i class="icon s7-users"></i><span>비교 분석</span></a>
+					<li class="parent"><a href="../table/groupStatForm.action"><i class="icon s7-users"></i><span>비교 분석</span></a>
 						<!-- <ul class="sub-menu"><li class="title">차트3</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="tables-general.html">General</a>

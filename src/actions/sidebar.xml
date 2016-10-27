@@ -11,18 +11,24 @@
 	<!-- 문의 게시판 관련 액션 -->
     <package name="table" namespace="/table" extends="default">
 
-		<!-- 문의게시판 글쓰기 폼으로 이동 -->
-        <action name="goTable" class="action.TableAction" method="goTable">
-            <result>/table/table.jsp</result>
+		<action name="infoForm">
+ 			<result>/sidebar/infoForm.jsp</result>
+ 		</action>
+		
+        <action name="spendListForm" class="action.TableAction" method="goTable">
+            <result>/sidebar/spendListForm.jsp</result>
         </action>
         
- 		<!-- 통계정보  -->
- 		<action name="graphForm">
- 			<result>/table/pages-graph.jsp</result>
+ 		<action name="personalStatForm">
+ 			<result>/sidebar/personalStatForm.jsp</result>
+ 		</action>
+ 		
+ 		<action name="groupStatForm">
+ 			<result>/sidebar/groupStatForm.jsp</result>
  		</action>
  		
  		<action name="locationForm">
- 			<result>/table/locationForm.jsp</result>
+ 			<result>/sidebar/locationForm.jsp</result>
  		</action>
  		
  		<!-- main.jsp 통계 -->

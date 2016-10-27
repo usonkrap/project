@@ -5,31 +5,20 @@
 	<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="viewport" content="initial-scale=1.0">
-    
     <meta name="description" content="">
     <meta name="author" content="">
     <title>연습용</title>
-    <link rel="stylesheet" type="text/css" href="assets/lib/stroke-7/style.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/lib/stroke-7/material-icons.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/lib/jquery.nanoscroller/css/nanoscroller.css"/><!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/material-icons.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.nanoscroller/css/nanoscroller.css"/><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="script/jquery-3.1.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
-  	<style>
-       	#map {
-       		height: 500px; 
-       		width:90%; 
-       		margin-left:5%;
-    		border-radius: 10px;
-       	}
-    </style>
-  	
+    <script type="text/javascript" src="../script/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
   	</head>
 	<body>
 		<div class="am-wrapper"><!--  ??? -->
@@ -52,12 +41,12 @@
 							<li class="dropdown">
 								<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
 									<img src="assets/img/cat.jpg"> <!-- 오른쪽 상단 프로필 사진 -->
-									<span class="user-name">떼껄룩</span>
+									<span class="user-name">nikname</span>
 									<span class="angle-down s7-angle-down"></span>
 								</a>
 								<ul role="menu" class="dropdown-menu"><!--프로필 왼쪽 화살표 눌렀을시 드롭메뉴 -->
 									<!-- href는 링크, span class는 아이콘을 나타냄, 아이콘의 종류는 html\assets\lib\stroke-7\demo.html 참고  -->
-									<li><a href="#"> <span class="icon s7-user"></span>내 프로필</a></li>
+									<li><a href=""> <span class="icon s7-user"></span>내 프로필</a></li>
 					                <li><a href="#"> <span class="icon s7-config"></span>설정</a></li>
 					                <li><a href="#"> <span class="icon s7-help1"></span>도움!</a></li>
 					                <li><a href="#"> <span class="icon s7-power"></span>로그 아웃</a></li>
@@ -66,7 +55,7 @@
 						</ul>
 						
 						<ul class="nav navbar-nav am-nav-right">
-							<li><a>소비 정보</a></li>
+							<li><a>만들 페이지 이름입력</a></li>
 						</ul>
 						<!-- \<ul class="nav navbar-nav am-nav-right"> 왼쪽 상단 메뉴
 							<li><a href="#">메인</a></li>
@@ -123,7 +112,7 @@
           <div class="am-logo"></div>
           <ul class="sidebar-elements">
           
-            <li class="parent active"><a href="#"><i class="icon s7-user"></i><span>소비 정보</span></a>
+            <li class="parent active"><a href="../table/infoForm.action"><i class="icon s7-user"></i><span>nickname님의 정보</span></a>
               <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">
@@ -138,7 +127,7 @@
               </ul> -->
             </li>
             
-            <li class="parent"><a href="#"><i class="icon s7-display2"></i><span>내역보기</span></a>
+            <li class="parent"><a href="../table/spendListForm.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
             <!--   <ul class="sub-menu"><li class="title">차트1</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="charts-flot.html">Flot</a>
@@ -148,7 +137,7 @@
             </li>
             
             
-            <li class="parent"><a href="#"><i class="icon s7-graph"></i><span>통계 1</span></a>
+            <li class="parent"><a href="../table/personalStatForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a> 
               <!-- <ul class="sub-menu"><li class="title">차트2</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="form-elements.html">Elements</a>
@@ -160,7 +149,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
             </li>
             
-            <li class="parent"><a href="#"><i class="icon s7-display1"></i><span>통계2</span></a>
+            <li class="parent"><a href="../table/groupStatForm.action"><i class="icon s7-users"></i><span>비교 분석</span></a>
               <!-- <ul class="sub-menu"><li class="title">차트3</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="tables-general.html">General</a>
@@ -170,7 +159,7 @@
             
             
             
-            <li class="parent"><a href="#"><i class="icon s7-map"></i><span>위치 정보</span></a>
+            <li class="parent"><a href="../table/locationForm.action"><i class="icon s7-map-2"></i><span>위치 통계</span></a>
               <!-- <ul class="sub-menu"><li class="title">위치 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="ui-general.html">음...</a>
@@ -212,53 +201,40 @@
 	   <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
           <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
-        
+          
+         
          
          
         </div><!-- 메인 컨텐츠 끝 -->
-        
-        <div id="map"></div>
-	    <script>
-			var map;
-			function initMap() {
-			  map = new google.maps.Map(document.getElementById('map'), {
-			    center: {lat: 37.511771, lng: 127.059675},
-			    zoom: 13
-			  });
-			}
-	
-	    </script>
-	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNCm3UQNzK__pj-eJ_WPhP1bmi7K-A-pU&callback=initMap"
-	        async defer></script>
       </div><!-- am 컨텐츠 끝 -->
-  
+ 
     </div>
 	
 	
-	<script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
-    <script src="assets/js/main.js" type="text/javascript"></script>
-    <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.min.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery.vectormap/maps/jquery-jvectormap-uk-mill-en.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery.vectormap/maps/jquery-jvectormap-fr-merc-en.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery.vectormap/maps/jquery-jvectormap-us-il-chicago-mill-en.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery.vectormap/maps/jquery-jvectormap-au-mill-en.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery.vectormap/maps/jquery-jvectormap-in-mill-en.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery.vectormap/maps/jquery-jvectormap-map.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery.vectormap/maps/jquery-jvectormap-ca-lcc-en.js" type="text/javascript"></script>
-    <script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
-    <script src="assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
-    <script src="assets/js/app-dashboard.js" type="text/javascript"></script>
+	<script src="../assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
+    <script src="../assets/js/main.js" type="text/javascript"></script>
+    <script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-uk-mill-en.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-fr-merc-en.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-us-il-chicago-mill-en.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-au-mill-en.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-in-mill-en.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-map.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-ca-lcc-en.js" type="text/javascript"></script>
+    <script src="../assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
+    <script src="../assets/js/app-dashboard.js" type="text/javascript"></script>
     
     <script type="text/javascript">
       $(document).ready(function(){
