@@ -159,8 +159,13 @@
 					</li>
 
 
+<<<<<<< HEAD
 					<li class="parent"><a href="../table/graphForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a> 
 					<!-- <ul class="sub-menu"><li class="title">차트2</li>
+=======
+					<li class="parent"><a href="../table/graphForm.action"><i class="icon s7-graph"></i><span>통계
+								1</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
+>>>>>>> branch 'master' of https://github.com/usonkrap/project.git
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="form-elements.html">Elements</a>
                 </li><li><a href="form-validation.html">Validation</a>
@@ -304,7 +309,7 @@
 								<span class="title">가장 많이 간 가게는?</span>
 							</div>
 							<div class="panel-body">
-								<p>코엑스 KFC - 15회</p>
+								<p id="mostVisit"></p>
 							</div>
 						</div>
 					</div>
@@ -318,7 +323,7 @@
 								<span class="title">최대 소비날</span>
 							</div>
 							<div class="panel-body">
-								<p>2016년 10월 22일 - KFC외 8건 1,000,000원</p>
+								<p id="mostSpendDay"></p>
 							</div>
 						</div>
 					</div>
@@ -332,7 +337,7 @@
 								<span class="title">최고 소비액</span>
 							</div>
 							<div class="panel-body">
-								<p>500,000 - KFC</p>
+								<p id="mostSpend"></p>
 							</div>
 						</div>
 					</div>
@@ -372,15 +377,7 @@
 						<!-- 지출 내역 패널 -->
 						<div class="panel panel-default">
 							<div class="panel-heading">최근 지출 내역</div>
-							<div class="panel-body">
-								<p>[2016-10-19 13시 26분] KFC 코엑스점 - 4800원</p>
-								<p>[2016-10-18 17시 12분] KFC 코엑스점 - 5200원</p>
-								<p>[2016-10-18 13시 21분] KFC 코엑스점 - 6500원</p>
-								<p>[2016-10-17 17시 04분] KFC 코엑스점 - 9900원</p>
-								<p>[2016-10-17 13시 17분] KFC 코엑스점 - 4800원</p>
-								<p>[2016-10-17 13시 17분] KFC 코엑스점 - 4800원</p>
-								<p>[2016-10-17 13시 17분] KFC 코엑스점 - 4800원</p>
-								<p>[2016-10-17 13시 17분] KFC 코엑스점 - 4800원</p>
+							<div class="panel-body" id="latestBills">
 							</div>
 						</div>
 					</div>
@@ -507,6 +504,7 @@
 	<script src="../assets/lib/countup/countUp.min.js" type="text/javascript"></script>
 	<script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
 	<script src="../assets/js/app-dashboard.js" type="text/javascript"></script>
+	<script src="../assets/js/main-statistics.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function() {

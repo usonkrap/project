@@ -21,8 +21,14 @@
  			<result>/table/pages-graph.jsp</result>
  		</action>
  		
+<<<<<<< HEAD
  		<action name="locationForm">
  			<result>/table/locationForm.jsp</result>
+=======
+ 		<!-- main.jsp 통계 -->
+ 		<action name="mainPageLoad" class="action.TableAction" method="mainPageLoad">
+ 			<result type="json"></result>
+>>>>>>> branch 'master' of https://github.com/usonkrap/project.git
  		</action>
 	</package>
 </struts>

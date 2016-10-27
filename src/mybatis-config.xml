@@ -8,6 +8,7 @@
 		<typeAlias type="vo.Customer" alias="Customer"/>
 		<typeAlias type="vo.Bill" alias="Bill"/>
 		<typeAlias type="vo.Item" alias="Item"/>
+		<typeAlias type="vo.MainPage" alias="MainPage"/>
 	</typeAliases>
 
 

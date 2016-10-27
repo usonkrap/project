@@ -22,10 +22,12 @@ var App = (function () {
 
     //Enable toolbar button functions
     $("#table3").dataTable({
+      order: [[3,'desc']]
+	  ,
       buttons: [
-        'copy', 'excel', 'pdf', 'print'
+        'copy', 'excel', 'pdf'
       ],
-      "lengthMenu": [[6, 10, 25, 50, -1], [6, 10, 25, 50, "All"]],
+      "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
       dom:  "<'row am-datatable-header'<'col-sm-6'l><'col-sm-6 text-right'B>>" +
             "<'row am-datatable-body'<'col-sm-12'tr>>" +
             "<'row am-datatable-footer'<'col-sm-5'i><'col-sm-7'p>>"
