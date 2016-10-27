@@ -26,7 +26,7 @@ var App = (function () {
 		    data: tax_data,
 		    xkey: 'period',
 		    ykeys: ['licensed', 'sorned'],
-		    labels: ['Licensed', 'Off the road'],
+		    labels: ['총지출', '총지출'],
 		    lineColors: [color1, color2]
 		  });
 	  }
@@ -67,11 +67,10 @@ var App = (function () {
   	  Morris.Donut({
 		    element: 'donut-chart',
 		    data: [
-		      {label: 'Facebook', value: 25 },
-		      {label: 'Google', value: 40 },
-		      {label: 'Twitter', value: 25 },
-		      {label: 'Pinterest', value: 10 }
-		    ],
+		      {label: 'KFC', value: 43 },
+		      {label: '스타벅스', value: 35 },
+		      {label: 'GS25', value: 17 },
+		      {label: '버거킹', value: 5 }		    ],
 		    colors:[color1, color5, color3, color4],
 		    formatter: function (y) { return y + "%" }
 		  });
