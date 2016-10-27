@@ -82,5 +82,20 @@ public class TableDAO {
 		}
 		return mostSpendBill;
 	}
+	
+	public List<Bill> latestBills(String customerId){
+		List<Bill> billList = new ArrayList<>();
+
+		try {
+			ss = factory.openSession();
+			billList = ss.selectList("table.latestBills", customerId);
+			ss.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}
+		return billList;
+	}
 
 }

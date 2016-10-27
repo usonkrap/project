@@ -158,7 +158,7 @@
 					</li>
 
 
-					<li class="parent"><a href="/table/graphForm.action"><i class="icon s7-graph"></i><span>통계
+					<li class="parent"><a href="../table/graphForm.action"><i class="icon s7-graph"></i><span>통계
 								1</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="form-elements.html">Elements</a>
@@ -371,15 +371,7 @@
 						<!-- 지출 내역 패널 -->
 						<div class="panel panel-default">
 							<div class="panel-heading">최근 지출 내역</div>
-							<div class="panel-body">
-								<p>[2016-10-19 13시 26분] KFC 코엑스점 - 4800원</p>
-								<p>[2016-10-18 17시 12분] KFC 코엑스점 - 5200원</p>
-								<p>[2016-10-18 13시 21분] KFC 코엑스점 - 6500원</p>
-								<p>[2016-10-17 17시 04분] KFC 코엑스점 - 9900원</p>
-								<p>[2016-10-17 13시 17분] KFC 코엑스점 - 4800원</p>
-								<p>[2016-10-17 13시 17분] KFC 코엑스점 - 4800원</p>
-								<p>[2016-10-17 13시 17분] KFC 코엑스점 - 4800원</p>
-								<p>[2016-10-17 13시 17분] KFC 코엑스점 - 4800원</p>
+							<div class="panel-body" id="latestBills">
 							</div>
 						</div>
 					</div>

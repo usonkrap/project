@@ -50,6 +50,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 		Map<String, Object> result3 = dao.mostSpendBill(cust_email);
 		main.setMostSpendPrice((String)result3.get("TOTALPRICE"));
 		main.setMostSpendStore((String)result3.get("STORENAME"));
+		main.setLatestBills(dao.latestBills(cust_email));
 		
 		return SUCCESS;
 	}

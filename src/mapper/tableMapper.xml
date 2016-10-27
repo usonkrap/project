@@ -32,4 +32,8 @@
 		parameterType="String">
 		select * from (select storename, to_char(totalprice, '999,999,999,999,999') totalprice from bill where customerId = #{customerId} order by totalprice desc) where rownum = 1
 	</select>
+	
+	<select id="latestBills" resultType="bill" parameterType="String">
+	select * from (select storename, to_char(billdate, 'YYYY-MM-DD HH24:mm') billdate, totalprice from bill where customerId = #{loginId} order by BILLDATE desc) where rownum between 1 and 5
+	</select>
 </mapper>

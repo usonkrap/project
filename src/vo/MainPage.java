@@ -1,5 +1,7 @@
 package vo;
 
+import java.util.List;
+
 public class MainPage {
 	private String mostVisitStoreName;
 	private String mostVisitStoreNumber;
@@ -8,6 +10,7 @@ public class MainPage {
 	private String mostSpendDayMoney;
 	private String mostSpendPrice;
 	private String mostSpendStore;
+	private List<Bill> latestBills;
 
 	public MainPage() {
 		// TODO Auto-generated constructor stub
@@ -71,5 +74,14 @@ public class MainPage {
 	public void setMostSpendStore(String mostSpendStore) {
 		this.mostSpendStore = mostSpendStore;
 	}
+
+	public List<Bill> getLatestBills() {
+		return latestBills;
+	}
+
+	public void setLatestBills(List<Bill> list) {
+		this.latestBills = list;
+	}
+	
 	
 }
