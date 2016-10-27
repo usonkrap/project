@@ -197,12 +197,12 @@
     </div>
    
    
-   <div class="am-content"> <!-- am 컨텐츠 시작 -->
+   
+      <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
           <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
           
-          
-         	<!-- 파이차트 -->
+         <!-- 파이차트 -->
 	         <div class="row">
          
 	         	<div class="col-md-15">
@@ -297,12 +297,8 @@
               </div>
             </div>
           </div>
-          
-
-        <!-- 차트 끝 -->
-
-         <!-- 숨겨놓은 차트 -->
-	   <div style="visibility: visible;">
+           <!-- 숨겨놓은 차트 -->
+	   <div style="visibility: hidden;">
 	   	<div id="live-data" style="height: 250px;"></div>
 	   	<div id="line-chart1" style="height: 250px;"></div>
 	   	<div id="linechart-mini1" style="height: 250px;"></div>
@@ -313,7 +309,7 @@
          
         </div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
-          
+ 
     </div>
    
    
@@ -333,7 +329,6 @@
     <script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
     <script src="../assets/js/app-charts.js" type="text/javascript"></script>
     <script src="../assets/js/app-dashboard.js" type="text/javascript"></script>
-    
     
     <script type="text/javascript">
       $(document).ready(function(){
