@@ -101,20 +101,20 @@
 					<li class="parent active"><a href="../table/infoForm.action"><i class="icon s7-user"></i><span>nickname님의 정보</span></a> 
 							</li>
 
-					<li class="parent"><a href="../table/spendListForm.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
+					<li class="parent"><a href="../sidebar/spendListForm.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
 					</li>
 
 
-					<li class="parent"><a href="../table/personalStatForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a>
+					<li class="parent"><a href="../sidebar/personalStatForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a>
 						</li>
 
-					<li class="parent"><a href="../table/groupStatForm.action"><i class="icon s7-users"></i><span>비교 분석</span></a>
+					<li class="parent"><a href="../sidebar/groupStatForm.action"><i class="icon s7-users"></i><span>비교 분석</span></a>
 
 					</li>
 
 
 
-					<li class="parent"><a href="../table/locationForm.action"><i class="icon s7-map-2"></i><span>위치 통계</span></a>
+					<li class="parent"><a href="../sidebar/locationForm.action"><i class="icon s7-map-2"></i><span>위치 통계</span></a>
 						</li>
 
 					<li class="parent"><a href="#"><i class="icon s7-search"></i><span>돋보기</span></a>

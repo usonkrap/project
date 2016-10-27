@@ -9,7 +9,7 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="false" />
 
 	<!-- 문의 게시판 관련 액션 -->
-    <package name="table" namespace="/table" extends="default">
+    <package name="sidebar" namespace="/sidebar" extends="default">
 
 		<action name="infoForm">
  			<result>/sidebar/infoForm.jsp</result>

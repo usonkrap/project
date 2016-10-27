@@ -112,7 +112,7 @@
           <div class="am-logo"></div>
           <ul class="sidebar-elements">
           
-            <li class="parent active"><a href="../table/infoForm.action"><i class="icon s7-user"></i><span>nickname님의 정보</span></a> 
+            <li class="parent active"><a href="../sidebar/infoForm.action"><i class="icon s7-user"></i><span>nickname님의 정보</span></a> 
               <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">
@@ -127,7 +127,7 @@
               </ul> -->
             </li>
             
-           <li class="parent"><a href="../table/spendListForm.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
+           <li class="parent"><a href="../sidebar/spendListForm.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
 					<!--   <ul class="sub-menu"><li class="title">차트1</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="charts-flot.html">Flot</a>
@@ -137,7 +137,7 @@
             </li>
             
             
-           <li class="parent"><a href="../table/personalStatForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a>
+           <li class="parent"><a href="../sidebar/personalStatForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a>
               <!-- <ul class="sub-menu"><li class="title">차트2</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="form-elements.html">Elements</a>
@@ -149,7 +149,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
             </li>
             
-           <li class="parent"><a href="../table/groupStatForm.action"><i class="icon s7-users"></i><span>비교 분석</span></a>
+           <li class="parent"><a href="../sidebar/groupStatForm.action"><i class="icon s7-users"></i><span>비교 분석</span></a>
               <!-- <ul class="sub-menu"><li class="title">차트3</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="tables-general.html">General</a>
@@ -159,7 +159,7 @@
             
             
             
-            <li class="parent"><a href="../table/locationForm.action"><i class="icon s7-map-2"></i><span>위치 통계</span></a>
+            <li class="parent"><a href="../sidebar/locationForm.action"><i class="icon s7-map-2"></i><span>위치 통계</span></a>
               <!-- <ul class="sub-menu"><li class="title">위치 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="ui-general.html">음...</a>
