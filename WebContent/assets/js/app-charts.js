@@ -160,7 +160,7 @@ var App = (function () {
       var plot_statistics = $.plot($("#bar-chart1"), [
         {
           data: [
-            [0, 15], [1, 15], [2, 19], [3, 28], [4, 30], [5, 37], [6, 35], [7, 38], [8, 48], [9, 43], [10, 38], [11, 32], [12, 38]
+            [0, 10], [1, 15], [2, 19], [3, 28], [4, 30], [5, 37], [6, 35], [7, 38], [8, 48], [9, 43], [10, 38], [11, 32], [12, 38]
           ],
           label: "Page Views"
         },
@@ -218,11 +218,20 @@ var App = (function () {
     //Top pie widget 1
     function widget_top_1(){
       
-      var data = [
-        { label: "Premium Purchases", data: 15 },
-        { label: "Standard Plans", data: 25 },
-        { label: "Services", data: 60 }
-      ];
+    	var data = [
+    		    	{ label: "외식", data: 5 },
+			    	{ label: "식음료", data: 5 },
+			    	{ label: "교통", data: 5 },
+			    	{ label: "패션/미용", data: 5},
+			    	{ label: "문화생활", data: 5},
+			    	{ label: "생활용품", data: 5},
+			    	{ label: "사회생활", data: 5},
+			    	{ label: "교육", data: 5},
+			    	{ label: "주거/관리/통신", data: 5},
+			    	{ label: "의료/건강", data: 5},
+			    	{ label: "금융", data: 5},
+			    	{ label: "기타", data: 5}
+    		    ];
 
       var color1 = tinycolor( App.color.primary ).lighten( 5 ).toString();
       var color2 = App.color.alt2;
@@ -620,7 +629,7 @@ var App = (function () {
 
     	var plot_statistics = $.plot($("#line-chart3"), [{
         data: [
-        	[0, 20], [1, 30], [2, 25], [3, 39], [4, 35], [5, 40], [6, 30], [7, 45]
+        	[1, 30], [2, 25], [3, 39], [4, 35], [5, 40], [6, 30], [7, 45], [8, 30], [9, 100], [10, 15], [11,30], [12,25]
         ],
         label: "Page Views"
       }
@@ -667,6 +676,65 @@ var App = (function () {
         }
       });
     }
+    
+    
+  //Line Chart 2 - 2
+    function widget_linechart2_2(){
+
+      var color1 = tinycolor( App.color.primary ).lighten( 5 ).toString();
+
+    	var plot_statistics = $.plot($("#line-chart"), [{
+        data: [
+        	[1, 30], [2, 25], [3, 39], [4, 35], [5, 40], [6, 30], [7, 45], [8, 30], [9, 100], [10, 15], [11,30], [12,25]
+        ],
+        label: "Page Views"
+      }
+      ], {
+        series: {
+          lines: {
+            show: true,
+            lineWidth: 2, 
+            fill: true,
+            fillColor: {
+              colors: [{
+                opacity: 0.1
+              }, {
+                opacity: 0.1
+              }
+              ]
+            } 
+          },
+          points: {
+            show: true
+          },
+          shadowSize: 0
+        },
+        legend:{
+          show: false
+        },
+        grid: {
+        	labelMargin: 15,
+          axisMargin: 500,
+          hoverable: true,
+          clickable: true,
+          tickColor: "rgba(0,0,0,0.15)",
+          borderWidth: 0
+        },
+        colors: [color1],
+        xaxis: {
+          ticks: 11,
+          tickDecimals: 0
+        },
+        yaxis: {
+          ticks: 4,
+          tickSize: 15,
+          tickDecimals: 0
+        }
+      });
+    }
+    
+    
+    
 
     //Bar Chart 2
     function widget_barchart2(){
@@ -744,8 +812,8 @@ var App = (function () {
       line_live_data();
 
     //row 3
-      widget_linechart_live();
-      line_chart2();
+      /*widget_linechart_live();
+      line_chart2();*/
 
     //Row 4
       widget_linechart2();
