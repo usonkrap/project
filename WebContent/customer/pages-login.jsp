@@ -19,7 +19,7 @@
   <body class="am-splash-screen">
     <div class="am-wrapper am-login">
       <div class="am-content">
-        <div class="main-content">
+        <div class="main-content" style="background-color: rgba(255, 255, 255, 0);">
           <div class="login-container">
             <div class="panel panel-default">
               <div class="panel-heading"><img src="../assets/img/logo-full-retina.png" alt="logo" width="150px" height="39px" class="logo-img"><span>Please enter your user information.</span></div>
