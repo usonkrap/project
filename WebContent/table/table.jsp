@@ -136,12 +136,11 @@
 
 
 
-				<div class="page-head">
-					<h2>Data Tables</h2>
+				<div class="page-head" style="margin-left: 85px; margin-right: 55px;">
+					<h2>내 소비 내역보기</h2>
 					<ol class="breadcrumb">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Tables</a></li>
-						<li class="active">Data Tables</li>
+						<li><a href="#">메인페이지</a></li>
+						<li class="active">내 소비 내역보기</li>
 					</ol>
 				</div>
 				<div class="main-content">
@@ -149,11 +148,11 @@
 						<div class="col-sm-12">
 							<div class="widget widget-fullwidth widget-small">
 								<div class="widget-head">
-									<div class="tools">
+									<div class="tools" style="visibility: hidden">
 										<span class="icon s7-upload"></span><span class="icon s7-edit"></span><span
 											class="icon s7-close"></span>
 									</div>
-									<div class="title">Export Functions</div>
+									<div class="title">내 전체 거래내역</div>
 								</div>
 								<table id="table3"
 									class="table table-striped table-hover table-fw-widget">
