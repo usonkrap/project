@@ -36,10 +36,11 @@
 			<div class="container-fluid">
 				<!--  ??? -->
 				<div class="navbar-header">
+				
 					<!--  ??? -->
 					<div class="page-title">
-						<!--  ??? -->
-						<span>Dashboard</span>
+						<!--  페이지 축소 title -->
+						<span>Janzani</span>
 					</div>
 					<a href="#" class="am-toggle-left-sidebar navbar-toggle collapsed">
 					</a> <a href="index.jsp" class="navbar-brand">
@@ -56,7 +57,7 @@
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
 								<img src="../assets/img/cat.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
-								class="user-name">떼껄룩</span> <span
+								class="user-name">nickname</span> <span
 								class="angle-down s7-angle-down"></span>
 						</a>
 							<ul role="menu" class="dropdown-menu">
@@ -135,7 +136,7 @@
 				<ul class="sidebar-elements">
 
 					<li class="parent active"><a href="#"><i
-							class="icon s7-user"></i><span>소비 정보</span></a> <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
+							class="icon s7-user"></i><span>nickname님의 정보</span></a> <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">
               <ul><li class="active"><a href="index.html">Version 1</a>
@@ -148,7 +149,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li>
               </ul> --></li>
 
-					<li class="parent"><a href="../table/goTable.action" ><i class="icon s7-display2"></i><span>내역보기</span></a>
+					<li class="parent"><a href="../table/goTable.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
 						<!--   <ul class="sub-menu"><li class="title">차트1</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="charts-flot.html">Flot</a>
@@ -158,8 +159,8 @@
 					</li>
 
 
-					<li class="parent"><a href="/table/graphForm.action"><i class="icon s7-graph"></i><span>통계
-								1</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
+					<li class="parent"><a href="../table/graphForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a> 
+					<!-- <ul class="sub-menu"><li class="title">차트2</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="form-elements.html">Elements</a>
                 </li><li><a href="form-validation.html">Validation</a>
@@ -170,7 +171,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
 					</li>
 
-					<li class="parent"><a href="#"><i class="icon s7-graph2"></i><span>통계2</span></a>
+					<li class="parent"><a href="#"><i class="icon s7-users"></i><span>비교 분석</span></a>
 						<!-- <ul class="sub-menu"><li class="title">차트3</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="tables-general.html">General</a>
@@ -180,8 +181,8 @@
 
 
 
-					<li class="parent"><a href="#"><i class="icon s7-map"></i><span>위치
-								정보</span></a> <!-- <ul class="sub-menu"><li class="title">위치 정보</li>
+					<li class="parent"><a href="../table/locationForm.action"><i class="icon s7-map-2"></i><span>위치 통계</span></a>
+					 <!-- <ul class="sub-menu"><li class="title">위치 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="ui-general.html">음...</a>
                 </li><li><a href="ui-alerts.html">일</a>
@@ -197,7 +198,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
 					</li>
 
-					<li class="parent"><a href="#"><i class="icon s7-search"></i><span>돋보기</span></a>
+					<li class="parent"><a href="#"><i class="icon s7-ticket"></i><span>맞춤 정보</span></a>
 						<!--  <ul class="sub-menu"><li class="title">차트4</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="pages-blank.html">Blank Page</a>

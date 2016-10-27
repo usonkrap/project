@@ -9,7 +9,7 @@
 
 <!-- 로그인 -->
 <select id="login" parameterType="Customer" resultType="Customer">
-select * from Customer where cust_email=#{cust_email} and cust_password=#{cust_password} 
+select * from customer where cust_email=#{cust_email} and cust_password=#{cust_password} 
 </select>
 
 </mapper>

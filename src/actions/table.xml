@@ -20,6 +20,10 @@
  		<action name="graphForm">
  			<result>/table/pages-graph.jsp</result>
  		</action>
+ 		
+ 		<action name="locationForm">
+ 			<result>/table/locationForm.jsp</result>
+ 		</action>
 	</package>
 </struts>
 
