@@ -212,13 +212,8 @@
 	   <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
           <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
-        
-         
-         
-        </div><!-- 메인 컨텐츠 끝 -->
-        
-        <div id="map"></div>
-	    <script>
+        	 <div id="map"></div>
+	    	<script>
 			var map;
 			function initMap() {
 			  map = new google.maps.Map(document.getElementById('map'), {
@@ -230,6 +225,11 @@
 	    </script>
 	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNCm3UQNzK__pj-eJ_WPhP1bmi7K-A-pU&callback=initMap"
 	        async defer></script>
+         
+         
+        </div><!-- 메인 컨텐츠 끝 -->
+        
+       
       </div><!-- am 컨텐츠 끝 -->
   
     </div>
