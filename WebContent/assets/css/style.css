@@ -8852,7 +8852,7 @@ button:focus {
   padding: 15px;
   color: #e1e1e1;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
 }
 .am-left-sidebar .sidebar-elements > li > a .icon {
   display: block;
@@ -9875,6 +9875,8 @@ button:focus {
   padding-left: 35px;
   padding-right: 35px;
   padding-top: 35px;
+  margin-left: 30px;
+  background-color: aliceblue;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-content {
@@ -16673,7 +16675,7 @@ fieldset[disabled] .btn-social.btn-tumblr.active {
 .panel-heading > h4,
 .panel-heading > h5,
 .panel-heading > h6 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   display: block;
   margin: 0;

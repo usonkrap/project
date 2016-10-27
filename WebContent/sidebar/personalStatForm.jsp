@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/lib/select2/css/select2.min.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/morrisjs/morris.css"/>
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
      </head>
    <body>
@@ -196,95 +197,40 @@
     </div>
    
    
-   
-      <div class="am-content"> <!-- am 컨텐츠 시작 -->
+   <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
           <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
           
-         <div class="row">
-            <div class="col-md-4">
-                        <div class="widget widget-fullwidth line-chart">
-                          <div class="widget-head">
-                            <div class="tools"><span class="icon s7-upload"></span><span class="icon s7-edit"></span><span class="icon s7-close"></span></div><span class="title">Line Chart</span>
-                          </div>
-                          <div class="chart-container">
-                            <div class="counter">
-                              <div class="value">80%</div>
-                              <div class="desc">More Visits</div>
-                            </div>
-                            <div id="line-chart1" style="height: 250px;"></div>
-                          </div>
-                        </div>
-            </div>
-            <div class="col-md-4">
-                        <div class="widget false">
-                          <div class="widget-head">
-                            <div class="tools"><span class="icon s7-upload"></span><span class="icon s7-edit"></span><span class="icon s7-close"></span></div><span class="title">Pie Chart</span>
-                          </div>
-                          <div class="chart-container">
-                            <div id="pie-chart4" style="height: 220px;"></div>
-                          </div>
-                        </div>
-            </div>
-            <div class="col-md-4">
-                        <div class="widget widget-fullwidth">
-                          <div class="widget-head">
-                            <div class="tools"><span class="icon s7-upload"></span><span class="icon s7-edit"></span><span class="icon s7-close"></span></div><span class="title">Bar Chart</span>
-                          </div>
-                          <div class="chart-container">
-                            <div class="counter">
-                              <div class="value">80%</div>
-                              <div class="desc">More Visits</div>
-                            </div>
-                            <div id="bar-chart1" style="height: 250px;"></div>
-                          </div>
-                        </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="widget widget-pie">
-                <div class="widget-head"><span class="title">Top Sales</span></div>
-                <div class="row chart-container">
-                  <div class="col-md-6">
-                    <div id="widget-top-1" class="chart"></div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="legend"></div>
-                  </div>
-                </div>
-                <div class="row chart-info">
-                  <div class="col-xs-4"><span class="title">New Clients</span><span data-toggle="counter" data-end="180" class="number">0</span></div>
-                  <div class="col-xs-4"><span class="title">Total Sales</span><span data-toggle="counter" data-end="500" data-prefix="$" class="number">$0</span></div>
-                  <div class="col-xs-4"><span class="title">Refunds</span><span data-toggle="counter" data-end="90" class="number">0</span></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-                            <div class="widget widget-fullwidth widget-small">
-                              <div class="widget-head">
-                                <div class="tools"><span class="value">25.3K</span></div><span class="title">Fullwidth Chart</span>
-                              </div>
-                              <div class="chart-container">
-                                <div id="linechart-mini1" style="height: 250px;"></div>
-                              </div>
-                            </div>
-            </div>
-            <div class="col-md-4">
-                        <div class="widget widget-fullwidth">
-                          <div class="widget-head">
-                            <div class="tools"><span class="icon s7-upload"></span><span class="icon s7-edit"></span><span class="icon s7-close"></span></div><span class="title">Active Users</span>
-                          </div>
-                          <div class="chart-container">
-                            <div id="live-data" style="height: 250px;"></div>
-                          </div>
-                        </div>
-            </div>
-          </div>
+          
+         	<!-- 파이차트 -->
+	         <div class="row">
+         
+	         	<div class="col-md-15">
+	              <div class="widget widget-pie">
+	                <div class="widget-head"><span class="title">분야별 지출</span></div>
+	                <div class="row chart-container">
+	                  <div class="col-md-6">
+	                    <div id="widget-top-1" class="chart"></div>
+	                  </div>
+	                  <div class="col-md-6">
+	                    <div class="legend"></div>
+	                  </div>
+	                </div>
+	                <!-- <div class="row chart-info">
+	                  <div class="col-xs-4"><span class="title">New Clients</span><span data-toggle="counter" data-end="180" class="number">0</span></div>
+	                  <div class="col-xs-4"><span class="title">Total Sales</span><span data-toggle="counter" data-end="500" data-prefix="$" class="number">$0</span></div>
+	                  <div class="col-xs-4"><span class="title">Refunds</span><span data-toggle="counter" data-end="90" class="number">0</span></div>
+	                </div> -->
+	             </div>
+            	</div>
+          	</div>
+          	<!-- 파이차트 끝 -->
+         
+         <!-- 월별, 연간 -->
           <div class="row">
             <div class="col-md-6">
                         <div class="widget line-chart">
-                          <div class="widget-head"><span class="title">Chart Table</span>
+                          <div class="widget-head"><span class="title">월별, 연간지출비교</span>
                           </div>
                           <div class="chart-container">
                             <div id="line-chart3" style="height: 230px;"></div>
@@ -305,83 +251,69 @@
                                     <td class="number">186</td>
                                     <td class="number">51%</td>
                                   </tr>
-                                  <tr>
-                                    <td>Mac OS</td>
-                                    <td class="number">280</td>
-                                    <td class="number">145</td>
-                                    <td class="number">64%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Linux</td>
-                                    <td class="number">210</td>
-                                    <td class="number">89</td>
-                                    <td class="number">38%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Android</td>
-                                    <td class="number">176</td>
-                                    <td class="number">67</td>
-                                    <td class="number">57%</td>
-                                  </tr>
                                 </tbody>
                               </table>
                             </div>
                           </div>
                         </div>
             </div>
+            
             <div class="col-md-6">
-                        <div class="widget bar-chart">
-                          <div class="widget-head"><span class="title">Chart Table</span>
-                          </div>
-                          <div class="chart-container">
-                            <div id="bar-chart2" style="height: 230px;"></div>
-                            <div class="chart-table">
-                              <table class="table table-striped">
-                                <thead class="alt3">
-                                  <tr>
-                                    <th>Operating System</th>
-                                    <th class="number">Visits</th>
-                                    <th class="number">Users</th>
-                                    <th class="number">Rebound</th>
-                                  </tr>
-                                </thead>
-                                <tbody class="no-border-x">
-                                  <tr>
-                                    <td>Windows</td>
-                                    <td class="number">340</td>
-                                    <td class="number">186</td>
-                                    <td class="number">51%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Mac OS</td>
-                                    <td class="number">280</td>
-                                    <td class="number">145</td>
-                                    <td class="number">64%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Linux</td>
-                                    <td class="number">210</td>
-                                    <td class="number">89</td>
-                                    <td class="number">38%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Android</td>
-                                    <td class="number">176</td>
-                                    <td class="number">67</td>
-                                    <td class="number">57%</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
+              <div class="panel panel-default">
+                <div class="panel-heading"> 
+       				<span class="title">월간, 연간비교</span>
+                </div>
+                <div class="panel-body">
+                  <div id="line-chart" style="height: 250px;"></div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <!-- 모리스차트 -->
+          
+          <div class="row">
+            
+            <div class="col-sm-6">
+              <div class="panel panel-default">
+                <div class="panel-heading"> 
+                  <span class="title">방문매장 TOP4</span>
+                </div>
+                <div class="panel-body">
+                  <div id="donut-chart" style="height: 250px;"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-sm-6">
+              <div class="panel panel-default">
+                <div class="panel-heading"> 
+                  <div class="tools"><span class="icon s7-upload"></span><span class="icon s7-edit"></span><span class="icon s7-close"></span></div><span class="title">Bar Chart</span>
+                </div>
+                <div class="panel-body">
+                  <div id="bar-chart" style="height: 250px;"></div>
+                </div>
+              </div>
             </div>
           </div>
-         
+          
+
+        <!-- 차트 끝 -->
+
+         <!-- 숨겨놓은 차트 -->
+	   <div style="visibility: visible;">
+	   	<div id="live-data" style="height: 250px;"></div>
+	   	<div id="line-chart1" style="height: 250px;"></div>
+	   	<div id="linechart-mini1" style="height: 250px;"></div>
+	   	<div id="pie-chart4" style="height: 220px;"></div>
+	   	<div id="bar-chart1" style="height: 250px;"></div>
+	   	<div id="bar-chart2" style="height: 230px;"></div>
+	   </div>
          
         </div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
- 
+          
     </div>
    
    
@@ -389,6 +321,9 @@
     <script src="../assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
     <script src="../assets/js/main.js" type="text/javascript"></script>
     <script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/raphael/raphael-min.js" type="text/javascript"></script>
+    <script src="../assets/lib/morrisjs/morris.min.js" type="text/javascript"></script>
+    <script src="../assets/js/app-charts-morris.js" type="text/javascript"></script>
     <script src="../assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
     <script src="../assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
     <script src="../assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
@@ -399,11 +334,13 @@
     <script src="../assets/js/app-charts.js" type="text/javascript"></script>
     <script src="../assets/js/app-dashboard.js" type="text/javascript"></script>
     
+    
     <script type="text/javascript">
       $(document).ready(function(){
          //initialize the javascript
          App.init();
          App.charts();
+         App.chartsMorris();
          App.dashboard();
       });
     </script>
