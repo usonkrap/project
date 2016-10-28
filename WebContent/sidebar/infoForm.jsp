@@ -390,12 +390,8 @@
 							<div class="cal-container">
 								<div class="cal-notes">
 									<span class="day">Thursday</span><span class="date">September
-										24</span><span class="title">Notes<span class="icon s7-plus"></span></span>
-									<ul>
-										<li><span class="hour">14h</span><span class="event-name">Meeting
-												with investors</span></li>
-										<li><span class="hour">8h</span><span class="event-name">Dentist
-												date</span></li>
+										24</span><span class="title">Notes</span>
+									<ul id="calendar_note">
 									</ul>
 								</div>
 								<div class="cal-calendar">

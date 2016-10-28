@@ -39,6 +39,10 @@
  		<action name="mainPagePie" class="action.TableAction" method="mainPagePie">
  			<result type="json"></result>
  		</action>
+ 		
+ 		<action name="calendarBillList" class="action.TableAction" method="calendarBillList">
+ 			<result type="json"></result>
+ 		</action>
 	</package>
 </struts>
 
