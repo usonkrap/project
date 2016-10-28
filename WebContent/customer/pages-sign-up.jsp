@@ -51,8 +51,8 @@
     </script>
   </head>
   <body class="am-splash-screen">
-    <div class="am-wrapper am-login am-signup">
-      <div class="am-content" style="background-color: rgba(255, 255, 255, 0);">
+    <div class="am-wrapper am-login am-signup" style="background-color: rgba(255, 255, 255, 0);">
+      <div class="am-content">
         <div class="main-content">
           <div class="login-container sign-up">
             <div class="panel panel-default">
