@@ -38,7 +38,7 @@ var App = (function () {
 
     //Top pie widget 1
     function widget_top_1(){
-    	var tempArray = new Array();
+    	var tempArray = [];
     	$.ajax({
     		url : '../sidebar/mainPagePie',
     		type : 'post',
@@ -46,8 +46,9 @@ var App = (function () {
     		success : function(response) {
     			var category = response.mainPieCategory;
     			var price = response.mainPiePrice;
-    			for(var i = 0; i < category.length; i++){
-    				var tempData = new Object();
+    			var length = category.length;
+    			for(var i = 0; i < length; i++){
+    				var tempData = {};
     				tempData.label = category[i];
     				tempData.data = price[i];
     				tempArray.push(tempData);
@@ -163,7 +164,7 @@ var App = (function () {
 
     	//Calculate the weekday name
     	var d = new Date();
-			var weekday = new Array(7);
+			var weekday = [7];
 			weekday[0]=  "Sunday";
 			weekday[1] = "Monday";
 			weekday[2] = "Tuesday";
@@ -177,7 +178,7 @@ var App = (function () {
 			calNotesDay.html( weekdayName );
 
 			//Calculate the month name
-			var month = new Array();
+			var month = [];
 			month[0] = "January";
 			month[1] = "February";
 			month[2] = "March";
@@ -193,13 +194,14 @@ var App = (function () {
 
 			var monthName = month[d.getMonth()];
 			var monthDay = d.getDate();
-
+			bill_List(d);
 			calNotesDate.html( monthName + " " + monthDay);
 
       if (typeof jQuery.ui != 'undefined') {
         $( ".ui-datepicker" ).datepicker({
         	onSelect: function(s, o){
         		var sd = new Date(s);
+        		bill_List(s);
         		var weekdayName = weekday[sd.getDay()];
         		var monthName = month[sd.getMonth()];
 						var monthDay = sd.getDate();
@@ -209,6 +211,34 @@ var App = (function () {
         	}
         });
       }
+    }
+    
+    
+    //날짜에 맞는 거래내역을 불러오는 function
+    function bill_List(date){
+    	$.ajax({
+    		url : '../sidebar/calendarBillList',
+			method : 'post',
+			data : castingDate(date),
+			dataType : 'json',
+			success : function(response) {
+				var list = response.billList;
+				$('#calendar_note').empty();
+				$.each(list, function(index, value) {
+					$('#calendar_note').append(
+						"<li><span class='hour'>" + value.totalPrice + "</span><span class='event-name'>" + value.storeName + "</span></li>"
+					);
+				});
+			}
+    	});
+    }
+    
+    // Date객체를 변환
+    function castingDate(date){
+    	var data = { 
+			"calendarDate" : date.toString()
+		}
+		return data;
     }
 
     //Fullwidth line chart 1

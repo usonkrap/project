@@ -21,6 +21,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private List<Bill> billList;
 	private String[] mainPieCategory;
 	private String[] mainPiePrice;
+	private String calendarDate;
 	private Map<String, Object> session;
 
 	public String goTable() {
