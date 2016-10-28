@@ -75,9 +75,36 @@ public class TableAction extends ActionSupport implements SessionAware {
 			mainPiePrice[i] = piePrice.get(i);
 		}
 		
-		System.out.println(pieCategory);
-		System.out.println(piePrice);
-		
+		return SUCCESS;
+	}
+	
+	public String calendarBillList(){
+		TableDAO dao = new TableDAO();
+		billList = new ArrayList<>();
+		List<Bill> temp = new ArrayList<>();
+		temp = dao.tableList((String) session.get("loginId"));
+		String date = "";
+		String[] month = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+		String[] month2 = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
+		if(calendarDate.length() > 10){
+			for(int i = 0; i < 12; i++){
+				if(calendarDate.substring(4, 7).equals(month[i])){
+					date = calendarDate.substring(11, 15) + "-" + month2[i] + "-" + calendarDate.substring(8, 10); 
+					break;
+				}
+			}
+		}else{
+			date = calendarDate.substring(6) + "-" + calendarDate.substring(0, 2) + "-" + calendarDate.substring(3, 5);
+		}
+		for (Bill bill : temp) {
+			if(bill.getBillDate().substring(0, 10).equals(date)){
+				bill.setBillDate(date);
+				if(bill.getStoreName().length() > 9){
+//					bill.setStoreName(bill.getStoreName().substring(0, 8) + "...");
+				}
+				billList.add(bill);
+			}
+		}
 		return SUCCESS;
 	}
 
@@ -116,7 +143,6 @@ public class TableAction extends ActionSupport implements SessionAware {
 		this.main = main;
 	}
 
-	
 	public String[] getMainPieCategory() {
 		return mainPieCategory;
 	}
@@ -134,6 +160,17 @@ public class TableAction extends ActionSupport implements SessionAware {
 
 	public void setMainPiePrice(String[] mainPiePrice) {
 		this.mainPiePrice = mainPiePrice;
+	}
+
+	
+
+	public String getCalendarDate() {
+		return calendarDate;
+	}
+
+
+	public void setCalendarDate(String calendarDate) {
+		this.calendarDate = calendarDate;
 	}
 
 
