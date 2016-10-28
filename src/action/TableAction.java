@@ -114,10 +114,8 @@ public class TableAction extends ActionSupport implements SessionAware {
 	public void setMain(MainPage main) {
 		this.main = main;
 	}
-	
-	
 
-
+	
 	public String[] getMainPieCategory() {
 		return mainPieCategory;
 	}
