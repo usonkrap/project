@@ -35,6 +35,10 @@
  		<action name="mainPageLoad" class="action.TableAction" method="mainPageLoad">
  			<result type="json"></result>
  		</action>
+ 		
+ 		<action name="mainPagePie" class="action.TableAction" method="mainPagePie">
+ 			<result type="json"></result>
+ 		</action>
 	</package>
 </struts>
 

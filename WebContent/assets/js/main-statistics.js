@@ -4,7 +4,7 @@
 
 $(document).ready(function() {
 	$.ajax({
-		url : '../table/mainPageLoad',
+		url : '../sidebar/mainPageLoad',
 		type : 'post',
 		dataType : 'json',
 		success : function(response) {

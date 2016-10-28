@@ -96,5 +96,21 @@ public class TableDAO {
 		}
 		return billList;
 	}
+	
+	
+	public List<Map<String, Object>> mainPagePie(String customerId){
+		List<Map<String, Object>> dataList = null;
+
+		try {
+			ss = factory.openSession();
+			dataList = ss.selectList("table.mainPagePie", customerId);
+			ss.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}
+		return dataList;
+	}
 
 }
