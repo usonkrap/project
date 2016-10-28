@@ -36,53 +36,55 @@ var App = (function () {
       });
     }
 
-    
-    
     //Top pie widget 1
     function widget_top_1(){
-	    
-	    var data = [
-	                { label: "외식", data: 30 },
-			    	{ label: "식음료", data: 20 },
-			    	{ label: "교통", data: 40 },
-			    	{ label: "패션/미용", data: 10},
-			    	{ label: "문화생활", data: 50},
-			    	{ label: "생활용품", data: 35},
-			    	{ label: "사회생활", data: 20},
-			    	{ label: "교육", data: 1},
-			    	{ label: "주거/관리/통신", data: 15},
-			    	{ label: "의료/건강", data: 5},
-			    	{ label: "금융", data: 2},
-			    	{ label: "기타", data: 10}
-	    ];
-
-      var color1 = tinycolor( App.color.primary ).lighten( 5 ).toString();
-      var color2 = App.color.alt2;
-      var color3 = App.color.alt1;
-
-      var legendContainer = $("#widget-top-1").parent().next().find(".legend");
-
-	    $.plot('#widget-top-1', data, {
-		    series: {
-					pie: {
-						show: true,
-						highlight: {
-							opacity: 0.1
-						}
-		      }
-		    },
-		    grid:{
-		    	hoverable: true
-		    },
-		    legend:{
-		    	container: legendContainer
-		    },
-        colors: [ color1, color2, color3 ]  
-			});
+    	var tempArray = new Array();
+    	$.ajax({
+    		url : '../sidebar/mainPagePie',
+    		type : 'post',
+    		dataType : 'json',
+    		success : function(response) {
+    			var category = response.mainPieCategory;
+    			var price = response.mainPiePrice;
+    			for(var i = 0; i < category.length; i++){
+    				var tempData = new Object();
+    				tempData.label = category[i];
+    				tempData.data = price[i];
+    				tempArray.push(tempData);
+    			}
+    			widget_top_1_call(tempArray);
+    		}
+    	});
     }
+    function widget_top_1_call(tempArray){
+    	var data = tempArray;
+    	var color1 = tinycolor( App.color.primary ).lighten( 5 ).toString();
+        var color2 = App.color.alt2;
+        var color3 = App.color.alt1;
 
+        var legendContainer = $("#widget-top-1").parent().next().find(".legend");
+
+  	    $.plot('#widget-top-1', data, {
+  		    series: {
+  					pie: {
+  						show: true,
+  						highlight: {
+  							opacity: 0.1
+  						}
+  		      }
+  		    },
+  		    grid:{
+  		    	hoverable: true
+  		    },
+  		    legend:{
+  		    	container: legendContainer
+  		    },
+          colors: [ color1, color2, color3]  
+  			});
+    }
     //Top pie widget 2
     function widget_top_2(){
+	    
 	    var data = [
 	    	{ label: "Direct Access", data: 20 },
 	    	{ label: "Advertisment", data: 15 },

@@ -18,8 +18,8 @@
   </head>
   <body class="am-splash-screen">
     <div class="am-wrapper am-login">
-      <div class="am-content">
-        <div class="main-content" style="background-color: rgba(255, 255, 255, 0);">
+      <div class="am-content" style="background-color: rgba(255, 255, 255, 0);">
+        <div class="main-content" >
           <div class="login-container">
             <div class="panel panel-default">
               <div class="panel-heading"><img src="../assets/img/logo-full-retina.png" alt="logo" width="150px" height="39px" class="logo-img"><span>Please enter your user information.</span></div>
@@ -28,12 +28,12 @@
                   <div class="login-form">
                     <div class="form-group">
                       <div id="email-handler" class="input-group"><span class="input-group-addon"><i class="icon s7-mail"></i></span>
-                        <input type="email" name="customer.cust_email" data-parsley-trigger="change" data-parsley-errors-messages-disabled="true" data-parsley-class-handler="#email-handler" required="" placeholder="E-mail" autocomplete="off" class="form-control">
+                        <input type="email" value="master@master.com" name="customer.cust_email" data-parsley-trigger="change" data-parsley-errors-messages-disabled="true" data-parsley-class-handler="#email-handler" required="" placeholder="E-mail" autocomplete="off" class="form-control">
                       </div>
                     </div>
                     <div class="form-group">
                       <div class="input-group"><span class="input-group-addon"><i class="icon s7-lock"></i></span>
-                        <input id="password" name="customer.cust_password" type="password" placeholder="Password" class="form-control">
+                        <input id="password" value="master" name="customer.cust_password" type="password" placeholder="Password" class="form-control">
                       </div>
                     </div>
                     <div class="form-group login-submit">

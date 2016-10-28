@@ -8114,6 +8114,7 @@ button:focus {
 .am-wrapper {
   min-height: 100%;
   padding-top: 80px;
+  background-color: aliceblue;
 }
 @media (max-width: 767px) {
   .am-wrapper {
@@ -9855,7 +9856,8 @@ button:focus {
 .am-content {
   position: relative;
   left: 0;
-  margin-left: 100px;
+  margin-top: 3%;
+  margin-left: 130px;
   min-height: 100%;
 }
 @media (max-width: 767px) {
@@ -9875,8 +9877,6 @@ button:focus {
   padding-left: 35px;
   padding-right: 35px;
   padding-top: 35px;
-  margin-left: 30px;
-  background-color: aliceblue;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-content {
