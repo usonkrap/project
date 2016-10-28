@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -135,7 +136,7 @@
 				<div class="am-logo"></div>
 				<ul class="sidebar-elements">
 
-					<li class="parent active"><a href="../sidebar/infoForm.action"><i class="icon s7-user"></i><span>nickname님의 정보</span></a> 
+					<li class="parent active"><a href="../sidebar/infoForm.action"><i class="icon s7-user"></i><span>님의 정보</span></a> 
 					<!-- <ul class="sub-menu"><li class="title">소비 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">

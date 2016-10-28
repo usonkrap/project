@@ -98,7 +98,7 @@
 				<div class="am-logo"></div>
 				<ul class="sidebar-elements">
 
-					<li class="parent active"><a href="../table/infoForm.action"><i class="icon s7-user"></i><span>nickname님의 정보</span></a> 
+					<li class="parent active"><a href="../sidebar/infoForm.action"><i class="icon s7-user"></i><span>nickname님의 정보</span></a> 
 							</li>
 
 					<li class="parent"><a href="../sidebar/spendListForm.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
