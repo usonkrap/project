@@ -1,5 +1,6 @@
 package action;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -18,6 +19,8 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private Item item;
 	private MainPage main;
 	private List<Bill> billList;
+	private String[] mainPieCategory;
+	private String[] mainPiePrice;
 	private Map<String, Object> session;
 
 	public String goTable() {
@@ -50,6 +53,29 @@ public class TableAction extends ActionSupport implements SessionAware {
 		main.setMostSpendPrice((String)result3.get("TOTALPRICE"));
 		main.setMostSpendStore((String)result3.get("STORENAME"));
 		main.setLatestBills(dao.latestBills(cust_email));
+		
+		return SUCCESS;
+	}
+	
+	public String mainPagePie(){
+		TableDAO dao = new TableDAO();
+		ArrayList<String> pieCategory = new ArrayList<>();
+		ArrayList<String> piePrice = new ArrayList<>();
+		List<Map<String, Object>> data = dao.mainPagePie((String)session.get("loginId"));
+		for (Map<String, Object> map : data) {
+			pieCategory.add((String) map.get("CATEGORY"));
+			piePrice.add(String.valueOf(map.get("TOTAL")));
+		}
+		mainPieCategory = new String[pieCategory.size()];
+		mainPiePrice = new String[piePrice.size()];
+		
+		for(int i = 0; i < mainPieCategory.length; i++){
+			mainPieCategory[i] = pieCategory.get(i);
+			mainPiePrice[i] = piePrice.get(i);
+		}
+		
+		System.out.println(pieCategory);
+		System.out.println(piePrice);
 		
 		return SUCCESS;
 	}
@@ -87,6 +113,26 @@ public class TableAction extends ActionSupport implements SessionAware {
 
 	public void setMain(MainPage main) {
 		this.main = main;
+	}
+
+	
+	public String[] getMainPieCategory() {
+		return mainPieCategory;
+	}
+
+
+	public void setMainPieCategory(String[] mainPieCategory) {
+		this.mainPieCategory = mainPieCategory;
+	}
+
+
+	public String[] getMainPiePrice() {
+		return mainPiePrice;
+	}
+
+
+	public void setMainPiePrice(String[] mainPiePrice) {
+		this.mainPiePrice = mainPiePrice;
 	}
 
 

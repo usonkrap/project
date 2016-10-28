@@ -36,4 +36,8 @@
 	<select id="latestBills" resultType="bill" parameterType="String">
 	select * from (select storename, to_char(billdate, 'YYYY-MM-DD HH24:mm') billdate, totalprice from bill where customerId = #{loginId} order by BILLDATE desc) where rownum between 1 and 5
 	</select>
+	
+	<select id="mainPagePie" resultType="hashmap" parameterType="String">
+	select category, sum(price) as total from ( select  m.category_name	as category, i.price as price from item i , major_CATEGORY m where i.customerid = #{customerId} and substr(i.category, 1, 3) = m.category_num ) group by category order by total desc
+	</select>
 </mapper>
