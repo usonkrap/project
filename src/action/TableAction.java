@@ -25,13 +25,10 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private Map<String, Object> session;
 
 	public String goTable() {
-
 		TableDAO dao = new TableDAO();
 		billList = dao.tableList((String) session.get("loginId"));
-
-
 		return SUCCESS;
-	}
+	}//end of goTable
 	
 	
 	public String mainPageLoad(){
@@ -49,9 +46,8 @@ public class TableAction extends ActionSupport implements SessionAware {
 		main.setMostSpendPrice((String)result3.get("TOTALPRICE"));
 		main.setMostSpendStore((String)result3.get("STORENAME"));
 		main.setLatestBills(dao.latestBills(cust_email));
-		
 		return SUCCESS;
-	}
+	}//end of mainPageLoad
 	
 	public String mainPagePie(){
 		TableDAO dao = new TableDAO();
@@ -61,118 +57,48 @@ public class TableAction extends ActionSupport implements SessionAware {
 		for (Map<String, Object> map : data) {
 			pieCategory.add((String) map.get("CATEGORY_NAME"));
 			piePrice.add(String.valueOf(map.get("TOTAL")));
-		}
+		}//for
 		mainPieCategory = new String[pieCategory.size()];
 		mainPiePrice = new String[piePrice.size()];
-		
 		for(int i = 0; i < mainPieCategory.length; i++){
 			mainPieCategory[i] = pieCategory.get(i);
 			mainPiePrice[i] = piePrice.get(i);
-		}
-		
+		}//for
 		return SUCCESS;
-	}
+	}//end of mainPagePie
 	
 	public String calendarBillList(){
 		TableDAO dao = new TableDAO();
 		billList = new ArrayList<>();
-		List<Bill> temp = new ArrayList<>();
-		temp = dao.tableList((String) session.get("loginId"));
-		String date = "";
-		String[] month = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
-		String[] month2 = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
-		if(calendarDate.length() > 10){
-			for(int i = 0; i < 12; i++){
-				if(calendarDate.substring(4, 7).equals(month[i])){
-					date = calendarDate.substring(11, 15) + "-" + month2[i] + "-" + calendarDate.substring(8, 10); 
-					break;
-				}
-			}
-		}else{
-			date = calendarDate.substring(6) + "-" + calendarDate.substring(0, 2) + "-" + calendarDate.substring(3, 5);
-		}
-		for (Bill bill : temp) {
-			if(bill.getBillDate().substring(0, 10).equals(date)){
-				bill.setBillDate(date);
-				if(bill.getStoreName().length() > 9){
-//					bill.setStoreName(bill.getStoreName().substring(0, 8) + "...");
-				}
-				billList.add(bill);
-			}
-		}
+		billList = dao.tableList((String) session.get("loginId"),calendarDate);
+		System.out.println(billList);
 		return SUCCESS;
-	}
+	}//end of calendarBillList
 
 	////////////////////////////
 
-	public Bill getBill() {
-		return bill;
-	}
-
-	public void setBill(Bill bill) {
-		this.bill = bill;
-	}
-
-	public Item getItem() {
-		return item;
-	}
-
-	public void setItem(Item item) {
-		this.item = item;
-	}
-
-	public List<Bill> getBillList() {
-		return billList;
-	}
-
-	public void setBillList(List<Bill> billList) {
-		this.billList = billList;
-	}
+	public Bill getBill() {return bill;}
+	public void setBill(Bill bill) {this.bill = bill;}
 	
-	public MainPage getMain() {
-		return main;
-	}
+	public Item getItem() {return item;}
+	public void setItem(Item item) {this.item = item;}
 
-
-	public void setMain(MainPage main) {
-		this.main = main;
-	}
-
-	public String[] getMainPieCategory() {
-		return mainPieCategory;
-	}
-
-
-	public void setMainPieCategory(String[] mainPieCategory) {
-		this.mainPieCategory = mainPieCategory;
-	}
-
-
-	public String[] getMainPiePrice() {
-		return mainPiePrice;
-	}
-
-
-	public void setMainPiePrice(String[] mainPiePrice) {
-		this.mainPiePrice = mainPiePrice;
-	}
-
+	public List<Bill> getBillList() {return billList;}
+	public void setBillList(List<Bill> billList) {this.billList = billList;}
 	
+	public MainPage getMain() {return main;}
+	public void setMain(MainPage main) {this.main = main;}
 
-	public String getCalendarDate() {
-		return calendarDate;
-	}
+	public String[] getMainPieCategory() {return mainPieCategory;}
+	public void setMainPieCategory(String[] mainPieCategory) {this.mainPieCategory = mainPieCategory;}
 
+	public String[] getMainPiePrice() {return mainPiePrice;}
+	public void setMainPiePrice(String[] mainPiePrice) {this.mainPiePrice = mainPiePrice;}
 
-	public void setCalendarDate(String calendarDate) {
-		this.calendarDate = calendarDate;
-	}
-
+	public String getCalendarDate() {return calendarDate;}
+	public void setCalendarDate(String calendarDate) {this.calendarDate = calendarDate;}
 
 	@Override
-	public void setSession(Map<String, Object> session) {
-		this.session = session;
+	public void setSession(Map<String, Object> session) {this.session = session;}
 
-	}
-
-}
+}//end of class

@@ -1,6 +1,7 @@
 package dao;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -14,29 +15,50 @@ import vo.Item;
 public class TableDAO {
 	SqlSessionFactory factory = MybatisConfig.getSqlSessionFactory();
 	SqlSession ss;
-
+	
+	/*
+	 * 특정 유저의 전체 거래 목록을 뽑아줌
+	 */
 	public List<Bill> tableList(String id) {
-
 		List<Bill> billList = new ArrayList<>();
-
 		try {
 			ss = factory.openSession();
 			billList = ss.selectList("table.billList", id);
 			for (Bill bill : billList) {
 				List<Item> itemList = ss.selectList("table.itemList", bill.getBillNo());
 				bill.setItemList(itemList);
-			}
-
+			}//for
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			ss.close();
-		}
-
+		}//try catch finally
 		return billList;
-
-	}
-
+	}//end of tableList
+	
+	/*
+	 *특정 유저의 특정 거래일의 목록을 뽑아줌 
+	 */
+	public List<Bill> tableList(String id,String date) {
+		List<Bill> billList = new ArrayList<>();
+		Map<String, Object>map = new HashMap<>();
+		map.put("id", id);
+		map.put("dates", date);
+		try {
+			ss = factory.openSession();
+			billList = ss.selectList("table.billListForDate", map);
+			for (Bill bill : billList) {
+				List<Item> itemList = ss.selectList("table.itemList", bill.getBillNo());
+				bill.setItemList(itemList);
+			}//for
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}//try catch finally
+		return billList;
+	}//end of tableList
+	
 	// 가장 많이 간 가게
 	public Map<String, Object> mostVisitStore(String customerId) {
 		Map<String, Object> storeName = null;
@@ -63,9 +85,9 @@ public class TableDAO {
 			e.printStackTrace();
 		} finally {
 			ss.close();
-		}
+		}//try catch finally
 		return mostSpendDay;
-	}
+	}//end of mostSpendDay
 	
 	// 최고 소비액
 	public Map<String, Object> mostSpendBill(String customerId){
