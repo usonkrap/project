@@ -8,7 +8,7 @@ var App = (function () {
 		      var color2 = tinycolor( App.color.alt4 ).lighten( 6.5 );
 
 		      var data = {
-		        labels: ["January", "February", "March", "April", "May", "June", "July"],
+		        labels: ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"],
 		        datasets: [
 		          {
 		            label: "My First dataset",
@@ -40,20 +40,22 @@ var App = (function () {
 		}
 		
 		 function donut_chart(){
-			  	var color1 = App.color.alt2;
+			  var color1 = App.color.alt2;
 		      var color2 = App.color.alt4;
 		      var color3 = App.color.alt3;
 		      var color4 = App.color.alt1;
 		      var color5 = tinycolor( App.color.primary ).lighten( 5 ).toString();
+		      
 
 		  	  Morris.Donut({
 				    element: 'donut',
 				    data: [
-				      {label: 'KFC', value: 43 },
-				      {label: '스타벅스', value: 35 },
-				      {label: 'GS25', value: 17 },
-				      {label: '버거킹', value: 5 }		    ],
-				    colors:[color1, color5, color3, color4],
+				      {label: 'KFC', value: 10 },
+				      {label: '스타벅스', value: 20 },
+				      {label: 'GS25', value: 10 },
+				      {label: '버거킹', value: 55 },
+				      {label: '기타', value: 5 }],
+				    colors:[color5, color1, color3, color4, color2],
 				    formatter: function (y) { return y + "%" }
 				  });
 			  }
@@ -61,15 +63,18 @@ var App = (function () {
 		 
 		 
 		 var tax_data = [
-		       {"period": "2013", "licensed": 400, "sorned": 550},
-		       {"period": "2012", "licensed": 450, "sorned": 400},
-		       {"period": "2011", "licensed": 350, "sorned": 550},
-		       {"period": "2010", "licensed": 500, "sorned": 700},
-		       {"period": "2009", "licensed": 250, "sorned": 380},
-		       {"period": "2008", "licensed": 350, "sorned": 240},
-		       {"period": "2007", "licensed": 180, "sorned": 300},
-		       {"period": "2006", "licensed": 300, "sorned": 250},
-		       {"period": "2005", "licensed": 200, "sorned": 150}
+		       {"period": "1월", "itme1": 150000, "itme2": 85600},
+		       {"period": "2월", "itme1": 210000, "itme2": 95900},
+		       {"period": "3월", "itme1": 156000, "itme2": 83300},
+		       {"period": "4월", "itme1": 111000, "itme2": 82600},
+		       {"period": "5월", "itme1": 123000, "itme2": 85600},
+		       {"period": "6월", "itme1": 150000, "itme2": 85600},
+		       {"period": "7월", "itme1": 124000, "itme2": 40900},
+		       {"period": "8월", "itme1": 213000, "itme2": 65600},
+		       {"period": "9월", "itme1": 221000, "itme2": 55400},
+		       {"period": "10월", "itme1": 190700, "itme2": 65300},
+		       {"period": "11월", "itme1": 156300, "itme2": 75600},
+		       {"period": "12월", "itme1": 198700, "itme2": 95600},
 		  ];
 		 
 		 function line_chart(){
@@ -80,8 +85,8 @@ var App = (function () {
 				    element: 'line',
 				    data: tax_data,
 				    xkey: 'period',
-				    ykeys: ['licensed', 'sorned'],
-				    labels: ['총지출', '총지출'],
+				    ykeys: ['itme1', 'itme2'],
+				    labels: ['카테고리1', '카테고리2'],
 				    lineColors: [color1, color2]
 				  });
 			  }
