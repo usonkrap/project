@@ -80,18 +80,24 @@
 						<ul class="nav navbar-nav navbar-right am-user-nav">
 							<li class="dropdown">
 								<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
-									<img src="../assets/img/cat.jpg"> <!-- 오른쪽 상단 프로필 사진 -->
-									<span class="user-name">nikname</span>
-									<span class="angle-down s7-angle-down"></span>
-								</a>
-								<ul role="menu" class="dropdown-menu"><!--프로필 왼쪽 화살표 눌렀을시 드롭메뉴 -->
-									<!-- href는 링크, span class는 아이콘을 나타냄, 아이콘의 종류는 html\assets\lib\stroke-7\demo.html 참고  -->
-									<li><a href=""> <span class="icon s7-user"></span>내 프로필</a></li>
-					                <li><a href="#"> <span class="icon s7-config"></span>설정</a></li>
-					                <li><a href="#"> <span class="icon s7-help1"></span>도움!</a></li>
-					                <li><a href="#"> <span class="icon s7-power"></span>로그 아웃</a></li>
-								</ul>
-							</li>
+									<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
+								class="user-name">nickname</span> <span
+								class="angle-down s7-angle-down"></span>
+						</a>
+							<ul role="menu" class="dropdown-menu">
+								<!--프로필 왼쪽 화살표 눌렀을시 드롭메뉴 -->
+								<!-- href는 링크, span class는 아이콘을 나타냄, 아이콘의 종류는 html\assets\lib\stroke-7\demo.html 참고  -->
+								<li><a href="#"> <span class="icon s7-user"></span>내
+										프로필
+								</a></li>
+								<li><a href="#"> <span class="icon s7-config"></span>설정
+								</a></li>
+								<%-- <li><a href="#"> <span class="icon s7-help1"></span>도움!
+								</a></li> --%>
+								<li><a href="#"> <span class="icon s7-power"></span>로그
+										아웃
+								</a></li>
+							</ul></li>
 						</ul>
 						
 						<ul class="nav navbar-nav am-nav-right">

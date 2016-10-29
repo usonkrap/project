@@ -17,8 +17,22 @@
     <link rel="stylesheet" type="text/css" href="../assets/lib/select2/css/select2.min.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
+    
+    <link href="../css/general.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
-     </head>
+    
+    <style type="text/css">
+    	.category {
+    		padding: 5%;
+    	}
+    	
+    	.method {
+    		padding: 5%;
+    	}
+    </style>
+    
+    
+    </head>
    <body>
       <div class="am-wrapper"><!--  ??? -->
          <nav class="navbar navbar-default navbar-fixed-top am-top-header"><!-- 상단 적색바 -->
@@ -39,18 +53,24 @@
                   <ul class="nav navbar-nav navbar-right am-user-nav">
                      <li class="dropdown">
                         <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
-                           <!-- <img src="../assets/img/kaho.jpg"> --> <!-- 오른쪽 상단 프로필 사진 -->
-                           <span class="user-name">떼껄룩</span>
-                           <span class="angle-down s7-angle-down"></span>
-                        </a>
-                        <ul role="menu" class="dropdown-menu"><!--프로필 왼쪽 화살표 눌렀을시 드롭메뉴 -->
-                           <!-- href는 링크, span class는 아이콘을 나타냄, 아이콘의 종류는 html\assets\lib\stroke-7\demo.html 참고  -->
-                           <li><a href="#"> <span class="icon s7-user"></span>내 프로필</a></li>
-                               <li><a href="#"> <span class="icon s7-config"></span>설정</a></li>
-                               <li><a href="#"> <span class="icon s7-help1"></span>도움!</a></li>
-                               <li><a href="#"> <span class="icon s7-power"></span>로그 아웃</a></li>
-                        </ul>
-                     </li>
+                        <img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
+								class="user-name">nickname</span> <span
+								class="angle-down s7-angle-down"></span>
+						</a>
+							<ul role="menu" class="dropdown-menu">
+								<!--프로필 왼쪽 화살표 눌렀을시 드롭메뉴 -->
+								<!-- href는 링크, span class는 아이콘을 나타냄, 아이콘의 종류는 html\assets\lib\stroke-7\demo.html 참고  -->
+								<li><a href="#"> <span class="icon s7-user"></span>내
+										프로필
+								</a></li>
+								<li><a href="#"> <span class="icon s7-config"></span>설정
+								</a></li>
+								<%-- <li><a href="#"> <span class="icon s7-help1"></span>도움!
+								</a></li> --%>
+								<li><a href="#"> <span class="icon s7-power"></span>로그
+										아웃
+								</a></li>
+							</ul></li>
                   </ul>
                   
                   <ul class="nav navbar-nav am-nav-right">
@@ -241,10 +261,6 @@
 					<div class="col-sm-6">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<div class="tools">
-									<span class="icon s7-upload"></span><span class="icon s7-edit"></span><span
-										class="icon s7-close"></span>
-								</div>
 								<span class="title">자주 간 매장</span>
 							</div>
 							<div class="panel-body">
@@ -254,26 +270,64 @@
 					</div>
 
 				</div>
-				
-				
+
+
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<div class="tools">
-									<span class="icon s7-upload"></span><span class="icon s7-edit"></span><span
-										class="icon s7-close"></span>
-								</div>
-								<span class="title">월별 지출 비교</span>
+								<span class="title" style="padding: 20px;">월별 지출 비교 <select
+									class="form-control" style="width: 15%; float: right;">
+										<option>2016년</option>
+										<option>2015년</option>
+										<option>2014년</option>
+								</select></span>
 							</div>
 							<div class="panel-body">
 								<div id="line" style="height: 300px;"></div>
 							</div>
 						</div>
 					</div>
-
 				</div>
-        </div><!-- 메인 컨텐츠 끝 -->
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<span class="title">카테고리별 지출</span>
+							</div>
+							<div class="panel-body text-center">
+								<span id="category1" class="category"></span>
+								<span id="category2" class="category"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<span class="title">지불 방법</span>
+							</div>
+							<div class="panel-body text-center">
+								<div><img class="rotate method" src="../img/icon/credit-card.png">........80%</div>
+								<div><img class="rotate method" src="../img/icon/money.png">........20%</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<span class="title">시간대별</span>
+							</div>
+							<div class="panel-body text-center">
+							
+							
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
  
     </div>
@@ -285,24 +339,22 @@
     <script src="../assets/js/main.js" type="text/javascript"></script>
     <script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
     
-    <script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-    <script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-    <script src="assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
-    <script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+    <script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/countup/countUp.min.js" type="text/javascript"></script>
    
     
     <script src="../assets/lib/raphael/raphael-min.js" type="text/javascript"></script>
     <script src="../assets/lib/morrisjs/morris.min.js" type="text/javascript"></script>
     <script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
     <script src="../assets/js/app-personalStat.js" type="text/javascript"></script>
-   <!--  <script src="../assets/js/app-charts-morris.js" type="text/javascript"></script>
+	<script src="../assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
     <script src="../assets/js/app-charts-sparkline.js" type="text/javascript"></script>
-     -->
-    
-    
+        
     
     <script type="text/javascript">
       $(document).ready(function(){

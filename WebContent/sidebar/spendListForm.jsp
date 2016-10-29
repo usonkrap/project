@@ -56,8 +56,8 @@
 					<ul class="nav navbar-nav navbar-right am-user-nav">
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
-								<img src="../assets/img/cat.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
-								class="user-name">떼껄룩</span> <span
+								<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
+								class="user-name">nickname</span> <span
 								class="angle-down s7-angle-down"></span>
 						</a>
 							<ul role="menu" class="dropdown-menu">
@@ -68,8 +68,8 @@
 								</a></li>
 								<li><a href="#"> <span class="icon s7-config"></span>설정
 								</a></li>
-								<li><a href="#"> <span class="icon s7-help1"></span>도움!
-								</a></li>
+								<%-- <li><a href="#"> <span class="icon s7-help1"></span>도움!
+								</a></li> --%>
 								<li><a href="#"> <span class="icon s7-power"></span>로그
 										아웃
 								</a></li>

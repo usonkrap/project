@@ -105,10 +105,31 @@ var App = (function () {
 				    parseTime: false
 				    	
 				  });
-			  }
-		 
-		 
+		}
+
+
+		var color1Src = tinycolor(App.color.primary);
+		var color2Src = tinycolor(App.color.alt1);
+		var color3Src = tinycolor(App.color.alt2);
+		var color4Src = tinycolor(App.color.alt3);
+		var color1 = color1Src.toString();
+		var color2 = color2Src.toString();
+		var color3 = color3Src.toString();
+		var color4 = color4Src.toString();
 		
+		$('#category1').sparkline([ 45000, 50000, 76000, 80000 ], {
+			type : 'pie',
+			sliceColors : [ color4, color3, color2, color1 ],
+			height : '200px'
+		});
+		
+		$('#category2').sparkline([ 80000, 30000, 40000 ], {
+			type : 'pie',
+			sliceColors : [ color3, color2, color1 ],
+			height : '200px'
+		});
+
+
 		rader_chart();
 		donut_chart();
 		line_chart();
