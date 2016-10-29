@@ -29,6 +29,7 @@
 	<mappers>
 		<mapper resource="mapper/customerMapper.xml"/>
 		<mapper resource="mapper/tableMapper.xml"/>
+		<mapper resource="mapper/billMapper.xml"/>
 	</mappers>
 
 </configuration>

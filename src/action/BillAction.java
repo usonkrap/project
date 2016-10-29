@@ -12,8 +12,11 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import dao.BillDAO;
 import util.BillDetection;
 import util.FileService;
+import util.LocalSearch;
+import util.ShoppingSearch;
 import vo.Bill;
 import vo.Item;
 
@@ -82,10 +85,34 @@ public class BillAction extends ActionSupport implements SessionAware {
 		String customerId = (String) session.get("loginId");
 
 		List<Item> itemList = new ArrayList();
+		LocalSearch local = new LocalSearch();
+		ShoppingSearch shopping = null;
+		String category = "";
+		boolean restaurantflag = false;
+		BillDAO dao = new BillDAO();
+		
+		category = local.searchLocalCategory(bill.getStoreName());
+		if(!category.equals("")){
+			category = dao.searchRestaurant(category);
+			restaurantflag = true;
+		}else{
+			shopping = new ShoppingSearch();
+		}
 
 		for (int i = 0; i < itemName.size(); i++) {
 			Item item = new Item(itemName.get(i), itemPrice.get(i));
 			item.setCustomerId(customerId);
+			if(restaurantflag){
+				item.setCategory(category);
+			}else{
+				category = shopping.searchShoppingCategory(item.getName());
+				if(category.equals("null")){
+					item.setCategory("L99M99");
+				}else{
+					category = dao.searchItem(category);
+					item.setCategory(category);
+				}
+			}
 			itemList.add(item);
 		}
 		
