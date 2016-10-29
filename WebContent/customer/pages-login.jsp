@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
   </head>
   <body class="am-splash-screen">
-    <div class="am-wrapper am-login" style="background-color: rgba(255, 255, 255, 0);">
-      <div class="am-content">
+    <div class="am-wrapper am-login">
+      <div class="am-content" style="background-color: rgba(255, 255, 255, 0);">
         <div class="main-content" >
           <div class="login-container">
             <div class="panel panel-default">

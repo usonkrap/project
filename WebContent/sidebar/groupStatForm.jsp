@@ -9,19 +9,18 @@
     <meta name="author" content="">
     <title>연습용</title>
     <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/style.css"/>
-    <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/material-icons.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.nanoscroller/css/nanoscroller.css"/><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="../script/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/morrisjs/morris.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/select2/css/select2.min.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
   	</head>
 	<body>
-		<div class="am-wrapper"><!--  ??? -->
+		<div class="am-wrapper	 am-white-header" ><!--  ??? -->
 			<nav class="navbar navbar-default navbar-fixed-top am-top-header"><!-- 상단 적색바 -->
 				<div class="container-fluid"><!--  ??? -->
 					<div class="navbar-header"><!--  ??? -->
@@ -40,7 +39,7 @@
 						<ul class="nav navbar-nav navbar-right am-user-nav">
 							<li class="dropdown">
 								<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
-									<img src="assets/img/cat.jpg"> <!-- 오른쪽 상단 프로필 사진 -->
+									<img src="../assets/img/cat.jpg"> <!-- 오른쪽 상단 프로필 사진 -->
 									<span class="user-name">nikname</span>
 									<span class="angle-down s7-angle-down"></span>
 								</a>
@@ -201,10 +200,21 @@
 	   <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
           <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
-          
-         
-         
-         
+                  
+                  
+             <div class="col-sm-12">
+              <div class="panel panel-default">
+                <div class="panel-heading"> 
+                  <span class="title">Bar Chart</span>
+                </div>
+                <div class="panel-body">
+                  <div id="groupStat" style="height: 400px;"></div>
+                </div>
+              </div>
+            </div>
+            
+            성별, 연령별, 
+                  
         </div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
  
@@ -215,32 +225,18 @@
     <script src="../assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
     <script src="../assets/js/main.js" type="text/javascript"></script>
     <script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.min.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-uk-mill-en.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-fr-merc-en.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-us-il-chicago-mill-en.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-au-mill-en.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-in-mill-en.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-map.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-ca-lcc-en.js" type="text/javascript"></script>
-    <script src="../assets/lib/countup/countUp.min.js" type="text/javascript"></script>
-    <script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
-    <script src="../assets/js/app-dashboard.js" type="text/javascript"></script>
+    
+    <script src="../assets/lib/raphael/raphael-min.js" type="text/javascript"></script>
+    <script src="../assets/lib/morrisjs/morris.min.js" type="text/javascript"></script>
+    <script src="../assets/js/app-groupStat.js" type="text/javascript"></script>
+    
+    
     
     <script type="text/javascript">
       $(document).ready(function(){
       	//initialize the javascript
       	App.init();
-      	App.dashboard();
+      	App.groupStat();
       });
     </script>
 	</body>

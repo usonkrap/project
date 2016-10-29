@@ -1158,7 +1158,6 @@ body {
   font-size: 13px;
   line-height: 1.42857143;
   color: #555555;
-  background-color: #f0f0f0;
 }
 input,
 button,
@@ -8125,7 +8124,7 @@ button:focus {
 	[Top header]
 */
 .am-top-header {
-  background-color: #56c3e7;
+  background-color: #ef6262;
   border: 0;
   margin-bottom: 0;
 }
@@ -9857,7 +9856,6 @@ button:focus {
   left: 0;
   margin-left: 130px;
   min-height: 100%;
-  background-color: aliceblue;
   
 }
 @media (max-width: 767px) {
