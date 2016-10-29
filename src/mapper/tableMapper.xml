@@ -3,41 +3,96 @@
 <mapper namespace="table">
 
 	<select id="billList" resultType="Bill" parameterType="String">
-		select * from bill where customerId = #{loginId} order by BILLDATE desc
+		select  * 
+		from 	bill 
+		where   customerId = #{loginId}
+		order by BILLDATE desc
+	</select>
+	
+	<select id="billListForDate" resultType="Bill" parameterType="Map">
+		select  * 
+		from 	bill 
+		where   customerId = #{id}
+		and     TO_CHAR(BILLDATE, 'MM/DD/YYYY') like #{dates}
+		order by BILLDATE desc
 	</select>
 
 	<select id="itemList" resultType="Item" parameterType="int">
-		select   i.itemno				as itemNo
+		select   i.itemno			as itemNo
 			, i.billno				as billNo
 	   		, i.customerid			as customerNd
 	   		, s.sub_category_name	as category
-	   		, i.name					as name
+	   		, i.name				as name
 	   		, i.price 				as price
 		from item i , SUB_CATEGORY s
 		where billno = #{billno}
 		and i.category = s.sub_category_num 
 	</select>
 
-	<select id="mostVisitStore" resultType="hashmap"
-		parameterType="String">
-		select * from (select storename, count(*) count from bill where customerId = #{customerId} group by storename order by count desc) where rownum = 1
+	<select id="mostVisitStore" resultType="hashmap" parameterType="String">
+		select *
+		from  (select  storename
+		              ,count(*) count 
+		       from bill
+		       where customerId = #{customerId} 
+		       group by storename
+		       order by count desc)
+		where rownum = 1
 	</select>
 	
-	<select id="mostSpendDay" resultType="hashmap"
-		parameterType="String">
-		select * from (select b.billdate billdate, to_char(sum(b.totalprice), '999,999,999,999,999') sum, count(*) count from (select to_char(billDate, 'YYYY-MM-DD') billDate, totalprice from bill where customerId = #{customerId}) b group by b.billdate order by sum(b.totalprice) desc) where rownum = 1
+	<select id="mostSpendDay" resultType="hashmap" parameterType="String">
+		select *
+		from (select   b.billdate billdate
+					  ,to_char(sum(b.totalprice)
+					  ,'999,999,999,999,999') sum
+					  , count(*) count
+			  from (select  to_char(billDate, 'YYYY-MM-DD') billDate
+			        	   ,totalprice
+			        from bill
+			        where customerId = #{customerId}) b
+              group by b.billdate
+              order by sum(b.totalprice) desc)
+        where rownum = 1
 	</select>
 	
-	<select id="mostSpendBill" resultType="hashmap"
-		parameterType="String">
-		select * from (select storename, to_char(totalprice, '999,999,999,999,999') totalprice from bill where customerId = #{customerId} order by totalprice desc) where rownum = 1
+	<select id="mostSpendBill" resultType="hashmap"	parameterType="String">
+		select *
+		from (select storename 
+					 ,to_char(totalprice, '999,999,999,999,999') totalprice
+		      from bill
+		      where customerId = #{customerId}
+		      order by totalprice desc)
+		where rownum = 1
 	</select>
 	
 	<select id="latestBills" resultType="bill" parameterType="String">
-	select * from (select storename, to_char(billdate, 'YYYY-MM-DD HH24:mm') billdate, totalprice from bill where customerId = #{loginId} order by BILLDATE desc) where rownum between 1 and 5
+	select *
+	from (select  storename
+				 ,to_char(billdate, 'YYYY-MM-DD HH24:mm') billdate
+				 ,totalprice
+		  from bill
+		  where customerId = #{loginId}
+		  order by BILLDATE desc)
+	where rownum between 1 and 5
 	</select>
 	
 	<select id="mainPagePie" resultType="hashmap" parameterType="String">
-	select b.category_name as category_name, nvl(a.total, 0) as total from(select category, sum(price) as total from (select m.category_name as category, i.price as price from (select billno from bill where customerid = #{customerId} and billdate between add_months(billdate, -1) and sysdate) bill, item i, major_category m where i.billno = bill.billno and substr(i.category, 1, 3) = m.category_num) group by category) a, major_category b where a.category(+) = b.category_name
+	select   b.category_name as category_name
+	  		,nvl(a.total, 0) as total
+	from (select category
+	 			 ,sum(price) as total
+	 	  from  (select m.category_name as category
+	 	  		 ,i.price as price
+	 	  		 from  (select billno 
+	 	  		 		from bill
+	 	  		 		where customerid = #{customerId}
+	 	  		 		and billdate between add_months(billdate, -1) and sysdate) bill
+	 	  		 		,item i
+	 	  		 		, major_category m
+	 	  		 where i.billno = bill.billno
+	 	  		 and substr(i.category, 1, 3) = m.category_num)
+	 	  		 group by category) a
+	 	       , major_category     b
+	where a.category(+) = b.category_name
 	</select>
 </mapper>
