@@ -33,6 +33,10 @@
 				/sidebar/infoForm.jsp
 			</result>
 		</action>
+		
+		<action name="profile">
+			<result>/customer/profileForm.jsp</result>
+		</action>
 
 	</package>
 </struts>

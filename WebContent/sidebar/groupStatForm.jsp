@@ -70,7 +70,7 @@
 						</div>
 						<a href="#" class="am-toggle-left-sidebar navbar-toggle collapsed">
 						</a>
-						<a href="index.html" class="navbar-brand"><!-- 메인 페이지 링크 및 로고 표시 --></a>
+						<a href="../sidebar/main.action" class="navbar-brand"><!-- 메인 페이지 링크 및 로고 표시 --></a>
 					</div>
 					
 					<a href="#" data-toggle="collapse" data-target="#am-navbar-collapse" class="am-toggle-top-header-menu collapsed">
@@ -87,7 +87,7 @@
 							<ul role="menu" class="dropdown-menu">
 								<!--프로필 왼쪽 화살표 눌렀을시 드롭메뉴 -->
 								<!-- href는 링크, span class는 아이콘을 나타냄, 아이콘의 종류는 html\assets\lib\stroke-7\demo.html 참고  -->
-								<li><a href="#"> <span class="icon s7-user"></span>내
+								<li><a href="../customer/profile.action"> <span class="icon s7-user"></span>내
 										프로필
 								</a></li>
 								<li><a href="#"> <span class="icon s7-config"></span>설정

@@ -31,6 +31,10 @@
  			<result>/sidebar/locationForm.jsp</result>
  		</action>
  		
+ 		<action name="main">
+ 			<result>/sidebar/main.jsp</result>
+ 		</action>
+ 		
  		<!-- main.jsp 통계 -->
  		<action name="mainPageLoad" class="action.TableAction" method="mainPageLoad">
  			<result type="json"></result>
