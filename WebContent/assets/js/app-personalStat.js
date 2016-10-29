@@ -63,18 +63,18 @@ var App = (function () {
 		 
 		 
 		 var tax_data = [
-		       {"period": "1월", "itme1": 150000, "itme2": 85600},
-		       {"period": "2월", "itme1": 210000, "itme2": 95900},
-		       {"period": "3월", "itme1": 156000, "itme2": 83300},
-		       {"period": "4월", "itme1": 111000, "itme2": 82600},
-		       {"period": "5월", "itme1": 123000, "itme2": 85600},
-		       {"period": "6월", "itme1": 150000, "itme2": 85600},
-		       {"period": "7월", "itme1": 124000, "itme2": 40900},
-		       {"period": "8월", "itme1": 213000, "itme2": 65600},
-		       {"period": "9월", "itme1": 221000, "itme2": 55400},
-		       {"period": "10월", "itme1": 190700, "itme2": 65300},
-		       {"period": "11월", "itme1": 156300, "itme2": 75600},
-		       {"period": "12월", "itme1": 198700, "itme2": 95600},
+		       {"month": "1월", "item1": 150000, "item2": 85600},
+		       {"month": "2월", "item1": 210000, "item2": 95900},
+		       {"month": "3월", "item1": 156000, "item2": 83300},
+		       {"month": "4월", "item1": 111000, "item2": 82600},
+		       {"month": "5월", "item1": 123000, "item2": 85600},
+		       {"month": "6월", "item1": 150000, "item2": 85600},
+		       {"month": "7월", "item1": 124000, "item2": 40900},
+		       {"month": "8월", "item1": 213000, "item2": 65600},
+		       {"month": "9월", "item1": 221000, "item2": 55400},
+		       {"month": "10월", "item1": 190700, "item2": 65300},
+		       {"month": "11월", "item1": 156300, "item2": 75600},
+		       {"month": "12월", "item1": 198700, "item2": 95600},
 		  ];
 		 
 		 function line_chart(){
@@ -84,10 +84,12 @@ var App = (function () {
 			  	new Morris.Line({
 				    element: 'line',
 				    data: tax_data,
-				    xkey: 'period',
-				    ykeys: ['itme1', 'itme2'],
+				    xkey: 'month',
+				    ykeys: ['item1', 'item2'],
 				    labels: ['카테고리1', '카테고리2'],
-				    lineColors: [color1, color2]
+				    lineColors: [color1, color2],
+				    parseTime: false
+				    	
 				  });
 			  }
 		 

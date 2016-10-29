@@ -248,7 +248,7 @@
 								<span class="title">월별 지출 비교</span>
 							</div>
 							<div class="panel-body">
-								<div id="line" style="height: 250px;"></div>
+								<div id="line" style="height: 300px;"></div>
 							</div>
 						</div>
 					</div>
