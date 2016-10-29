@@ -1,8 +1,11 @@
 package action;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.struts2.interceptor.SessionAware;
 
@@ -23,13 +26,35 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private String[] mainPiePrice;
 	private String calendarDate;
 	private Map<String, Object> session;
+	private Double[] dayRecentAver;
+	private Double[] dayTotalAver;
+
 
 	public String goTable() {
 		TableDAO dao = new TableDAO();
 		billList = dao.tableList((String) session.get("loginId"));
+		 raderChart();
 		return SUCCESS;
 	}//end of goTable
 	
+	
+	public String raderChart(){
+		TableDAO dao = new TableDAO();
+		List<List<Double>> lists =  dao.raderChart((String) session.get("loginId"));
+		dayTotalAver = new Double[7];
+		dayRecentAver = new Double[7];
+		for(int i = 0; i<lists.size(); i++){
+			List<Double> littles = lists.get(i);
+			for(int ii=0; ii< littles.size(); ii++ ){
+				if(i == 0){
+					dayTotalAver[ii] = littles.get(ii);
+				}else{
+					dayRecentAver[ii] = littles.get(ii);
+				}//if else
+			}//for
+		}//else
+		return SUCCESS;
+	}//end of raderChart
 	
 	public String mainPageLoad(){
 		main = new MainPage();
@@ -76,6 +101,11 @@ public class TableAction extends ActionSupport implements SessionAware {
 	}//end of calendarBillList
 
 	////////////////////////////
+	public Double[] getDayRecentAver() {return dayRecentAver;}
+	public void setDayRecentAver(Double[] dayRecentAver) {this.dayRecentAver = dayRecentAver;}
+	
+	public Double[] getDayTotalAver() {return dayTotalAver;}
+	public void setDayTotalAver(Double[] dayTotalAver) {this.dayTotalAver = dayTotalAver;}
 
 	public Bill getBill() {return bill;}
 	public void setBill(Bill bill) {this.bill = bill;}

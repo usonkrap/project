@@ -4,29 +4,44 @@ var App = (function () {
 	App.personalStat = function( ){
 		  
 		function rader_chart(){
-		      var color1 = tinycolor( App.color.primary ).lighten( 6 );
+		     $.ajax({
+		    	 url : '../sidebar/raderChart',
+		    	 type : 'post',
+		    	 dataType : 'json',
+		    	 success : function(response){
+		    		 var dayRecentAver = response.dayRecentAver;
+		    		 var dayTotalAver = response.dayTotalAver;
+		    		 rader_chart_call(dayRecentAver, dayTotalAver);
+		    	 }
+		    	 
+		     });
+		}
+		
+		function rader_chart_call(dayRecentAver, dayTotalAver){
+			
+			 var color1 = tinycolor( App.color.primary ).lighten( 6 );
 		      var color2 = tinycolor( App.color.alt4 ).lighten( 6.5 );
 
 		      var data = {
-		        labels: ["January", "February", "March", "April", "May", "June", "July"],
+		        labels: ["월요일" ,"화요일", "수요일", "목요일", "금요일", "토요일","일요일"],
 		        datasets: [
 		          {
-		            label: "My First dataset",
+		            label: "month",
 		            fillColor: color2.setAlpha(.5).toString(),
 		            pointColor: color2.setAlpha(.8).toString(),
 		            strokeColor: color2.setAlpha(.8).toString(),
 		            highlightFill: color2.setAlpha(.75).toString(),
 		            highlightStroke: color2.toString(),
-		            data: [65, 59, 80, 81, 56, 55, 40]
+		            data: dayRecentAver
 		          },
 		          {
-		            label: "My Second dataset",
+		            label: "all",
 		            fillColor: color1.setAlpha(.5).toString(),
 		            pointColor: color1.setAlpha(.8).toString(),
 		            strokeColor: color1.setAlpha(.8).toString(),
 		            highlightFill: color1.setAlpha(.75).toString(),
 		            highlightStroke: color1.toString(),
-		            data: [28, 48, 40, 19, 86, 27, 90]
+		            data: dayTotalAver
 		          }
 		        ]
 		      };
@@ -34,11 +49,10 @@ var App = (function () {
 		      var radarChart = new Chart( $("#rader").get(0).getContext("2d") ).Radar(data, {
 		        scaleShowLine : true,
 		        responsive: true,
-		        maintainAspectRatio: false,
+		        maintainAspectRatio: true,
 		        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 		      });
 		}
-		
 		 function donut_chart(){
 			  	var color1 = App.color.alt2;
 		      var color2 = App.color.alt4;
