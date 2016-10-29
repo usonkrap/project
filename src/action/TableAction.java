@@ -29,11 +29,6 @@ public class TableAction extends ActionSupport implements SessionAware {
 		TableDAO dao = new TableDAO();
 		billList = dao.tableList((String) session.get("loginId"));
 
-		for (Bill bill : billList) {
-
-			System.out.println(bill);
-
-		}
 
 		return SUCCESS;
 	}
@@ -64,7 +59,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 		ArrayList<String> piePrice = new ArrayList<>();
 		List<Map<String, Object>> data = dao.mainPagePie((String)session.get("loginId"));
 		for (Map<String, Object> map : data) {
-			pieCategory.add((String) map.get("CATEGORY"));
+			pieCategory.add((String) map.get("CATEGORY_NAME"));
 			piePrice.add(String.valueOf(map.get("TOTAL")));
 		}
 		mainPieCategory = new String[pieCategory.size()];
