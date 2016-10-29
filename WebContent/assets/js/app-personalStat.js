@@ -3,7 +3,7 @@ var App = (function () {
 
 	App.personalStat = function( ){
 		  
-		function rader(){
+		function rader_chart(){
 		      var color1 = tinycolor( App.color.primary ).lighten( 6 );
 		      var color2 = tinycolor( App.color.alt4 ).lighten( 6.5 );
 
@@ -39,7 +39,7 @@ var App = (function () {
 		      });
 		}
 		
-		 function donut(){
+		 function donut_chart(){
 			  	var color1 = App.color.alt2;
 		      var color2 = App.color.alt4;
 		      var color3 = App.color.alt3;
@@ -60,11 +60,37 @@ var App = (function () {
 		 
 		 
 		 
+		 var tax_data = [
+		       {"period": "2013", "licensed": 400, "sorned": 550},
+		       {"period": "2012", "licensed": 450, "sorned": 400},
+		       {"period": "2011", "licensed": 350, "sorned": 550},
+		       {"period": "2010", "licensed": 500, "sorned": 700},
+		       {"period": "2009", "licensed": 250, "sorned": 380},
+		       {"period": "2008", "licensed": 350, "sorned": 240},
+		       {"period": "2007", "licensed": 180, "sorned": 300},
+		       {"period": "2006", "licensed": 300, "sorned": 250},
+		       {"period": "2005", "licensed": 200, "sorned": 150}
+		  ];
+		 
+		 function line_chart(){
+			  	var color1 = App.color.primary;
+			  	var color2 = tinycolor( App.color.primary ).lighten( 15 ).toString();
+
+			  	new Morris.Line({
+				    element: 'line',
+				    data: tax_data,
+				    xkey: 'period',
+				    ykeys: ['licensed', 'sorned'],
+				    labels: ['총지출', '총지출'],
+				    lineColors: [color1, color2]
+				  });
+			  }
 		 
 		 
 		
-		rader();
-		donut();
+		rader_chart();
+		donut_chart();
+		line_chart();
 	};
 
 	return App;
