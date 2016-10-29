@@ -13,11 +13,15 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="../assets/lib/morrisjs/morris.css"/>
+    
+  	<link rel="stylesheet" type="text/css" href="../assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/select2/css/select2.min.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
-    <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/morrisjs/morris.css"/>
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
+  	
+  	
+  	
   	
     <style>
 		.rotate {
@@ -40,6 +44,18 @@
 		
 		#select {
 			height: 50px;
+		}
+		
+		#okbtn{
+			background-color: #58ba54;
+			color: white;
+			height: 44px;
+		}
+		#okbtn:HOVER {
+			background-color: #66c56b;
+		}
+		#okbtn:ACTIVE {
+			background-color: #58ba54;
 		}
 	</style>
   	
@@ -226,78 +242,86 @@
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
           <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
 
-
 				<div class="col-sm-12">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<span class="title">총 지출</span>
+							<span class="title">총 지출 (원)</span>
 						</div>
 						<div class="panel-body">
 							<div id="groupStat" style="height: 400px;"></div>
 						</div>
 					</div>
 				</div>
-
+				<div class="row"><br></div>
+				<div class="row"><br></div>
 				<div class="row">
-				
-				<div class="col-sm-3  wow fadeInDown text-center">
-				  <img class="rotate" src="../img/icon/laptop.svg" alt="Generic placeholder image">
-				  <h3><select>
-				  	<option>기간</option>
-				  	<option>1월</option>
-				  	<option>2월</option>
-				  	<option>2월</option>
-				  	<option>2월</option>
-				  	<option>2월</option>
-				  	<option>2월</option>
-				  	<option>2월</option>
-				  	<option>2월</option>
-				  	<option>2월</option>
-				  	<option>2월</option>
-				  	<option>2월</option>
-				  </select></h3>
-				</div>
-				
-			
-				<div class="col-sm-3  wow fadeInDown text-center">
-				  <img class="rotate" src="../img/icon/laptop.svg" alt="Generic placeholder image">
-				  <h3><select>
-				  	<option>성별</option>
-				  	<option>남</option>
-				  	<option>여</option>
-				  </select></h3>
-				</div>
-				
-				<div class="col-sm-3 wow fadeInDown text-center">
-				  <img  class="rotate" src="../img/icon/map.svg" alt="Generic placeholder image">
-				   <h3><select>
-				  	<option>연령별</option>
-				  	<option>10대</option>
-				  	<option>20대</option>
-				  	<option>20대</option>
-				  	<option>20대</option>
-				  	<option>20대</option>
-				  </select></h3>
-				</div>
-				
-				<div class="col-sm-3 wow fadeInDown text-center">
-				  <img  class="rotate" src="../img/icon/browser.svg" alt="Generic placeholder image">
-				   <h3><select>
-				  	<option>지역별</option>
-				  	<option>서울</option>
-				  	<option>서울</option>
-				  	<option>서울</option>
-				  	<option>서울</option>
-				  	<option>서울</option>
-				  	<option>20대</option>
-				  	<option>20대</option>
-				  	<option>20대</option>
-				  	<option>20대</option>
-				  </select></h3>
-				</div>
-				
-				
-			</div><!-- /.row -->
+
+
+
+					<div class="col-sm-3  wow fadeInDown text-center">
+						<img class="rotate" src="../img/icon/genders.png"
+							alt="Generic placeholder image" style="size: 114px;">
+						<h3>
+							<select class="form-control" style="width:40%; margin: auto;">
+								<option>미선택</option>
+								<option>남성</option>
+								<option>여성</option>
+							</select>
+						</h3>
+					</div>
+
+					<div class="col-sm-3 wow fadeInDown text-center">
+						<img class="rotate" src="../img/icon/age.png"
+							alt="Generic placeholder image">
+						<h3>
+							<select class="form-control" style="width:40%; margin: auto;">
+								<option>미선택</option>
+								<option>10대</option>
+								<option>20대</option>
+								<option>30대</option>
+								<option>40대</option>
+								<option>50대</option>
+								<option>60대이상</option>
+							</select>
+						</h3>
+					</div>
+
+					<div class="col-sm-3 wow fadeInDown text-center">
+						<img class="rotate" src="../img/icon/location.png"
+							alt="Generic placeholder image">
+						<h3>
+							<select class="form-control" style="width: 40%; margin: auto;">
+								<option>미선택</option>
+								<option>서울</option>
+								<option>부산</option>
+								<option>대구</option>
+								<option>인천</option>
+								<option>광주</option>
+								<option>대전</option>
+								<option>울산</option>
+								<option>강원</option>
+								<option>경기</option>
+								<option>경남</option>
+								<option>경북</option>
+								<option>전남</option>
+								<option>전북</option>
+								<option>제주</option>
+								<option>충남</option>
+								<option>충북</option>
+								<option></option>
+							</select>
+						</h3>
+					</div>
+					<div class="col-sm-3 wow fadeInDown text-center">
+						<img class="rotate" src="../img/icon/checked.png"
+							alt="Generic placeholder image">
+						<h3>
+							<button type="submit" id="okbtn" class="btn" style="width: 40%">확 인</button>
+						</h3>
+
+					</div>
+			</div>
+					<!-- /.row -->
         </div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
  
@@ -308,13 +332,26 @@
     <script src="../assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
     <script src="../assets/js/main.js" type="text/javascript"></script>
     <script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
+    <script src="../assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    
+    <script src="../assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/bootstrap-slider/js/bootstrap-slider.js" type="text/javascript"></script>
+    <script src="../assets/js/app-form-elements.js" type="text/javascript"></script>
     
     <script src="../assets/lib/raphael/raphael-min.js" type="text/javascript"></script>
     <script src="../assets/lib/morrisjs/morris.min.js" type="text/javascript"></script>
     <script src="../assets/js/app-groupStat.js" type="text/javascript"></script>
+
+
     
     
+   
     
+    
+
     <script type="text/javascript">
       $(document).ready(function(){
       	//initialize the javascript
