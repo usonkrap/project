@@ -238,9 +238,22 @@
 				
 				
 				<div class="row">
-         		
-         		
-         		</div>
+					<div class="col-sm-8">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="tools">
+									<span class="icon s7-upload"></span><span class="icon s7-edit"></span><span
+										class="icon s7-close"></span>
+								</div>
+								<span class="title">월별 지출 비교</span>
+							</div>
+							<div class="panel-body">
+								<div id="line" style="height: 250px;"></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
         </div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
  
@@ -252,6 +265,15 @@
     <script src="../assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
     <script src="../assets/js/main.js" type="text/javascript"></script>
     <script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    
+    <script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+    <script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+    <script src="assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
+    <script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+   
     
     <script src="../assets/lib/raphael/raphael-min.js" type="text/javascript"></script>
     <script src="../assets/lib/morrisjs/morris.min.js" type="text/javascript"></script>
