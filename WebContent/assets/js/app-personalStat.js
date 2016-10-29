@@ -4,7 +4,6 @@ var App = (function () {
 	App.personalStat = function( ){
 		  
 		function rader(){
-
 		      var color1 = tinycolor( App.color.primary ).lighten( 6 );
 		      var color2 = tinycolor( App.color.alt4 ).lighten( 6.5 );
 

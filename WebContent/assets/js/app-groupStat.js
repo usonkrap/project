@@ -2,34 +2,29 @@ var App = (function () {
 	'use strict';
 
 	App.groupStat = function( ){
-
-	  //Bar chart
 	  function groupStat(){
-		var color1 = tinycolor( App.color.alt3 ).lighten( 15 ).toString();
-	  	var color2 = tinycolor( App.color.alt3 ).brighten( 3 ).toString();
-
 	  	Morris.Bar({
 			  element: 'groupStat',
 			  data: [
-			    {device: 'iPhone', geekbench: 136, macbench: 180},
-			    {device: 'iPhone 3G', geekbench: 137, macbench: 200},
-			    {device: 'iPhone 3GS', geekbench: 275, macbench: 350},
-			    {device: 'iPhone 4', geekbench: 380, macbench: 500},
-			    {device: 'iPhone 4S', geekbench: 655, macbench: 900},
-			    {device: 'iPhone 5', geekbench: 1571, macbench: 1700},
-			    {device: 'iPhone', geekbench: 33, macbench: 180},
-			    {device: 'iPhone ', geekbench: 223, macbench: 443},
-			    {device: 'iPhone ', geekbench: 432, macbench: 350},
-			    {device: 'iPhone ', geekbench: 380, macbench: 533},
-			    {device: 'iPhone ', geekbench: 664, macbench: 566},
-			    {device: 'iPhone ', geekbench: 345, macbench: 1443}
+			    {category: '외식', user: 500000, average: 180000},
+			    {category: '식음료', user: 200000, average: 200000},
+			    {category: '교통', user: 80000, average: 350000},
+			    {category: '패션/미용', user: 120000, average: 500000},
+			    {category: '문화생활', user: 60000, average: 900000},
+			    {category: '생활용품', user: 145000, average: 17000},
+			    {category: '사회생활', user: 90080, average: 18000},
+			    {category: '교육', user: 500000, average: 440300},
+			    {category: '주거/관리/통신', user: 70000, average: 3500},
+			    {category: '의료/건강', user: 160000, average: 53300},
+			    {category: '금융', user: 800000, average: 566000},
+			    {category: '기타', user: 45000, average: 1000000}
 			  ],
-			  xkey: 'device',
-			  ykeys: ['geekbench','macbench'],
-			  labels: ['Geekbench','Macbench'],
-			  barColors: [color1, 'red'],
-			  barRatio: 0.4,
-			  xLabelAngle: 35,
+			  xkey: 'category',
+			  ykeys: ['user','average'],
+			  labels: ['사용자','평균'],
+			  barColors: ['LightCoral', 'SteelBlue'],
+			  barRatio: 3.0,
+			  xLabelAngle: 30,
 			  hideHover: 'auto'
 			});
 	  }

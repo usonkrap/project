@@ -190,7 +190,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
             </li>
             
-            <li class="parent"><a href="#"><i class="icon s7-search"></i><span>돋보기</span></a>
+			<li class="parent"><a href="#"><i class="icon s7-ticket"></i><span>맞춤 정보</span></a>
              <!--  <ul class="sub-menu"><li class="title">차트4</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="pages-blank.html">Blank Page</a>

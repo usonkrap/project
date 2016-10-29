@@ -18,9 +18,30 @@
     <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
+  	
+    <style>
+		.rotate {
+			-webkit-transition-duration: 0.8s;
+			-moz-transition-duration: 0.8s;
+			-o-transition-duration: 0.8s;
+			transition-duration: 0.8s;
+			-webkit-transition-property: -webkit-transform;
+			-moz-transition-property: -moz-transform;
+			-o-transition-property: -o-transform;
+			transition-property: transform;
+			overflow: hidden;
+		}
+		
+		.rotate:hover {
+			-webkit-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
+		}
+	</style>
+  	
   	</head>
 	<body>
-		<div class="am-wrapper	 am-white-header" ><!--  ??? -->
+		<div class="am-wrapper" ><!--  ??? -->
 			<nav class="navbar navbar-default navbar-fixed-top am-top-header"><!-- 상단 적색바 -->
 				<div class="container-fluid"><!--  ??? -->
 					<div class="navbar-header"><!--  ??? -->
@@ -54,7 +75,7 @@
 						</ul>
 						
 						<ul class="nav navbar-nav am-nav-right">
-							<li><a>만들 페이지 이름입력</a></li>
+							<li><a>비교 분석</a></li>
 						</ul>
 						<!-- \<ul class="nav navbar-nav am-nav-right"> 왼쪽 상단 메뉴
 							<li><a href="#">메인</a></li>
@@ -175,7 +196,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
             </li>
             
-            <li class="parent"><a href="#"><i class="icon s7-search"></i><span>돋보기</span></a>
+			<li class="parent"><a href="#"><i class="icon s7-ticket"></i><span>맞춤 정보</span></a>
              <!--  <ul class="sub-menu"><li class="title">차트4</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="pages-blank.html">Blank Page</a>
@@ -205,7 +226,7 @@
              <div class="col-sm-12">
               <div class="panel panel-default">
                 <div class="panel-heading"> 
-                  <span class="title">Bar Chart</span>
+                  <span class="title">총 지출</span>
                 </div>
                 <div class="panel-body">
                   <div id="groupStat" style="height: 400px;"></div>
@@ -213,8 +234,29 @@
               </div>
             </div>
             
-            성별, 연령별, 
-                  
+            <div class="row tworow">
+			
+				<div class="col-sm-3  wow fadeInDown text-center">
+				  <img class="rotate" src="../img/icon/laptop.svg" alt="Generic placeholder image">
+				  <h3>성별</h3>
+				</div>
+				
+				<div class="col-sm-3 wow fadeInDown text-center">
+				  <img  class="rotate" src="../img/icon/map.svg" alt="Generic placeholder image">
+				   <h3>연령별</h3>
+				</div>
+				
+				<div class="col-sm-3 wow fadeInDown text-center">
+				  <img  class="rotate" src="../img/icon/browser.svg" alt="Generic placeholder image">
+				   <h3>지역별</h3>
+				</div>
+				
+				<div class="col-sm-3 wow fadeInDown text-center">
+				  <img  class="rotate" src="../img/icon/browser.svg" alt="Generic placeholder image">
+				   <h3>목표금액별</h3>
+				</div>
+				
+			</div><!-- /.row -->
         </div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
  
