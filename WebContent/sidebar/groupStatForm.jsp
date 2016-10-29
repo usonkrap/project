@@ -37,6 +37,10 @@
 			-moz-transform: rotate(360deg);
 			-o-transform: rotate(360deg);
 		}
+		
+		#select {
+			height: 50px;
+		}
 	</style>
   	
   	</head>
@@ -221,40 +225,77 @@
 	   <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
           <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
-                  
-                  
-             <div class="col-sm-12">
-              <div class="panel panel-default">
-                <div class="panel-heading"> 
-                  <span class="title">총 지출</span>
-                </div>
-                <div class="panel-body">
-                  <div id="groupStat" style="height: 400px;"></div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="row tworow">
+
+
+				<div class="col-sm-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<span class="title">총 지출</span>
+						</div>
+						<div class="panel-body">
+							<div id="groupStat" style="height: 400px;"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+				
+				<div class="col-sm-3  wow fadeInDown text-center">
+				  <img class="rotate" src="../img/icon/laptop.svg" alt="Generic placeholder image">
+				  <h3><select>
+				  	<option>기간</option>
+				  	<option>1월</option>
+				  	<option>2월</option>
+				  	<option>2월</option>
+				  	<option>2월</option>
+				  	<option>2월</option>
+				  	<option>2월</option>
+				  	<option>2월</option>
+				  	<option>2월</option>
+				  	<option>2월</option>
+				  	<option>2월</option>
+				  	<option>2월</option>
+				  </select></h3>
+				</div>
+				
 			
 				<div class="col-sm-3  wow fadeInDown text-center">
 				  <img class="rotate" src="../img/icon/laptop.svg" alt="Generic placeholder image">
-				  <h3>성별</h3>
+				  <h3><select>
+				  	<option>성별</option>
+				  	<option>남</option>
+				  	<option>여</option>
+				  </select></h3>
 				</div>
 				
 				<div class="col-sm-3 wow fadeInDown text-center">
 				  <img  class="rotate" src="../img/icon/map.svg" alt="Generic placeholder image">
-				   <h3>연령별</h3>
+				   <h3><select>
+				  	<option>연령별</option>
+				  	<option>10대</option>
+				  	<option>20대</option>
+				  	<option>20대</option>
+				  	<option>20대</option>
+				  	<option>20대</option>
+				  </select></h3>
 				</div>
 				
 				<div class="col-sm-3 wow fadeInDown text-center">
 				  <img  class="rotate" src="../img/icon/browser.svg" alt="Generic placeholder image">
-				   <h3>지역별</h3>
+				   <h3><select>
+				  	<option>지역별</option>
+				  	<option>서울</option>
+				  	<option>서울</option>
+				  	<option>서울</option>
+				  	<option>서울</option>
+				  	<option>서울</option>
+				  	<option>20대</option>
+				  	<option>20대</option>
+				  	<option>20대</option>
+				  	<option>20대</option>
+				  </select></h3>
 				</div>
 				
-				<div class="col-sm-3 wow fadeInDown text-center">
-				  <img  class="rotate" src="../img/icon/browser.svg" alt="Generic placeholder image">
-				   <h3>목표금액별</h3>
-				</div>
 				
 			</div><!-- /.row -->
         </div><!-- 메인 컨텐츠 끝 -->
