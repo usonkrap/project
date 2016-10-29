@@ -209,9 +209,28 @@
 						<div class="widget widget-radar">
 							<div class="widget-head">
 								<div class="tools">
-									<span class="icon s7-upload"></span><span class="icon s7-edit"></span>
+									<table style="top:5px;right:5px;;font-size:smaller;color:#545454" class="">
+										<tbody>
+											<tr>
+												<td class="legendColorBox">
+													<div style="border:1px solid #ccc;padding:1px">
+														<div style="width:4px;height:0;border:5px solid #f9bfbf;overflow:hidden"></div>
+													</div>
+												</td>
+												<td class="legendLabel">최근 30일</td>
+											</tr>
+											<tr>
+												<td class="legendColorBox">
+													<div style="border:1px solid #ccc;padding:1px">
+														<div style="width:4px;height:0;border:5px solid #eeeeee;overflow:hidden"></div>
+													</div>
+												</td>
+												<td class="legendLabel">전체</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
-								<span class="title">요일별 지출</span>
+								<span class="title">요일별 지출 비율(%)</span>
 							</div>
 							<div class="chart-container">
 								<canvas id="rader" height="250px"></canvas>

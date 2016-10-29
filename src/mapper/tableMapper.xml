@@ -95,4 +95,43 @@
 	 	       , major_category     b
 	where a.category(+) = b.category_name
 	</select>
+
+	<select id="raderChart" resultType="Double" parameterType="map">
+		select
+ 			  round((RATIO_TO_REPORT(val) OVER ())*100,2)
+		from
+			  (select
+			         DECODE(rownum,1, monday
+			                     ,2, tuesday
+			                     ,3, wednesday
+			                     ,4, thursday
+			                     ,5, friday
+			                     ,6, saturday
+			                     ,7, sunday
+			                 )  as val
+			  from      
+			  　	　　　(select 
+			  　	　　　<if test="type == 'all'">
+			  　	　　　   　　　　    (select SUM(totalprice) from bill where to_char(billdate,'day') = '월요일') monday
+			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '화요일') tuesday
+			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '수요일') wednesday
+			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '목요일') thursday
+			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '금요일') friday
+			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '토요일') saturday
+			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '일요일') sunday
+			  　	　　　</if>
+			  　	　　　<if test="type == 'limited'">
+			  　	　　　	 　(　　　select SUM(totalprice) from bill where to_char(billdate,'day') = '월요일' and BILLDATE BETWEEN sysdate-14 and sysdate) monday
+			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '화요일' and BILLDATE BETWEEN sysdate-14 and sysdate) tuesday
+			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '수요일' and BILLDATE BETWEEN sysdate-14 and sysdate) wednesday
+			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '목요일' and BILLDATE BETWEEN sysdate-14 and sysdate) thursday
+			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '금요일' and BILLDATE BETWEEN sysdate-14 and sysdate) friday
+			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '토요일' and BILLDATE BETWEEN sysdate-14 and sysdate) saturday
+			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '일요일' and BILLDATE BETWEEN sysdate-14 and sysdate) sunday
+			  　	　　　</if>
+			  　	　　　from bill 
+			  　	　　　where CUSTOMERID = #{customerId}
+			  　	　　　group by customerid )
+			  connect by level &lt; 8) 
+	</select>
 </mapper>
