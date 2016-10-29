@@ -19,4 +19,5 @@
 	</package>
 	<include file="actions/sidebar.xml" />
 	<include file="actions/customer.xml" />
+	<include file="actions/bill.xml" />
 </struts>

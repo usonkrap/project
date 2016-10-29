@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>    
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,15 +37,14 @@
 			<div class="container-fluid">
 				<!--  ??? -->
 				<div class="navbar-header">
-				
+
 					<!--  ??? -->
 					<div class="page-title">
 						<!--  페이지 축소 title -->
 						<span>Janzani</span>
 					</div>
 					<a href="#" class="am-toggle-left-sidebar navbar-toggle collapsed">
-					</a> <a href="index.jsp" class="navbar-brand">
-						<!-- 메인 페이지 링크 및 로고 표시 -->
+					</a> <a href="index.jsp" class="navbar-brand"> <!-- 메인 페이지 링크 및 로고 표시 -->
 					</a>
 				</div>
 
@@ -101,10 +100,13 @@
 					<ul class="nav navbar-nav navbar-right am-icons-nav">
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
-								<button type="button"
-									class="btn btn-space btn-primary btn-rounded btn-lg">
-									<i class="icon icon-left s7-cloud-upload"></i> 소비 입력
-								</button>
+
+								<a href="../bill/goBillForm.action">
+									<button type="button"
+										class="btn btn-space btn-primary btn-rounded btn-lg">
+										<i class="icon icon-left s7-cloud-upload"></i> 소비 입력
+									</button>
+							</a>
 						</a> <!-- <ul class="dropdown-menu am-messages">
 									<li>
 										<div class="title">메세지
@@ -136,8 +138,8 @@
 				<div class="am-logo"></div>
 				<ul class="sidebar-elements">
 
-					<li class="parent active"><a href="../sidebar/infoForm.action"><i class="icon s7-user"></i><span>님의 정보</span></a> 
-					<!-- <ul class="sub-menu"><li class="title">소비 정보</li>
+					<li class="parent active"><a href="../sidebar/infoForm.action"><i
+							class="icon s7-user"></i><span>님의 정보</span></a> <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">
               <ul><li class="active"><a href="index.html">Version 1</a>
@@ -150,8 +152,8 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li>
               </ul> --></li>
 
-					<li class="parent"><a href="../sidebar/spendListForm.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
-						<!--   <ul class="sub-menu"><li class="title">차트1</li>
+					<li class="parent"><a href="../sidebar/spendListForm.action"><i
+							class="icon s7-news-paper"></i><span>소비 목록</span></a> <!--   <ul class="sub-menu"><li class="title">차트1</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="charts-flot.html">Flot</a>
                 </li><li><a href="charts-morris.html">Morris.js</a>
@@ -161,8 +163,9 @@
 
 
 
-					<li class="parent"><a href="../sidebar/personalStatForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a> 
-					<!-- <ul class="sub-menu"><li class="title">차트2</li>
+					<li class="parent"><a
+						href="../sidebar/personalStatForm.action"><i
+							class="icon s7-graph"></i><span>개인 분석</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
 
 					<li class="parent"><a href="../table/personalStatForm.action"><i class="icon s7-graph"></i><span>통계
 								1</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
@@ -177,8 +180,8 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
 					</li>
 
-					<li class="parent"><a href="../sidebar/groupStatForm.action"><i class="icon s7-users"></i><span>비교 분석</span></a>
-						<!-- <ul class="sub-menu"><li class="title">차트3</li>
+					<li class="parent"><a href="../sidebar/groupStatForm.action"><i
+							class="icon s7-users"></i><span>비교 분석</span></a> <!-- <ul class="sub-menu"><li class="title">차트3</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="tables-general.html">General</a>
                 </li><li><a href="tables-datatables.html">Data Tables</a>
@@ -187,8 +190,8 @@
 
 
 
-					<li class="parent"><a href="../sidebar/locationForm.action"><i class="icon s7-map-2"></i><span>위치 통계</span></a>
-					 <!-- <ul class="sub-menu"><li class="title">위치 정보</li>
+					<li class="parent"><a href="../sidebar/locationForm.action"><i
+							class="icon s7-map-2"></i><span>위치 통계</span></a> <!-- <ul class="sub-menu"><li class="title">위치 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="ui-general.html">음...</a>
                 </li><li><a href="ui-alerts.html">일</a>
@@ -204,8 +207,8 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
 					</li>
 
-					<li class="parent"><a href="#"><i class="icon s7-ticket"></i><span>맞춤 정보</span></a>
-						<!--  <ul class="sub-menu"><li class="title">차트4</li>
+					<li class="parent"><a href="#"><i class="icon s7-ticket"></i><span>맞춤
+								정보</span></a> <!--  <ul class="sub-menu"><li class="title">차트4</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="pages-blank.html">Blank Page</a>
                 </li><li><a href="pages-blank-header.html">Blank Page Header</a>
@@ -378,8 +381,7 @@
 						<!-- 지출 내역 패널 -->
 						<div class="panel panel-default">
 							<div class="panel-heading">최근 지출 내역</div>
-							<div class="panel-body" id="latestBills">
-							</div>
+							<div class="panel-body" id="latestBills"></div>
 						</div>
 					</div>
 					<!-- 지출 내역 패널 끝-->
@@ -461,7 +463,8 @@
 		type="text/javascript"></script>
 	<script src="../assets/lib/jquery-flot/jquery.flot.resize.js"
 		type="text/javascript"></script>
-	<script src="../assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js"
+	<script
+		src="../assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js"
 		type="text/javascript"></script>
 	<script src="../assets/lib/jquery-flot/plugins/curvedLines.js"
 		type="text/javascript"></script>
@@ -493,12 +496,14 @@
 	<script
 		src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-in-mill-en.js"
 		type="text/javascript"></script>
-	<script src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-map.js"
+	<script
+		src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-map.js"
 		type="text/javascript"></script>
 	<script
 		src="../assets/lib/jquery.vectormap/maps/jquery-jvectormap-ca-lcc-en.js"
 		type="text/javascript"></script>
-	<script src="../assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+	<script src="../assets/lib/countup/countUp.min.js"
+		type="text/javascript"></script>
 	<script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
 	<script src="../assets/js/app-dashboard.js" type="text/javascript"></script>
 	<script src="../assets/js/main-statistics.js" type="text/javascript"></script>
