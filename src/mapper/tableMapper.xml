@@ -134,6 +134,7 @@
 			  　	　　　group by customerid )
 			  connect by level &lt; 8) 
 	</select>
+<<<<<<< HEAD
 	
 	<select id="donutChart" resultType="hashmap" parameterType="String">
 		select a.storename store, round((ratio_to_report(a.price) over ())*100) per 
@@ -172,4 +173,6 @@
 			    where CUSTOMERID = #{customerId})
 
 	</select>
+=======
+>>>>>>> refs/heads/naks
 </mapper>

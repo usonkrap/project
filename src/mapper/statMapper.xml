@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="stat">
+
+	<select id="allSelect" resultType="hashmap" parameterType="Comparison">
+
+		select CATEGORY_NAME category,
+		(select avg(i.price) from item i, bill
+		b, customer c where substr(i.category,1,3) like m.category_num and
+		i.billno = b.billno and c.cust_email = i.customerid and i.CUSTOMERID =
+		#{id}
+		<if test="!gender.equals('all')">
+			and c.CUST_GENDER = #{gender}
+		</if>
+		<if test="!age.equals('all')">
+		<![CDATA[
+		   and #{age} <= TRUNC(MONTHS_BETWEEN(SYSDATE, c.cust_birthday) / 12) 
+		   and TRUNC(MONTHS_BETWEEN(SYSDATE, c.cust_birthday) / 12) <  #{age} + 10
+		]]>
+		</if>
+		<if test="!address.equals('all')">
+			and c.cust_address like '${address}%' </if>
+		) self,
+
+		(select avg(i.price) from item i, bill b, customer c where
+		substr(i.category,1,3) like m.category_num and i.billno = b.billno and
+		c.cust_email = i.customerid
+
+		<if test="!gender.equals('all')">
+			and c.CUST_GENDER = #{gender}
+		</if>
+		<if test="!age.equals('all')">
+		<![CDATA[
+		   and #{age} <= TRUNC(MONTHS_BETWEEN(SYSDATE, c.cust_birthday) / 12) 
+		   and TRUNC(MONTHS_BETWEEN(SYSDATE, c.cust_birthday) / 12) <  #{age} + 10
+		]]>
+		</if>
+		<if test="!address.equals('all')">
+			and c.cust_address like '${address}%' </if>
+		) average
+
+		from major_category m
+
+	</select>
+
+
+
+</mapper>

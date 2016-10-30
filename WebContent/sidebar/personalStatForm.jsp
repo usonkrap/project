@@ -18,7 +18,12 @@
     <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
     
+<<<<<<< HEAD
+=======
+    <link href="../css/general.css" rel="stylesheet">
+>>>>>>> refs/heads/naks
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
+<<<<<<< HEAD
   	
   	
   	
@@ -154,6 +159,115 @@
 				</div>			
 			</nav>
 	<div class="am-left-sidebar">
+=======
+    
+    <style type="text/css">
+    	.category {
+    		padding: 5%;
+    	}
+    	
+    	.method {
+    		padding: 5%;
+    	}
+    </style>
+    
+    
+    </head>
+   <body>
+      <div class="am-wrapper"><!--  ??? -->
+         <nav class="navbar navbar-default navbar-fixed-top am-top-header"><!-- 상단 적색바 -->
+            <div class="container-fluid"><!--  ??? -->
+               <div class="navbar-header"><!--  ??? -->
+                  <div class="page-title"><!--  ??? -->
+                     <span>Dashboard</span>
+                  </div>
+                  <a href="#" class="am-toggle-left-sidebar navbar-toggle collapsed">
+                  </a>
+                  <a href="../sidebar/main.action" class="navbar-brand"><!-- 메인 페이지 링크 및 로고 표시 --></a>
+               </div>
+               
+               <a href="#" data-toggle="collapse" data-target="#am-navbar-collapse" class="am-toggle-top-header-menu collapsed">
+                  <span class="icon s7-angle-down"></span> <!-- ??? -->
+               </a>
+               <div id="am-navbar-collapse" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav navbar-right am-user-nav">
+                     <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
+                        <img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
+								class="user-name">nickname</span> <span
+								class="angle-down s7-angle-down"></span>
+						</a>
+							<ul role="menu" class="dropdown-menu">
+								<!--프로필 왼쪽 화살표 눌렀을시 드롭메뉴 -->
+								<!-- href는 링크, span class는 아이콘을 나타냄, 아이콘의 종류는 html\assets\lib\stroke-7\demo.html 참고  -->
+								<li><a href="../customer/profile.action"> <span class="icon s7-user"></span>내
+										프로필
+								</a></li>
+								<li><a href="#"> <span class="icon s7-config"></span>설정
+								</a></li>
+								<%-- <li><a href="#"> <span class="icon s7-help1"></span>도움!
+								</a></li> --%>
+								<li><a href="#"> <span class="icon s7-power"></span>로그
+										아웃
+								</a></li>
+							</ul></li>
+                  </ul>
+                  
+                  <ul class="nav navbar-nav am-nav-right">
+                     <li><a>개인 분석</a></li>
+                  </ul>
+                  <!-- \<ul class="nav navbar-nav am-nav-right"> 왼쪽 상단 메뉴
+                     <li><a href="#">메인</a></li>
+                          <li><a href="#">어바웃</a></li>
+                          <li class="dropdown">
+                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">조원소개
+                                <span class="angle-down s7-angle-down"></span>
+                             </a>   
+                             <ul role="menu" class="dropdown-menu"> 드롭박스 메뉴
+                                <li><a href="#">조장 박노수</a></li>
+                               <li><a href="#">나경상</a></li>
+                               <li><a href="#">유형은</a></li>
+                               <li><a href="#">김수진</a></li>
+                               <li><a href="#">이정승</a></li>
+                             </ul>
+                          </li>
+                          <li><a href="#">고객지원</a></li>
+                  </ul> --><!-- 왼쪽 상단 메뉴 끝 -->
+                  
+                  <ul class="nav navbar-nav navbar-right am-icons-nav">
+                     <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
+                           <button type="button" class="btn btn-space btn-primary btn-rounded btn-lg"><i class="icon icon-left s7-cloud-upload"></i> 소비 입력</button>
+                        </a>
+                        <!-- <ul class="dropdown-menu am-messages">
+                           <li>
+                              <div class="title">메세지
+                                  <span class="badge">3</span>3은 메세지 갯수
+                              </div>
+                              <div class="list">
+                                 <div class="am-scroller nano"> ??
+                                    <div class="content nano-content"> ??
+                                       <ul>
+                                          <li class="active">  ??
+                                             <a href="#"> ??
+                                                <div class="logo">
+                                                   <img src="assets/img/avatar2.jpg">
+                                                </div>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul> -->
+                     </li>
+                  </ul>               
+               </div>
+            </div>         
+         </nav>
+   <div class="am-left-sidebar">
+>>>>>>> refs/heads/naks
         <div class="content">
           <div class="am-logo"></div>
           <ul class="sidebar-elements">
@@ -273,6 +387,7 @@
 						<div class="widget widget-radar">
 							<div class="widget-head">
 								<div class="tools">
+<<<<<<< HEAD
 									<table
 										style="top: 5px; right: 5px;; font-size: smaller; color: #545454"
 										class="">
@@ -291,6 +406,22 @@
 													<div style="border: 1px solid #ccc; padding: 1px">
 														<div
 															style="width: 4px; height: 0; border: 5px solid #eeeeee; overflow: hidden"></div>
+=======
+									<table style="top:5px;right:5px;;font-size:smaller;color:#545454" class="">
+										<tbody>
+											<tr>
+												<td class="legendColorBox">
+													<div style="border:1px solid #ccc;padding:1px">
+														<div style="width:4px;height:0;border:5px solid #f9bfbf;overflow:hidden"></div>
+													</div>
+												</td>
+												<td class="legendLabel">최근 30일</td>
+											</tr>
+											<tr>
+												<td class="legendColorBox">
+													<div style="border:1px solid #ccc;padding:1px">
+														<div style="width:4px;height:0;border:5px solid #eeeeee;overflow:hidden"></div>
+>>>>>>> refs/heads/naks
 													</div>
 												</td>
 												<td class="legendLabel">전체</td>
@@ -358,6 +489,27 @@
 					</div>
 				</div>
 
+<<<<<<< HEAD
+=======
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<span class="title" style="padding: 20px;">월별 지출 비교 <select
+									class="form-control" style="width: 15%; float: right;">
+										<option>2016년</option>
+										<option>2015년</option>
+										<option>2014년</option>
+								</select></span>
+							</div>
+							<div class="panel-body">
+								<div id="line" style="height: 300px;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+>>>>>>> refs/heads/naks
 				<div class="row">
 					<div class="col-sm-8">
 						<div class="panel panel-default">
@@ -365,8 +517,13 @@
 								<span class="title">카테고리별 지출</span>
 							</div>
 							<div class="panel-body text-center">
+<<<<<<< HEAD
 								<span id="category1" class="category"></span> <span
 									id="category2" class="category"></span>
+=======
+								<span id="category1" class="category"></span>
+								<span id="category2" class="category"></span>
+>>>>>>> refs/heads/naks
 							</div>
 						</div>
 					</div>
@@ -376,16 +533,22 @@
 								<span class="title">지불 방법</span>
 							</div>
 							<div class="panel-body text-center">
+<<<<<<< HEAD
 								<div>
 									<img class="rotate method" src="../img/icon/credit-card.png">........80%
 								</div>
 								<div>
 									<img class="rotate method" src="../img/icon/money.png">........20%
 								</div>
+=======
+								<div><img class="rotate method" src="../img/icon/credit-card.png">........80%</div>
+								<div><img class="rotate method" src="../img/icon/money.png">........20%</div>
+>>>>>>> refs/heads/naks
 							</div>
 						</div>
 					</div>
 				</div>
+<<<<<<< HEAD
 				
 				<div class="row">
 					<div class="col-sm-4">
@@ -402,6 +565,22 @@
 				</div> 
 				
 
+=======
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<span class="title">시간대별</span>
+							</div>
+							<div class="panel-body text-center">
+							
+							
+							</div>
+						</div>
+					</div>
+				</div>
+				
+>>>>>>> refs/heads/naks
 			</div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
  
@@ -417,12 +596,24 @@
     <script src="../assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
     <script src="../assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
     
+<<<<<<< HEAD
     <script src="../assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
     <script src="../assets/lib/bootstrap-slider/js/bootstrap-slider.js" type="text/javascript"></script>
     <script src="../assets/js/app-form-elements.js" type="text/javascript"></script>
+=======
+    <script src="../assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+    <script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+   
+>>>>>>> refs/heads/naks
     
     <script src="../assets/lib/raphael/raphael-min.js" type="text/javascript"></script>
     <script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
+<<<<<<< HEAD
     <script src="../assets/lib/morrisjs/morris.min.js" type="text/javascript"></script>
 	<script src="../assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
     
@@ -431,6 +622,12 @@
     
     
    
+=======
+    <script src="../assets/js/app-personalStat.js" type="text/javascript"></script>
+	<script src="../assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+    <script src="../assets/js/app-charts-sparkline.js" type="text/javascript"></script>
+        
+>>>>>>> refs/heads/naks
     
     
 
