@@ -247,23 +247,39 @@
 	   <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
           <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
-
-				<div class="col-sm-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<span class="title">총 지출 (원)</span>
-						</div>
-						<div class="panel-body">
-							<div id="groupStat" style="height: 400px;"></div>
+				<div class=row>
+					<div class="col-sm-12">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="form-group" style="margin-bottom: 5px;">
+									<div class="title" style="margin-bottom: 10px;">
+										총 지출 (원)
+										<div style="float: right;">
+											<label class="col-sm-2 control-label">시작 날짜</label>
+											<div class="col-sm-3">
+												<input type="text" data-mask="date" placeholder="DD/MM/YYYY"
+													class="form-control" style="width: 100%;">
+											</div>
+											<label class="col-sm-2 control-label">종료 날짜</label>
+											<div class="col-sm-3">
+												<input type="text" data-mask="date" placeholder="DD/MM/YYYY"
+													class="form-control" style="width: 100%;">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel-body">
+								<div id="groupStat" style="height: 400px;"></div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row"><br></div>
 				<div class="row"><br></div>
+				
+				
 				<div class="row">
-
-
-
 					<div class="col-sm-3  wow fadeInDown text-center">
 						<img class="rotate" src="../img/icon/genders.png"
 							alt="Generic placeholder image" style="size: 114px;">
@@ -314,7 +330,6 @@
 								<option>제주</option>
 								<option>충남</option>
 								<option>충북</option>
-								<option></option>
 							</select>
 						</h3>
 					</div>

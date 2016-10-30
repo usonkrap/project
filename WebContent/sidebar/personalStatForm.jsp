@@ -2,58 +2,85 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-   <head>
+	<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>통계</title>
+    <title>연습용</title>
     <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/style.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.nanoscroller/css/nanoscroller.css"/><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="../assets/lib/morrisjs/morris.css"/>
-    <link rel="stylesheet" type="text/css" href="../assets/lib/select2/css/select2.min.css"/>
+    
+  	<link rel="stylesheet" type="text/css" href="../assets/lib/morrisjs/morris.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
     
-    <link href="../css/general.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
-    
-    <style type="text/css">
-    	.category {
-    		padding: 5%;
-    	}
-    	
-    	.method {
-    		padding: 5%;
-    	}
-    </style>
-    
-    
-    </head>
-   <body>
-      <div class="am-wrapper"><!--  ??? -->
-         <nav class="navbar navbar-default navbar-fixed-top am-top-header"><!-- 상단 적색바 -->
-            <div class="container-fluid"><!--  ??? -->
-               <div class="navbar-header"><!--  ??? -->
-                  <div class="page-title"><!--  ??? -->
-                     <span>Dashboard</span>
-                  </div>
-                  <a href="#" class="am-toggle-left-sidebar navbar-toggle collapsed">
-                  </a>
-                  <a href="../sidebar/main.action" class="navbar-brand"><!-- 메인 페이지 링크 및 로고 표시 --></a>
-               </div>
-               
-               <a href="#" data-toggle="collapse" data-target="#am-navbar-collapse" class="am-toggle-top-header-menu collapsed">
-                  <span class="icon s7-angle-down"></span> <!-- ??? -->
-               </a>
-               <div id="am-navbar-collapse" class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav navbar-right am-user-nav">
-                     <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
-                        <img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
+  	
+  	
+  	
+  	
+    <style>
+		.rotate {
+			-webkit-transition-duration: 0.8s;
+			-moz-transition-duration: 0.8s;
+			-o-transition-duration: 0.8s;
+			transition-duration: 0.8s;
+			-webkit-transition-property: -webkit-transform;
+			-moz-transition-property: -moz-transform;
+			-o-transition-property: -o-transform;
+			transition-property: transform;
+			overflow: hidden;
+		}
+		
+		.rotate:hover {
+			-webkit-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
+		}
+		
+		#select {
+			height: 50px;
+		}
+		
+		#okbtn{
+			background-color: #58ba54;
+			color: white;
+			height: 44px;
+		}
+		#okbtn:HOVER {
+			background-color: #66c56b;
+		}
+		#okbtn:ACTIVE {
+			background-color: #58ba54;
+		}
+	</style>
+  	
+  	</head>
+	<body>
+		<div class="am-wrapper" ><!--  ??? -->
+			<nav class="navbar navbar-default navbar-fixed-top am-top-header"><!-- 상단 적색바 -->
+				<div class="container-fluid"><!--  ??? -->
+					<div class="navbar-header"><!--  ??? -->
+						<div class="page-title"><!--  ??? -->
+							<span>Dashboard</span>
+						</div>
+						<a href="#" class="am-toggle-left-sidebar navbar-toggle collapsed">
+						</a>
+						<a href="../sidebar/main.action" class="navbar-brand"><!-- 메인 페이지 링크 및 로고 표시 --></a>
+					</div>
+					
+					<a href="#" data-toggle="collapse" data-target="#am-navbar-collapse" class="am-toggle-top-header-menu collapsed">
+						<span class="icon s7-angle-down"></span> <!-- ??? -->
+					</a>
+					<div id="am-navbar-collapse" class="collapse navbar-collapse">
+						<ul class="nav navbar-nav navbar-right am-user-nav">
+							<li class="dropdown">
+								<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
+									<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
 								class="user-name">nickname</span> <span
 								class="angle-down s7-angle-down"></span>
 						</a>
@@ -71,67 +98,67 @@
 										아웃
 								</a></li>
 							</ul></li>
-                  </ul>
-                  
-                  <ul class="nav navbar-nav am-nav-right">
-                     <li><a>개인 분석</a></li>
-                  </ul>
-                  <!-- \<ul class="nav navbar-nav am-nav-right"> 왼쪽 상단 메뉴
-                     <li><a href="#">메인</a></li>
-                          <li><a href="#">어바웃</a></li>
-                          <li class="dropdown">
-                             <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">조원소개
-                                <span class="angle-down s7-angle-down"></span>
-                             </a>   
-                             <ul role="menu" class="dropdown-menu"> 드롭박스 메뉴
-                                <li><a href="#">조장 박노수</a></li>
-                               <li><a href="#">나경상</a></li>
-                               <li><a href="#">유형은</a></li>
-                               <li><a href="#">김수진</a></li>
-                               <li><a href="#">이정승</a></li>
-                             </ul>
-                          </li>
-                          <li><a href="#">고객지원</a></li>
-                  </ul> --><!-- 왼쪽 상단 메뉴 끝 -->
-                  
-                  <ul class="nav navbar-nav navbar-right am-icons-nav">
-                     <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
-                           <button type="button" class="btn btn-space btn-primary btn-rounded btn-lg"><i class="icon icon-left s7-cloud-upload"></i> 소비 입력</button>
-                        </a>
-                        <!-- <ul class="dropdown-menu am-messages">
-                           <li>
-                              <div class="title">메세지
-                                  <span class="badge">3</span>3은 메세지 갯수
-                              </div>
-                              <div class="list">
-                                 <div class="am-scroller nano"> ??
-                                    <div class="content nano-content"> ??
-                                       <ul>
-                                          <li class="active">  ??
-                                             <a href="#"> ??
-                                                <div class="logo">
-                                                   <img src="assets/img/avatar2.jpg">
-                                                </div>
-                                             </a>
-                                          </li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                              </div>
-                           </li>
-                        </ul> -->
-                     </li>
-                  </ul>               
-               </div>
-            </div>         
-         </nav>
-   <div class="am-left-sidebar">
+						</ul>
+						
+						<ul class="nav navbar-nav am-nav-right">
+							<li><a>비교 분석</a></li>
+						</ul>
+						<!-- \<ul class="nav navbar-nav am-nav-right"> 왼쪽 상단 메뉴
+							<li><a href="#">메인</a></li>
+              				<li><a href="#">어바웃</a></li>
+              				<li class="dropdown">
+              					<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">조원소개
+		              				<span class="angle-down s7-angle-down"></span>
+              					</a>	
+	              				<ul role="menu" class="dropdown-menu"> 드롭박스 메뉴
+	              					<li><a href="#">조장 박노수</a></li>
+					                <li><a href="#">나경상</a></li>
+					                <li><a href="#">유형은</a></li>
+					                <li><a href="#">김수진</a></li>
+					                <li><a href="#">이정승</a></li>
+	              				</ul>
+              				</li>
+              				<li><a href="#">고객지원</a></li>
+						</ul> --><!-- 왼쪽 상단 메뉴 끝 -->
+						
+						<ul class="nav navbar-nav navbar-right am-icons-nav">
+							<li class="dropdown">
+								<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
+									<button type="button" class="btn btn-space btn-primary btn-rounded btn-lg"><i class="icon icon-left s7-cloud-upload"></i> 소비 입력</button>
+								</a>
+								<!-- <ul class="dropdown-menu am-messages">
+									<li>
+										<div class="title">메세지
+									 		<span class="badge">3</span>3은 메세지 갯수
+										</div>
+										<div class="list">
+											<div class="am-scroller nano"> ??
+												<div class="content nano-content"> ??
+													<ul>
+														<li class="active">  ??
+															<a href="#"> ??
+																<div class="logo">
+																	<img src="assets/img/avatar2.jpg">
+																</div>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul> -->
+							</li>
+						</ul>					
+					</div>
+				</div>			
+			</nav>
+	<div class="am-left-sidebar">
         <div class="content">
           <div class="am-logo"></div>
           <ul class="sidebar-elements">
           
-            <li class="parent active"><a href="../sidebar/infoForm.action"><i class="icon s7-user"></i><span>nickname님의 정보</span></a> 
+            <li class="parent active"><a href="../sidebar/infoForm.action"><i class="icon s7-user"></i><span>nickname님의 정보</span></a>
               <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">
@@ -146,8 +173,8 @@
               </ul> -->
             </li>
             
-           <li class="parent"><a href="../sidebar/spendListForm.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
-					<!--   <ul class="sub-menu"><li class="title">차트1</li>
+            <li class="parent"><a href="../sidebar/spendListForm.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
+            <!--   <ul class="sub-menu"><li class="title">차트1</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="charts-flot.html">Flot</a>
                 </li><li><a href="charts-morris.html">Morris.js</a>
@@ -156,7 +183,7 @@
             </li>
             
             
-           <li class="parent"><a href="../sidebar/personalStatForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a>
+            <li class="parent"><a href="../sidebar/personalStatForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a> 
               <!-- <ul class="sub-menu"><li class="title">차트2</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="form-elements.html">Elements</a>
@@ -168,7 +195,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
             </li>
             
-           <li class="parent"><a href="../sidebar/groupStatForm.action"><i class="icon s7-users"></i><span>비교 분석</span></a>
+            <li class="parent"><a href="../sidebar/groupStatForm.action"><i class="icon s7-users"></i><span>비교 분석</span></a>
               <!-- <ul class="sub-menu"><li class="title">차트3</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="tables-general.html">General</a>
@@ -212,67 +239,17 @@
             </li>
           </ul>
           <!--Sidebar bottom content-->
-       </div>
+    	</div>
     </div>
-   
-   
-   
-      <div class="am-content"> <!-- am 컨텐츠 시작 -->
+	
+	
+	
+	   <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
-          
-          
-          
-          
-	         <div class="row">
-
-					<div class="col-md-6">
-						<div class="widget widget-radar">
-							<div class="widget-head">
-								<div class="tools">
-									<table style="top:5px;right:5px;;font-size:smaller;color:#545454" class="">
-										<tbody>
-											<tr>
-												<td class="legendColorBox">
-													<div style="border:1px solid #ccc;padding:1px">
-														<div style="width:4px;height:0;border:5px solid #f9bfbf;overflow:hidden"></div>
-													</div>
-												</td>
-												<td class="legendLabel">최근 30일</td>
-											</tr>
-											<tr>
-												<td class="legendColorBox">
-													<div style="border:1px solid #ccc;padding:1px">
-														<div style="width:4px;height:0;border:5px solid #eeeeee;overflow:hidden"></div>
-													</div>
-												</td>
-												<td class="legendLabel">전체</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<span class="title">요일별 지출 비율(%)</span>
-							</div>
-							<div class="chart-container">
-								<canvas id="rader" height="250px"></canvas>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-6">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<span class="title">자주 간 매장</span>
-							</div>
-							<div class="panel-body">
-								<div id="donut" style="height: 250px;"></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
+          <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
 
 
-				<div class="row">
+<div class="row">
 					<div class="col-sm-12">
 						<div class="panel panel-default">
 							<div class="panel-heading">
@@ -289,6 +266,99 @@
 						</div>
 					</div>
 				</div>
+
+
+
+		 <div class="row">
+					<div class="col-md-6">
+						<div class="widget widget-radar">
+							<div class="widget-head">
+								<div class="tools">
+									<table
+										style="top: 5px; right: 5px;; font-size: smaller; color: #545454"
+										class="">
+										<tbody>
+											<tr>
+												<td class="legendColorBox">
+													<div style="border: 1px solid #ccc; padding: 1px">
+														<div
+															style="width: 4px; height: 0; border: 5px solid #f9bfbf; overflow: hidden"></div>
+													</div>
+												</td>
+												<td class="legendLabel">최근 30일</td>
+											</tr>
+											<tr>
+												<td class="legendColorBox">
+													<div style="border: 1px solid #ccc; padding: 1px">
+														<div
+															style="width: 4px; height: 0; border: 5px solid #eeeeee; overflow: hidden"></div>
+													</div>
+												</td>
+												<td class="legendLabel">전체</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="title">요일별 지출 비율(%)</span>
+							</div>
+							<div class="chart-container">
+								<canvas id="rader_day" height="250px"></canvas>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="col-md-6">
+						<div class="widget widget-radar">
+							<div class="widget-head">
+								<div class="tools">
+									<table
+										style="top: 5px; right: 5px;; font-size: smaller; color: #545454"
+										class="">
+										<tbody>
+											<tr>
+												<td class="legendColorBox">
+													<div style="border: 1px solid #ccc; padding: 1px">
+														<div
+															style="width: 4px; height: 0; border: 5px solid #f9bfbf; overflow: hidden"></div>
+													</div>
+												</td>
+												<td class="legendLabel">최근 30일</td>
+											</tr>
+											<tr>
+												<td class="legendColorBox">
+													<div style="border: 1px solid #ccc; padding: 1px">
+														<div
+															style="width: 4px; height: 0; border: 5px solid #eeeeee; overflow: hidden"></div>
+													</div>
+												</td>
+												<td class="legendLabel">전체</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="title">시간대별 지출 비율(%)</span>
+							</div>
+							<div class="chart-container">
+								<canvas id="rader_time" height="250px"></canvas>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+					<div class="col-sm-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<span class="title">자주 간 매장</span>
+							</div>
+							<div class="panel-body">
+								<div id="donut" style="height: 250px;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="row">
 					<div class="col-sm-8">
 						<div class="panel panel-default">
@@ -296,8 +366,8 @@
 								<span class="title">카테고리별 지출</span>
 							</div>
 							<div class="panel-body text-center">
-								<span id="category1" class="category"></span>
-								<span id="category2" class="category"></span>
+								<span id="category1" class="category"></span> <span
+									id="category2" class="category"></span>
 							</div>
 						</div>
 					</div>
@@ -307,12 +377,17 @@
 								<span class="title">지불 방법</span>
 							</div>
 							<div class="panel-body text-center">
-								<div><img class="rotate method" src="../img/icon/credit-card.png">........80%</div>
-								<div><img class="rotate method" src="../img/icon/money.png">........20%</div>
+								<div>
+									<img class="rotate method" src="../img/icon/credit-card.png">........80%
+								</div>
+								<div>
+									<img class="rotate method" src="../img/icon/money.png">........20%
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="panel panel-default">
@@ -325,48 +400,47 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> 
 				
+
 			</div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
  
     </div>
-   
-   
-    
-    <script src="../assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+	
+	
+	<script src="../assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
     <script src="../assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
     <script src="../assets/js/main.js" type="text/javascript"></script>
     <script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
+    <script src="../assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
     
-    <script src="../assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-    <script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
-    <script src="../assets/lib/countup/countUp.min.js" type="text/javascript"></script>
-   
+    <script src="../assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/bootstrap-slider/js/bootstrap-slider.js" type="text/javascript"></script>
+    <script src="../assets/js/app-form-elements.js" type="text/javascript"></script>
     
     <script src="../assets/lib/raphael/raphael-min.js" type="text/javascript"></script>
-    <script src="../assets/lib/morrisjs/morris.min.js" type="text/javascript"></script>
     <script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
-    <script src="../assets/js/app-personalStat.js" type="text/javascript"></script>
+    <script src="../assets/lib/morrisjs/morris.min.js" type="text/javascript"></script>
 	<script src="../assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-    <script src="../assets/js/app-charts-sparkline.js" type="text/javascript"></script>
-        
     
+	<script src="../assets/js/app-personalStat.js" type="text/javascript"></script>
+	
+    
+    
+   
+    
+    
+
     <script type="text/javascript">
       $(document).ready(function(){
-         //initialize the javascript
-         App.init();
-         App.personalStat();
-         
-         
-        /*  App.charts();
-         App.chartsMorris();
-         App.dashboard(); */
+      	//initialize the javascript
+      	App.init();
+      	App.personalStat();
       });
     </script>
-   </body>
+	</body>
 </html>
