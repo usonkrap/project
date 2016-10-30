@@ -98,10 +98,14 @@ public class BillAction extends ActionSupport implements SessionAware {
 		}else{
 			shopping = new ShoppingSearch();
 		}
+		
+		bill.setCustomerId(customerId);
+		int billNo = dao.insertBill(bill);
 
 		for (int i = 0; i < itemName.size(); i++) {
 			Item item = new Item(itemName.get(i), itemPrice.get(i));
 			item.setCustomerId(customerId);
+			item.setBillNo(billNo);
 			if(restaurantflag){
 				item.setCategory(category);
 			}else{
@@ -116,7 +120,8 @@ public class BillAction extends ActionSupport implements SessionAware {
 			itemList.add(item);
 		}
 		
-		bill.setCustomerId(customerId);
+		
+		dao.insertItem(itemList);
 		bill.setItemList(itemList);
 
 		System.out.println("input: " + bill);

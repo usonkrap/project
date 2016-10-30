@@ -1,12 +1,15 @@
 package dao;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import util.MybatisConfig;
+import vo.Bill;
+import vo.Item;
 
 public class BillDAO {
 
@@ -47,6 +50,39 @@ public class BillDAO {
 			ss.close();
 		}
 		return category;
+	}
+	
+	public int insertBill(Bill bill){
+		System.out.println("insertBill method");
+		int billNo = 0;
+		try {
+			ss = factory.openSession();
+			ss.insert("bill.insertBill", bill);
+			ss.commit();
+			
+			billNo = ss.selectOne("bill.searchBillNo");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}
+		return billNo;
+	}
+	
+	public void insertItem(List<Item> items){
+		System.out.println("insertItem method");
+		List<Item> list = items;
+		try {
+			ss = factory.openSession();
+			for (int i = 0; i < list.size(); i++) {
+				ss.insert("bill.insertItem", list.get(i));
+				ss.commit();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}
 	}
 
 
