@@ -31,4 +31,19 @@
 <select id="searchItem" parameterType="String" resultType="String">
 	select sub_category_num from category_data where minimum_category = #{keyword}
 </select>
+
+<!-- Bill 등록 -->
+<insert id="insertBill" parameterType="Bill">
+	insert into bill values(bill_seq.nextval, #{customerId}, to_date(#{billDate}, 'YYYY-MM-DD hh24:mi:ss'), #{address, jdbcType=VARCHAR}, #{storeName, jdbcType=VARCHAR}, #{totalPrice}, #{payment, jdbcType=VARCHAR}, #{img, jdbcType=VARCHAR} )
+</insert>
+
+<!-- 방금 등록한 영수증의 billno 검색 -->
+<select id="searchBillNo" resultType="int">
+	select billNo from bill where rownum = 1 order by billNo desc
+</select>
+
+<!-- Item 등록 -->
+<insert id="insertItem" parameterType="Item">
+	insert into item values(item_seq.nextval, #{billNo}, #{customerId}, #{category}, #{name}, #{price})
+</insert>
 </mapper>
