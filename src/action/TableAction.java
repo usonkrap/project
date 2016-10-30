@@ -17,6 +17,7 @@ import dao.TableDAO;
 import vo.Bill;
 import vo.Item;
 import vo.MainPage;
+import vo.ProgressData;
 
 public class TableAction extends ActionSupport implements SessionAware {
 
@@ -31,15 +32,20 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private Double[] dayRecentAver;
 	private Double[] dayTotalAver;
 	private JSONArray donutData;
-
-
+	private ProgressData progressData;
+	
+	public String progressGet(){
+		TableDAO dao = new TableDAO();
+		progressData = dao.progressGet((String)session.get("loginId"));
+		System.out.println(progressData);
+		return SUCCESS;
+	}//progressGet
+	
 	public String goTable() {
 		TableDAO dao = new TableDAO();
 		billList = dao.tableList((String) session.get("loginId"));
-		 raderChart();
 		return SUCCESS;
 	}//end of goTable
-	
 	
 	public String raderChart(){
 		TableDAO dao = new TableDAO();
@@ -162,6 +168,9 @@ public class TableAction extends ActionSupport implements SessionAware {
 	public void setDonutData(JSONArray donutData) {this.donutData = donutData;}
 
 
+	public ProgressData getProgressData() {return progressData;}
+	public void setProgressData(ProgressData progressData) {this.progressData = progressData;}
+ 	
 	@Override
 	public void setSession(Map<String, Object> session) {this.session = session;}
 

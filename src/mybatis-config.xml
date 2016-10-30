@@ -9,6 +9,7 @@
 		<typeAlias type="vo.Bill" alias="Bill"/>
 		<typeAlias type="vo.Item" alias="Item"/>
 		<typeAlias type="vo.MainPage" alias="MainPage"/>
+		<typeAlias type="vo.ProgressData" alias="ProgressData"/>
 	</typeAliases>
 
 

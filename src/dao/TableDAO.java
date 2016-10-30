@@ -11,11 +11,25 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import util.MybatisConfig;
 import vo.Bill;
 import vo.Item;
+import vo.ProgressData;
 
 public class TableDAO {
 	SqlSessionFactory factory = MybatisConfig.getSqlSessionFactory();
 	SqlSession ss;
 	
+	
+	public ProgressData progressGet(String customerId){
+		ProgressData progressData = new ProgressData();
+		try {
+			ss = factory.openSession();
+			progressData = ss.selectOne("table.progressGet",customerId);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}///try catch finally
+		return progressData;
+	}//end of progressGet
 	/*
 	 * 레이더 차트에 사용되는
 	 * 전체 요일 금액의 소비량 퍼센티지(비율)와

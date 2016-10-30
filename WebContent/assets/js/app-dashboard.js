@@ -2,7 +2,7 @@ var App = (function () {
   'use strict';
   
   App.dashboard = function( ){
-
+	  
     //Counter
     function counter(){
 

@@ -56,6 +56,10 @@
  		<action name="donutChart" class="action.TableAction" method="donutChart">
  			<result type="json"></result>
  		</action>
+ 		
+ 		<action name="progressGet" class="action.TableAction" method="progressGet">
+ 			<result type="json"></result>
+ 		</action>
 	</package>
 </struts>
 

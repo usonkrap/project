@@ -143,4 +143,33 @@
 			  group by storename 
 			  order by price desc) a
 	</select>
+	<select id="progressGet" resultType="progressData" parameterType="string">
+		select
+			   target as CUST_TARGET_PRICE
+			  ,sums as spendMonth
+			  ,target-sums as leftMonth
+			  ,round((target-sums)/leftdays,0) as canMonth
+			  ,round( totalsum/(select trunc(sysdate - billdate)+1
+			                    from (select billdate
+			                          from bill 
+			                          order by billdate asc)
+			                    where rownum = 1),0) as averTotal
+			  ,round(sums/TRUNC(sysdate+1 - TRUNC(SYSDATE,'MM')),0) as averMonth
+			  ,round((sums/target)*100) as precentMonth
+		FROM
+			   (select sum(TOTALPRICE) sums
+			    from bill 
+			    where billdate 
+			    BETWEEN TO_CHAR(TRUNC(SYSDATE,'MM'),'YYYY/MM/DD') and TO_CHAR(LAST_DAY(SYSDATE),'YYYY/MM/DD')
+			    and CUSTOMERID = #{customerId}) 
+			  ,(select cust_target_price target
+			    from customer
+			    where cust_EMAIL = #{customerId})
+			  ,(select (LAST_DAY(SYSDATE)+1 - SYSDATE) as leftdays
+			    from dual)
+			  ,(select sum(TOTALPRICE) totalsum
+			    from bill
+			    where CUSTOMERID = #{customerId})
+
+	</select>
 </mapper>
