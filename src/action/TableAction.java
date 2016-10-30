@@ -10,6 +10,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import dao.TableDAO;
 import vo.Bill;
+import vo.Comparison;
 import vo.Item;
 import vo.MainPage;
 
@@ -23,6 +24,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private String[] mainPiePrice;
 	private String calendarDate;
 	private Map<String, Object> session;
+	private Comparison comparison;
 
 	public String goTable() {
 		TableDAO dao = new TableDAO();
@@ -74,6 +76,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 		System.out.println(billList);
 		return SUCCESS;
 	}//end of calendarBillList
+
 
 	////////////////////////////
 

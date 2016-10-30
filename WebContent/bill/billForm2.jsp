@@ -92,33 +92,24 @@ small {
 								<td>주소</td>
 								<td><input type="text" id="address" name="bill.address"></td>
 							</tr>
-							<!-- <tr>
+							<tr>
 								<td>일시</td>
 								<td><input type="text" id="billDate" name="bill.billDate"></td>
-							</tr> -->
+							</tr>
 							<tr>
-								<td colspan="2">
-									<div class="panel-body">
-
-
-										<div class="form-group">
-											<div class="col-sm-6">
-												<div 
-												   
-													data-start-view="0"
-													data-date-format="yyyy-mm-dd - HH:mm"
-													data-link-field="dtp_input1"
-													class="input-group date datetimepicker col-md-5 col-xs-7">
-													<input size="16" type="text" value="" class="form-control"
-														id="calendar_date" name="bill.billDate"><span
-														class="input-group-addon btn btn-primary"><i
-														class="icon-th s7-date"></i></span>
-												</div>
+								<td rowspan="2">
+									<div class="form-group">
+										<div class="col-sm-6">
+											<div data-start-view="0" data-date="1979-09-16T05:25:07Z"
+												data-date-format="yyyy-mm-dd - HH:ii"
+												data-link-field="dtp_input1"
+												class="input-group date datetimepicker col-md-5 col-xs-7">
+												<input size="16" type="text" value="" class="form-control"><span
+													class="input-group-addon btn btn-primary"><i
+													class="icon-th s7-date"></i></span>
 											</div>
 										</div>
-
 									</div>
-
 								</td>
 							</tr>
 						</table>
@@ -152,12 +143,13 @@ small {
 						</table>
 
 					</div>
-					<input type="hidden" value="#" id="imgPath" name="bill.img">
 				</form>
 				<button id="inputBtn">등록하기</button>
 				<button id="cancel">취소</button>
 			</div>
 		</div>
+
+		<input type="hidden" value="#" id="imgPath" name="bill.img">
 	</div>
 
 
@@ -203,8 +195,6 @@ small {
 			App.init();
 			App.formElements();
 			var totalPrice = 0;
-
-			$("#calendar_date").val();
 
 			$('.itemMenu').on('keyup', '.itemPrice', function() {
 
@@ -294,7 +284,7 @@ small {
 														data.bill.storeName);
 												$("#address").val(
 														data.bill.address);
-												$("#calendar_date").val(
+												$("#billDate").val(
 														data.bill.billDate);
 												$("#imgPath")
 														.val(data.bill.img);
@@ -355,6 +345,7 @@ small {
 
 		//////////////////폼 취소/////////////////////
 		$("#cancel").click(function() {
+
 			intiForm();
 		});
 

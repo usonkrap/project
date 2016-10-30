@@ -7928,7 +7928,7 @@ html {
 }
 body {
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: Cornsilk;
   height: 100%;
 }
 a:hover,
@@ -10149,6 +10149,7 @@ button:focus {
   display: inline-block;
   cursor: pointer;
   background-clip: padding-box;
+  float: left;
 }
 .switch-button label:before {
   position: absolute;
@@ -10167,7 +10168,7 @@ button:focus {
   color: #ffffff;
 }
 .switch-button input[type="checkbox"]:checked + span {
-  background-color: #ef6262;
+  background-color: MediumSeaGreen;
   display: block;
   position: absolute;
   top: 0;
@@ -10178,7 +10179,7 @@ button:focus {
 }
 .switch-button input[type="checkbox"]:checked + span label {
   float: right;
-  border-color: #ec4b4b;
+  border-color: MediumSeaGreen;
 }
 .switch-button input[type="checkbox"]:checked + span label:before {
   position: absolute;

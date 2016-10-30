@@ -44,7 +44,7 @@
 						<span>Janzani</span>
 					</div>
 					<a href="#" class="am-toggle-left-sidebar navbar-toggle collapsed">
-					</a> <a href="index.jsp" class="navbar-brand"> <!-- 메인 페이지 링크 및 로고 표시 -->
+					</a> <a href="../sidebar/main.action" class="navbar-brand"> <!-- 메인 페이지 링크 및 로고 표시 -->
 					</a>
 				</div>
 
@@ -56,27 +56,26 @@
 					<ul class="nav navbar-nav navbar-right am-user-nav">
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
-								<img src="../assets/img/cat.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
-								class="user-name">nickname</span> <span
-								class="angle-down s7-angle-down"></span>
+								<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 --> 
+								<span class="user-name">nickname</span> <span class="angle-down s7-angle-down"></span>
 						</a>
 							<ul role="menu" class="dropdown-menu">
 								<!--프로필 왼쪽 화살표 눌렀을시 드롭메뉴 -->
 								<!-- href는 링크, span class는 아이콘을 나타냄, 아이콘의 종류는 html\assets\lib\stroke-7\demo.html 참고  -->
-								<li><a href="#"> <span class="icon s7-user"></span>내
+								<li><a href="../customer/profile.action"> <span class="icon s7-user"></span>내
 										프로필
 								</a></li>
 								<li><a href="#"> <span class="icon s7-config"></span>설정
 								</a></li>
-								<li><a href="#"> <span class="icon s7-help1"></span>도움!
-								</a></li>
+								<%-- <li><a href="#"> <span class="icon s7-help1"></span>도움!
+								</a></li> --%>
 								<li><a href="#"> <span class="icon s7-power"></span>로그
 										아웃
 								</a></li>
 							</ul></li>
 					</ul>
 					<ul class="nav navbar-nav am-nav-right">
-						<li><a>메인 페이지</a></li>
+						<li><a>nickname님의 정보</a></li>
 					</ul>
 					<!-- \<ul class="nav navbar-nav am-nav-right"> 왼쪽 상단 메뉴
 							<li><a href="#">메인</a></li>
@@ -139,7 +138,7 @@
 				<ul class="sidebar-elements">
 
 					<li class="parent active"><a href="../sidebar/infoForm.action"><i
-							class="icon s7-user"></i><span>님의 정보</span></a> <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
+							class="icon s7-user"></i><span>nickname님의 정보</span></a> <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">
               <ul><li class="active"><a href="index.html">Version 1</a>
