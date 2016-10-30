@@ -356,20 +356,13 @@
 					<div class="col-md-3">
 						<!-- 목표치 패널 시작-->
 						<div class="panel panel-default">
-							<div class="panel-heading">10월 소비 현황</div>
-							<div class="panel-body">
+							<div class="panel-heading" id = "todaysMonth"></div>
+							<div class="panel-body" id="testcall">
 								<p></p>
 								<div class="progress">
-									<div style="width: 70%"
-										class="progress-bar progress-bar-warning progress-bar-striped active">예산
-										70% 사용</div>
+									<div style="width: 0%" id="showBar">
+										</div>
 								</div>
-								<p>총 예산 1,000,000원</p>
-								<p>현재 700,000원 사용</p>
-								<p>잔액 300,000원</p>
-								<p>일 30,000원씩 사용 가능</p>
-								<p>전체 일평균 지출액 31,154원</p>
-								<p>이번달 일평균 지출액 25,000원</p>
 							</div>
 						</div>
 					</div>

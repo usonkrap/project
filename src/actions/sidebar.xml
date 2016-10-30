@@ -51,6 +51,10 @@
  		<action name="raderChart" class="action.TableAction" method="raderChart">
  			<result type="json"></result>
  		</action>
+ 		
+ 		<action name="progressGet" class="action.TableAction" method="progressGet">
+ 			<result type="json"></result>
+ 		</action>
 	</package>
 </struts>
 
