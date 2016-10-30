@@ -103,6 +103,20 @@ var App = (function () {
 		
 		//자주 간 매장
 		 function donut_chart(){
+		     $.ajax({
+		    	 url : '../sidebar/donutChart',
+		    	 type : 'post',
+		    	 dataType : 'json',
+		    	 success : function(response){
+		    		 var donutData = response.donutData;
+		    		 donut_chart_call(donutData);
+		    	 }
+		    	 
+		     });
+		}
+		
+		
+		 function donut_chart_call(donutData){
 			  var color1 = App.color.alt2;
 		      var color2 = App.color.alt4;
 		      var color3 = App.color.alt3;
@@ -111,12 +125,7 @@ var App = (function () {
 
 		  	  Morris.Donut({
 				    element: 'donut',
-				    data: [
-				      {label: 'KFC', value: 10 },
-				      {label: '스타벅스', value: 20 },
-				      {label: 'GS25', value: 10 },
-				      {label: '버거킹', value: 55 },
-				      {label: '기타', value: 5 }],
+				    data: donutData,
 				    colors:[color5, color1, color3, color4, color2],
 				    formatter: function (y) { return y + "%" }
 				  });
