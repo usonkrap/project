@@ -166,5 +166,19 @@ public class TableDAO {
 		}//try catch finally
 		return dataList;
 	}//end fo mainPagePie
-
+	
+	
+	public List<Map<String, Object>> donutChart(String customerId){
+		List<Map<String, Object>> dataList = null;
+		try {
+			ss = factory.openSession();
+			dataList = ss.selectList("table.donutChart", customerId);
+			ss.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}//try catch finally
+		return dataList;
+	}//end fo donutChart
 }//end of class

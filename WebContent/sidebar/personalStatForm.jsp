@@ -261,7 +261,7 @@
 					<div class="col-sm-6">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<span class="title">자주 간 매장</span>
+								<span class="title">매장 별 소비금액</span>
 							</div>
 							<div class="panel-body">
 								<div id="donut" style="height: 250px;"></div>

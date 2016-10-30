@@ -48,7 +48,12 @@
  			<result type="json"></result>
  		</action>
  		
+ 		<!-- personalStatForm.jsp 통계 -->
  		<action name="raderChart" class="action.TableAction" method="raderChart">
+ 			<result type="json"></result>
+ 		</action>
+ 		
+ 		<action name="donutChart" class="action.TableAction" method="donutChart">
  			<result type="json"></result>
  		</action>
 	</package>

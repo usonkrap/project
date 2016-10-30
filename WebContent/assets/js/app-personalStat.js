@@ -53,22 +53,32 @@ var App = (function () {
 		        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 		      });
 		}
-		 function donut_chart(){
+		
+		
+		function donut_chart(){
+		     $.ajax({
+		    	 url : '../sidebar/donutChart',
+		    	 type : 'post',
+		    	 dataType : 'json',
+		    	 success : function(response){
+		    		 var donutData = response.donutData;
+		    		 donut_chart_call(donutData);
+		    	 }
+		    	 
+		     });
+		}
+		
+		
+		 function donut_chart_call(donutData){
 			  var color1 = App.color.alt2;
 		      var color2 = App.color.alt4;
 		      var color3 = App.color.alt3;
 		      var color4 = App.color.alt1;
 		      var color5 = tinycolor( App.color.primary ).lighten( 5 ).toString();
-		      
 
 		  	  Morris.Donut({
 				    element: 'donut',
-				    data: [
-				      {label: 'KFC', value: 10 },
-				      {label: '스타벅스', value: 20 },
-				      {label: 'GS25', value: 10 },
-				      {label: '버거킹', value: 55 },
-				      {label: '기타', value: 5 }],
+				    data: donutData,
 				    colors:[color5, color1, color3, color4, color2],
 				    formatter: function (y) { return y + "%" }
 				  });

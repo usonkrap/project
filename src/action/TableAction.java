@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.struts2.interceptor.SessionAware;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -28,6 +30,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private Map<String, Object> session;
 	private Double[] dayRecentAver;
 	private Double[] dayTotalAver;
+	private JSONArray donutData;
 
 
 	public String goTable() {
@@ -99,6 +102,33 @@ public class TableAction extends ActionSupport implements SessionAware {
 		System.out.println(billList);
 		return SUCCESS;
 	}//end of calendarBillList
+	
+	public String donutChart(){
+		TableDAO dao = new TableDAO();
+		String customerId = (String) session.get("loginId");
+		List<Map<String, Object>> list = null;
+		list = dao.donutChart(customerId);
+		int count = list.size();
+		int etc = 0;
+		donutData = new JSONArray();
+        for (int i = 0; i < count; i++) {
+        	Map<String, Object> tempData = list.get(i);
+        	JSONObject data = new JSONObject();
+        	if(i < 4){
+			data.put("label", String.valueOf(tempData.get("STORE")));
+			data.put("value", Integer.valueOf(String.valueOf(tempData.get("PER"))));
+			donutData.add(data);
+        	}else{
+        		etc += Integer.valueOf(String.valueOf(tempData.get("PER")));
+        		if(i == count-1){
+        			data.put("label", "기타");
+        			data.put("value", etc);
+        			donutData.add(data);
+        		}
+        	}
+		}
+		return SUCCESS;
+	}//end of donutChart
 
 	////////////////////////////
 	public Double[] getDayRecentAver() {return dayRecentAver;}
@@ -127,6 +157,10 @@ public class TableAction extends ActionSupport implements SessionAware {
 
 	public String getCalendarDate() {return calendarDate;}
 	public void setCalendarDate(String calendarDate) {this.calendarDate = calendarDate;}
+	
+	public JSONArray getDonutData() {return donutData;}
+	public void setDonutData(JSONArray donutData) {this.donutData = donutData;}
+
 
 	@Override
 	public void setSession(Map<String, Object> session) {this.session = session;}
