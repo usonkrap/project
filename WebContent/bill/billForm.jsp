@@ -50,7 +50,7 @@ small {
 				</div>
 				<div class="dragContext">
 					<div class='fileDrop'>
-					<input type="file">
+				
 					</div>
 					<div class='uploadedList'></div>
 					<div class="main-content">
