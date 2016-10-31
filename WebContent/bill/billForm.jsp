@@ -40,7 +40,7 @@ small {
 </style>
 </head>
 <body>
-
+<iframe name="zeroFrame"></iframe>
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="widget widget-pie">
@@ -49,7 +49,9 @@ small {
 					<span class="title">Bill</span>
 				</div>
 				<div class="dragContext">
-					<div class='fileDrop'></div>
+					<div class='fileDrop'>
+					<input type="file">
+					</div>
 					<div class='uploadedList'></div>
 					<div class="main-content">
 						<div class="gallery-container">
