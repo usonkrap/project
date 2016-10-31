@@ -15,7 +15,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import dao.TableDAO;
 import vo.Bill;
-import vo.Comparison;
 import vo.Item;
 import vo.MainPage;
 import vo.ProgressData;
@@ -30,7 +29,6 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private String[] mainPiePrice;
 	private String calendarDate;
 	private Map<String, Object> session;
-
 	private Double[] dayRecentAver;
 	private Double[] dayTotalAver;
 	private JSONArray donutData;
@@ -43,10 +41,6 @@ public class TableAction extends ActionSupport implements SessionAware {
 		return SUCCESS;
 	}//progressGet
 	
-
-	private Comparison comparison;
-
-
 	public String goTable() {
 		TableDAO dao = new TableDAO();
 		billList = dao.tableList((String) session.get("loginId"));
@@ -141,7 +135,6 @@ public class TableAction extends ActionSupport implements SessionAware {
 		}
 		return SUCCESS;
 	}//end of donutChart
-
 
 	////////////////////////////
 	public Double[] getDayRecentAver() {return dayRecentAver;}
