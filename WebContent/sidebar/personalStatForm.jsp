@@ -377,10 +377,10 @@
 							</div>
 							<div class="panel-body text-center">
 								<div>
-									<img class="rotate method" src="../img/icon/credit-card.png">........80%
+									<img class="rotate method" src="../img/icon/credit-card.png" id="card">
 								</div>
 								<div>
-									<img class="rotate method" src="../img/icon/money.png">........20%
+									<img class="rotate method" src="../img/icon/money.png" id="cash">
 								</div>
 							</div>
 						</div>

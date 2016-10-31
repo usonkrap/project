@@ -33,6 +33,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private Double[] dayTotalAver;
 	private JSONArray donutData;
 	private ProgressData progressData;
+	private int[] paymentData;
 	
 	public String progressGet(){
 		TableDAO dao = new TableDAO();
@@ -135,6 +136,23 @@ public class TableAction extends ActionSupport implements SessionAware {
 		}
 		return SUCCESS;
 	}//end of donutChart
+	
+	public String paymentData(){
+		TableDAO dao = new TableDAO();
+		String customerId = (String) session.get("loginId");
+		List<Map<String, Object>> list = null;
+		list = dao.paymentData(customerId);
+		paymentData = new int[2];
+        for (int i = 0; i < 2; i++) {
+        	Map<String, Object> tempData = list.get(i);
+			if(String.valueOf(tempData.get("PAYMENT")).equals("카드")){
+				paymentData[0] = Integer.valueOf(String.valueOf(tempData.get("PER")));
+			}else{
+				paymentData[1] = Integer.valueOf(String.valueOf(tempData.get("PER")));
+        	}
+        }
+		return SUCCESS;
+	}//end of paymentData
 
 	////////////////////////////
 	public Double[] getDayRecentAver() {return dayRecentAver;}
@@ -167,10 +185,12 @@ public class TableAction extends ActionSupport implements SessionAware {
 	public JSONArray getDonutData() {return donutData;}
 	public void setDonutData(JSONArray donutData) {this.donutData = donutData;}
 
-
 	public ProgressData getProgressData() {return progressData;}
 	public void setProgressData(ProgressData progressData) {this.progressData = progressData;}
- 	
+	
+	public int[] getPaymentData() {return paymentData;}
+	public void setPaymentData(int[] paymentData) {this.paymentData = paymentData;}
+
 	@Override
 	public void setSession(Map<String, Object> session) {this.session = session;}
 

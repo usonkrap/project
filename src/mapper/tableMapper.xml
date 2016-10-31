@@ -173,4 +173,8 @@
 			    where CUSTOMERID = #{customerId})
 
 	</select>
+	
+	<select id="paymentData" parameterType="String" resultType="map">
+		select payment, round((ratio_to_report(count(*)) over())*100) per from bill where customerid = #{customerid} group by payment
+	</select>
 </mapper>
