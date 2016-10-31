@@ -33,9 +33,15 @@
 				/sidebar/infoForm.jsp
 			</result>
 		</action>
-		
+
 		<action name="profile">
+			<interceptor-ref name="loginInterceptorStack"/>
 			<result>/customer/profileForm.jsp</result>
+		</action>
+		
+		<action name="logout" class="action.CustomerAction" method="logout">
+			<interceptor-ref name="loginInterceptorStack"/>
+			<result name="success" type="redirect">/loginForm.action</result>
 		</action>
 
 	</package>

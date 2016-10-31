@@ -100,8 +100,14 @@
 							role="button" aria-expanded="false" class="dropdown-toggle">
 
 									<button type="button" class="btn btn-space btn-primary btn-rounded btn-lg">
+=======
+								<a href="../bill/goBillForm.action">
+									<button type="button"
+										class="btn btn-space btn-primary btn-rounded btn-lg">
+>>>>>>> branch 'master' of https://github.com/usonkrap/project.git
 										<i class="icon icon-left s7-cloud-upload"></i> 소비 입력
 									</button>
+							</a>
 						</a> <!-- <ul class="dropdown-menu am-messages">
 									<li>
 										<div class="title">메세지
