@@ -29,7 +29,7 @@
 
 <!-- 아이템 카테고리 검색 -->
 <select id="searchItem" parameterType="String" resultType="String">
-	select sub_category_num from category_data where minimum_category = #{keyword}
+	select nvl(sub_category_num, 'null') from category_data where minimum_category = #{keyword}
 </select>
 
 <!-- Bill 등록 -->
