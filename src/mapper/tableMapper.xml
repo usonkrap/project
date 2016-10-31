@@ -112,22 +112,22 @@
 			  from      
 			  　	　　　(select 
 			  　	　　　<if test="type == 'all'">
-			  　	　　　   　　　　    (select SUM(totalprice) from bill where to_char(billdate,'day') = '월요일') monday
-			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '화요일') tuesday
-			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '수요일') wednesday
-			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '목요일') thursday
-			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '금요일') friday
-			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '토요일') saturday
-			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '일요일') sunday
+			  　	　　　   　　　　    (select SUM(totalprice) from bill where to_char(billdate,'day') = '월요일' and CUSTOMERID = #{customerId}) monday
+			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '화요일' and CUSTOMERID = #{customerId}) tuesday
+			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '수요일' and CUSTOMERID = #{customerId}) wednesday
+			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '목요일' and CUSTOMERID = #{customerId}) thursday
+			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '금요일' and CUSTOMERID = #{customerId}) friday
+			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '토요일' and CUSTOMERID = #{customerId}) saturday
+			  　	　　　   　　　　   ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '일요일' and CUSTOMERID = #{customerId}) sunday
 			  　	　　　</if>
 			  　	　　　<if test="type == 'limited'">
-			  　	　　　	 　(　　　select SUM(totalprice) from bill where to_char(billdate,'day') = '월요일' and BILLDATE BETWEEN sysdate-14 and sysdate) monday
-			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '화요일' and BILLDATE BETWEEN sysdate-14 and sysdate) tuesday
-			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '수요일' and BILLDATE BETWEEN sysdate-14 and sysdate) wednesday
-			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '목요일' and BILLDATE BETWEEN sysdate-14 and sysdate) thursday
-			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '금요일' and BILLDATE BETWEEN sysdate-14 and sysdate) friday
-			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '토요일' and BILLDATE BETWEEN sysdate-14 and sysdate) saturday
-			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '일요일' and BILLDATE BETWEEN sysdate-14 and sysdate) sunday
+			  　	　　　	 　         (select SUM(totalprice) from bill where to_char(billdate,'day') = '월요일' and BILLDATE BETWEEN sysdate-14 and sysdate and CUSTOMERID = #{customerId}) monday
+			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '화요일' and BILLDATE BETWEEN sysdate-14 and sysdate and CUSTOMERID = #{customerId}) tuesday
+			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '수요일' and BILLDATE BETWEEN sysdate-14 and sysdate and CUSTOMERID = #{customerId}) wednesday
+			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '목요일' and BILLDATE BETWEEN sysdate-14 and sysdate and CUSTOMERID = #{customerId}) thursday
+			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '금요일' and BILLDATE BETWEEN sysdate-14 and sysdate and CUSTOMERID = #{customerId}) friday
+			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '토요일' and BILLDATE BETWEEN sysdate-14 and sysdate and CUSTOMERID = #{customerId}) saturday
+			  　	　　　   　 　　　 ,(select SUM(totalprice) from bill where to_char(billdate,'day') = '일요일' and BILLDATE BETWEEN sysdate-14 and sysdate and CUSTOMERID = #{customerId}) sunday
 			  　	　　　</if>
 			  　	　　　from bill 
 			  　	　　　where CUSTOMERID = #{customerId}
@@ -177,4 +177,56 @@
 	<select id="paymentData" parameterType="String" resultType="map">
 		select payment, round((ratio_to_report(count(*)) over())*100) per from bill where customerid = #{customerid} group by payment
 	</select>
+	
+	<select id = "raderChartForTime" resultType="Double" parameterType="map">
+			select
+ 			  round((RATIO_TO_REPORT(val) OVER ())*100,2)
+		from
+			  (select
+			         DECODE(rownum,1, first
+			                     ,2, second
+			                     ,3, third
+			                     ,4, fourth
+			                 )  as val
+			  from      
+			  　	　　　(select 
+			  　	　　　<if test="type == 'all'">
+			  　	　　　   　　　　    NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 0 and 5 and customerId = #{customerId}),0) first
+ 										,NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 6 and 11 and customerId = #{customerId}),0) second
+										,NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 12 and 17 and customerId = #{customerId}),0) third
+										,NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 18 and 23 and customerId = #{customerId}),0) fourth
+			  　	　　　</if>
+			  　	　　　<if test="type == 'limited'">
+			  　	　　　	 　           NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN  0 and 5 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) first
+ 										, NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN  6 and 11 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) second
+										, NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 12 and 17 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) third
+										, NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 18 and 23 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) fourth
+			  　	　　　</if>
+			  　	　　　from bill 
+			  　	　　　where CUSTOMERID = #{customerId}
+			  　	　　　group by customerid )
+			  connect by level &lt; 5)
+	</select>
+	<!-- <select id = "raderChartForTime" resultType="java.util.LinkedHashMap" parameterType="map">
+		select groups
+       		   ,round((RATIO_TO_REPORT(val) OVER ())*100,2) val 
+		from( select groups,sum(totalprice) as val
+              from (select totalprice
+		                   ,hours
+		                   ,CASE WHEN hours BETWEEN 0 and 5 THEN 'a'
+		                         WHEN hours BETWEEN 6 and 11 THEN 'b'
+		                         WHEN hours BETWEEN 12 and 17 THEN 'c'
+		                         WHEN hours BETWEEN 18 and 24 THEN 'd'
+		                         else 'default'
+		                         end as groups
+                    from (select  totalprice
+                       			  ,to_char(billdate,'hh24') hours
+                 		  from bill		   
+                  		  where  CUSTOMERID = #{customerId}
+                  <if test = "type == 'limited'">
+                  		  and  BILLDATE BETWEEN sysdate-14 and sysdate
+                  </if>
+                  		  ))
+              		GROUP by groups)
+	</select> -->
 </mapper>

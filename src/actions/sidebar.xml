@@ -54,6 +54,10 @@
  			<result type="json"></result>
  		</action>
  		
+ 		<action name="raderChartForTime" class="action.TableAction" method="raderChartForTime">
+ 			<result type="json"></result>
+ 		</action>
+ 		
  		<action name="donutChart" class="action.TableAction" method="donutChart">
  			<result type="json"></result>
  		</action>
