@@ -64,7 +64,7 @@
 			<h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">무엇을 구매하셨나요?</h1>
 			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">당신의 소비패턴을 분석해 드립니다.</h3>
 			<ul class="list-inline intro-social-buttons">
-				<li><a href="customer/loginForm.action" class="btn btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">JanZani 시작하기</span></a>
+				<li><a href="customer/loginForm.action" class="btn btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">시작하기</span></a>
 				</li>
 				<!-- <li id="download" ><a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Google Play</span></a>
 				</li> -->
@@ -88,17 +88,17 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#home">JanZani</a>
+				<a class="navbar-brand" href="#home">HOME</a>
 			</div>
 
 			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
 					<li class="menuItem"><a href="#whatis">What is?</a></li>
-					<li class="menuItem"><a href="#useit">Feature</a></li>
+					<!-- <li class="menuItem"><a href="#useit">Feature</a></li> -->
 					<li class="menuItem"><a href="#signup">Sign up</a></li>
 					<!-- <li class="menuItem"><a href="#screen">Screenshot</a></li>-->
 					<!-- <li class="menuItem"><a href="#downloadlink">Download</a></li> --> 
-					<li class="menuItem"><a href="#contact">Contact</a></li>
+					<!-- <li class="menuItem"><a href="#contact">Contact</a></li> -->
 				</ul>
 			</div>
 		   
@@ -168,7 +168,7 @@
 	 
 	 
 	<!-- Use it -->
-    <div id ="useit" class="content-section-a">
+    <!-- <div id ="useit" class="content-section-a">
 
         <div class="container">
 			
@@ -262,7 +262,7 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
 	<!-- 
 	<div id="signup" class="content-section-c ">
@@ -313,14 +313,14 @@
 								</div>
 							</div>
 						</div>
-				<p><a href="customer/joinForm.action" class="btn btn-embossed btn-primary view" style="width: 350px; font-size: 20px" role="button">JanZani 가입하기</a></p> 
+				<p><a href="customer/joinForm.action" class="btn btn-embossed btn-primary view" style="width: 350px; font-size: 20px" role="button">가입하기</a></p> 
 			 </div>
 			</div>
 		</div>
 	</div>
 	
 	<!-- Contact -->
-	<div id="contact" class="content-section-a">
+	<%-- <div id="contact" class="content-section-a">
 		<div class="container">
 			<div class="row">
 			
@@ -422,7 +422,7 @@
         </div>
       </div>
     </footer>
-
+ --%>
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
