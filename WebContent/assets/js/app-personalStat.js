@@ -110,7 +110,7 @@ var App = (function () {
 		
 		
 		
-		
+	//자주간 매장 	
 		
 				 function donut_chart(){
 		     $.ajax({
@@ -137,7 +137,7 @@ var App = (function () {
 				    element: 'donut',
 				    data: donutData,
 				    colors:[color5, color1, color3, color4, color2],
-				    formatter: function (y) { return y + "%" }
+				    formatter: function (y) { return y + "건" }
 				  });
 			  }
 		 
