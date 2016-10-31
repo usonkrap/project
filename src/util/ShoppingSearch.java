@@ -43,7 +43,7 @@ public class ShoppingSearch {
 		} else {
 			System.out.println("카테고리 검색 결과: " + word);
 			String[] array = word.split("&gt;");
-			categoryKeyword = array[array.length -1];
+			categoryKeyword = array[array.length -2];
 			System.out.println("DB 검색용 카테고리 키워드: " + categoryKeyword);
 		}
 		return categoryKeyword;
