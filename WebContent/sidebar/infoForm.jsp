@@ -20,7 +20,6 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-<script type="text/javascript" src="../script/jquery-3.1.0.min.js"></script>
 <link rel="stylesheet" type="text/css"
 	href="../assets/lib/select2/css/select2.min.css" />
 <link rel="stylesheet" type="text/css"
