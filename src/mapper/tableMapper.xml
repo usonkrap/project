@@ -136,12 +136,13 @@
 	</select>
 	
 	<select id="donutChart" resultType="hashmap" parameterType="String">
-		select a.storename store, round((ratio_to_report(a.price) over ())*100) per 
-		from (select storename, sum(totalprice) price 
-			  from bill 
-			  where customerid = #{customerid} 
-			  group by storename 
-			  order by price desc) a
+		select * 
+		from(   select storename, count(*) count 
+			    from bill 
+			    where customerid = #{customerId}
+			    group by storename 
+			    order by count desc) 
+		where rownum between 1 and 5
 	</select>
 	
 	<select id="progressGet" resultType="progressData" parameterType="string">
