@@ -61,6 +61,10 @@
  		<action name="progressGet" class="action.TableAction" method="progressGet">
  			<result type="json"></result>
  		</action>
+ 		
+ 		<action name="paymentData" class="action.TableAction" method="paymentData">
+ 			<result type="json"></result>
+ 		</action>
 	</package>
 </struts>
 

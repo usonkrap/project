@@ -194,5 +194,20 @@ public class TableDAO {
 			ss.close();
 		}//try catch finally
 		return dataList;
-	}//end fo donutChart
+	}//end of donutChart
+	
+	public List<Map<String, Object>> paymentData(String customerId){
+		List<Map<String, Object>> dataList = null;
+		try {
+			ss = factory.openSession();
+			dataList = ss.selectList("table.paymentData", customerId);
+			ss.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}//try catch finally
+		return dataList;
+	}//end of paymentData
+	
 }//end of class

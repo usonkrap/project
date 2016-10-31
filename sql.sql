@@ -80,6 +80,7 @@ insert into item values(5, 3 ,'외식' ,'오징어찌게',8000);
 insert into item values(7, 3 ,'외식' ,'바나나',500);
 insert into item values(9, 3 ,'외식' ,'된장찌게',7000);
 
+insert into bill values(bill_seq.nextval, 'master@master.com', '2016-09-30 12:32:01', '서울 강남구 삼성로104길', '마시타야', 6700, '카드', null);
 
 commit;
 
