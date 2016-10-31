@@ -51,17 +51,28 @@ var App = (function () {
 		        maintainAspectRatio: true,
 		        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 		      });
+		      
 		}
 		
 		
+		function rader_time_chart(){
+			 $.ajax({
+		    	 url : '../sidebar/raderChartForTime',
+		    	 type : 'post',
+		    	 dataType : 'json',
+		    	 success : function(response){
+		    		 var dayRecentAverForTime = response.dayRecentAverForTime;
+		    		 var dayTotalAverForTime = response.dayTotalAverForTime;
+		    		 rader_time_chart_call(dayRecentAverForTime, dayTotalAverForTime);
+		    	 }
+		    	 
+		     });
 		
 		
-		
-		
-		
+		}
 		
 		//시간대별 지출 비율
-		function rader_time_chart(){
+		function rader_time_chart_call(dayRecentAverForTime, dayTotalAverForTime){
 		      var color1 = tinycolor( App.color.primary ).lighten( 6 );
 		      var color2 = tinycolor( App.color.alt4 ).lighten( 6.5 );
 
@@ -75,7 +86,7 @@ var App = (function () {
 		            strokeColor: color2.setAlpha(.8).toString(),
 		            highlightFill: color2.setAlpha(.75).toString(),
 		            highlightStroke: color2.toString(),
-		            data: [65, 59, 80, 81 ]
+		            data: dayRecentAverForTime
 		          },
 		          {
 		            label: "all",
@@ -84,7 +95,7 @@ var App = (function () {
 		            strokeColor: color1.setAlpha(.8).toString(),
 		            highlightFill: color1.setAlpha(.75).toString(),
 		            highlightStroke: color1.toString(),
-		            data: [28, 48, 40, 19]
+		            data: dayTotalAverForTime
 		          }
 		        ]
 		      };

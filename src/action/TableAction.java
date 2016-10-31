@@ -1,11 +1,8 @@
 package action;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.apache.struts2.interceptor.SessionAware;
 import org.json.simple.JSONArray;
@@ -31,13 +28,17 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private Map<String, Object> session;
 	private Double[] dayRecentAver;
 	private Double[] dayTotalAver;
+	private Double[] dayRecentAverForTime;
+	private Double[] dayTotalAverForTime;
 	private JSONArray donutData;
 	private ProgressData progressData;
 	
+
 	public String progressGet(){
 		TableDAO dao = new TableDAO();
 		progressData = dao.progressGet((String)session.get("loginId"));
 		System.out.println(progressData);
+		raderChartForTime();
 		return SUCCESS;
 	}//progressGet
 	
@@ -64,6 +65,24 @@ public class TableAction extends ActionSupport implements SessionAware {
 		}//else
 		return SUCCESS;
 	}//end of raderChart
+	
+	public String raderChartForTime(){
+		TableDAO dao = new TableDAO();
+		List<List<Double>> lists =  dao.raderChartForTime((String) session.get("loginId"));
+		dayTotalAverForTime = new Double[4];
+		dayRecentAverForTime = new Double[4];
+		for(int i = 0; i<lists.size(); i++){
+			List<Double> littles = lists.get(i);
+			for(int ii=0; ii< littles.size(); ii++ ){
+				if(i == 0){
+					dayTotalAverForTime[ii] = littles.get(ii);
+				}else{
+					dayRecentAverForTime[ii] = littles.get(ii);
+				}//if else
+			}//for
+		}//else
+		return SUCCESS;
+	}//end of raderChartForTime
 	
 	public String mainPageLoad(){
 		main = new MainPage();
@@ -167,6 +186,11 @@ public class TableAction extends ActionSupport implements SessionAware {
 	public JSONArray getDonutData() {return donutData;}
 	public void setDonutData(JSONArray donutData) {this.donutData = donutData;}
 
+	public Double[] getDayRecentAverForTime() {return dayRecentAverForTime;}
+	public void setDayRecentAverForTime(Double[] dayRecentAverForTime) {this.dayRecentAverForTime = dayRecentAverForTime;}
+	
+	public Double[] getDayTotalAverForTime() {return dayTotalAverForTime;}
+	public void setDayTotalAverForTime(Double[] dayTotalAverForTime) {this.dayTotalAverForTime = dayTotalAverForTime;}
 
 	public ProgressData getProgressData() {return progressData;}
 	public void setProgressData(ProgressData progressData) {this.progressData = progressData;}
