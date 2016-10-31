@@ -62,9 +62,11 @@
 		
 		.payment {
 			font-size: 5em;
-			padding-left: 2em;
-			padding-top: 2%;
-			float: right;
+		    padding-left: 1.2em;
+		    padding-top: 2%;
+		    float: right;
+		    color: #ef6262;
+		    font-weight: bold;
 		}
 		
 		.method {
@@ -359,7 +361,7 @@
 					
 					
 					
-					<div class="col-sm-4">
+					<div class="col-sm-6">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<span class="title">자주 간 매장 TOP5</span>
