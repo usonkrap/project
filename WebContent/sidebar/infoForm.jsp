@@ -229,17 +229,17 @@
 
 		<div class="am-content">
 			<!-- am 컨텐츠 시작ㄴ -->
-			<div class="main-content">
+			<div class="main-content" style="padding-left: initial; padding-right: initial;">
 				<!-- 메인 컨텐츠 시작  -->
 				<!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
 
 				<div class="row">
 					<!-- 가로줄 한줄 묶음 시작 -->
-					<div class="col-md-8">
+					<div class="col-md-6">
 						<div class="widget widget-pie">
 							<!-- 메인 화면 대표 그래프 -->
 							<div class="widget-head">
-								<span class="title">Top Sales</span>
+								<span class="title" style="font-size: 28px;">Top Sales</span>
 							</div>
 							<div class="row chart-container">
 								<div class="col-md-6">
@@ -251,7 +251,7 @@
 											style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 102px; height: 125px;"></canvas>
 									</div>
 								</div>
-								<div class="col-md-6">
+								<div class="col-md-6" style="padding-left: 15%;">
 									<div class="legend">
 										<table style="font-size: smaller; color: #545454">
 											<tbody>
@@ -284,8 +284,10 @@
 									</div>
 								</div>
 							</div>
+							
+							
 							<div class="row chart-info">
-								<div class="col-xs-4">
+								<%-- <div class="col-xs-4">
 									<span class="title">New Clients</span><span
 										data-toggle="counter" data-end="180" class="number">180</span>
 								</div>
@@ -297,62 +299,19 @@
 								<div class="col-xs-4">
 									<span class="title">Refunds</span><span data-toggle="counter"
 										data-end="90" class="number">90</span>
-								</div>
+								</div> --%>
 							</div>
+							
+							
 						</div>
 					</div>
+					
+					
+					
 					<!-- 메인 화면 대표 그래프 끝 -->
-
-					<div class="col-md-4">
-						<!-- 메세지 위젯1-->
-						<div class="panel panel-alt1">
-							<div class="panel-heading">
-								<div class="tools"></div>
-								<span class="title">가장 많이 간 가게는?</span>
-							</div>
-							<div class="panel-body">
-								<p id="mostVisit"></p>
-							</div>
-						</div>
-					</div>
-					<!-- 메세지 위젯1-->
-
-					<div class="col-md-4">
-						<!-- 메세지 위젯2-->
-						<div class="panel panel-alt1">
-							<div class="panel-heading">
-								<div class="tools"></div>
-								<span class="title">최대 소비날</span>
-							</div>
-							<div class="panel-body">
-								<p id="mostSpendDay"></p>
-							</div>
-						</div>
-					</div>
-					<!-- 메세지 위젯2-->
-
-					<div class="col-md-4">
-						<!-- 메세지 위젯3-->
-						<div class="panel panel-alt1">
-							<div class="panel-heading">
-								<div class="tools"></div>
-								<span class="title">최고 소비액</span>
-							</div>
-							<div class="panel-body">
-								<p id="mostSpend"></p>
-							</div>
-						</div>
-					</div>
-					<!-- 메세지 위젯3-->
-
-				</div>
-				<!-- 가로줄 한줄 묶음 끝 -->
-
-				<div class="row">
-					<!-- 가로줄 한줄 묶음 시작 -->
-
-
 					<div class="col-md-3">
+					
+					<div class="col-md-12">
 						<!-- 목표치 패널 시작-->
 						<div class="panel panel-default">
 							<div class="panel-heading" id = "todaysMonth"></div>
@@ -366,9 +325,66 @@
 						</div>
 					</div>
 					<!-- 목표치 패널 끝 -->
-
-
+					
+						
+					</div>
 					<div class="col-md-3">
+						<div class="col-md-12">
+							<!-- 메세지 위젯1-->
+							<div class="panel panel-alt1">
+								<div class="panel-heading">
+									<div class="tools"></div>
+									<span class="title">가장 많이 간 가게는?</span>
+								</div>
+								<div class="panel-body">
+									<p id="mostVisit"></p>
+								</div>
+							</div>
+						</div>
+						<!-- 메세지 위젯1-->
+	
+						<div class="col-md-12">
+							<!-- 메세지 위젯2-->
+							<div class="panel panel-alt1">
+								<div class="panel-heading">
+									<div class="tools"></div>
+									<span class="title">최대 소비날</span>
+								</div>
+								<div class="panel-body">
+									<p id="mostSpendDay"></p>
+								</div>
+							</div>
+						<!-- 메세지 위젯2-->
+						</div>
+	
+						<div class="col-md-12">
+							<!-- 메세지 위젯3-->
+							<div class="panel panel-alt1">
+								<div class="panel-heading">
+									<div class="tools"></div>
+									<span class="title">최고 소비액</span>
+								</div>
+								<div class="panel-body">
+									<p id="mostSpend"></p>
+								</div>
+							</div>
+						</div>
+						<!-- 메세지 위젯3-->
+					
+					</div>
+					
+					
+				</div>
+				<!-- 가로줄 한줄 묶음 끝 -->
+
+				<div class="row">
+					<!-- 가로줄 한줄 묶음 시작 -->
+
+
+					
+
+
+					<div class="col-md-4">
 						<!-- 지출 내역 패널 -->
 						<div class="panel panel-default">
 							<div class="panel-heading">최근 지출 내역</div>
@@ -378,13 +394,13 @@
 					<!-- 지출 내역 패널 끝-->
 
 
-					<div class="col-md-6">
+					<div class="col-md-8">
 						<!-- 달력 위젯 시작 -->
 						<div class="widget widget-calendar">
 							<div class="cal-container">
 								<div class="cal-notes">
 									<span class="day">Thursday</span><span class="date">September
-										24</span><span class="title">Notes</span>
+										24</span><span class="title">Purchases</span>
 									<ul id="calendar_note">
 									</ul>
 								</div>
