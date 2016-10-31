@@ -214,7 +214,7 @@ var App = (function () {
 		    			 if(index == 0){
 		    				 $('<span class="payment">' + data + '%</span>').insertAfter('#card');
 		    			 }else{
-		    				 $('<span class="payment">' + data + '%</span>').insertAfter('#cash');
+		    				 $('<span class="payment cash">' + data + '%</span>').insertAfter('#cash');
 		    			 }
 		    			});
 		    		 

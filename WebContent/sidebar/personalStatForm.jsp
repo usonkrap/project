@@ -65,12 +65,15 @@
 		    padding-left: 1.2em;
 		    padding-top: 2%;
 		    float: right;
-		    color: #ef6262;
+		    color: #f38282;
 		    font-weight: bold;
 		}
 		
+		.cash {
+			color: #cccccc;
+		}
+		
 		.method {
-			padding-left: 2em;
 		}
 	</style>
   	
@@ -277,6 +280,9 @@
 							</div>
 							<div class="panel-body">
 								<div id="line" style="height: 300px;"></div>
+								<div>
+									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -358,25 +364,17 @@
 							</div>
 						</div>
 					</div>
+	</div>				
 					
 					
 					
-					<div class="col-sm-6">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<span class="title">자주 간 매장 TOP5</span>
-							</div>
-							<div class="panel-body">
-								<div id="donut" style="height: 250px;"></div>
-							</div>
-						</div>
-					</div>
+					<div class="row">
 					<div class="col-sm-6">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<span class="title">지불 방법</span>
 							</div>
-							<div class="panel-body text-center">
+							<div class="panel-body text-center" style="padding-left: 10%;">
 								<div>
 								<span style="float: left; padding-bottom: 2em;">
 									<img class="rotate method" src="../img/icon/credit-card.png" id="card">
@@ -406,7 +404,16 @@
 						</div>
 					</div>
 					
-				</div>
+				<div class="col-sm-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<span class="title">자주 간 매장 TOP5</span>
+							</div>
+							<div class="panel-body">
+								<div id="donut" style="height: 250px;"></div>
+							</div>
+						</div>
+					</div>
 
 			</div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->

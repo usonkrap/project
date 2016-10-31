@@ -70,7 +70,7 @@ var App = (function () {
   					pie: {
   						show: true,
   						highlight: {
-  							opacity: 0.1
+  							opacity: 0.1,
   						}
   		      }
   		    },
@@ -80,7 +80,7 @@ var App = (function () {
   		    legend:{
   		    	container: legendContainer
   		    },
-          colors: [ color1, color2, color3]  
+  		    colors: [ color1, color2, color3]  
   			});
     }
     //Top pie widget 2
