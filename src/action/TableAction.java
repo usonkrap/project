@@ -121,18 +121,9 @@ public class TableAction extends ActionSupport implements SessionAware {
         for (int i = 0; i < count; i++) {
         	Map<String, Object> tempData = list.get(i);
         	JSONObject data = new JSONObject();
-        	if(i < 4){
-			data.put("label", String.valueOf(tempData.get("STORE")));
-			data.put("value", Integer.valueOf(String.valueOf(tempData.get("PER"))));
+			data.put("label", String.valueOf(tempData.get("STORENAME")));
+			data.put("value", Integer.valueOf(String.valueOf(tempData.get("COUNT"))));
 			donutData.add(data);
-        	}else{
-        		etc += Integer.valueOf(String.valueOf(tempData.get("PER")));
-        		if(i == count-1){
-        			data.put("label", "기타");
-        			data.put("value", etc);
-        			donutData.add(data);
-        		}
-        	}
 		}
 		return SUCCESS;
 	}//end of donutChart
