@@ -56,7 +56,7 @@
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
 								<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 --> 
-								<span class="user-name">nickname</span> <span class="angle-down s7-angle-down"></span>
+								<span class="user-name"><s:property value="#session.nickname" /></span> <span class="angle-down s7-angle-down"></span>
 						</a>
 							<ul role="menu" class="dropdown-menu">
 								<!--프로필 왼쪽 화살표 눌렀을시 드롭메뉴 -->
@@ -74,10 +74,10 @@
 							</ul></li>
 					</ul>
 					<ul class="nav navbar-nav am-nav-right">
-						<li><a>nickname님의 정보</a></li>
+						<li><a><s:property value="#session.nickname" />님의 정보</a></li>
 					</ul>
 					<!-- \<ul class="nav navbar-nav am-nav-right"> 왼쪽 상단 메뉴
-							<li><a href="#">메인</a></li>
+							<li><a href="#">메 인</a></li>
               				<li><a href="#">어바웃</a></li>
               				<li class="dropdown">
               					<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">조원소개
@@ -99,8 +99,7 @@
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
 
-									<button type="button"
-										class="btn btn-space btn-primary btn-rounded btn-lg">
+									<button type="button" class="btn btn-space btn-primary btn-rounded btn-lg">
 										<i class="icon icon-left s7-cloud-upload"></i> 소비 입력
 									</button>
 						</a> <!-- <ul class="dropdown-menu am-messages">
@@ -135,7 +134,7 @@
 				<ul class="sidebar-elements">
 
 					<li class="parent active"><a href="../sidebar/infoForm.action"><i
-							class="icon s7-user"></i><span>nickname님의 정보</span></a> <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
+							class="icon s7-user"></i><span><s:property value="#session.nickname" />님의 정보</span></a> <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">
               <ul><li class="active"><a href="index.html">Version 1</a>

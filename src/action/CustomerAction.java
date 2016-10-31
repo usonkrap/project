@@ -31,7 +31,8 @@ public class CustomerAction extends ActionSupport implements SessionAware {
 			return INPUT;
 		}
 		else{
-			session.put("loginId", customer.getCust_email());
+			session.put("loginId", c.getCust_email());
+			session.put("nickname", c.getCust_nickname());
 			return SUCCESS;
 		}
 	}

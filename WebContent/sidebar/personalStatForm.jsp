@@ -81,7 +81,7 @@
 							<li class="dropdown">
 								<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
 									<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 --> <span
-								class="user-name">nickname</span> <span
+								class="user-name"><s:property value="#session.nickname" /></span> <span
 								class="angle-down s7-angle-down"></span>
 						</a>
 							<ul role="menu" class="dropdown-menu">
@@ -158,7 +158,7 @@
           <div class="am-logo"></div>
           <ul class="sidebar-elements">
           
-            <li class="parent active"><a href="../sidebar/infoForm.action"><i class="icon s7-user"></i><span>nickname님의 정보</span></a>
+            <li class="parent active"><a href="../sidebar/infoForm.action"><i class="icon s7-user"></i><span><s:property value="#session.nickname" />님의 정보</span></a>
               <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">
@@ -346,27 +346,13 @@
 					
 					
 					
-					<div class="col-sm-6">
+					<div class="col-sm-4">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<span class="title">자주 간 매장</span>
 							</div>
 							<div class="panel-body">
 								<div id="donut" style="height: 250px;"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-sm-8">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<span class="title">카테고리별 지출</span>
-							</div>
-							<div class="panel-body text-center">
-								<span id="category1" class="category"></span> <span
-									id="category2" class="category"></span>
 							</div>
 						</div>
 					</div>
@@ -385,6 +371,21 @@
 							</div>
 						</div>
 					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<span class="title">카테고리별 지출</span>
+							</div>
+							<div class="panel-body text-center">
+								<span id="category1" class="category"></span> <span
+									id="category2" class="category"></span>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 
 			</div><!-- 메인 컨텐츠 끝 -->

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Amaretti</title>
+    <title>JanZani</title>
     <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/style.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.nanoscroller/css/nanoscroller.css"/><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -56,7 +56,7 @@
         <div class="main-content">
           <div class="login-container sign-up">
             <div class="panel panel-default">
-              <div class="panel-heading"><img src="../assets/img/logo-full-retina.png" alt="logo" width="150px" height="39px" class="logo-img"><span>Please enter your user information.</span></div>
+              <div class="panel-heading"><img src="../assets/img/logo-full-retina.png" alt="logo" width="150px" height="39px" class="logo-img"><span></span></div>
               
               <!-- 회원가입판넬시작 -->
               

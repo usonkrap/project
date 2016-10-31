@@ -97,7 +97,7 @@
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
 								<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 -->
-								<span class="user-name">nickname</span> <span
+								<span class="user-name"><s:property value="#session.nickname" /></span> <span
 								class="angle-down s7-angle-down"></span>
 						</a>
 							<ul role="menu" class="dropdown-menu">
@@ -139,7 +139,7 @@
 				<ul class="sidebar-elements">
 
 					<li class="parent active"><a href="../sidebar/infoForm.action"><i
-							class="icon s7-user"></i><span>nickname님의 정보</span></a></li>
+							class="icon s7-user"></i><span><s:property value="#session.nickname" />님의 정보</span></a></li>
 
 					<li class="parent"><a href="../sidebar/spendListForm.action"><i
 							class="icon s7-news-paper"></i><span>소비 목록</span></a></li>

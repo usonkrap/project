@@ -13,6 +13,28 @@ create table customer(
 select * from customer
 
 
+
+
+
+DECLARE
+    j    NUMBER (3);
+BEGIN
+    FOR j IN 1 .. 10
+    LOOP
+         insert into customer(cust_email, cust_password, cust_nickname, cust_address, cust_birthday) 
+		values('test1@test.com', '1111', 'test1', '서울강남구대치동', '2000-10-15');
+
+    END LOOP;
+END;
+
+       
+
+
+
+
+
+
+
 create table bill(
 	billNo NUMBER PRIMARY key,
   customerId varchar2(30) REFERENCES customer(cust_email),
@@ -60,3 +82,64 @@ insert into item values(9, 3 ,'외식' ,'된장찌게',7000);
 
 
 commit;
+
+
+
+
+
+
+select
+	sum(totalprice)
+from
+	(select * from bill where customerId ='master@master.com')
+where
+	(to_char(billdate, 'hh24') between 0 and 5)
+union
+select
+	sum(totalprice)
+from
+	(select * from bill where customerId ='master@master.com')
+where
+	to_char(billdate, 'hh24') between 6 and 11
+union
+select
+	sum(totalprice)
+from
+	(select * from bill where customerId ='master@master.com')
+where
+	to_char(billdate, 'hh24') between 12 and 17	
+union
+select
+	sum(totalprice)
+from
+	(select * from bill where customerId ='master@master.com')
+where
+	to_char(billdate, 'hh24') between 18 and 23
+	
+	
+	
+	
+	
+	
+	
+	
+select
+sum(totalprice)
+from
+(select * from bill where customerId ='master@master.com')
+where
+to_char(billdate, 'hh24') between 6 and 11
+
+select
+sum(totalprice)
+from
+(select * from bill where customerId ='master@master.com')
+where
+to_char(billdate, 'hh24') between 12 and 17
+
+select
+sum(totalprice)
+from
+(select * from bill where customerId ='master@master.com')
+where
+to_char(billdate, 'hh24') between 18 and 23
