@@ -20,7 +20,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-<script type="text/javascript" src="script/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="../script/jquery-3.1.0.min.js"></script>
 <link rel="stylesheet" type="text/css"
 	href="../assets/lib/select2/css/select2.min.css" />
 <link rel="stylesheet" type="text/css"
@@ -100,12 +100,10 @@
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
 
-								<a href="../bill/goBillForm.action">
 									<button type="button"
 										class="btn btn-space btn-primary btn-rounded btn-lg">
 										<i class="icon icon-left s7-cloud-upload"></i> 소비 입력
 									</button>
-							</a>
 						</a> <!-- <ul class="dropdown-menu am-messages">
 									<li>
 										<div class="title">메세지
