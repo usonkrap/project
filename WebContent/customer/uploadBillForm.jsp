@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib prefix="s" uri="/struts-tags" %> 
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,7 +24,7 @@
 				<div class="container-fluid"><!--  ??? -->
 					<div class="navbar-header"><!--  ??? -->
 						<div class="page-title"><!--  ??? -->
-							<span>Dashboard</span>
+							<span>JanZani</span>
 						</div>
 						<a href="#" class="am-toggle-left-sidebar navbar-toggle collapsed">
 						</a>
@@ -39,7 +39,7 @@
 							<li class="dropdown">
 								<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
 									<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 -->
-									<span class="user-name"><%@ taglib prefix="s" uri="/struts-tags"%></span>
+									<span class="user-name"><s:property value="#session.nickname" /></span>
 									<span class="angle-down s7-angle-down"></span>
 								</a>
 								<ul role="menu" class="dropdown-menu"><!--프로필 왼쪽 화살표 눌렀을시 드롭메뉴 -->
@@ -58,7 +58,7 @@
 						</ul>
 						
 						<ul class="nav navbar-nav am-nav-right">
-							<li><a></a></li>
+							<li><a>프로필</a></li>
 						</ul>
 						<!-- \<ul class="nav navbar-nav am-nav-right"> 왼쪽 상단 메뉴
 							<li><a href="#">메인</a></li>
@@ -204,7 +204,6 @@
 				<!--Sidebar bottom content-->
 			</div>
 		</div>
-	
 	
 	   <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
