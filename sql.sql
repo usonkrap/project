@@ -13,22 +13,7 @@ create table customer(
 select * from customer
 
 
-
-
-
-DECLARE
-    j    NUMBER (3);
-BEGIN
-    FOR j IN 1 .. 10
-    LOOP
-         insert into customer(cust_email, cust_password, cust_nickname, cust_address, cust_birthday) 
-		values('test1@test.com', '1111', 'test1', '서울강남구대치동', '2000-10-15');
-
-    END LOOP;
-END;
-
-       
-
+insert into bill values(78, 'master@master')
 
 
 
@@ -36,7 +21,7 @@ END;
 
 
 create table bill(
-	billNo NUMBER PRIMARY key,
+ billNo NUMBER PRIMARY key,
   customerId varchar2(30) REFERENCES customer(cust_email),
   billDate date not null,
   address varchar2(300),
