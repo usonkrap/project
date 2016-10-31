@@ -17,8 +17,10 @@
   	<link rel="stylesheet" type="text/css" href="../assets/lib/morrisjs/morris.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
-
-    <link href="../css/general.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
+  	
+  	
   	
   	
     <style>
@@ -151,6 +153,7 @@
 					</div>
 				</div>			
 			</nav>
+	<div class="am-left-sidebar">
         <div class="content">
           <div class="am-logo"></div>
           <ul class="sidebar-elements">
@@ -270,7 +273,6 @@
 						<div class="widget widget-radar">
 							<div class="widget-head">
 								<div class="tools">
-<<<<<<< HEAD
 									<table
 										style="top: 5px; right: 5px;; font-size: smaller; color: #545454"
 										class="">
@@ -289,22 +291,6 @@
 													<div style="border: 1px solid #ccc; padding: 1px">
 														<div
 															style="width: 4px; height: 0; border: 5px solid #eeeeee; overflow: hidden"></div>
-=======
-									<table style="top:5px;right:5px;;font-size:smaller;color:#545454" class="">
-										<tbody>
-											<tr>
-												<td class="legendColorBox">
-													<div style="border:1px solid #ccc;padding:1px">
-														<div style="width:4px;height:0;border:5px solid #f9bfbf;overflow:hidden"></div>
-													</div>
-												</td>
-												<td class="legendLabel">최근 30일</td>
-											</tr>
-											<tr>
-												<td class="legendColorBox">
-													<div style="border:1px solid #ccc;padding:1px">
-														<div style="width:4px;height:0;border:5px solid #eeeeee;overflow:hidden"></div>
->>>>>>> refs/heads/naks
 													</div>
 												</td>
 												<td class="legendLabel">전체</td>
@@ -372,27 +358,6 @@
 					</div>
 				</div>
 
-<<<<<<< HEAD
-=======
-
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<span class="title" style="padding: 20px;">월별 지출 비교 <select
-									class="form-control" style="width: 15%; float: right;">
-										<option>2016년</option>
-										<option>2015년</option>
-										<option>2014년</option>
-								</select></span>
-							</div>
-							<div class="panel-body">
-								<div id="line" style="height: 300px;"></div>
-							</div>
-						</div>
-					</div>
-				</div>
->>>>>>> refs/heads/naks
 				<div class="row">
 					<div class="col-sm-8">
 						<div class="panel panel-default">
@@ -400,13 +365,8 @@
 								<span class="title">카테고리별 지출</span>
 							</div>
 							<div class="panel-body text-center">
-<<<<<<< HEAD
 								<span id="category1" class="category"></span> <span
 									id="category2" class="category"></span>
-=======
-								<span id="category1" class="category"></span>
-								<span id="category2" class="category"></span>
->>>>>>> refs/heads/naks
 							</div>
 						</div>
 					</div>
@@ -416,22 +376,16 @@
 								<span class="title">지불 방법</span>
 							</div>
 							<div class="panel-body text-center">
-<<<<<<< HEAD
 								<div>
 									<img class="rotate method" src="../img/icon/credit-card.png">........80%
 								</div>
 								<div>
 									<img class="rotate method" src="../img/icon/money.png">........20%
 								</div>
-=======
-								<div><img class="rotate method" src="../img/icon/credit-card.png">........80%</div>
-								<div><img class="rotate method" src="../img/icon/money.png">........20%</div>
->>>>>>> refs/heads/naks
 							</div>
 						</div>
 					</div>
 				</div>
-<<<<<<< HEAD
 				
 				<div class="row">
 					<div class="col-sm-4">
@@ -448,22 +402,6 @@
 				</div> 
 				
 
-=======
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<span class="title">시간대별</span>
-							</div>
-							<div class="panel-body text-center">
-							
-							
-							</div>
-						</div>
-					</div>
-				</div>
-				
->>>>>>> refs/heads/naks
 			</div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
  
@@ -479,24 +417,12 @@
     <script src="../assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
     <script src="../assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
     
-<<<<<<< HEAD
     <script src="../assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
     <script src="../assets/lib/bootstrap-slider/js/bootstrap-slider.js" type="text/javascript"></script>
     <script src="../assets/js/app-form-elements.js" type="text/javascript"></script>
-=======
-    <script src="../assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-    <script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
-    <script src="../assets/lib/countup/countUp.min.js" type="text/javascript"></script>
-   
->>>>>>> refs/heads/naks
     
     <script src="../assets/lib/raphael/raphael-min.js" type="text/javascript"></script>
     <script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
-<<<<<<< HEAD
     <script src="../assets/lib/morrisjs/morris.min.js" type="text/javascript"></script>
 	<script src="../assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
     
@@ -505,12 +431,6 @@
     
     
    
-=======
-    <script src="../assets/js/app-personalStat.js" type="text/javascript"></script>
-	<script src="../assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-    <script src="../assets/js/app-charts-sparkline.js" type="text/javascript"></script>
-        
->>>>>>> refs/heads/naks
     
     
 
