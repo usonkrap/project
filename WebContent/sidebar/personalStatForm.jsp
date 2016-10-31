@@ -386,21 +386,6 @@
 						</div>
 					</div>
 				</div>
-				
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<span class="title">시간대별</span>
-							</div>
-							<div class="panel-body text-center">
-							
-							
-							</div>
-						</div>
-					</div>
-				</div> 
-				
 
 			</div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
