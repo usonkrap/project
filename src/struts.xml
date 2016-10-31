@@ -6,15 +6,25 @@
 <struts>
 	<package name="default" namespace="/"
 		extends="struts-default, json-default">
+		<interceptors>
+			<interceptor name="loginInterceptor" class="interceptor.LoginInterceptor" />
+			<interceptor-stack name="loginInterceptorStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="loginInterceptor" />
+			</interceptor-stack>
+		</interceptors>
 
 
 		<default-action-ref name="index" />
+		<global-results>
+			<result name="login" type="redirect">/customer/loginForm.action</result>
+		</global-results>
 
 		<action name="index">
 			<result>/customer/index.jsp</result>
 		</action>
 
-		
+
 
 	</package>
 	<include file="actions/sidebar.xml" />

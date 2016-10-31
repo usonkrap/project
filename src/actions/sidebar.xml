@@ -10,6 +10,7 @@
 
 	<!-- 문의 게시판 관련 액션 -->
     <package name="sidebar" namespace="/sidebar" extends="default">
+    <default-interceptor-ref name="loginInterceptorStack"/>
 
 		<action name="infoForm">
  			<result>/sidebar/infoForm.jsp</result>
