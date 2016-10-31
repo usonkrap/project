@@ -20,7 +20,6 @@ $(document).ready(function() {
 				$('#latestBills').append(
 					"<p>[" + i.billDate + "]<br>" + i.storeName + " - " + i.totalPrice + "원</p>");
 						});
-			alert('??????');
 			callinfo();
 			
 		}
