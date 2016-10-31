@@ -35,6 +35,7 @@
 			-o-transition-property: -o-transform;
 			transition-property: transform;
 			overflow: hidden;
+			
 		}
 		
 		.rotate:hover {
@@ -57,6 +58,17 @@
 		}
 		#okbtn:ACTIVE {
 			background-color: #58ba54;
+		}
+		
+		.payment {
+			font-size: 5em;
+			padding-left: 2em;
+			padding-top: 2%;
+			float: right;
+		}
+		
+		.method {
+			padding-left: 2em;
 		}
 	</style>
   	
@@ -350,24 +362,29 @@
 					<div class="col-sm-4">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<span class="title">자주 간 매장</span>
+								<span class="title">자주 간 매장 TOP5</span>
 							</div>
 							<div class="panel-body">
 								<div id="donut" style="height: 250px;"></div>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-6">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<span class="title">지불 방법</span>
 							</div>
 							<div class="panel-body text-center">
 								<div>
+								<span style="float: left; padding-bottom: 2em;">
 									<img class="rotate method" src="../img/icon/credit-card.png" id="card">
+								</span>
 								</div>
+								
 								<div>
+								<span style="float: left">
 									<img class="rotate method" src="../img/icon/money.png" id="cash">
+								</span>
 								</div>
 							</div>
 						</div>

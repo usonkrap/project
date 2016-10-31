@@ -212,9 +212,9 @@ var App = (function () {
 		    		 $.each(paymentData,function(index, value) {
 		    			 var data = value;
 		    			 if(index == 0){
-		    				 $('<b>........' + data + '%</b>').insertAfter('#card');
+		    				 $('<span class="payment">' + data + '%</span>').insertAfter('#card');
 		    			 }else{
-		    				 $('<b>........' + data + '%</b>').insertAfter('#cash');
+		    				 $('<span class="payment">' + data + '%</span>').insertAfter('#cash');
 		    			 }
 		    			});
 		    		 
