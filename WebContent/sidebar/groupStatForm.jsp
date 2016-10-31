@@ -254,19 +254,19 @@
 								<div class="form-group" style="margin-bottom: 5px;">
 									<div class="title" style="margin-bottom: 10px;">
 										총 지출 (원)
-										<div style="float: right;">
-											<label class="col-sm-2 control-label">시작 날짜</label>
+									
+									<div class="col-sm-8">
 											<div class="col-sm-3">
 												<input type="text" data-mask="date" placeholder="DD/MM/YYYY"
 													class="form-control" style="width: 100%;">
 											</div>
-											<label class="col-sm-2 control-label">종료 날짜</label>
+											<label class="col-sm-1 control-label" style="font-size: 20px; padding-top: 5px;">~</label>
 											<div class="col-sm-3">
 												<input type="text" data-mask="date" placeholder="DD/MM/YYYY"
 													class="form-control" style="width: 100%;">
 											</div>
 										</div>
-									</div>
+										</div>
 								</div>
 							</div>
 							<div class="panel-body">
@@ -367,7 +367,8 @@
     <script src="../assets/js/app-groupStat.js" type="text/javascript"></script>
 
 
-    
+    <script src="../assets/lib/jquery.maskedinput/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script src="../assets/js/app-form-masks.js" type="text/javascript"></script>
     
    
     
@@ -378,6 +379,7 @@
       	//initialize the javascript
       	App.init();
       	App.groupStat();
+      	App.masks();
       });
     </script>
 	</body>
