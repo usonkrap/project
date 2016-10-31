@@ -99,10 +99,12 @@
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
 
+								<a href="../bill/goBillForm.action">
 									<button type="button"
 										class="btn btn-space btn-primary btn-rounded btn-lg">
 										<i class="icon icon-left s7-cloud-upload"></i> 소비 입력
 									</button>
+							</a>
 						</a> <!-- <ul class="dropdown-menu am-messages">
 									<li>
 										<div class="title">메세지
