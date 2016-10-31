@@ -134,7 +134,6 @@
 			  　	　　　group by customerid )
 			  connect by level &lt; 8) 
 	</select>
-<<<<<<< HEAD
 	
 	<select id="donutChart" resultType="hashmap" parameterType="String">
 		select a.storename store, round((ratio_to_report(a.price) over ())*100) per 
@@ -144,6 +143,7 @@
 			  group by storename 
 			  order by price desc) a
 	</select>
+	
 	<select id="progressGet" resultType="progressData" parameterType="string">
 		select
 			   target as CUST_TARGET_PRICE
@@ -173,6 +173,4 @@
 			    where CUSTOMERID = #{customerId})
 
 	</select>
-=======
->>>>>>> refs/heads/naks
 </mapper>

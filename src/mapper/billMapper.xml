@@ -31,7 +31,6 @@
 <select id="searchItem" parameterType="String" resultType="String">
 	select sub_category_num from category_data where minimum_category = #{keyword}
 </select>
-<<<<<<< HEAD
 
 <!-- Bill 등록 -->
 <insert id="insertBill" parameterType="Bill">
@@ -47,6 +46,5 @@
 <insert id="insertItem" parameterType="Item">
 	insert into item values(item_seq.nextval, #{billNo}, #{customerId}, #{category}, #{name}, #{price})
 </insert>
-=======
->>>>>>> refs/heads/naks
+
 </mapper>

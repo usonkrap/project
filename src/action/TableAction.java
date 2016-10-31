@@ -30,7 +30,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private String[] mainPiePrice;
 	private String calendarDate;
 	private Map<String, Object> session;
-<<<<<<< HEAD
+
 	private Double[] dayRecentAver;
 	private Double[] dayTotalAver;
 	private JSONArray donutData;
@@ -43,10 +43,10 @@ public class TableAction extends ActionSupport implements SessionAware {
 		return SUCCESS;
 	}//progressGet
 	
-=======
+
 	private Comparison comparison;
 
->>>>>>> refs/heads/naks
+
 	public String goTable() {
 		TableDAO dao = new TableDAO();
 		billList = dao.tableList((String) session.get("loginId"));
