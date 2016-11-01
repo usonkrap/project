@@ -68,6 +68,14 @@
 #okbtn:ACTIVE {
 	background-color: #58ba54;
 }
+
+.btn-lg, .btn-group-lg > .btn {
+    padding: 12px 100px;
+}
+.btn-rounded.btn-lg {
+    border-radius: 5px;
+    border: 3px solid white;
+}
 </style>
 
 </head>
@@ -125,11 +133,14 @@
 					<ul class="nav navbar-nav navbar-right am-icons-nav">
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
-								<button type="button"
-									class="btn btn-space btn-primary btn-rounded btn-lg">
-									<i class="icon icon-left s7-cloud-upload"></i> 소비 입력
-								</button>
-						</a></li>
+						</a>
+						<a href="../bill/goBillForm.action" >
+									<button type="button"
+										class="btn btn-space btn-primary btn-rounded btn-lg">
+										<i class="icon icon-left s7-cloud-upload"></i> 소비 등록
+									</button>
+									</a>
+						</li>
 					</ul>
 				</div>
 			</div>

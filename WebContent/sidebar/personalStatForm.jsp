@@ -85,6 +85,14 @@
 		   background-image: url('http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png');
 			width: 50px;
 		}
+		
+		.btn-lg, .btn-group-lg > .btn {
+	    padding: 12px 100px;
+		}
+		.btn-rounded.btn-lg {
+		    border-radius: 5px;
+		    border: 3px solid white;
+		}
 	</style>
   	
   	</head>
@@ -152,9 +160,13 @@
 						<ul class="nav navbar-nav navbar-right am-icons-nav">
 							<li class="dropdown">
 								<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
-									<button type="button" class="btn btn-space btn-primary btn-rounded btn-lg"><i class="icon icon-left s7-cloud-upload"></i> 소비 입력</button>
 								</a>
-								<!-- <ul class="dropdown-menu am-messages">
+								<a href="../bill/goBillForm.action" >
+									<button type="button"
+										class="btn btn-space btn-primary btn-rounded btn-lg">
+										<i class="icon icon-left s7-cloud-upload"></i> 소비 등록
+									</button>
+									</a><!-- <ul class="dropdown-menu am-messages">
 									<li>
 										<div class="title">메세지
 									 		<span class="badge">3</span>3은 메세지 갯수
@@ -412,6 +424,18 @@
 							</div>
 						</div>
 					</div>
+					
+					<div class="col-sm-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<span class="title">자주 간 매장 TOP5</span>
+							</div>
+							<div class="panel-body">
+								<div id="donut" style="height: 250px;"></div>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 
 				<div class="row">
@@ -427,16 +451,7 @@
 						</div>
 					</div>
 					
-				<div class="col-sm-4">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<span class="title">자주 간 매장 TOP5</span>
-							</div>
-							<div class="panel-body">
-								<div id="donut" style="height: 250px;"></div>
-							</div>
-						</div>
-					</div>
+				
 
 			</div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->

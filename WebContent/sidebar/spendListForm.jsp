@@ -28,6 +28,19 @@
 <link rel="stylesheet" type="text/css"
 	href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css" />
 <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+
+<style type="text/css">
+	.btn-lg, .btn-group-lg > .btn {
+	    padding: 12px 100px;
+	}
+	.btn-rounded.btn-lg {
+	    border-radius: 5px;
+	    border: 3px solid white;
+	}
+
+</style>
+
+
 </head>
 <body>
 	<div class="am-wrapper">
@@ -77,18 +90,21 @@
 					</ul>
 
 					<ul class="nav navbar-nav am-nav-right">
-						<li><a>소비 정보</a></li>
+						<li><a>소비 목록</a></li>
 					</ul>
 
 
 					<ul class="nav navbar-nav navbar-right am-icons-nav">
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
-								<button type="button"
-									class="btn btn-space btn-primary btn-rounded btn-lg">
-									<i class="icon icon-left s7-cloud-upload"></i> 소비 입력
-								</button>
-						</a></li>
+						</a>
+								<a href="../bill/goBillForm.action" >
+									<button type="button"
+										class="btn btn-space btn-primary btn-rounded btn-lg">
+										<i class="icon icon-left s7-cloud-upload"></i> 소비 등록
+									</button>
+									</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -136,13 +152,13 @@
 
 
 
-				<div class="page-head" style="margin-left: 85px; margin-right: 55px;">
+				<!-- <div class="page-head" style="margin-left: 85px; margin-right: 55px;">
 					<h2>내 소비 내역보기</h2>
 					<ol class="breadcrumb">
 						<li><a href="#">메인페이지</a></li>
 						<li class="active">내 소비 내역보기</li>
 					</ol>
-				</div>
+				</div> -->
 				<div class="main-content">
 					<div class="row">
 						<div class="col-sm-12">

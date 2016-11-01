@@ -27,6 +27,18 @@
 <link rel="stylesheet" type="text/css"
 	href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css" />
 <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+
+<style>
+.btn-lg, .btn-group-lg > .btn {
+    padding: 12px 100px;
+}
+.btn-rounded.btn-lg {
+    border-radius: 5px;
+    border: 3px solid white;
+}
+
+</style>
+
 </head>
 <body>
 	<div class="am-wrapper">
@@ -98,14 +110,14 @@
 					<ul class="nav navbar-nav navbar-right am-icons-nav">
 						<li class="dropdown"><a href="#" data-toggle="dropdown"
 							role="button" aria-expanded="false" class="dropdown-toggle">
-
-									<a href="../bill/goBillForm.action">
+</a>
+									<a href="../bill/goBillForm.action" >
 									<button type="button"
 										class="btn btn-space btn-primary btn-rounded btn-lg">
-										<i class="icon icon-left s7-cloud-upload"></i> 소비 입력
+										<i class="icon icon-left s7-cloud-upload"></i> 소비 등록
 									</button>
-							</a>
-						</a> <!-- <ul class="dropdown-menu am-messages">
+									</a>	
+						 <!-- <ul class="dropdown-menu am-messages">
 									<li>
 										<div class="title">메세지
 									 		<span class="badge">3</span>3은 메세지 갯수
