@@ -69,6 +69,10 @@
  		<action name="paymentData" class="action.TableAction" method="paymentData">
  			<result type="json"></result>
  		</action>
+ 		
+ 		<action name="lineChart" class="action.TableAction" method="lineChart">
+ 			<result type="json"></result>
+ 		</action>
 	</package>
 </struts>
 
