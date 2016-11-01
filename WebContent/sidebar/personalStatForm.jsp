@@ -73,7 +73,17 @@
 			color: #cccccc;
 		}
 		
-		.method {
+		.lineIcon {
+			text-align: center;
+		}
+		
+		.lineIcon img{
+			margin: 1em;
+		}
+		
+		#img_1 {
+		   background-image: url('http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png');
+			width: 50px;
 		}
 	</style>
   	
@@ -171,6 +181,7 @@
 					</div>
 				</div>			
 			</nav>
+		
 	<div class="am-left-sidebar">
         <div class="content">
           <div class="am-logo"></div>
@@ -261,7 +272,6 @@
     </div>
 	
 	
-	
 	   <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
           <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
@@ -280,8 +290,21 @@
 							</div>
 							<div class="panel-body">
 								<div id="line" style="height: 300px;"></div>
-								<div>
+								<div class="lineIcon">
+									<div id="img_1"></div>
+									<!-- <img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
 									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
+									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
+									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
+									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
+									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
+									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
+									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
+									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
+									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
+									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
+									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
+								-->
 								</div>
 							</div>
 						</div>
@@ -302,19 +325,19 @@
 												<td class="legendColorBox">
 													<div style="border: 1px solid #ccc; padding: 1px">
 														<div
-															style="width: 4px; height: 0; border: 5px solid #f9bfbf; overflow: hidden"></div>
+															style="width: 4px; height: 0; border: 5px solid #eeeeee; overflow: hidden"></div>
 													</div>
 												</td>
-												<td class="legendLabel">최근 30일</td>
+												<td class="legendLabel">전체</td>
 											</tr>
 											<tr>
 												<td class="legendColorBox">
 													<div style="border: 1px solid #ccc; padding: 1px">
 														<div
-															style="width: 4px; height: 0; border: 5px solid #eeeeee; overflow: hidden"></div>
+															style="width: 4px; height: 0; border: 5px solid #f9bfbf; overflow: hidden"></div>
 													</div>
 												</td>
-												<td class="legendLabel">전체</td>
+												<td class="legendLabel">최근 30일</td>
 											</tr>
 										</tbody>
 									</table>
@@ -340,19 +363,19 @@
 												<td class="legendColorBox">
 													<div style="border: 1px solid #ccc; padding: 1px">
 														<div
-															style="width: 4px; height: 0; border: 5px solid #f9bfbf; overflow: hidden"></div>
+															style="width: 4px; height: 0; border: 5px solid #eeeeee; overflow: hidden"></div>
 													</div>
 												</td>
-												<td class="legendLabel">최근 30일</td>
+												<td class="legendLabel">전체</td>
 											</tr>
 											<tr>
 												<td class="legendColorBox">
 													<div style="border: 1px solid #ccc; padding: 1px">
 														<div
-															style="width: 4px; height: 0; border: 5px solid #eeeeee; overflow: hidden"></div>
+															style="width: 4px; height: 0; border: 5px solid #f9bfbf; overflow: hidden"></div>
 													</div>
 												</td>
-												<td class="legendLabel">전체</td>
+												<td class="legendLabel">최근 30일</td>
 											</tr>
 										</tbody>
 									</table>
