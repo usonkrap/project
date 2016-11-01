@@ -9,15 +9,47 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>JanZani</title>
-    <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/style.css"/>
-    <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/material-icons.css"/>
-    <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.nanoscroller/css/nanoscroller.css"/><!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-    <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css"
+	href="../assets/lib/stroke-7/style.css" />
+<link rel="stylesheet" type="text/css"
+	href="../assets/lib/jquery.nanoscroller/css/nanoscroller.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="../assets/lib/select2/css/select2.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../assets/lib/bootstrap-slider/css/bootstrap-slider.css" />
+<link rel="stylesheet" type="text/css"
+	href="../assets/lib/datetimepicker/css/bootstrap-datetimepicker.css" />
+<link rel="stylesheet" type="text/css"
+	href="../assets/lib/jquery.magnific-popup/magnific-popup.css" />
+<link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
   	</head>
+  	
+  	
+  	<style>
+
+	.form-horizontal .form-group {
+		padding: 3px 0;
+	}
+	
+	.col-sm-1{
+		padding-top: 10px;
+		padding-left: 0;
+	}
+	.col-sm-12.addBtn {
+	    text-align: center;
+		margin-top: 14px;
+    	margin-bottom: 40px;
+	}
+	
+	i{
+		cursor: pointer; 
+		cursor: hand;
+	}
+	
+	 
+
+</style>
 	<body>
 		<div class="am-wrapper"><!--  ??? -->
 			<nav class="navbar navbar-default navbar-fixed-top am-top-header"><!-- 상단 적색바 -->
@@ -208,7 +240,136 @@
 	   <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
           <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
-          
+          <div class="col-sm-6">
+          	<div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 style="text-align: center">영수증 사진 등록</h3>
+                </div>
+                <div class="panel-body">
+					<div class="dragContext">
+						<div class='fileDrop' style="height:400px;">
+					
+						</div>
+						<div class='uploadedList'></div>
+						<div class="main-content">
+							<div class="gallery-container">
+								<div class="item w2">
+									<div class="photo">
+										<div class="img">
+											<!-- 여기로 이미지가 들어옴-->
+											<div class="over">
+												<div class="func">
+													<a href="#" class="delImg"><i class="icon s7-link"></i></a><a
+														href="#" class="image-zoom"><i class="icon s7-search"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+	          		</div>
+          		</div>
+          	</div>
+          </div>
+          <div class="col-sm-6">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 style="text-align: center">상품 등록</h3>
+                </div>
+                <div class="panel-body">
+                  <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                      <label for="storeName" class="col-sm-2 control-label">상호</label>
+                      <div class="col-sm-10">
+                        <input id="storeName" name="bill.storeName" type="text" placeholder="상호" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="address" class="col-sm-2 control-label">주소</label>
+                      <div class="col-sm-10">
+                        <input id="address" type="text" placeholder="주소" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group" style="border-bottom: 1px solid #dddddd;">
+                      <label for="address" class="col-sm-2 control-label">일시</label>
+                      <div class="col-sm-10">
+							<div data-start-view="2" data-date-format="yyyy-mm-dd - hh:mm" data-link-field="dtp_input1" class="input-group date datetimepicker col-md-8 col-xs-7">
+								<input type="text" value="" class="form-control" id="calendar_date" name="bill.billDate">
+									<span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
+							</div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                    	<!-- <div class="col-sm-3">
+                    		 <label for="address" class="col-sm-12 control-label" style="text-align: center;">대분류</label>
+                    	</div>
+                    	<div class="col-sm-3">
+                    		 <label for="address" class="col-sm-12 control-label" style="text-align: center;">중분류</label>
+                    	</div> -->
+                    	<div class="col-sm-8">
+                    		 <label for="address" class="col-sm-12 control-label" style="text-align: center;">상품명</label>
+                    	</div>
+                    	<div class="col-sm-3">
+                    		 <label for="address" class="col-sm-12 control-label" style="text-align: center;">금액</label>
+                    	</div>
+                    </div>
+                    
+                    <div class="form-group itemMenu">
+	                    <!-- <div class="col-sm-3">
+	                    	<input type='text' name='category1' class="form-control">
+	                    </div>
+	                    <div class="col-sm-3">
+	                    	<input type='text' name='category2' class="form-control">
+	                    </div> -->
+	                    <!-- <div class="col-sm-12">
+		                    <div class="col-sm-8">
+		                    	<input type='text' name='itemName' class="form-control">
+		                    </div>
+		                    <div class="col-sm-3">
+		                    	<input type='text' name='itemPrice' class='itemPrice form-control'>
+		                    </div>
+		                    <div class="col-sm-1">
+								
+								<i class='s7-less' id='lessBtn' style="font-size: 1.6em;"></i>
+		                    </div>
+	                    </div> -->
+						</div>
+                   	<div class="col-sm-12 addBtn">
+                    	<i class="s7-plus" id="addBtn" style="font-size: 2em;"></i>
+                    </div>
+                    
+                    
+                    <div class="form-group" style="border-bottom: 1px solid #dddddd;">
+                      <label for="storeName" class="col-sm-3 control-label">지불수단</label>
+                      <div class="col-sm-3">
+                        <select id="payment" name="bill.payment" class="form-control" >
+							<option value='현금'>현금</option>
+							<option value='카드'>카드</option>
+						</select>
+                      </div>
+                      <label for="storeName" class="col-sm-2 control-label">총 액</label>
+                      <div class="col-sm-4">
+                        <input id="totalPrice" name="bill.storeName" type="text" class="form-control" readonly="readonly">
+	                      </div>
+                    </div>
+                    
+                    
+                    <div class="form-group" style="padding-top: 5em;">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <div class="text-right">
+                          <button type="submit" class="btn btn-space btn-primary">등록하기</button>
+                          <button class="btn btn-space btn-default">취소</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+         
+         
          
          
          
@@ -218,28 +379,321 @@
     </div>
 	
 	
-	<script src="../assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
-    <script src="../assets/js/main.js" type="text/javascript"></script>
-    <script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="../assets/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
-    <script src="../assets/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
-    <script src="../assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
-    
-    <script src="../assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
-    <script src="../assets/lib/bootstrap-slider/js/bootstrap-slider.js" type="text/javascript"></script>
-    <script src="../assets/js/app-form-elements.js" type="text/javascript"></script>
-    
-    <script src="../assets/lib/raphael/raphael-min.js" type="text/javascript"></script>
-    <script src="../assets/lib/morrisjs/morris.min.js" type="text/javascript"></script>
-    <script src="../assets/js/app-groupStat.js" type="text/javascript"></script>
 
-    <script type="text/javascript">
-      $(document).ready(function(){
-      	//initialize the javascript
-      	App.init();
-      });
-    </script>
+	<script src="../assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+	<script
+		src="../assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js"
+		type="text/javascript"></script>
+	<script src="../assets/js/main.js" type="text/javascript"></script>
+	<script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"
+		type="text/javascript"></script>
+	<script
+		src="../assets/lib/jquery.magnific-popup/jquery.magnific-popup.min.js"
+		type="text/javascript"></script>
+	<script src="../assets/lib/masonry/masonry.pkgd.min.js"
+		type="text/javascript"></script>
+	<script src="../assets/lib/select2/js/select2.min.js"
+		type="text/javascript"></script>
+
+	<script src="../assets/lib/jquery-ui/jquery-ui.min.js"
+		type="text/javascript"></script>
+	<script src="../assets/lib/jquery.nestable/jquery.nestable.js"
+		type="text/javascript"></script>
+
+
+	<script
+		src="../assets/lib/datetimepicker/js/bootstrap-datetimepicker.js"
+		type="text/javascript"></script>
+
+
+	<script src="../assets/lib/bootstrap-slider/js/bootstrap-slider.js"
+		type="text/javascript"></script>
+
+	<script src="../assets/js/app-form-elements.js" type="text/javascript"></script>
+
+	<script src="../assets/js/app-page-gallery.js" type="text/javascript"></script>
+	
+	
+	<script>
+		$(document).ready(function() {
+			//initialize the javascript
+			App.init();
+			App.formElements();
+			var totalPrice = 0;
+
+			$("#calendar_date").val();
+
+			$('.itemMenu').on('keyup', '.itemPrice', function() {
+
+				if (isNaN($(this).val())) {
+					alert("숫자만 입력가능합니다");
+					$(this).val("");
+					calTotalPrice();
+					return;
+
+				}
+
+				calTotalPrice();
+			});
+
+		});//ready
+
+		$(window).load(function() {
+			App.pageGallery();
+
+		});
+
+		$(".fileDrop").on("dragenter dragover", function(event) {
+			event.preventDefault();
+		});
+
+		$(".fileDrop")
+				.on(
+						"drop",
+						function(event) {
+							event.preventDefault();
+
+							intiForm();
+
+							var files = event.originalEvent.dataTransfer.files;
+
+							var file = files[0];
+
+							var formData = new FormData();
+
+							formData.append("billImg", file);
+
+							$
+									.ajax({
+										url : '../bill/uploadBill',
+										data : formData,
+										dataType : 'json',
+										processData : false,
+										contentType : false,
+										type : 'POST',
+										success : function(data) {
+
+											if (checkImageType(data.imagePath)) {
+
+												var imagePath = data.imagePath;
+
+												$(".dragContext").children()
+														.hide();
+
+												var str2 = "<div class='gallery-container' style='width:600px;'>"
+														+ "<div class='item w2'>"
+														+ "<div class='photo'>"
+														+ "<div class='img'>"
+														+ "<div class='over'>"
+														+ "<div class='func'>"
+														+ "<a href='#' class='del-img'>"
+														+ "<i class='icon s7-close'>"
+														+ "</i></a><a href='#' class='image-zoom'>"
+														+ "<i class='icon s7-search'>"
+														+ "</i></a></div></div></div></div></div></div>";
+
+												$(".dragContext").append(str2);
+
+												App.pageGallery();
+
+												var str = "";
+
+												str = "<img src='../" + imagePath + "'>";
+
+												$(".img").append(str);
+												$(".image-zoom").attr("href",
+														"../" + imagePath);
+
+												var itemList = data.bill.itemList;
+
+												/////////bill에서 데이터 꺼내오기
+												$("#storeName").val(
+														data.bill.storeName);
+												$("#address").val(
+														data.bill.address);
+												$("#calendar_date").val(
+														data.bill.billDate);
+												$("#imgPath")
+														.val(data.bill.img);
+												$("#payment").val(
+														data.bill.payment);
+
+												/////////select태그 값 적용하기///////////////
+
+												if (data.bill.payment == "카드") {
+
+													$("#card").selected;
+
+												} else if (data.bill.payment == "현금") {
+
+													$("#cash").selected;
+												}
+
+												//////itemList에 있는 상품들 등록///////////////
+												$(".itemMenu tr:gt(0)")
+														.remove();
+
+												$
+														.each(
+																itemList,
+																function(index,
+																		item) {
+
+																	$(
+																			".itemMenu")
+																			.append(
+																					
+																					"<div class='col-sm-12'>" +
+																					"<div class='col-sm-8'>"　+
+																                    	"<input type='text' value='" + item.name + "' name='itemName' class='form-control'>"　+
+																                    "</div>" +
+																                    "<div class='col-sm-3'>" +
+																                    	"<input type='text' value='" + item.price + "' name='itemPrice' class='itemPrice form-control'>" +
+																                    "</div>" +
+																                    "<div class='col-sm-1'>" +
+																						"<i class='s7-less' id='lessBtn' style='font-size: 1.6em;'></i>" +
+																					"</div>" +
+																				"</div>"
+																					
+																					);
+
+																})//each
+
+											} else {
+
+												alert("이미지 파일만 올려주세요!");
+
+											}
+
+											calTotalPrice();
+										}
+									});
+						});
+
+		///////////////////////////////////////////////////////////////////
+
+		//////////////////이미지 삭제///////////////////
+		$('.dragContext').on('click', '.del-img', function() {
+
+			intiForm();
+
+		});
+
+		//////////////////폼 취소/////////////////////
+		$("#cancel").click(function() {
+			intiForm();
+		});
+
+		/////////////////영수증 등록////////////////////
+		$("#inputBtn").on("click", function(event) {
+			
+			var form = $("form");
+
+			form.submit();
+
+		});
+
+		///////////////아이템 등록/////////////////////
+		$("#addBtn")
+				.on(
+						"click",
+						function() {
+
+							var result = false;
+							$(".itemMenu div div input").each(function() {
+
+								if ($(this).val() == "") {
+
+									result = true;
+
+								}
+
+							})
+
+							if (result) {
+								alert("현재 아이템을 먼저 입력해주세요");
+								return;
+							}
+
+							$(".itemMenu")
+									.append("<div class='col-sm-12'>" +
+												"<div class='col-sm-8'>"　+
+							                    	"<input type='text' name='itemName' class='form-control'>"　+
+							                    "</div>" +
+							                    "<div class='col-sm-3'>" +
+							                    	"<input type='text' name='itemPrice' class='itemPrice form-control'>" +
+							                    "</div>" +
+							                    "<div class='col-sm-1'>" +
+													"<i class='s7-less' id='lessBtn' style='font-size: 1.6em;'></i>" +
+												"</div>" +
+											"</div>");
+
+						})
+
+		////////////////////아이템 삭제//////////////////				
+		$(".itemMenu").on("click", "#lessBtn", function() {
+
+			$(this).parent().parent().remove();
+			calTotalPrice();
+
+		});
+
+		/*                 호출 메소드                                   */
+
+		///////////////////페이지 초기화///////////////////
+		function intiForm() {
+
+			var delBill = $("img").attr("src");
+
+			$.ajax({
+				url : "../bill/deleteBill",
+				type : "post",
+				data : {
+					imagePath : delBill
+				},
+				dataType : "text",
+				success : function() {
+
+					$(".gallery-container").remove();
+
+					$('.itemMenu tr:gt(1)').remove();
+
+					$(".dragContext").children().show();
+
+					$("form").each(function() {
+						this.reset();
+					});
+
+				}
+
+			});
+
+		}
+
+		///////////////////총액 구하기///////////////////
+		function calTotalPrice() {
+
+			totalPrice = 0;
+			$(".itemPrice").each(function(index, item) {
+
+				totalPrice = totalPrice + Number($(this).val());
+
+			})//fore
+
+			$("#totalPrice").val(totalPrice);
+
+		}
+
+		///////////////////이미지 확장자 검사///////////////////
+		function checkImageType(fileName) {
+
+			var pattern = /jpg|gif|png|jpeg/i;
+
+			return fileName.match(pattern);
+
+		}
+
+		
+		</script>
 	</body>
 </html>
