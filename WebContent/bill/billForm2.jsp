@@ -63,6 +63,12 @@ small {
 													href="#" class="image-zoom"><i class="icon s7-search"></i></a>
 											</div>
 										</div>
+										 <form id="my-awesome-dropzone" action="assets/lib/dropzone/upload.php" class="dropzone">
+								            <div class="dz-message">
+								              <div class="icon"><span class="s7-cloud-upload"></span></div>
+								              <h2>Drag and Drop files here</h2><span class="note">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
+								            </div>
+								          </form>
 									</div>
 								</div>
 							</div>
