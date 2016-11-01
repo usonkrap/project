@@ -303,7 +303,7 @@
                       </div>
                     </div>
                     <div class="form-group" style="border-bottom: 1px solid #dddddd;">
-                      <label for="address" class="col-sm-2 control-label">일시</label>
+                      <label for="calendar_date" class="col-sm-2 control-label">일시</label>
                       <div class="col-sm-10">
 							<div data-start-view="2" data-date-format="yyyy-mm-dd - hh:mm" data-link-field="dtp_input1" class="input-group date datetimepicker col-md-8 col-xs-7">
 								<input type="text" value="" class="form-control" id="calendar_date" name="bill.billDate">
@@ -320,10 +320,10 @@
                     		 <label for="address" class="col-sm-12 control-label" style="text-align: center;">중분류</label>
                     	</div> -->
                     	<div class="col-sm-8">
-                    		 <label for="address" class="col-sm-12 control-label" style="text-align: center;">상품명</label>
+                    		 <label for="item" class="col-sm-12 control-label" style="text-align: center;">상품명</label>
                     	</div>
                     	<div class="col-sm-3">
-                    		 <label for="address" class="col-sm-12 control-label" style="text-align: center;">금액</label>
+                    		 <label for="price" class="col-sm-12 control-label" style="text-align: center;">금액</label>
                     	</div>
                     </div>
                     
@@ -353,14 +353,14 @@
                     
                     
                     <div class="form-group" style="border-bottom: 1px solid #dddddd;">
-                      <label for="storeName" class="col-sm-3 control-label">지불수단</label>
+                      <label for="payment" class="col-sm-3 control-label">지불수단</label>
                       <div class="col-sm-3">
                         <select id="payment" name="bill.payment" class="form-control" >
 							<option value='현금'>현금</option>
 							<option value='카드'>카드</option>
 						</select>
                       </div>
-                      <label for="storeName" class="col-sm-2 control-label">총 액</label>
+                      <label for="totalPrice" class="col-sm-2 control-label">총 액</label>
                       <div class="col-sm-4">
                         <input id="totalPrice" name="bill.storeName" type="text" class="form-control" readonly="readonly">
 	                      </div>
