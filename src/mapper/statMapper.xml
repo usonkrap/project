@@ -13,17 +13,6 @@
 		and c.cust_email = i.customerid
 		and i.CUSTOMERID =
 		#{id}
-		<if test="!gender.equals('all')">
-			and c.CUST_GENDER = #{gender}
-		</if>
-		<if test="!age.equals('all')">
-		<![CDATA[
-		   and #{age} <= TRUNC(MONTHS_BETWEEN(SYSDATE, c.cust_birthday) / 12) 
-		   and TRUNC(MONTHS_BETWEEN(SYSDATE, c.cust_birthday) / 12) <  #{age} + 10
-		]]>
-		</if>
-		<if test="!address.equals('all')">
-			and c.cust_address like '${address}%' </if>
 
 		) self, round((select (sum(i.price)) from item i,
 		bill
