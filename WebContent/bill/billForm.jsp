@@ -42,14 +42,14 @@ small {
 <body>
 <iframe name="zeroFrame"></iframe>
 	<div class="row">
-		<div class="col-sm-6">
+		<div class="col-sm-7" style="height: auto">
 			<div class="widget widget-pie">
 				<!-- 메인 화면 대표 그래프 -->
 				<div class="widget-head">
 					<span class="title">Bill</span>
 				</div>
 				<div class="dragContext">
-					<div class='fileDrop'>
+					<div class='fileDrop' style="height:400px;">
 				
 					</div>
 					<div class='uploadedList'></div>
@@ -77,40 +77,41 @@ small {
 		</div>
 
 
-		<div class="col-sm-6">
+		<div class="col-sm-4">
 			<div class="widget widget-pie">
 
 				<div class="widget-head">
-					<span class="title">Bill</span>
+					<span class="title"><h4>입력 목록</h4></span>
 				</div>
 				<form action="inputBill" id="fm">
 					<div class="dataTable">
 						<table>
 							<tr>
-								<td>상호</td>
-								<td><input type="text" id="storeName" name="bill.storeName"></td>
+								<th>상호&nbsp;</th>
+								<td><input type="text" id="storeName" name="bill.storeName"class="form-control" style="margin-left: 10px; width: 140%;"></td>
 							</tr>
 							<tr>
-								<td>주소</td>
-								<td><input type="text" id="address" name="bill.address"></td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<th>주소&nbsp;</th>
+								<td><input type="text" id="address" name="bill.address"class="form-control" style="margin-left: 10px; width: 140%;"></td>
 							</tr>
 							<!-- <tr>
 								<td>일시</td>
 								<td><input type="text" id="billDate" name="bill.billDate"></td>
 							</tr> -->
-							<tr>
+							<tr><th>일시</th>
+							
 								<td colspan="2">
 									<div class="panel-body">
-
-
 										<div class="form-group">
-											<div class="col-sm-6">
-												<div 
-												   
-													data-start-view="0"
-													data-date-format="yyyy-mm-dd - HH:mm"
-													data-link-field="dtp_input1"
-													class="input-group date datetimepicker col-md-5 col-xs-7">
+											<div class="col-sm-6" style="width:420%; margin-left: -25px;">
+												<div data-start-view="0"
+													 data-date-format="yyyy-mm-dd - HH:mm"
+													 data-link-field="dtp_input1"
+													 class="input-group date datetimepicker col-md-5 col-xs-7">
+													
 													<input size="16" type="text" value="" class="form-control"
 														id="calendar_date" name="bill.billDate"><span
 														class="input-group-addon btn btn-primary"><i
@@ -128,26 +129,28 @@ small {
 							<tr>
 								<th width="200">상품명</th>
 								<th>금액(원)</th>
-								<th><i class="s7-plus" id="addBtn"></i></th>
+								<th><i class="s7-plus" id="addBtn" style="font-size: 20px;"></i></th>
 							</tr>
 							<tr>
-								<td><input type='text' name='itemName'></td>
-								<td><input type='text' name='itemPrice' class='itemPrice'></td>
-								<td><i class='s7-less' id='lessBtn'></i></td>
+								<td><input type='text' name='itemName' class="form-control"></td>
+								<td><input type='text' name='itemPrice' class='itemPrice form-control'> </td>
+								<td><i class='s7-less' id='lessBtn' style="font-size: 20px;"></i></td>
 							</tr>
 						</table>
 
 						<table>
+							<tr><td>&nbsp;</td></tr>
 							<tr>
-								<td>거래유형</td>
-								<td><select id="payment" name="bill.payment">
+								<th>거래유형</th>
+								<td><select id="payment" name="bill.payment" class="form-control" >
 										<option value='현금'>현금</option>
 										<option value='카드'>카드</option>
 								</select></td>
 							</tr>
+							<tr><td>&nbsp;</td></tr>
 							<tr>
-								<td>총액</td>
-								<td><input type="text" class="totalPrice" value="0"
+								<th>총액</th>
+								<td><input type="text" class="totalPrice form-control" value="0"
 									readonly="readonly" name="bill.totalPrice"></td>
 							</tr>
 
@@ -156,8 +159,11 @@ small {
 					</div>
 					<input type="hidden" value="#" id="imgPath" name="bill.img">
 				</form>
-				<button id="inputBtn">등록하기</button>
-				<button id="cancel">취소</button>
+				<p>&nbsp;</p>
+				<div>
+					<button id="inputBtn" class="btn btn-primary" style="width:240px;">등록하기</button>
+					<button id="cancel" class="btn btn-primary" style="width:130px; margin-left: 10px;">취소</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -265,14 +271,14 @@ small {
 												$(".dragContext").children()
 														.hide();
 
-												var str2 = "<div class='gallery-container'>"
+												var str2 = "<div class='gallery-container' style='width:600px;'>"
 														+ "<div class='item w2'>"
 														+ "<div class='photo'>"
 														+ "<div class='img'>"
 														+ "<div class='over'>"
 														+ "<div class='func'>"
 														+ "<a href='#' class='del-img'>"
-														+ "<i class='icon s7-link'>"
+														+ "<i class='icon s7-close'>"
 														+ "</i></a><a href='#' class='image-zoom'>"
 														+ "<i class='icon s7-search'>"
 														+ "</i></a></div></div></div></div></div></div>";
@@ -328,9 +334,10 @@ small {
 																			".itemMenu")
 																			.append(
 																					"<tr>"
-																							+ "<td><input type='text' value='" + item.name + "' name='itemName'></td>"
-																							+ "<td><input type='text' value='" + item.price + "' name='itemPrice' class='itemPrice'></td>"
-																							+ "<td><i class='s7-less' id='lessBtn'></i></td>"
+																								
+																							+ "<td><input type='text' value='" + item.name + "' name='itemName' class='form-control'></td>"
+																							+ "<td><input type='text' value='" + item.price + "' name='itemPrice' class='itemPrice form-control'></td>"
+																							+ "<td><i class='s7-less' id='lessBtn' style='font-size: 20px;'></i></td>"
 																							+ "</tr>");
 
 																})//each
@@ -362,7 +369,7 @@ small {
 
 		/////////////////영수증 등록////////////////////
 		$("#inputBtn").on("click", function(event) {
-
+			
 			var form = $("form");
 
 			form.submit();
@@ -394,9 +401,9 @@ small {
 							$(".itemMenu")
 									.append(
 											"<tr>"
-													+ "<td><input type='text' name='itemName'></td>"
-													+ "<td><input type='text' name='itemPrice' class='itemPrice'></td>"
-													+ "<td><i class='s7-less' id='lessBtn'></i></td>"
+													+ "<td><input type='text' name='itemName' class='form-control'></td>"
+													+ "<td><input type='text' name='itemPrice' class='itemPrice form-control' ></td>"
+													+ "<td><i class='s7-less' id='lessBtn' style='font-size:20px;'></i></td>"
 													+ "</tr>");
 
 						})
