@@ -475,6 +475,16 @@ var App = (function () {
         colors.alt2    = getColor('clr-alt2');
         colors.alt3    = getColor('clr-alt3');
         colors.alt4    = getColor('clr-alt4');
+        colors.alt5    = getColor('clr-alt5');
+        colors.alt6    = getColor('clr-alt6');
+        colors.alt7    = getColor('clr-alt7');
+        colors.alt8    = getColor('clr-alt8');
+        colors.alt9    = getColor('clr-alt9');
+        colors.alt10   = getColor('clr-alt10');
+        colors.alt11   = getColor('clr-alt11');
+        colors.alt12   = getColor('clr-alt12');
+        colors.alt13   = getColor('clr-alt13');
+        
 
       //Prevent Connections Dropdown closes on click
         $(".am-connections").on("click",function( e ){

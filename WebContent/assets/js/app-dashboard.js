@@ -59,10 +59,19 @@ var App = (function () {
     }
     function widget_top_1_call(tempArray){
     	var data = tempArray;
-    	var color1 = tinycolor( App.color.primary ).lighten( 5 ).toString();
+    	var color1 = App.color.alt1;
         var color2 = App.color.alt2;
-        var color3 = App.color.alt1;
-
+        var color3 = App.color.alt3;
+        var color4 = App.color.alt4;
+        var color5 = App.color.alt5;
+        var color6 = App.color.alt6;
+        var color7 = App.color.alt7;
+        var color8 = App.color.alt8;
+        var color9 = App.color.alt9;
+        var color10 = App.color.alt10;
+        var color11 = App.color.alt11;
+        var color12 = App.color.alt12;
+        var color13 = App.color.alt13;
         var legendContainer = $("#widget-top-1").parent().next().find(".legend");
 
   	    $.plot('#widget-top-1', data, {
@@ -80,7 +89,7 @@ var App = (function () {
   		    legend:{
   		    	container: legendContainer
   		    },
-  		    colors: [ color1, color2, color3]  
+  		    colors: [ color1, color2, color3, color4, color5, color6, color7, color8, color9, color10, color11, color12, color13]  
   			});
     }
     //Top pie widget 2

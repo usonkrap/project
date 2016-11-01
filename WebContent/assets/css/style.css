@@ -10381,17 +10381,53 @@ button:focus {
   background-color: #ef6262;
 }
 .clr-alt1 {
-  background-color: #95d9f0;
+  background-color: #fe6f5e;
 }
 .clr-alt2 {
-  background-color: #ffdc7a;
+  background-color: #ffcc33;
 }
 .clr-alt3 {
-  background-color: #7a98bf;
+  background-color: #afe313;
 }
 .clr-alt4 {
-  background-color: #cccccc;
+  background-color: #95e0e8;
 }
+.clr-alt5 {
+  background-color: #7070cc;
+}
+
+.clr-alt6 {
+  background-color: #fdbaba;
+}
+
+.clr-alt7 {
+  background-color: #ff9090;
+}
+
+.clr-alt8 {
+  background-color: #cba6eb;
+}
+
+.clr-alt9 {
+  background-color: #93d8a5;
+}
+
+.clr-alt10 {
+  background-color: #add3ff;
+}
+
+.clr-alt11 {
+  background-color: #ff8800;
+}
+
+.clr-alt12 {
+  background-color: #ab2d07;
+}
+
+.clr-alt13 {
+  background-color: #40485d;
+}
+
 .clr-btn-default {
   background-color: #ffffff;
 }
