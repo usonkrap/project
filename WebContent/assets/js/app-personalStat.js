@@ -153,7 +153,6 @@ var App = (function () {
 		    	 success : function(response){
 		    		 var lineData = response.lineData;
 		    		 line_chart_call(lineData);
-		    		 alert(JSON.stringify(lineData));
 		    	 }
 		    	 
 		     });
