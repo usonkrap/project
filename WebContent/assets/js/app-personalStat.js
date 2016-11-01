@@ -161,15 +161,26 @@ var App = (function () {
 //		 ykeys: ['item1', 'item2', 'item3', 'item4', 'item5', 'item6', 'item7', 'item8', 'item9', 'item10', 'item11', 'item12'],
 //		 labels: ['외식', '식음료', '교통', '패션/미용', '문화생활', '생활용품', '사회생활', '교육', '주거/관리/통신', '의료/건강', '금융', '기타'],
 		 function line_chart_call(lineData){
-			  	var color1 = App.color.primary;
-			  	var color2 = tinycolor( App.color.primary ).lighten( 15 ).toString();
+			 var color1 = App.color.alt1;
+		        var color2 = App.color.alt2;
+		        var color3 = App.color.alt3;
+		        var color4 = App.color.alt4;
+		        var color5 = App.color.alt5;
+		        var color6 = App.color.alt6;
+		        var color7 = App.color.alt7;
+		        var color8 = App.color.alt8;
+		        var color9 = App.color.alt9;
+		        var color10 = App.color.alt10;
+		        var color11 = App.color.alt11;
+		        var color12 = App.color.alt12;
+			  	var color13 = tinycolor( App.color.primary ).lighten( 15 ).toString();
 			  	new Morris.Line({
 				    element: 'line',
 				    data: lineData,
 				    xkey: 'month',
 				    ykeys: ['item1', 'item2', 'item3', 'item4', 'item5', 'item6', 'item7', 'item8', 'item9', 'item10', 'item11', 'item12'],
 				    labels: ['외식', '식음료', '교통', '패션/미용', '문화생활', '생활용품', '사회생활', '교육', '주거/관리/통신', '의료/건강', '금융', '기타'],
-				    lineColors: [color1, color2, color3, color4],
+				    lineColors: [color1, color2, color3, color4, color5, color6, color7, color8, color9, color10, color11, color12],
 				    parseTime: false
 				  });
 		}
