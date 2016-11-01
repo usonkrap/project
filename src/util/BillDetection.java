@@ -55,6 +55,7 @@ public class BillDetection {
 			String coordinate = s.substring(s.indexOf("vertices") + 16, s.indexOf("}") + 1);
 			String x = "";
 			String y = "";
+			System.out.println("coordinate?? " + coordinate);
 			if (flag) {
 				y = coordinate.substring(0, coordinate.indexOf(","));
 				x = coordinate.substring(coordinate.indexOf(":") + 1, coordinate.length() - 1);
@@ -305,7 +306,7 @@ public class BillDetection {
 		total = StringUtils.replacePattern(total.toString(), "[.]", "");
 		total = StringUtils.replacePattern(total.toString(), "[,]", "");
 
-		itemList.add(new Item("total", Integer.parseInt(total)));
+		//itemList.add(new Item("total", Integer.parseInt(total)));
 
 		return itemList;
 

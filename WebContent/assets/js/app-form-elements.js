@@ -10,7 +10,11 @@ var App = (function () {
     	navIcons:{
     		rightIcon: 's7-angle-right',
     		leftIcon: 's7-angle-left'
-    	}
+    	},
+    	format: 'yyyy/mm/dd - hh:ii',
+    	pickDate: true,
+    	pickSeconds: false,
+    	pick12HourFormat: false
     });
     
     //Select2

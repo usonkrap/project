@@ -55,7 +55,6 @@ public class BillAction extends ActionSupport implements SessionAware {
 
 		imagePath = "temp/" + savedfile;
 		String totalPath = basePath + "/" + savedfile;
-
 		BillDetection bd = new BillDetection();
 		bill = bd.assembleForm(totalPath);
 
