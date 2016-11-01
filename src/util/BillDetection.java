@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
 
 import com.google.api.services.vision.v1.model.AnnotateImageResponse;
 import com.google.api.services.vision.v1.model.BatchAnnotateImagesResponse;
@@ -12,12 +13,14 @@ import com.google.api.services.vision.v1.model.EntityAnnotation;
 import util.GoogleDetection;
 import vo.Bill;
 import vo.Item;
+import vo.LabelScore;
 
 public class BillDetection {
 	private BatchAnnotateImagesResponse googleResponse;
 	private String googleDetection;
 	private String[][] data;
 	private String imgPath;
+	private boolean textFlag;
 
 	public BillDetection() {
 
@@ -25,37 +28,93 @@ public class BillDetection {
 
 	public Bill assembleForm(String imgPath) {
 		this.imgPath = imgPath;
+
 		runGoogleVision();
 
+		if (textFlag == true) {
+			// text가 하나도 없을 경우
+			return new Bill(null, null, null, null, "wrongPic");
+
+		}
+
+		ArrayList<LabelScore> labelScoreList = getLabel();
+		ArrayList<String> filterWord = new ArrayList<>();
+		filterWord.add("text");
+
+		System.out.println("lsl" + labelScoreList);
+
+		boolean con = false;
+
+		for (LabelScore ls : labelScoreList) {
+			for (String str : filterWord) {
+
+				if (ls.getLabelName().equals(str)) {
+					System.out.println(str);
+					con = true;
+
+				}
+
+			}
+
+		}
+
+		if (con == false) {
+
+			return new Bill(null, null, null, null, "wrongPic");
+
+		}
+
 		String storeName = findName();
+		System.out.println("sn:" + storeName);
 		String address = findAddress();
+		System.out.println("add:" + address);
 		String date = findDate();
+		System.out.println("date:" + date);
 		ArrayList<Item> itemList = findItem();
+		System.out.println("itemlist:" + itemList);
 		String payment = findPaymentMethod();
+		System.out.println("pay:" + payment);
 		Bill bill = new Bill(storeName, address, date, itemList, payment);
-		
+		System.out.println(bill);
 		return bill;
 
 	}
 
 	public void runGoogleVision() {
+
 		GoogleDetection google = new GoogleDetection(imgPath);
+
 		googleResponse = google.detect();
+
 		googleDetection = googleResponse.toString();
 
+		System.out.println("googleDetection: " + googleDetection);
+
 		// [i][0]:인덱스 [i][1]:x좌표 [i][2]:y좌표 [i][3]:내용
+
 		String[] arr1 = googleDetection.split("boundingPoly");
+
+		if (arr1.length == 1) {
+
+			textFlag = true;
+			return;
+
+		}
+
 		String[][] arr2 = new String[arr1.length - 2][4];
+
 		boolean flag = false; // xy 스위치가 필요할 경우 true
 		// flag = true;
+
 		for (int i = 0; i < arr1.length - 2; i++) {
+
 			String index = ((Integer) i).toString();
 			arr2[i][0] = index;
 			String s = arr1[i + 2];
 			String coordinate = s.substring(s.indexOf("vertices") + 16, s.indexOf("}") + 1);
 			String x = "";
 			String y = "";
-			System.out.println("coordinate?? " + coordinate);
+
 			if (flag) {
 				y = coordinate.substring(0, coordinate.indexOf(","));
 				x = coordinate.substring(coordinate.indexOf(":") + 1, coordinate.length() - 1);
@@ -69,7 +128,7 @@ public class BillDetection {
 			int k = s.length();
 			String desc = s.substring(j + 14, k - 5);
 			arr2[i][3] = desc;
-			
+
 		}
 		data = arr2;
 
@@ -82,7 +141,7 @@ public class BillDetection {
 		String time = "";
 		int date_index = 0;
 		for (int i = 0; i < data.length; i++) {
-		
+
 			if (Pattern.matches("^(?:\\d{2}|\\d{4})(?:-|/|\\.)(?:\\d{1}|\\d{2})(?:-|/|\\.)(?:\\d{1}|\\d{2})$",
 					data[i][3])) {
 				date = data[i][3];
@@ -94,13 +153,13 @@ public class BillDetection {
 		System.out.println();
 		int y = Integer.parseInt(data[date_index][2]); // y축
 		ArrayList<String> list = new ArrayList<>();
-		
+
 		for (int i = date_index; i < data.length - 1; i++) {
 			String desc = data[i + 1][3];
 			String temp_s = data[i + 1][2];
 			int temp_i = Integer.parseInt(temp_s);
 			if (temp_i > y - 30 && temp_i < y + 30) {
-				
+
 				list.add(data[i + 1][0]);
 				if (Pattern.matches("\\d{2}\\:\\d{2}", desc) || Pattern.matches("\\d{2}\\:\\d{2}\\:\\d{2}", desc)) {
 					time = desc;
@@ -108,12 +167,11 @@ public class BillDetection {
 				}
 			}
 		} // for
-		
 
 		// time값에 아무것도 안들어감 = 시간 데이터가 해체되어 추출되었다고 가정
 		String temp = "";
 		if (time.equals("")) {
-			
+
 			for (int i = 0; i < list.size() - 3; i++) {
 				int temp_i = Integer.parseInt(list.get(i));
 				String temp_s = data[temp_i][3];
@@ -239,6 +297,9 @@ public class BillDetection {
 			// if
 		} // for
 
+	
+		
+		
 		ArrayList<Integer> priceIndexList = new ArrayList<>();
 		ArrayList<String> priceList = new ArrayList<>();
 		for (int i = total_index; i >= 0; i--) {
@@ -257,7 +318,8 @@ public class BillDetection {
 				priceList.add(data[i][3]);
 			}
 		}
-
+		
+		
 		ArrayList<String> nameList = new ArrayList<>();
 		String temp_name = "";
 		for (int i = 0; i < priceIndexList.size(); i++) {
@@ -273,8 +335,8 @@ public class BillDetection {
 			}
 			temp_name = "";
 		} // outer for
-		// 아이템명에 부가세 등의 키워드가 포함된 항목을 제외시킨다
-
+			// 아이템명에 부가세 등의 키워드가 포함된 항목을 제외시킨다
+	
 		ArrayList<Item> itemList = new ArrayList<>();
 
 		String[] filter = { "부가", "계", "액", "판매", "TEL", "가세" };
@@ -288,25 +350,26 @@ public class BillDetection {
 						break;
 					} // if
 				} // for
+				
+				
 				if (priceflag) {
-
 					String editPrice = "";
-
+					System.out.println(priceList.get(i).toString());
 					editPrice = StringUtils.replacePattern(priceList.get(i).toString(), "[.]", "");
 					editPrice = StringUtils.replacePattern(priceList.get(i).toString(), "[,]", "");
+					
 
 					// 반환할 리스트에 아이템 추가
 					itemList.add(new Item(nameList.get(i), Integer.parseInt(editPrice)));
-
+					System.out.println("들어오나요?2");
 				} // if
 			} // for
 		} // if
-
-		
+		;
 		total = StringUtils.replacePattern(total.toString(), "[.]", "");
 		total = StringUtils.replacePattern(total.toString(), "[,]", "");
 
-		//itemList.add(new Item("total", Integer.parseInt(total)));
+		// itemList.add(new Item("total", Integer.parseInt(total)));
 
 		return itemList;
 
@@ -336,7 +399,6 @@ public class BillDetection {
 		String[] strArry = sb.toString().split("\n");
 
 		for (String string : strArry) {
-
 
 		}
 
@@ -370,6 +432,28 @@ public class BillDetection {
 		/////////////////////////// 단어///////////////////
 		name = nameFillter(name);
 		return name;
+	}
+
+	private ArrayList<LabelScore> getLabel() {
+
+		StringBuilder sb = new StringBuilder();
+
+		ArrayList<AnnotateImageResponse> result;
+
+		ArrayList<LabelScore> labelScoreList = new ArrayList<>();
+
+		result = (ArrayList<AnnotateImageResponse>) googleResponse.getResponses();
+
+		for (AnnotateImageResponse r : result) {
+			for (EntityAnnotation label : r.getLabelAnnotations()) {
+				LabelScore ls = new LabelScore(label.getDescription(), Float.floatToIntBits(label.getScore()));
+				labelScoreList.add(ls);
+			}
+		}
+
+		System.out.println("라벨: \n" + sb.toString());
+
+		return labelScoreList;
 	}
 
 	public String nameFillter(String name) {

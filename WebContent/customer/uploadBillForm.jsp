@@ -1,15 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %> 
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
-	<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>JanZani</title>
-    <link rel="stylesheet" type="text/css"
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>JanZani</title>
+<link rel="stylesheet" type="text/css"
 	href="../assets/lib/stroke-7/style.css" />
 <link rel="stylesheet" type="text/css"
 	href="../assets/lib/jquery.nanoscroller/css/nanoscroller.css" />
@@ -23,255 +24,171 @@
 <link rel="stylesheet" type="text/css"
 	href="../assets/lib/jquery.magnific-popup/magnific-popup.css" />
 <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
-  	</head>
-  	
-  	
-  	<style>
+</head>
 
-	.form-horizontal .form-group {
-		padding: 3px 0;
-	}
-	
-	.col-sm-1{
-		padding-top: 10px;
-		padding-left: 0;
-	}
-	.col-sm-12.addBtn {
-	    text-align: center;
-		margin-top: 14px;
-    	margin-bottom: 40px;
-	}
-	
-	i{
-		cursor: pointer; 
-		cursor: hand;
-	}
-	
-	 
-	.btn-lg, .btn-group-lg > .btn {
-	    padding: 12px 100px;
-	}
-	.btn-rounded.btn-lg {
-	    border-radius: 5px;
-	    border: 3px solid white;
-	}
 
+<style>
+.form-horizontal .form-group {
+	padding: 3px 0;
+}
+
+.col-sm-1 {
+	padding-top: 10px;
+	padding-left: 0;
+}
+
+.col-sm-12.addBtn {
+	text-align: center;
+	margin-top: 14px;
+	margin-bottom: 40px;
+}
+
+i {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.btn-lg, .btn-group-lg>.btn {
+	padding: 12px 100px;
+}
+
+.btn-rounded.btn-lg {
+	border-radius: 5px;
+	border: 3px solid white;
+}
 </style>
-	<body>
-		<div class="am-wrapper"><!--  ??? -->
-			<nav class="navbar navbar-default navbar-fixed-top am-top-header"><!-- 상단 적색바 -->
-				<div class="container-fluid"><!--  ??? -->
-					<div class="navbar-header"><!--  ??? -->
-						<div class="page-title"><!--  ??? -->
-							<span>JanZani</span>
-						</div>
-						<a href="#" class="am-toggle-left-sidebar navbar-toggle collapsed">
-						</a>
-						<a href="../sidebar/main.action" class="navbar-brand"><!-- 메인 페이지 링크 및 로고 표시 --></a>
+<body>
+	<div class="am-wrapper">
+		<!--  ??? -->
+		<nav class="navbar navbar-default navbar-fixed-top am-top-header">
+			<!-- 상단 적색바 -->
+			<div class="container-fluid">
+				<!--  ??? -->
+				<div class="navbar-header">
+					<!--  ??? -->
+					<div class="page-title">
+						<!--  ??? -->
+						<span>JanZani</span>
 					</div>
-					
-					<a href="#" data-toggle="collapse" data-target="#am-navbar-collapse" class="am-toggle-top-header-menu collapsed">
-						<span class="icon s7-angle-down"></span> <!-- ??? -->
+					<a href="#" class="am-toggle-left-sidebar navbar-toggle collapsed">
+					</a> <a href="../sidebar/main.action" class="navbar-brand"> <!-- 메인 페이지 링크 및 로고 표시 -->
 					</a>
-					<div id="am-navbar-collapse" class="collapse navbar-collapse">
-						<ul class="nav navbar-nav navbar-right am-user-nav">
-							<li class="dropdown">
-								<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
-									<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 -->
-									<span class="user-name"><s:property value="#session.nickname" /></span>
-									<span class="angle-down s7-angle-down"></span>
-								</a>
-								<ul role="menu" class="dropdown-menu"><!--프로필 왼쪽 화살표 눌렀을시 드롭메뉴 -->
-									<!-- href는 링크, span class는 아이콘을 나타냄, 아이콘의 종류는 html\assets\lib\stroke-7\demo.html 참고  -->
-																	<li><a href="../customer/profile.action"> <span class="icon s7-user"></span>내
-										프로필
+				</div>
+
+				<a href="#" data-toggle="collapse" data-target="#am-navbar-collapse"
+					class="am-toggle-top-header-menu collapsed"> <span
+					class="icon s7-angle-down"></span> <!-- ??? -->
+				</a>
+				<div id="am-navbar-collapse" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right am-user-nav">
+						<li class="dropdown"><a href="#" data-toggle="dropdown"
+							role="button" aria-expanded="false" class="dropdown-toggle">
+								<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 -->
+								<span class="user-name"><s:property
+										value="#session.nickname" /></span> <span
+								class="angle-down s7-angle-down"></span>
+						</a>
+							<ul role="menu" class="dropdown-menu">
+								<!--프로필 왼쪽 화살표 눌렀을시 드롭메뉴 -->
+								<!-- href는 링크, span class는 아이콘을 나타냄, 아이콘의 종류는 html\assets\lib\stroke-7\demo.html 참고  -->
+								<li><a href="../customer/profile.action"> <span
+										class="icon s7-user"></span>내 프로필
 								</a></li>
 								<li><a href="#"> <span class="icon s7-config"></span>설정
 								</a></li>
 								<%-- <li><a href="#"> <span class="icon s7-help1"></span>도움!
 								</a></li> --%>
-								<li><a href="../customer/logout.action"> <span class="icon s7-power"></span>로그
+								<li><a href="#"> <span class="icon s7-power"></span>로그
 										아웃
 								</a></li>
 							</ul></li>
-						</ul>
-						
-						<ul class="nav navbar-nav am-nav-right">
-							<li><a>프로필</a></li>
-						</ul>
-						<!-- \<ul class="nav navbar-nav am-nav-right"> 왼쪽 상단 메뉴
-							<li><a href="#">메인</a></li>
-              				<li><a href="#">어바웃</a></li>
-              				<li class="dropdown">
-              					<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">조원소개
-		              				<span class="angle-down s7-angle-down"></span>
-              					</a>	
-	              				<ul role="menu" class="dropdown-menu"> 드롭박스 메뉴
-	              					<li><a href="#">조장 박노수</a></li>
-					                <li><a href="#">나경상</a></li>
-					                <li><a href="#">유형은</a></li>
-					                <li><a href="#">김수진</a></li>
-					                <li><a href="#">이정승</a></li>
-	              				</ul>
-              				</li>
-              				<li><a href="#">고객지원</a></li>
-						</ul> --><!-- 왼쪽 상단 메뉴 끝 -->
-						
-						<ul class="nav navbar-nav navbar-right am-icons-nav">
-							<li class="dropdown">
-								<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
-								</a>
-									<a href="../bill/goBillForm.action" >
-									<button type="button"
-										class="btn btn-space btn-primary btn-rounded btn-lg">
-										<i class="icon icon-left s7-cloud-upload"></i> 소비 등록
-									</button>
-									</a>								<!-- <ul class="dropdown-menu am-messages">
-									<li>
-										<div class="title">메세지
-									 		<span class="badge">3</span>3은 메세지 갯수
-										</div>
-										<div class="list">
-											<div class="am-scroller nano"> ??
-												<div class="content nano-content"> ??
-													<ul>
-														<li class="active">  ??
-															<a href="#"> ??
-																<div class="logo">
-																	<img src="assets/img/avatar2.jpg">
-																</div>
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</li>
-								</ul> -->
-							</li>
-						</ul>					
-					</div>
-				</div>			
-			</nav>
-	
-	<div class="am-left-sidebar">
+					</ul>
+
+					<ul class="nav navbar-nav am-nav-right">
+						<li><a>프로필</a></li>
+					</ul>
+
+
+					<ul class="nav navbar-nav navbar-right am-icons-nav">
+						<li class="dropdown"><a href="#" data-toggle="dropdown"
+							role="button" aria-expanded="false" class="dropdown-toggle">
+						</a> <a href="../bill/goBillForm.action">
+								<button type="button"
+									class="btn btn-space btn-primary btn-rounded btn-lg">
+									<i class="icon icon-left s7-cloud-upload"></i> 소비 등록
+								</button>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="am-left-sidebar">
 			<div class="content">
 				<div class="am-logo"></div>
 				<ul class="sidebar-elements">
 
 					<li class="parent active"><a href="../sidebar/infoForm.action"><i
-							class="icon s7-user"></i><span><s:property value="#session.nickname" />님의 정보</span></a> <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
-                
-              <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">
-              <ul><li class="active"><a href="index.html">Version 1</a>
-                </li>
-                <li><a href="#">소비 내역 등록</a>
-                <li><a href="#">소비 내역 수정</a>
-                <li><a href="#">목표치 설정</a>
-                <li><a href="#">카드 등록</a>
-                </li><li><a href="dashboard4.html"><span class="label label-primary pull-right">New</span>Version 4</a>
-                </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li>
-              </ul> --></li>
+							class="icon s7-user"></i><span><s:property
+									value="#session.nickname" />님의 정보</span></a></li>
 
 					<li class="parent"><a href="../sidebar/spendListForm.action"><i
-							class="icon s7-news-paper"></i><span>소비 목록</span></a> <!--   <ul class="sub-menu"><li class="title">차트1</li>
-                
-              <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="charts-flot.html">Flot</a>
-                </li><li><a href="charts-morris.html">Morris.js</a>
-                </li><li><a href="charts-sparkline.html">Sparklines</a>
-                </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
-					</li>
+							class="icon s7-news-paper"></i><span>소비 목록</span></a></li>
 
 
 
 					<li class="parent"><a
 						href="../sidebar/personalStatForm.action"><i
-							class="icon s7-graph"></i><span>개인 분석</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
-
-					<li class="parent"><a href="../table/personalStatForm.action"><i class="icon s7-graph"></i><span>통계
-								1</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
->>>>>>> branch 'master' of https://github.com/usonkrap/project.git
-                
-              <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="form-elements.html">Elements</a>
-                </li><li><a href="form-validation.html">Validation</a>
-                </li><li><a href="form-wizard.html">Wizard</a>
-                </li><li><a href="form-masks.html">Input Masks</a>
-                </li><li><a href="form-wysiwyg.html">WYSIWYG Editor</a>
-                </li><li><a href="form-upload.html">Multi Upload</a>
-                </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
-					</li>
+							class="icon s7-graph"></i><span>개인 분석</span></a></li>
 
 					<li class="parent"><a href="../sidebar/groupStatForm.action"><i
-							class="icon s7-users"></i><span>비교 분석</span></a> <!-- <ul class="sub-menu"><li class="title">차트3</li>
-                
-              <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="tables-general.html">General</a>
-                </li><li><a href="tables-datatables.html">Data Tables</a>
-                </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 20px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
-					</li>
+							class="icon s7-users"></i><span>비교 분석</span></a></li>
 
 
 
 					<li class="parent"><a href="../sidebar/locationForm.action"><i
-							class="icon s7-map-2"></i><span>위치 통계</span></a> <!-- <ul class="sub-menu"><li class="title">위치 정보</li>
-                
-              <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="ui-general.html">음...</a>
-                </li><li><a href="ui-alerts.html">일</a>
-                </li><li><a href="ui-panels.html">단</a>
-                </li><li><a href="ui-buttons.html">메</a>
-                </li><li><a href="ui-modals.html">뉴</a>
-                </li><li><a href="ui-notifications.html">내</a>
-                </li><li><a href="ui-icons.html">비</a>
-                </li><li><a href="ui-grid.html">둠</a>
-                </li><li><a href="ui-tabs-accordions.html">여 &amp; 기</a>
-                </li><li><a href="ui-chat.html"><span class="label label-primary pull-right">New</span>에</a>
-                </li><li><a href="ui-nestable-lists.html">뭐넣을까</a>
-                </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
-					</li>
+							class="icon s7-map-2"></i><span>위치 통계</span></a></li>
 
 					<li class="parent"><a href="#"><i class="icon s7-ticket"></i><span>맞춤
-								정보</span></a> <!--  <ul class="sub-menu"><li class="title">차트4</li>
-                
-              <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="pages-blank.html">Blank Page</a>
-                </li><li><a href="pages-blank-header.html">Blank Page Header</a>
-                </li><li><a href="pages-login.html">Login</a>
-                </li><li><a href="pages-404.html">404 Page</a>
-                </li><li><a href="pages-sign-up.html">Sign Up</a>
-                </li><li><a href="pages-forgot-password.html">Forgot Password</a>
-                </li><li><a href="pages-profile.html">Profile</a>
-                </li><li><a href="pages-calendar.html">Calendar</a>
-                </li><li><a href="pages-gallery.html">Gallery</a>
-                </li><li><a href="pages-pricing-tables.html"><span class="label label-primary pull-right">New</span>Pricing Tables</a>
-                </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 20px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
-					</li>
+								정보</span></a></li>
 				</ul>
 				<!--Sidebar bottom content-->
 			</div>
 		</div>
-	
-	   <div class="am-content"> <!-- am 컨텐츠 시작 -->
-        <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
-          <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
-          <div class="col-sm-6">
-          	<div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 style="text-align: center">영수증 사진 등록</h3>
-                </div>
-                <div class="panel-body">
-					<div class="dragContext">
-						<div class='fileDrop' style="height:400px;">
-					
+
+		<div class="am-content">
+			<!-- am 컨텐츠 시작 -->
+			<div class="main-content">
+				<!-- 메인 컨텐츠 시작  -->
+				<!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
+				<div class="col-sm-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 style="text-align: center">영수증 사진 등록</h3>
 						</div>
-						<div class='uploadedList'></div>
-						<div class="main-content">
-							<div class="gallery-container">
-								<div class="item w2">
-									<div class="photo">
-										<div class="img">
-											<!-- 여기로 이미지가 들어옴-->
-											<div class="over">
-												<div class="func">
-													<a href="#" class="delImg"><i class="icon s7-link"></i></a><a
-														href="#" class="image-zoom"><i class="icon s7-search"></i></a>
+						<div class="panel-body" style="height: 480px;">
+							<div class="dragContext" style="height: 100%;">
+								<div class='fileDrop' align="center" id="file-drop"
+									style="height: 100%;">
+									<h2 style="padding-top: 35%;">Drag and Drop files here</h2>
+								</div>
+								<div class='uploadedList'></div>
+								<div class="main-content">
+
+									<div class="gallery-container">
+										<div class="item w2">
+
+											<div class="photo">
+												<div class="img" align="center">
+
+													<!-- 여기로 이미지가 들어옴-->
+													<div class="over">
+														<div class="func">
+															<a href="#" class="delImg"><i class="icon s7-link"></i></a><a
+																href="#" class="image-zoom"><i
+																class="icon s7-search"></i></a>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -279,117 +196,103 @@
 								</div>
 							</div>
 						</div>
-	          		</div>
-          		</div>
-          	</div>
-          </div>
-          <div class="col-sm-6">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 style="text-align: center">상품 등록</h3>
-                </div>
-                <div class="panel-body">
-                  <form role="form" class="form-horizontal">
-                    <div class="form-group">
-                      <label for="storeName" class="col-sm-2 control-label">상호</label>
-                      <div class="col-sm-10">
-                        <input id="storeName" name="bill.storeName" type="text" placeholder="상호" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="address" class="col-sm-2 control-label">주소</label>
-                      <div class="col-sm-10">
-                        <input id="address" type="text" placeholder="주소" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group" style="border-bottom: 1px solid #dddddd;">
-                      <label for="calendar_date" class="col-sm-2 control-label">일시</label>
-                      <div class="col-sm-10">
-							<div data-start-view="2" data-date-format="yyyy-mm-dd - hh:mm" data-link-field="dtp_input1" class="input-group date datetimepicker col-md-8 col-xs-7">
-								<input type="text" value="" class="form-control" id="calendar_date" name="bill.billDate">
-									<span class="input-group-addon btn btn-primary"><i class="icon-th s7-date"></i></span>
-							</div>
-                      </div>
-                    </div>
-                    
-                    <div class="form-group">
-                    	<!-- <div class="col-sm-3">
-                    		 <label for="address" class="col-sm-12 control-label" style="text-align: center;">대분류</label>
-                    	</div>
-                    	<div class="col-sm-3">
-                    		 <label for="address" class="col-sm-12 control-label" style="text-align: center;">중분류</label>
-                    	</div> -->
-                    	<div class="col-sm-8">
-                    		 <label for="item" class="col-sm-12 control-label" style="text-align: center;">상품명</label>
-                    	</div>
-                    	<div class="col-sm-3">
-                    		 <label for="price" class="col-sm-12 control-label" style="text-align: center;">금액</label>
-                    	</div>
-                    </div>
-                    
-                    <div class="form-group itemMenu">
-	                    <!-- <div class="col-sm-3">
-	                    	<input type='text' name='category1' class="form-control">
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	<input type='text' name='category2' class="form-control">
-	                    </div> -->
-	                    <!-- <div class="col-sm-12">
-		                    <div class="col-sm-8">
-		                    	<input type='text' name='itemName' class="form-control">
-		                    </div>
-		                    <div class="col-sm-3">
-		                    	<input type='text' name='itemPrice' class='itemPrice form-control'>
-		                    </div>
-		                    <div class="col-sm-1">
-								
-								<i class='s7-less' id='lessBtn' style="font-size: 1.6em;"></i>
-		                    </div>
-	                    </div> -->
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 style="text-align: center">상품 등록</h3>
 						</div>
-                   	<div class="col-sm-12 addBtn">
-                    	<i class="s7-plus" id="addBtn" style="font-size: 2em;"></i>
-                    </div>
-                    
-                    
-                    <div class="form-group" style="border-bottom: 1px solid #dddddd;">
-                      <label for="payment" class="col-sm-3 control-label">지불수단</label>
-                      <div class="col-sm-3">
-                        <select id="payment" name="bill.payment" class="form-control" >
-							<option value='현금'>현금</option>
-							<option value='카드'>카드</option>
-						</select>
-                      </div>
-                      <label for="totalPrice" class="col-sm-2 control-label">총 액</label>
-                      <div class="col-sm-4">
-                        <input id="totalPrice" name="bill.storeName" type="text" class="form-control" readonly="readonly">
-	                      </div>
-                    </div>
-                    
-                    
-                    <div class="form-group" style="padding-top: 5em;">
-                      <div class="col-sm-offset-2 col-sm-10">
-                        <div class="text-right">
-                          <button type="submit" class="btn btn-space btn-primary">등록하기</button>
-                          <button class="btn btn-space btn-default">취소</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-         
-         
-         
-         
-         
-        </div><!-- 메인 컨텐츠 끝 -->
-      </div><!-- am 컨텐츠 끝 -->
- 
-    </div>
-	
-	
+						<div class="panel-body" style="height: 40%;">
+							<form role="form" class="form-horizontal">
+								<div class="form-group">
+									<label for="storeName" class="col-sm-2 control-label">상호</label>
+									<div class="col-sm-10">
+										<input id="storeName" name="bill.storeName" type="text"
+											placeholder="상호" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="address" class="col-sm-2 control-label">주소</label>
+									<div class="col-sm-10">
+										<input id="address" type="text" placeholder="주소"
+											class="form-control">
+									</div>
+								</div>
+								<div class="form-group"
+									style="border-bottom: 1px solid #dddddd;">
+									<label for="address" class="col-sm-2 control-label">일시</label>
+									<div class="col-sm-10">
+										<div data-start-view="2" data-date-format="yyyy-mm-dd - hh:mm"
+											data-link-field="dtp_input1"
+											class="input-group date datetimepicker col-md-8 col-xs-7">
+											<input type="text" value="" class="form-control"
+												id="calendar_date" name="bill.billDate"> <span
+												class="input-group-addon btn btn-primary"><i
+												class="icon-th s7-date"></i></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+
+									<div class="col-sm-8">
+										<label for="address" class="col-sm-12 control-label"
+											style="text-align: center;">상품명</label>
+									</div>
+									<div class="col-sm-3">
+										<label for="address" class="col-sm-12 control-label"
+											style="text-align: center;">금액</label>
+									</div>
+								</div>
+
+								<div class="form-group itemMenu"></div>
+								<div class="col-sm-12 addBtn">
+									<i class="s7-plus" id="addBtn" style="font-size: 2em;"></i>
+								</div>
+
+
+								<div class="form-group"
+									style="border-bottom: 1px solid #dddddd;">
+									<label for="storeName" class="col-sm-3 control-label">지불수단</label>
+									<div class="col-sm-3">
+										<select id="payment" name="bill.payment" class="form-control">
+											<option value='현금'>현금</option>
+											<option value='카드'>카드</option>
+										</select>
+									</div>
+									<label for="storeName" class="col-sm-2 control-label">총
+										액</label>
+									<div class="col-sm-4">
+										<input id="totalPrice" name="bill.storeName" type="text"
+											class="form-control" readonly="readonly">
+									</div>
+								</div>
+							</form>
+							<div class="form-group" style="padding-top: 5em;">
+								<div class="col-sm-offset-2 col-sm-10">
+									<div class="text-right">
+										<button type="submit" class="btn btn-space btn-primary">등록하기</button>
+										<button class="btn btn-space btn-default" id="cancel">취소</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+			</div>
+			<!-- 메인 컨텐츠 끝 -->
+		</div>
+		<!-- am 컨텐츠 끝 -->
+
+	</div>
+
+
 
 	<script src="../assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
 	<script
@@ -423,13 +326,22 @@
 	<script src="../assets/js/app-form-elements.js" type="text/javascript"></script>
 
 	<script src="../assets/js/app-page-gallery.js" type="text/javascript"></script>
-	
-	
+
+
 	<script>
 		$(document).ready(function() {
 			//initialize the javascript
 			App.init();
 			App.formElements();
+			
+			var con = "%{confirm}";
+			
+			if( con == 'chk'){
+				
+				alert("성공적으로 등록 되었습니다");
+				
+			}
+			
 			var totalPrice = 0;
 
 			$("#calendar_date").val();
@@ -482,8 +394,19 @@
 										processData : false,
 										contentType : false,
 										type : 'POST',
+										beforeSend : function() {
+											$("#file-drop").children().hide();
+											$("#file-drop")
+													.append(
+															"<img src='../img/img-loading.gif' id='lodingImg'/>"
+															); 
+										},
 										success : function(data) {
 
+											$("#lodingImg").remove();
+											
+											if(data.bill.payment != "wrongPic"){
+											
 											if (checkImageType(data.imagePath)) {
 
 												var imagePath = data.imagePath;
@@ -491,10 +414,10 @@
 												$(".dragContext").children()
 														.hide();
 
-												var str2 = "<div class='gallery-container' style='width:600px;'>"
+												var str2 = "<div class='gallery-container' style='height: 100%;'>"
 														+ "<div class='item w2'>"
-														+ "<div class='photo'>"
-														+ "<div class='img'>"
+														+ "<div class='photo' >"
+														+ "<div class='img' align='center' >"
 														+ "<div class='over'>"
 														+ "<div class='func'>"
 														+ "<a href='#' class='del-img'>"
@@ -556,7 +479,7 @@
 																					
 																					"<div class='col-sm-12'>" +
 																					"<div class='col-sm-8'>"　+
-																                    	"<input type='text' value='" + item.name + "' name='itemName' class='form-control'>"　+
+																                    	"<input type='text' value='" + item.name + "' name='itemName' class='itemName form-control'>"　+
 																                    "</div>" +
 																                    "<div class='col-sm-3'>" +
 																                    	"<input type='text' value='" + item.price + "' name='itemPrice' class='itemPrice form-control'>" +
@@ -577,6 +500,12 @@
 											}
 
 											calTotalPrice();
+											
+										}else{
+											
+											alert("영수증 사진을 올려주세요!");
+											
+										}
 										}
 									});
 						});
@@ -585,14 +514,15 @@
 
 		//////////////////이미지 삭제///////////////////
 		$('.dragContext').on('click', '.del-img', function() {
-
 			intiForm();
+			location.reload();  
 
 		});
 
 		//////////////////폼 취소/////////////////////
 		$("#cancel").click(function() {
 			intiForm();
+			location.reload();  
 		});
 
 		/////////////////영수증 등록////////////////////
@@ -644,8 +574,10 @@
 		////////////////////아이템 삭제//////////////////				
 		$(".itemMenu").on("click", "#lessBtn", function() {
 
+			
 			$(this).parent().parent().remove();
 			calTotalPrice();
+			
 
 		});
 
@@ -665,15 +597,33 @@
 				dataType : "text",
 				success : function() {
 
+				
+				/** 	
 					$(".gallery-container").remove();
 
 					$('.itemMenu tr:gt(1)').remove();
 
+					
 					$(".dragContext").children().show();
+
+					$(".itemName").each(function() {
+						this.remove();
+					});
+					
+					$(".itemPrice").each(function() {
+						this.remove();
+					});
+					
+					$(".s7-less").each(function() {
+						this.remove();
+					});
+					
 
 					$("form").each(function() {
 						this.reset();
-					});
+					}); **/
+					
+				
 
 				}
 
@@ -706,5 +656,5 @@
 
 		
 		</script>
-	</body>
+</body>
 </html>
