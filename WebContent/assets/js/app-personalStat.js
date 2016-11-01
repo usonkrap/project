@@ -145,31 +145,32 @@ var App = (function () {
 		 
 		 
 		//월별 지출 비교
-		 var tax_data = [
-		       {"month": "1월", "item1": 150000, "item2": 85600},
-		       {"month": "2월", "item1": 210000, "item2": 95900},
-		       {"month": "3월", "item1": 156000, "item2": 83300},
-		       {"month": "4월", "item1": 111000, "item2": 82600},
-		       {"month": "5월", "item1": 123000, "item2": 85600},
-		       {"month": "6월", "item1": 150000, "item2": 85600},
-		       {"month": "7월", "item1": 124000, "item2": 40900},
-		       {"month": "8월", "item1": 213000, "item2": 65600},
-		       {"month": "9월", "item1": 221000, "item2": 55400},
-		       {"month": "10월", "item1": 190700, "item2": 65300},
-		       {"month": "11월", "item1": 156300, "item2": 75600},
-		       {"month": "12월", "item1": 198700, "item2": 95600},
-		  ];
 		 function line_chart(){
+			 $.ajax({
+		    	 url : '../sidebar/lineChart',
+		    	 type : 'post',
+		    	 dataType : 'json',
+		    	 success : function(response){
+		    		 var lineData = response.lineData;
+		    		 line_chart_call(lineData);
+		    		 alert(JSON.stringify(lineData));
+		    	 }
+		    	 
+		     });
+		 }
+		 
+//		 ykeys: ['item1', 'item2', 'item3', 'item4', 'item5', 'item6', 'item7', 'item8', 'item9', 'item10', 'item11', 'item12'],
+//		 labels: ['외식', '식음료', '교통', '패션/미용', '문화생활', '생활용품', '사회생활', '교육', '주거/관리/통신', '의료/건강', '금융', '기타'],
+		 function line_chart_call(lineData){
 			  	var color1 = App.color.primary;
 			  	var color2 = tinycolor( App.color.primary ).lighten( 15 ).toString();
-
 			  	new Morris.Line({
 				    element: 'line',
-				    data: tax_data,
+				    data: lineData,
 				    xkey: 'month',
-				    ykeys: ['item1', 'item2'],
-				    labels: ['카테고리1', '카테고리2'],
-				    lineColors: [color1, color2],
+				    ykeys: ['item1', 'item2', 'item3', 'item4', 'item5', 'item6', 'item7', 'item8', 'item9', 'item10', 'item11', 'item12'],
+				    labels: ['외식', '식음료', '교통', '패션/미용', '문화생활', '생활용품', '사회생활', '교육', '주거/관리/통신', '의료/건강', '금융', '기타'],
+				    lineColors: [color1, color2, color3, color4],
 				    parseTime: false
 				  });
 		}

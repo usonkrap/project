@@ -240,4 +240,19 @@ public class TableDAO {
 		return dataList;
 	}//end of paymentData
 	
+	
+	public List<Map<String, Object>> lineChart(String customerId) {
+		List<Map<String, Object>> dataList = null;
+		try {
+			ss = factory.openSession();
+			dataList = ss.selectList("table.lineChart", customerId);
+			ss.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}//try catch finally
+		return dataList;
+	}//end of lineChart
+	
 }//end of class
