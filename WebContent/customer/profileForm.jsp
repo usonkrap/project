@@ -224,7 +224,67 @@
 	   <div class="am-content"> <!-- am 컨텐츠 시작 -->
         <div class="main-content"> <!-- 메인 컨텐츠 시작  -->
           <!--+general-chart("classes", "title", "height", "id", "counter value", "counter desc", tools enabled (use true or false))-->
-          
+          	<div class="row">
+            <div class="col-md-6">
+              <div class="panel panel-defaultt">
+                <div class="panel-heading">
+                  <h3>개인 정보</h3>
+                </div>
+                <div class="panel-body">
+                  <form action="#" novalidate="" class="form-horizontal group-border-dashed">
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">이메일</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" readonly="readonly">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">비밀번호</label>
+                      <div class="col-sm-9">
+                        <input type="text"  class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">비밀번호 확인</label>
+                      <div class="col-sm-9">
+                        <input type="text"  class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">닉네임</label>
+                      <div class="col-sm-9">
+                        <input type="text"  class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">주소</label>
+	                        <div class="col-sm-3">
+		                        <select class="form-control" name="sido" id="sido"></select>
+	                        </div>
+	                        <div class="col-sm-3" style="padding-left: initial">
+		                        <select class="form-control" name="gugun" id="gugun"></select>
+	                        </div>
+	                        <div class="col-sm-3"  style="padding-left: initial">
+		                        <select class="form-control" name="dong" id="dong"></select>
+	                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">생년월일</label>
+                      <div class="col-sm-9" >
+	                          <div data-min-view="2" data-start-view="4" data-date-format="yyyy-mm-dd" class="date datetimepicker" >
+	                            <input size="20" type="text" value="" id="birthday" name="customer.cust_birthday" class="form-control" readonly="readonly">
+	                          </div>
+	                        </div>
+                    </div>
+                    <div class="text-right" style="padding-top:3em;">
+                      <button type="submit" class="btn btn-space btn-primary">Submit</button>
+                      <button class="btn btn-space btn-default">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
          
          
          
@@ -251,11 +311,15 @@
     <script src="../assets/lib/morrisjs/morris.min.js" type="text/javascript"></script>
     <script src="../assets/js/app-groupStat.js" type="text/javascript"></script>
 
+<script src="../assets/js/sojaeji.js" type="text/javascript"></script>
+    
+
     <script type="text/javascript">
       $(document).ready(function(){
       	//initialize the javascript
       	App.init();
       });
+      sojaeji('서울', '강남구', '개포1동'); 
     </script>
 	</body>
 </html>
