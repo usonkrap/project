@@ -31,6 +31,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private Double[] dayRecentAverForTime;
 	private Double[] dayTotalAverForTime;
 	private JSONArray donutData;
+	private JSONArray lineData;
 	private ProgressData progressData;
 	private int[] paymentData;
 	
@@ -174,6 +175,35 @@ public class TableAction extends ActionSupport implements SessionAware {
         }
 		return SUCCESS;
 	}//end of paymentData
+	
+	
+	public String lineChart(){
+		TableDAO dao = new TableDAO();
+		String customerId = (String) session.get("loginId");
+		List<Map<String, Object>> list = null;
+		list = dao.lineChart(customerId);
+		lineData = new JSONArray();
+        for (int i = 0; i < list.size(); i++) {
+        	Map<String, Object> tempData = list.get(i);
+        	JSONObject data = new JSONObject();
+			data.put("month", String.valueOf(tempData.get("MON")) + "월");
+			data.put("item1", Integer.valueOf(String.valueOf(tempData.get("외식"))));
+			data.put("item2", Integer.valueOf(String.valueOf(tempData.get("식음료"))));
+			data.put("item3", Integer.valueOf(String.valueOf(tempData.get("교통"))));
+			data.put("item4", Integer.valueOf(String.valueOf(tempData.get("패션/미용"))));
+			data.put("item5", Integer.valueOf(String.valueOf(tempData.get("문화생활"))));
+			data.put("item6", Integer.valueOf(String.valueOf(tempData.get("생활용품"))));
+			data.put("item7", Integer.valueOf(String.valueOf(tempData.get("사회생활"))));
+			data.put("item8", Integer.valueOf(String.valueOf(tempData.get("교육"))));
+			data.put("item9", Integer.valueOf(String.valueOf(tempData.get("주거/관리/통신"))));
+			data.put("item10", Integer.valueOf(String.valueOf(tempData.get("의료/건강"))));
+			data.put("item11", Integer.valueOf(String.valueOf(tempData.get("금융"))));
+			data.put("item12", Integer.valueOf(String.valueOf(tempData.get("기타"))));
+			lineData.add(data);
+		}
+        System.out.println(lineData);
+		return SUCCESS;
+	}//end of lineChart
 
 	////////////////////////////
 	public Double[] getDayRecentAver() {return dayRecentAver;}
@@ -217,6 +247,9 @@ public class TableAction extends ActionSupport implements SessionAware {
 	
 	public int[] getPaymentData() {return paymentData;}
 	public void setPaymentData(int[] paymentData) {this.paymentData = paymentData;}
+	
+	public JSONArray getLineData() {return lineData;}
+	public void setLineData(JSONArray lineData) {this.lineData = lineData;}
 
 	@Override
 	public void setSession(Map<String, Object> session) {this.session = session;}

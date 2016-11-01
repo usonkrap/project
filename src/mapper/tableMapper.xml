@@ -230,4 +230,28 @@
                   		  ))
               		GROUP by groups)
 	</select> -->
+	
+	<select id="lineChart" parameterType="String" resultType="map">
+select d.month as mon
+           ,nvl(sum(decode(c.name, '외식', c.price)), 0) "외식"
+           ,nvl(sum(decode(c.name, '식음료', c.price)), 0) "식음료"
+           ,nvl(sum(decode(c.name, '교통', c.price)), 0) "교통"
+           ,nvl(sum(decode(c.name, '패션/미용', c.price)), 0) "패션/미용"
+           ,nvl(sum(decode(c.name, '문화생활', c.price)), 0) "문화생활"
+           ,nvl(sum(decode(c.name, '생활용품', c.price)), 0) "생활용품"
+           ,nvl(sum(decode(c.name, '사회생활', c.price)), 0) "사회생활"
+           ,nvl(sum(decode(c.name, '교육', c.price)), 0) "교육"
+           ,nvl(sum(decode(c.name, '주거/관리/통신', c.price)), 0) "주거/관리/통신"
+           ,nvl(sum(decode(c.name, '의료/건강', c.price)), 0) "의료/건강"
+           ,nvl(sum(decode(c.name, '금융', c.price)), 0) "금융"
+           ,nvl(sum(decode(c.name, '기타', c.price)), 0) "기타"
+from (select to_char(b.billdate, 'MM') as mon, a.category as name, a.price  as price
+      from (select i.billno as billno, m.category_name	as category, i.price as price 
+            from item i , major_CATEGORY m 
+            where i.customerid = #{customer} and substr(i.category, 1, 3) = m.category_num) a, bill b
+      where b.billno = a.billno) c, month d
+where d.month = c.mon(+)
+group by d.month
+order by d.month
+	</select>
 </mapper>

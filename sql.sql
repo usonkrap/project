@@ -76,8 +76,13 @@ select * from item order by itemno desc;
 select * from sub_category;
 select * from customer;
 
+create table month(
+month varchar2(6)
+);
 
+insert into month values('12');
 
+select * from month;
 
 select
 	sum(totalprice)
