@@ -199,7 +199,7 @@
 
 					<li class="parent"><a href="../table/personalStatForm.action"><i class="icon s7-graph"></i><span>통계
 								1</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
->>>>>>> branch 'master' of https://github.com/usonkrap/project.git
+
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="form-elements.html">Elements</a>
                 </li><li><a href="form-validation.html">Validation</a>
@@ -271,25 +271,25 @@
                     <div class="form-group">
                       <label class="col-sm-3 control-label">이메일</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" readonly="readonly">
+                        <input type="text" class="form-control" readonly="readonly" id="email">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-3 control-label">비밀번호</label>
                       <div class="col-sm-9">
-                        <input type="text"  class="form-control">
+                        <input type="password"  class="form-control" id="pw1">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-3 control-label">비밀번호 확인</label>
                       <div class="col-sm-9">
-                        <input type="text"  class="form-control">
+                        <input type="password"  class="form-control" id="pw2">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-3 control-label">닉네임</label>
                       <div class="col-sm-9">
-                        <input type="text"  class="form-control">
+                        <input type="text"  class="form-control" id="nickname">
                       </div>
                     </div>
                     <div class="form-group">
@@ -368,6 +368,7 @@
 <script src="../assets/js/sojaeji.js" type="text/javascript"></script>
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="../script/circle-progress.js"></script>
+<script src="../assets/js/updateProfile.js" type="text/javascript"></script>
 
     <script type="text/javascript">
       $(document).ready(function(){

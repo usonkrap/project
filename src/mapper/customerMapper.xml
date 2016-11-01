@@ -12,4 +12,8 @@
 select * from customer where cust_email=#{cust_email} and cust_password=#{cust_password} 
 </select>
 
+<select id="loadProfile" parameterType="String" resultType="Customer">
+select * from customer where cust_email=#{cust_email}
+</select>
+
 </mapper>
