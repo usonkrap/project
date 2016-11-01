@@ -106,7 +106,7 @@ public class BillAction extends ActionSupport implements SessionAware {
 			Item item = new Item(itemName.get(i), itemPrice.get(i));
 			item.setCustomerId(customerId);
 			item.setBillNo(billNo);
-			if(restaurantflag){
+			if(restaurantflag){ //업체카테고리로 일괄 등록
 				item.setCategory(category);
 			}else{
 				category = shopping.searchShoppingCategory(item.getName());
