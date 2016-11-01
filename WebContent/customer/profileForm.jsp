@@ -235,25 +235,25 @@
                     <div class="form-group">
                       <label class="col-sm-3 control-label">이메일</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" readonly="readonly">
+                        <input type="text" class="form-control" readonly="readonly" id="email">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-3 control-label">비밀번호</label>
                       <div class="col-sm-9">
-                        <input type="text"  class="form-control">
+                        <input type="password"  class="form-control" id="pw1">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-3 control-label">비밀번호 확인</label>
                       <div class="col-sm-9">
-                        <input type="text"  class="form-control">
+                        <input type="password"  class="form-control" id="pw2">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-3 control-label">닉네임</label>
                       <div class="col-sm-9">
-                        <input type="text"  class="form-control">
+                        <input type="text"  class="form-control" id="nickname">
                       </div>
                     </div>
                     <div class="form-group">
@@ -312,7 +312,7 @@
     <script src="../assets/js/app-groupStat.js" type="text/javascript"></script>
 
 <script src="../assets/js/sojaeji.js" type="text/javascript"></script>
-    
+<script src="../assets/js/updateProfile.js" type="text/javascript"></script>
 
     <script type="text/javascript">
       $(document).ready(function(){

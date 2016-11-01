@@ -37,6 +37,12 @@ public class CustomerAction extends ActionSupport implements SessionAware {
 		}
 	}
 	
+	public String loadProfile(){
+		CustomerDAO dao = new CustomerDAO();
+		customer = dao.loadProfile((String) session.get("loginId"));
+		return SUCCESS;
+	}
+	
 	public String logout(){
 		session.clear();
 		return SUCCESS;

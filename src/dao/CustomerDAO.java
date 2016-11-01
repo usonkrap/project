@@ -38,4 +38,17 @@ public class CustomerDAO {
 		return customer;
 	}
 
+	
+	public Customer loadProfile(String id){
+		Customer customer = new Customer();
+		try {
+			ss = factory.openSession();
+			customer = ss.selectOne("customer.loadProfile", id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}
+		return customer;
+	}
 }

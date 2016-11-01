@@ -44,6 +44,11 @@
 			<result name="success" type="redirect">/loginForm.action</result>
 		</action>
 
+		<action name="loadProfile" class="action.CustomerAction" method="loadProfile">
+			<interceptor-ref name="loginInterceptorStack"/>
+			<result name="success" type="json"></result>
+		</action>
+		
 	</package>
 </struts>
 
