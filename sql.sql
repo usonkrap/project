@@ -65,11 +65,11 @@ insert into item values(5, 3 ,'외식' ,'오징어찌게',8000);
 insert into item values(7, 3 ,'외식' ,'바나나',500);
 insert into item values(9, 3 ,'외식' ,'된장찌게',7000);
 
-insert into bill values(bill_seq.nextval, 'master@master.com', to_date('2016-10-31 01:52:01', 'YYYY-MM-DD HH24:MI:SS'), null, '택시', 35700, '현금', null);
-insert into item values(item_seq.nextval, 117, 'master@master.com', 'L03M02', '택시', 35700);
+insert into bill values(bill_seq.nextval, 'master@master.com', to_date('2016-10-25 10:15:01', 'YYYY-MM-DD HH24:MI:SS'), null, '휴대폰요금', 128000, '현금', null);
+insert into item values(item_seq.nextval, 139, 'master@master.com', 'L09M03', '휴대폰요금', 128000);
 
-insert into bill values(bill_seq.nextval, 'master@master.com', to_date('2016-09-01 12:50:01', 'YYYY-MM-DD HH24:MI:SS'), '서울 강남구 삼성로104길', '마시타야', 6700, '현금', null);
-insert into item values(item_seq.nextval, 131, 'master@master.com', 'L01M03', '돈코츠라멘', 6700);
+insert into bill values(bill_seq.nextval, 'master@master.com', to_date('2016-11-01 12:50:01', 'YYYY-MM-DD HH24:MI:SS'), '서울 강남구 삼성로104길', '마시타야', 7900, '현금', null);
+insert into item values(item_seq.nextval, 142, 'master@master.com', 'L01M03', '챠슈동', 7900);
 
 select * from bill order by billno desc;
 select * from item order by itemno desc;

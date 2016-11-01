@@ -123,9 +123,20 @@ public class TableAction extends ActionSupport implements SessionAware {
 	
 	public String calendarBillList(){
 		TableDAO dao = new TableDAO();
+		String[] monthData = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+		String[] monthData2 = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
+		if(calendarDate.length() > 10){
+			String month = calendarDate.substring(4, 7);
+			for (int i = 0; i < monthData.length; i++) {
+				if(month.equals(monthData[i])){
+					month = monthData2[i];
+					break;
+				}
+			}
+			calendarDate = month + "/" + calendarDate.substring(8, 10) + "/" + calendarDate.substring(11, 15);
+		}
 		billList = new ArrayList<>();
 		billList = dao.tableList((String) session.get("loginId"),calendarDate);
-		System.out.println(billList);
 		return SUCCESS;
 	}//end of calendarBillList
 	
