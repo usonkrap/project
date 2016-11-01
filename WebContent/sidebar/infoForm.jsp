@@ -80,7 +80,7 @@
 								</a></li>
 								<%-- <li><a href="#"> <span class="icon s7-help1"></span>도움!
 								</a></li> --%>
-								<li><a href="#"> <span class="icon s7-power"></span>로그
+								<li><a href="../customer/logout.action"> <span class="icon s7-power"></span>로그
 										아웃
 								</a></li>
 							</ul></li>
