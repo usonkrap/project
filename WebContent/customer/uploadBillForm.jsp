@@ -204,7 +204,7 @@ i {
 							<h3 style="text-align: center">상품 등록</h3>
 						</div>
 						<div class="panel-body" style="height: 40%;">
-							<form role="form" class="form-horizontal">
+							<form role="form" class="form-horizontal" action="inputBill">
 								<div class="form-group">
 									<label for="storeName" class="col-sm-2 control-label">상호</label>
 									<div class="col-sm-10">
@@ -215,7 +215,7 @@ i {
 								<div class="form-group">
 									<label for="address" class="col-sm-2 control-label">주소</label>
 									<div class="col-sm-10">
-										<input id="address" type="text" placeholder="주소"
+										<input id="address" name="bill.address" type="text" placeholder="주소"
 											class="form-control">
 									</div>
 								</div>
@@ -264,7 +264,7 @@ i {
 									<label for="storeName" class="col-sm-2 control-label">총
 										액</label>
 									<div class="col-sm-4">
-										<input id="totalPrice" name="bill.storeName" type="text"
+										<input id="totalPrice" name="bill.totalPrice" type="text"
 											class="form-control" readonly="readonly">
 									</div>
 								</div>
@@ -272,7 +272,7 @@ i {
 							<div class="form-group" style="padding-top: 5em;">
 								<div class="col-sm-offset-2 col-sm-10">
 									<div class="text-right">
-										<button type="submit" class="btn btn-space btn-primary">등록하기</button>
+										<button type="button" class="btn btn-space btn-primary" id="inputBtn">등록하기</button>
 										<button class="btn btn-space btn-default" id="cancel">취소</button>
 									</div>
 								</div>
@@ -393,7 +393,7 @@ i {
 										dataType : 'json',
 										processData : false,
 										contentType : false,
-										type : 'POST',
+										type : 'post',
 										beforeSend : function() {
 											$("#file-drop").children().hide();
 											$("#file-drop")

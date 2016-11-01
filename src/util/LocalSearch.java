@@ -28,6 +28,7 @@ public class LocalSearch {
 			for (int i = 0; i < arr.size(); i++) {
 				JSONObject data = (JSONObject) arr.get(i);
 				String s = (data.get("category").toString());
+				System.out.println(s);
 				category_list.add(s);
 			}
 		} catch (Exception e) {
