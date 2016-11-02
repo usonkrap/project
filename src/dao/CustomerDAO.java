@@ -1,5 +1,7 @@
 package dao;
 
+import java.util.HashMap;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -50,5 +52,19 @@ public class CustomerDAO {
 			ss.close();
 		}
 		return customer;
+	}
+	
+	public void setBudget(HashMap<String, Object> map) {
+		try {
+			ss = factory.openSession();
+			System.out.println("map?? "+ map);
+			ss.update("customer.setBudget", map);
+			ss.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}
+		
 	}
 }

@@ -8,13 +8,13 @@ public class Customer {
 	private String cust_address;
 	private String cust_birthday;
 	private String cust_gender;
-	private String cust_target_price;
+	private int cust_target_price;
 	
 	public Customer() {
 	}
 
 	public Customer(String cust_email, String cust_password, String cust_nickname, String cust_address,
-			String cust_birthday, String cust_gender, String cust_target_price) {
+			String cust_birthday, String cust_gender, int cust_target_price) {
 		this.cust_email = cust_email;
 		this.cust_password = cust_password;
 		this.cust_nickname = cust_nickname;
@@ -73,11 +73,11 @@ public class Customer {
 		this.cust_gender = cust_gender;
 	}
 
-	public String getCust_target_price() {
+	public int getCust_target_price() {
 		return cust_target_price;
 	}
 
-	public void setCust_target_price(String cust_target_price) {
+	public void setCust_target_price(int cust_target_price) {
 		this.cust_target_price = cust_target_price;
 	}
 

@@ -49,6 +49,10 @@
 			<result name="success" type="json"></result>
 		</action>
 		
+		<action name="setBudget" class="action.CustomerAction" method="setBudget">
+			<interceptor-ref name="loginInterceptorStack"/>
+			<result name="success" type="json"></result>
+		</action>
 	</package>
 </struts>
 

@@ -324,7 +324,7 @@
 	                  <h3 id="budgetMonth">월 예산 설정</h3>
 	                </div>
 	                <div class="panel-body">
-	                	<div class="circle"><strong>60<i>%</i></strong></div>
+	                	<div class="circle"><strong></strong></div>
 		                <div class="col-sm-12">
 	                      <div class="col-sm-6">
 	                        <input type="number" value="" class="form-control" id="targetPrice">
@@ -371,16 +371,44 @@
     <script type="text/javascript">
       $(document).ready(function(){
       	//initialize the javascript
-      	App.init();
+      		App.init();
       });
       sojaeji('서울', '강남구', '개포1동'); 
       
       $("div.btn").on('click', 'button#setBudget', function() {
-    	    alert(1);
-    	    
-    	});
-      
-      
+  	    var cust_target_price = $("#targetPrice").val();
+  	    $.ajax({
+  			url : '../customer/setBudget',
+  			type : 'post',
+  			data : {cust_target_price : cust_target_price},
+  			dataType : 'json',
+  			success : function(response) {
+  				alert("예산이 수정되었습니다.");
+
+  				$.ajax({
+  					url : '../sidebar/progressGet',
+  					type: 'post',
+  					dataType: 'json',
+  					success : function(response) {
+  						var datas = response.progressData;
+  						var d = new Date();
+  						var month = d.getMonth()+1;
+  						document.getElementById("budgetMonth").innerHTML = month+"월 예산 설정";
+  						
+  						
+  						$('.circle').circleProgress({
+  					    	value: datas.precentMonth/100
+  					      	}).on('circle-animation-progress', function(event, progress) {
+  					        	$(this).find('strong').html(parseInt(datas.precentMonth * progress) + '<i>%</i>');
+  					    	});
+  						
+  						$('#targetPrice').attr('value', datas.CUST_TARGET_PRICE);
+  					}
+  				});
+
+  			} 
+  	    });
+    });
     </script>
 	</body>
 </html>

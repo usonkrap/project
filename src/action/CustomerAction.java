@@ -1,5 +1,6 @@
 package action;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -16,6 +17,7 @@ public class CustomerAction extends ActionSupport implements SessionAware {
 	private String sido;
 	private String gugun;
 	private String dong;
+	private int cust_target_price;
 	
 	public String join(){
 		CustomerDAO dao = new CustomerDAO();
@@ -40,6 +42,16 @@ public class CustomerAction extends ActionSupport implements SessionAware {
 	public String loadProfile(){
 		CustomerDAO dao = new CustomerDAO();
 		customer = dao.loadProfile((String) session.get("loginId"));
+		return SUCCESS;
+	}
+	public String setBudget(){
+		System.out.println("target price : " +cust_target_price);
+		
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("email", (String) session.get("loginId"));
+		map.put("target_price", cust_target_price);
+		CustomerDAO dao = new CustomerDAO();
+		dao.setBudget(map);
 		return SUCCESS;
 	}
 	
@@ -78,6 +90,14 @@ public class CustomerAction extends ActionSupport implements SessionAware {
 
 	public void setDong(String dong) {
 		this.dong = dong;
+	}
+	
+	public int getCust_target_price() {
+		return cust_target_price;
+	}
+
+	public void setCust_target_price(int cust_target_price) {
+		this.cust_target_price = cust_target_price;
 	}
 
 	@Override

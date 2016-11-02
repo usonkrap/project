@@ -24,29 +24,29 @@ $(document).ready(function() {
 			//소재지ㅠㅠ
 		}
 	
-	
 
 	});
 	
 	
-	$.ajax({
-		url : '../sidebar/progressGet',
-		type: 'post',
-		dataType: 'json',
-		success : function(response) {
-			var datas = response.progressData;
-			var d = new Date();
-			var month = d.getMonth()+1;
-			document.getElementById("budgetMonth").innerHTML = month+"월 예산 설정";
-			
-			
-			$('.circle').circleProgress({
-		    	value: datas.precentMonth/100
-		      	}).on('circle-animation-progress', function(event, progress) {
-		        	$(this).find('strong').html(parseInt(datas.precentMonth * progress) + '<i>%</i>');
-		    	});
-			
-			$('#targetPrice').attr('value', datas.CUST_TARGET_PRICE);
-		}
-	});
+		$.ajax({
+			url : '../sidebar/progressGet',
+			type: 'post',
+			dataType: 'json',
+			success : function(response) {
+				var datas = response.progressData;
+				var d = new Date();
+				var month = d.getMonth()+1;
+				document.getElementById("budgetMonth").innerHTML = month+"월 예산 설정";
+				
+				
+				$('.circle').circleProgress({
+			    	value: datas.precentMonth/100
+			      	}).on('circle-animation-progress', function(event, progress) {
+			        	$(this).find('strong').html(parseInt(datas.precentMonth * progress) + '<i>%</i>');
+			    	});
+				
+				$('#targetPrice').attr('value', datas.CUST_TARGET_PRICE);
+			}
+		});
+	
 });
