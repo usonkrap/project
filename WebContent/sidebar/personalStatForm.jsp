@@ -93,6 +93,10 @@
 		    border-radius: 5px;
 		    border: 3px solid white;
 		}
+		
+		.legendLabel{
+			font-size: 1.3em;
+		}
 	</style>
   	
   	</head>
@@ -337,7 +341,7 @@
 												<td class="legendColorBox">
 													<div style="border: 1px solid #ccc; padding: 1px">
 														<div
-															style="width: 4px; height: 0; border: 5px solid #eeeeee; overflow: hidden"></div>
+															style="width: 4px; height: 0; border: 5px solid #b3e8ed; overflow: hidden"></div>
 													</div>
 												</td>
 												<td class="legendLabel">전체</td>
@@ -375,7 +379,7 @@
 												<td class="legendColorBox">
 													<div style="border: 1px solid #ccc; padding: 1px">
 														<div
-															style="width: 4px; height: 0; border: 5px solid #eeeeee; overflow: hidden"></div>
+															style="width: 4px; height: 0; border: 5px solid #b3e8ed; overflow: hidden"></div>
 													</div>
 												</td>
 												<td class="legendLabel">전체</td>

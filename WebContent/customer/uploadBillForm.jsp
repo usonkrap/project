@@ -104,7 +104,7 @@ i {
 					</ul>
 
 					<ul class="nav navbar-nav am-nav-right">
-						<li><a>프로필</a></li>
+						<li><a>소비 등록</a></li>
 					</ul>
 
 
@@ -165,11 +165,13 @@ i {
 						<div class="panel-heading">
 							<h3 style="text-align: center">영수증 사진 등록</h3>
 						</div>
-						<div class="panel-body" style="height: 480px;">
+						<div class="panel-body" style="height: 450px; border: 3px dashed #eaeaea; margin: 20px;">
 							<div class="dragContext" style="height: 100%;">
-								<div class='fileDrop' align="center" id="file-drop"
-									style="height: 100%;">
-									<h2 style="padding-top: 35%;">Drag and Drop files here</h2>
+								<div class='fileDrop' align="center" id="file-drop" style="height: 100%;">
+									<div class="dz-message" style="padding-top: 6em;">
+						              <div class="icon" style="font-size: 8em;"><span class="s7-cloud-upload"></span></div>
+						              <h2 style="font-weight: 700;">Drag and Drop files here</h2>
+						            </div>
 								</div>
 								<div class='uploadedList'></div>
 								<div class="main-content">
