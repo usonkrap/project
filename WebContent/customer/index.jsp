@@ -64,7 +64,7 @@
 			<h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">무엇을 구매하셨나요?</h1>
 			<h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">당신의 소비패턴을 분석해 드립니다.</h3>
 			<ul class="list-inline intro-social-buttons">
-				<li><a href="customer/loginForm.action" class="btn btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">파치리스 시작하기</span></a>
+				<li><a href="customer/loginForm.action" class="btn btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">PACHIRIS 시작하기</span></a>
 				</li>
 				<!-- <li id="download" ><a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Google Play</span></a>
 				</li> -->
@@ -88,7 +88,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#home">PACHIRiiS</a>
+				<a class="navbar-brand" href="#home">PACHIRIS</a>
 			</div>
 
 			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">

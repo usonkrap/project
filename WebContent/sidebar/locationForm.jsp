@@ -63,7 +63,7 @@
 						<ul class="nav navbar-nav navbar-right am-user-nav">
 							<li class="dropdown">
 								<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
-									<img src="assets/img/cat.jpg"> <!-- 오른쪽 상단 프로필 사진 -->
+									<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 -->
 									<span class="user-name"><s:property value="#session.nickname" /></span>
 									<span class="angle-down s7-angle-down"></span>
 								</a>

@@ -168,17 +168,17 @@
 										<span class="icon s7-upload"></span><span class="icon s7-edit"></span><span
 											class="icon s7-close"></span>
 									</div>
-									<div class="title">내 전체 거래내역</div>
+									<div class="title">전체 거래내역</div>
 								</div>
 								<table id="table3"
 									class="table table-striped table-hover table-fw-widget">
 									<thead>
 										<tr>
-											<th>이름</th>
+											<th>상품명</th>
 											<th>가격</th>
 											<th>카테고리</th>
 											<th>날짜</th>
-											<th>거래처</th>
+											<th>매장명</th>
 										</tr>
 									</thead>
 									<tbody>
