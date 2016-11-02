@@ -80,7 +80,6 @@ public class BillAction extends ActionSupport implements SessionAware {
 	////////////////////////////
 
 	public String inputBill() {
-
 		String customerId = (String) session.get("loginId");
 
 		List<Item> itemList = new ArrayList();

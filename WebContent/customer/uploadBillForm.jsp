@@ -530,14 +530,13 @@ i {
 		/////////////////영수증 등록////////////////////
 		
 		 $("#inputBtn").on("click", function() {
-			 
 			 var options = {
-					 beforeSubmit: formChk,
-					 success : responseCtl,
-					 url : "../bill/inputBill.action",
-					 contentType : "application/x-www-form-urlencoded;charset=UTF-8",
-					 type:"post",
-					 dataType:'text'
+				 beforeSubmit: formChk,
+				 success : responseCtl,
+				 url : "../bill/inputBill.action",
+				 contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+				 type:"post",
+				 dataType:'text'
 			 };
 			 
 			 $("form").ajaxSubmit(options);
@@ -558,28 +557,28 @@ i {
 				 alert("등록에 실패하였습니다");
 			 }
 				
-				location.reload(); 
-		 }
-
+				location.reload();
+		}
+	
 		///////////////아이템 등록/////////////////////
 		$("#addBtn")
-				.on(
-						"click",
-						function() {
-
-							var result = false;
-							$(".itemMenu div div input").each(function() {
-
-								if ($(this).val() == "") {
-
-									result = true;
-
-								}
-
-							})
-
-							if (result) {
-								alert("현재 아이템을 먼저 입력해주세요");
+			.on(
+				"click",
+				function() {
+	
+					var result = false;
+					$(".itemMenu div div input").each(function() {
+	
+						if ($(this).val() == "") {
+	
+							result = true;
+	
+						}
+	
+					})
+	
+					if (result) {
+						alert("현재 아이템을 먼저 입력해주세요");
 								return;
 							}
 
