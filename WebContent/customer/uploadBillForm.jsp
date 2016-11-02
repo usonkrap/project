@@ -9,7 +9,7 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>PACHIRIS</title>
+<title>JanZani</title>
 <link rel="stylesheet" type="text/css"
 	href="../assets/lib/stroke-7/style.css" />
 <link rel="stylesheet" type="text/css"
@@ -302,6 +302,7 @@ i {
 	<script src="../assets/js/main.js" type="text/javascript"></script>
 	<script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js"
 		type="text/javascript"></script>
+	<script src="../js/jquery.form.js" type="text/javascript"></script>
 	<script
 		src="../assets/lib/jquery.magnific-popup/jquery.magnific-popup.min.js"
 		type="text/javascript"></script>
@@ -538,20 +539,22 @@ i {
 					 contentType : "application/x-www-form-urlencoded;charset=UTF-8",
 					 type:"post",
 					 dataType:'text'
+					 
 			 };
+			 
 			 
 			 $("form").ajaxSubmit(options);
 			 
 		});
 		
 		
-		function formChk(){
-			
-			
-		}
+			function formChk() {
+				
+			};
+		
 		
 		 function responseCtl(html, status){
-		 
+			 
 			 if(status=='success'){
 				alert("성공적으로 등록했습니다");
 			 }else{
@@ -559,7 +562,7 @@ i {
 			 }
 				
 				location.reload(); 
-		 }
+		 };
 
 		///////////////아이템 등록/////////////////////
 		$("#addBtn")
