@@ -531,7 +531,6 @@ i {
 		/////////////////영수증 등록////////////////////
 		
 		 $("#inputBtn").on("click", function() {
-			 
 			 var options = {
 					 beforeSubmit: formChk,
 					 success : responseCtl,
@@ -566,23 +565,23 @@ i {
 
 		///////////////아이템 등록/////////////////////
 		$("#addBtn")
-				.on(
-						"click",
-						function() {
-
-							var result = false;
-							$(".itemMenu div div input").each(function() {
-
-								if ($(this).val() == "") {
-
-									result = true;
-
-								}
-
-							})
-
-							if (result) {
-								alert("현재 아이템을 먼저 입력해주세요");
+			.on(
+				"click",
+				function() {
+	
+					var result = false;
+					$(".itemMenu div div input").each(function() {
+	
+						if ($(this).val() == "") {
+	
+							result = true;
+	
+						}
+	
+					})
+	
+					if (result) {
+						alert("현재 아이템을 먼저 입력해주세요");
 								return;
 							}
 
