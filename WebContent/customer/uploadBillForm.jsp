@@ -14,7 +14,6 @@
 	href="../assets/lib/stroke-7/style.css" />
 <link rel="stylesheet" type="text/css"
 	href="../assets/lib/jquery.nanoscroller/css/nanoscroller.css" />
-
 <link rel="stylesheet" type="text/css"
 	href="../assets/lib/select2/css/select2.min.css" />
 <link rel="stylesheet" type="text/css"
@@ -204,7 +203,8 @@ i {
 							<h3 style="text-align: center">상품 등록</h3>
 						</div>
 						<div class="panel-body" style="height: 40%;">
-							<form role="form" class="form-horizontal" action="inputBill">
+							<form role="form" if="fm" onsubmit="return submitForm;"
+								class="form-horizontal" action="inputBill">
 								<div class="form-group">
 									<label for="storeName" class="col-sm-2 control-label">상호</label>
 									<div class="col-sm-10">
@@ -215,7 +215,7 @@ i {
 								<div class="form-group">
 									<label for="address" class="col-sm-2 control-label">주소</label>
 									<div class="col-sm-10">
-										<input id="address" name="bill.address" type="text" placeholder="주소"
+										<input id="address" type="text" placeholder="주소"
 											class="form-control">
 									</div>
 								</div>
@@ -272,7 +272,8 @@ i {
 							<div class="form-group" style="padding-top: 5em;">
 								<div class="col-sm-offset-2 col-sm-10">
 									<div class="text-right">
-										<button type="button" class="btn btn-space btn-primary" id="inputBtn">등록하기</button>
+										<button type="submit" class="btn btn-space btn-primary"
+											id="inputBtn">등록하기</button>
 										<button class="btn btn-space btn-default" id="cancel">취소</button>
 									</div>
 								</div>
@@ -308,7 +309,6 @@ i {
 		type="text/javascript"></script>
 	<script src="../assets/lib/select2/js/select2.min.js"
 		type="text/javascript"></script>
-
 	<script src="../assets/lib/jquery-ui/jquery-ui.min.js"
 		type="text/javascript"></script>
 	<script src="../assets/lib/jquery.nestable/jquery.nestable.js"
@@ -359,6 +359,8 @@ i {
 				calTotalPrice();
 			});
 
+				
+			
 		});//ready
 
 		$(window).load(function() {
@@ -393,7 +395,7 @@ i {
 										dataType : 'json',
 										processData : false,
 										contentType : false,
-										type : 'post',
+										type : 'POST',
 										beforeSend : function() {
 											$("#file-drop").children().hide();
 											$("#file-drop")
@@ -477,8 +479,8 @@ i {
 																			".itemMenu")
 																			.append(
 																					
-																					"<div class='col-sm-12'>" +
-																					"<div class='col-sm-8'>"　+
+																					"<div class='col-sm-12'>"+
+																					"<div class='col-sm-8'>"+
 																                    	"<input type='text' value='" + item.name + "' name='itemName' class='itemName form-control'>"　+
 																                    "</div>" +
 																                    "<div class='col-sm-3'>" +
@@ -526,13 +528,38 @@ i {
 		});
 
 		/////////////////영수증 등록////////////////////
-		$("#inputBtn").on("click", function(event) {
-			
-			var form = $("form");
-
-			form.submit();
-
+		
+		 $("#inputBtn").on("click", function() {
+			 
+			 var options = {
+					 beforeSubmit: formChk,
+					 success : responseCtl,
+					 url : "../bill/inputBill.action",
+					 contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+					 type:"post",
+					 dataType:'text'
+			 };
+			 
+			 $("form").ajaxSubmit(options);
+			 
 		});
+		
+		
+		function formChk(){
+			
+			
+		}
+		
+		 function responseCtl(html, status){
+		 
+			 if(status=='success'){
+				alert("성공적으로 등록했습니다");
+			 }else{
+				 alert("등록에 실패하였습니다");
+			 }
+				
+				location.reload(); 
+		 }
 
 		///////////////아이템 등록/////////////////////
 		$("#addBtn")

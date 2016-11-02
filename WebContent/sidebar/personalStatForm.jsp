@@ -437,7 +437,7 @@
 					</div>
 					
 				</div>
-
+				<%-- 
 				<div class="row">
 					<div class="col-sm-8">
 						<div class="panel panel-default">
@@ -450,8 +450,7 @@
 							</div>
 						</div>
 					</div>
-					
-				
+				 --%>
 
 			</div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
