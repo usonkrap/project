@@ -110,7 +110,7 @@ public class BillAction extends ActionSupport implements SessionAware {
 			}else{
 				category = shopping.searchShoppingCategory(item.getName());
 				category = dao.searchItem(category);
-				if(category.equals("null")){
+				if(category == null){
 					item.setCategory("L99M99");
 				}else{
 					item.setCategory(category);

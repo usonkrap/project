@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>JanZani</title>
+    <title>PACHIRIS</title>
     <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/style.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/material-icons.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.nanoscroller/css/nanoscroller.css"/><!--[if lt IE 9]>
@@ -30,7 +30,7 @@
 	}
 	.circle {
 		width: 100%;
-		margin: 6px 6px 20px;
+		margin: 6px 6px 60px;
 		display: inline-block;
 		position: relative;
 		text-align: center;
@@ -311,8 +311,8 @@
 	                        </div>
                     </div>
                     <div class="text-right" style="padding-top:3em;">
-                      <button type="submit" class="btn btn-space btn-primary">Submit</button>
-                      <button class="btn btn-space btn-default">Cancel</button>
+                      <button type="submit" class="btn btn-space btn-primary">수정</button>
+                      <button class="btn btn-space btn-default">취소</button>
                     </div>
                   </form>
                 </div>
@@ -321,16 +321,16 @@
             <div class="col-md-6">
             	<div class="panel panel-defaultt">
 	                <div class="panel-heading">
-	                  <h3>목표 설정</h3>
+	                  <h3 id="budgetMonth">월 예산 설정</h3>
 	                </div>
 	                <div class="panel-body">
 	                	<div class="circle"><strong>60<i>%</i></strong></div>
 		                <div class="col-sm-12">
-	                      <div class="col-sm-8">
-	                        <input type="text" value="" class="form-control">
+	                      <div class="col-sm-6">
+	                        <input type="number" value="" class="form-control" id="targetPrice">
 	                      </div>
-	                      <div class="col-sm-4">
-	                      	<button type="button" class="btn btn-space btn-success" style="font-size: 14px;"><i class="icon icon-left s7-piggy" style="font-size: 26px;"></i> 예산 설정</button>
+	                      <div class="col-sm-6 btn" style="padding: initial;">
+	                      	<button type="button" id="setBudget" class="btn btn-space btn-success" style="font-size: 14px; padding: 8px 42px;"><i class="icon icon-left s7-piggy" style="font-size: 26px;"></i> 예산 설정</button>
 	                      </div>
 	                    </div>
 	                </div>
@@ -375,10 +375,9 @@
       });
       sojaeji('서울', '강남구', '개포1동'); 
       
-      $('.circle').circleProgress({
-    	value: 0.6
-      	}).on('circle-animation-progress', function(event, progress) {
-        	$(this).find('strong').html(parseInt(100 * progress) + '<i>%</i>');
+      $("div.btn").on('click', 'button#setBudget', function() {
+    	    alert(1);
+    	    
     	});
       
       

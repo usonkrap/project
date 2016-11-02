@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>JanZani</title>
+    <title>PACHIRIS</title>
     <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/style.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/material-icons.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.nanoscroller/css/nanoscroller.css"/><!--[if lt IE 9]>

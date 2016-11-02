@@ -10,7 +10,7 @@
     
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>연습용</title>
+    <title>PACHIRIS</title>
     <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/style.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/stroke-7/material-icons.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.nanoscroller/css/nanoscroller.css"/><!--[if lt IE 9]>
