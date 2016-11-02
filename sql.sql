@@ -18,8 +18,6 @@ insert into bill values(78, 'master@master')
 
 
 
-
-
 create table bill(
  billNo NUMBER PRIMARY key,
   customerId varchar2(30) REFERENCES customer(cust_email),

@@ -340,7 +340,7 @@
 					
 						
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3" style="padding-left: initial;">
 						<div class="col-md-12">
 							<!-- 메세지 위젯1-->
 							<div class="panel panel-alt1">

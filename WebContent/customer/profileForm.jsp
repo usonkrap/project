@@ -307,9 +307,7 @@
                     <div class="form-group">
                       <label class="col-sm-3 control-label">생년월일</label>
                       <div class="col-sm-9" >
-	                          <div data-min-view="2" data-start-view="4" data-date-format="yyyy-mm-dd" class="date datetimepicker" >
 	                            <input size="20" type="text" value="" id="birthday" name="customer.cust_birthday" class="form-control" readonly="readonly">
-	                          </div>
 	                        </div>
                     </div>
                     <div class="text-right" style="padding-top:3em;">
@@ -326,7 +324,7 @@
 	                  <h3>목표 설정</h3>
 	                </div>
 	                <div class="panel-body">
-	                	<div class="circle"><strong>100<i>%</i></strong></div>
+	                	<div class="circle"><strong>60<i>%</i></strong></div>
 		                <div class="col-sm-12">
 	                      <div class="col-sm-8">
 	                        <input type="text" value="" class="form-control">

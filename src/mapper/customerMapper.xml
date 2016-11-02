@@ -13,7 +13,7 @@ select * from customer where cust_email=#{cust_email} and cust_password=#{cust_p
 </select>
 
 <select id="loadProfile" parameterType="String" resultType="Customer">
-select * from customer where cust_email=#{cust_email}
+select cust_email, cust_nickname, cust_address, to_char(cust_birthday, 'yyyy/mm/dd') cust_birthday, cust_target_price from customer where cust_email=#{cust_email}
 </select>
 
 </mapper>
