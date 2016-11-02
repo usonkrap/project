@@ -8133,7 +8133,7 @@ button:focus {
        -o-transition: all 0.35s ease;
           transition: all 0.35s ease;
 }
-.am-top-header .navbar-header .navbar-brand {
+.am-top-header .navbar-header .navbar-brand { 
   background-color: #3d3c3c;
   color: #ffffff;
   padding-top: 0;
@@ -8141,7 +8141,8 @@ button:focus {
   line-height: 80px;
   height: 80px;
   width: 130px;
-  background-image: url("../img/logo.png");
+  background-image: url("../img/new.png"); 
+  background-size : 160%;
   background-repeat: no-repeat;
   background-position: center center;
   margin-right: 20px;

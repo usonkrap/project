@@ -33,7 +33,7 @@
  		</action>
  		
  		<action name="main">
- 			<result>/sidebar/main.jsp</result>
+ 			<result>/sidebar/infoForm.jsp</result>
  		</action>
  		
  		<!-- main.jsp 통계 -->
