@@ -22,7 +22,7 @@
         <div class="main-content" >
           <div class="login-container">
             <div class="panel panel-default">
-              <div class="panel-heading"><img src="../assets/img/logo-full-retina.png" alt="logo" width="150px" height="39px" class="logo-img"><span></span></div>
+              <div class="panel-heading"><img src="../assets/img/newLogo1.png" alt="logo" width="350px" height="100px" class="logo-img"><span></span></div>
               <div class="panel-body">
                 <s:form action="login.action" method="post" class="form-horizontal">
                   <div class="login-form">

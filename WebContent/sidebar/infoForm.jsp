@@ -55,7 +55,7 @@
 						<span>Janzani</span>
 					</div>
 					<a href="#" class="am-toggle-left-sidebar navbar-toggle collapsed">
-					</a> <a href="../sidebar/main.action" class="navbar-brand"> <!-- 메인 페이지 링크 및 로고 표시 -->
+					</a> <a href="../sidebar/main.action" class="navbar-brand"><!-- <img src="../assets/img/newLogo1.png" alt="logo" width="100px" height="70px" class="logo-img"> --> <!-- 메인 페이지 링크 및 로고 표시 -->
 					</a>
 				</div>
 
