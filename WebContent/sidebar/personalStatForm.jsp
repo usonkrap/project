@@ -141,7 +141,7 @@
 						</ul>
 						
 						<ul class="nav navbar-nav am-nav-right">
-							<li><a>비교 분석</a></li>
+							<li><a>개인 분석</a></li>
 						</ul>
 						<!-- \<ul class="nav navbar-nav am-nav-right"> 왼쪽 상단 메뉴
 							<li><a href="#">메인</a></li>
@@ -218,6 +218,10 @@
               </ul> -->
             </li>
             
+            <li class="parent"><a href="../sidebar/targetForm.action"><i
+							class="icon s7-piggy"></i><span>목표 관리</span></a> 
+				</li>
+            
             <li class="parent"><a href="../sidebar/spendListForm.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
             <!--   <ul class="sub-menu"><li class="title">차트1</li>
                 
@@ -228,7 +232,7 @@
             </li>
             
             
-            <li class="parent"><a href="../sidebar/personalStatForm.action"><i class="icon s7-graph"></i><span>개인 분석</span></a> 
+            <li class="parent"><a href="../sidebar/personalStatForm.action"><i class="icon s7-display1"></i><span>개인 분석</span></a> 
               <!-- <ul class="sub-menu"><li class="title">차트2</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="form-elements.html">Elements</a>

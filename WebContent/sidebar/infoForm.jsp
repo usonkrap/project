@@ -117,28 +117,7 @@
 										<i class="icon icon-left s7-cloud-upload"></i> 소비 등록
 									</button>
 									</a>	
-						 <!-- <ul class="dropdown-menu am-messages">
-									<li>
-										<div class="title">메세지
-									 		<span class="badge">3</span>3은 메세지 갯수
-										</div>
-										<div class="list">
-											<div class="am-scroller nano"> ??
-												<div class="content nano-content"> ??
-													<ul>
-														<li class="active">  ??
-															<a href="#"> ??
-																<div class="logo">
-																	<img src="assets/img/avatar2.jpg">
-																</div>
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</li>
-								</ul> --></li>
+								</li>
 					</ul>
 				</div>
 			</div>
@@ -161,6 +140,10 @@
                 </li><li><a href="dashboard4.html"><span class="label label-primary pull-right">New</span>Version 4</a>
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li>
               </ul> --></li>
+              
+              <li class="parent"><a href="../sidebar/targetForm.action"><i
+							class="icon s7-piggy"></i><span>목표 관리</span></a> 
+				</li>
 
 					<li class="parent"><a href="../sidebar/spendListForm.action"><i
 							class="icon s7-news-paper"></i><span>소비 목록</span></a> <!--   <ul class="sub-menu"><li class="title">차트1</li>
@@ -175,7 +158,7 @@
 
 					<li class="parent"><a
 						href="../sidebar/personalStatForm.action"><i
-							class="icon s7-graph"></i><span>개인 분석</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
+							class="icon s7-display1"></i><span>개인 분석</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
 
 					<li class="parent"><a href="../table/personalStatForm.action"><i class="icon s7-graph"></i><span>통계
 								1</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
@@ -411,8 +394,7 @@
 						<div class="widget widget-calendar">
 							<div class="cal-container">
 								<div class="cal-notes">
-									<span class="day">Thursday</span><span class="date">September
-										24</span><span class="title">Purchases</span>
+									<span class="day">Thursday</span><span class="date">September 24</span><span class="title">Purchases</span>
 									<ul id="calendar_note">
 									</ul>
 								</div>

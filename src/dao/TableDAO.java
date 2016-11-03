@@ -2,6 +2,7 @@ package dao;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -196,8 +197,8 @@ public class TableDAO {
 	/*
 	 * 메인 파이
 	 */
-	public List<Map<String, Object>> mainPagePie(String customerId){
-		List<Map<String, Object>> dataList = null;
+	public List<LinkedHashMap<String, Object>> mainPagePie(String customerId){
+		List<LinkedHashMap<String, Object>> dataList = null;
 
 		try {
 			ss = factory.openSession();

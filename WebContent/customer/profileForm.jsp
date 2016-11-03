@@ -181,6 +181,10 @@
                 </li><li><a href="dashboard4.html"><span class="label label-primary pull-right">New</span>Version 4</a>
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li>
               </ul> --></li>
+              
+              <li class="parent"><a href="../sidebar/targetForm.action"><i
+							class="icon s7-piggy"></i><span>목표 관리</span></a> 
+				</li>
 
 					<li class="parent"><a href="../sidebar/spendListForm.action"><i
 							class="icon s7-news-paper"></i><span>소비 목록</span></a> <!--   <ul class="sub-menu"><li class="title">차트1</li>
@@ -195,7 +199,7 @@
 
 					<li class="parent"><a
 						href="../sidebar/personalStatForm.action"><i
-							class="icon s7-graph"></i><span>개인 분석</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
+							class="icon s7-display1"></i><span>개인 분석</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
 
 					<li class="parent"><a href="../table/personalStatForm.action"><i class="icon s7-graph"></i><span>통계
 								1</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>

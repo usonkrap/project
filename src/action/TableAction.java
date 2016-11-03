@@ -1,6 +1,7 @@
 package action;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -108,8 +109,8 @@ public class TableAction extends ActionSupport implements SessionAware {
 		TableDAO dao = new TableDAO();
 		ArrayList<String> pieCategory = new ArrayList<>();
 		ArrayList<String> piePrice = new ArrayList<>();
-		List<Map<String, Object>> data = dao.mainPagePie((String)session.get("loginId"));
-		for (Map<String, Object> map : data) {
+		List<LinkedHashMap<String, Object>> data = dao.mainPagePie((String)session.get("loginId"));
+		for (LinkedHashMap<String, Object> map : data) {
 			pieCategory.add((String) map.get("CATEGORY_NAME"));
 			piePrice.add(String.valueOf(map.get("TOTAL")));
 		}//for

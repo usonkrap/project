@@ -76,7 +76,7 @@
 	where rownum between 1 and 5
 	</select>
 	
-	<select id="mainPagePie" resultType="hashmap" parameterType="String">
+	<select id="mainPagePie" resultType="java.util.LinkedHashMap" parameterType="String">
 	select   b.category_name as category_name
 	  		,nvl(a.total, 0) as total
 	from (select category
@@ -94,6 +94,8 @@
 	 	  		 group by category) a
 	 	       , major_category     b
 	where a.category(+) = b.category_name
+	order by category_num
+	
 	</select>
 
 	<select id="raderChart" resultType="Double" parameterType="map">

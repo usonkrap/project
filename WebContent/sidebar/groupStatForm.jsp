@@ -153,13 +153,15 @@
 					<li class="parent active"><a href="../sidebar/infoForm.action"><i
 							class="icon s7-user"></i><span><s:property value="#session.nickname" />님의 정보</span></a></li>
 
+					<li class="parent"><a href="../sidebar/targetForm.action"><i
+							class="icon s7-piggy"></i><span>목표 관리</span></a></li>
 					<li class="parent"><a href="../sidebar/spendListForm.action"><i
 							class="icon s7-news-paper"></i><span>소비 목록</span></a></li>
-
+					
 
 					<li class="parent"><a
 						href="../sidebar/personalStatForm.action"><i
-							class="icon s7-graph"></i><span>개인 분석</span></a></li>
+							class="icon s7-display1"></i><span>개인 분석</span></a></li>
 
 					<li class="parent"><a href="../sidebar/groupStatForm.action"><i
 							class="icon s7-users"></i><span>비교 분석</span></a></li>

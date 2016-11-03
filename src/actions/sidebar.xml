@@ -15,6 +15,10 @@
 		<action name="infoForm">
  			<result>/sidebar/infoForm.jsp</result>
  		</action>
+ 		
+		<action name="targetForm">
+ 			<result>/sidebar/targetForm.jsp</result>
+ 		</action>
 		
         <action name="spendListForm" class="action.TableAction" method="goTable">
             <result>/sidebar/spendListForm.jsp</result>
