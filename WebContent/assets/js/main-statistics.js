@@ -67,7 +67,7 @@ $(document).ready(function() {
 		$("#testcall").append("<p>aaaaaaaaaaaaaaaaaaaaa</p>");*/
 	}
 	
-	function progressWrite(){
+	/*function progressWrite(){
 		alert(datas);
 		var d = new Date();
 		var month = d.getMonth()+1;
@@ -75,5 +75,5 @@ $(document).ready(function() {
 		document.getElementById("showBar").innerHTML = "사용";
 		$("#showBar").attr('class','progress-bar progress-bar-warning progress-bar-striped active');
 		$("#testcall").append("<p>aaaaaaaaaaaaaaaaaaaaa</p>");
-	}
+	}*/
 });
