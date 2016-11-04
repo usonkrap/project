@@ -30,11 +30,14 @@
 
 <style>
 .btn-lg, .btn-group-lg > .btn {
-    padding: 12px 100px;
+    padding: 6px 40px;
 }
 .btn-rounded.btn-lg {
     border-radius: 5px;
     border: 3px solid white;
+}
+.btn-lg, .btn-group-lg > .btn {
+	font-size: 18px;
 }
 
 </style>
@@ -114,7 +117,8 @@
 									<a href="../bill/goBillForm.action" >
 									<button type="button"
 										class="btn btn-space btn-primary btn-rounded btn-lg">
-										<i class="icon icon-left s7-cloud-upload"></i> 소비 등록
+										<i class="icon icon-left s7-cloud-upload"></i> 
+										<span class="insertBill">소비 등록</span>
 									</button>
 									</a>	
 								</li>

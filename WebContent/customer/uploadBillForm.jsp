@@ -48,7 +48,7 @@ i {
 }
 
 .btn-lg, .btn-group-lg>.btn {
-	padding: 12px 100px;
+	padding: 6px 40px;
 }
 
 .btn-rounded.btn-lg {

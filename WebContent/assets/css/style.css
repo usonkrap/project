@@ -8236,7 +8236,7 @@ button:focus {
   line-height: 80px;
   color: #ffffff;
   font-family: 'Raleway', sans-serif;
-  font-size: 19px;
+  font-size: 25px;
   padding: 0 18px;
   outline: none;
 }
@@ -8282,7 +8282,7 @@ button:focus {
   position: absolute;
 }
 .am-top-header .navbar-collapse .navbar-nav.am-nav-right > li:first-child > a {
-  padding-left: 15px;
+  padding-left: 2em;
 }
 .am-top-header .navbar-collapse .am-user-nav {
   margin-right: 0;
