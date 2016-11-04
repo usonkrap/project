@@ -433,7 +433,7 @@
 						</div>
 					</div>
 					
-					<div class="col-sm-6">
+					<div class="col-sm-4">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<span class="title">자주 간 매장 TOP5</span>

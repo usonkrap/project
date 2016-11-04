@@ -99,7 +99,8 @@
      * @default {gradient: ['#3aeabb', '#fdd250']}
      */
     fill: {
-      gradient: ['#3aeabb', '#fdd250']
+      gradient: ['#ffc870']
+  	//gradient: ['#3aeabb', '#fdd250']
     },
 
     /**
@@ -450,7 +451,7 @@
      * @returns {number}
      */
     getThickness: function() {
-      return $.isNumeric(this.thickness) ? this.thickness : this.size / 14;
+      return $.isNumeric(this.thickness) ? this.thickness : this.size / 8;
     },
 
     /**

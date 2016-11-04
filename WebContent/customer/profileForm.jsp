@@ -28,40 +28,7 @@
 	    border-radius: 5px;
 	    border: 3px solid white;
 	}
-	.circle {
-		width: 100%;
-		margin: 6px 6px 60px;
-		display: inline-block;
-		position: relative;
-		text-align: center;
-		line-height: 1.2;
-	}
 	
-	.circle canvas {
-	  vertical-align: top;
-	}
-	
-	.circle strong {
-		position: absolute;
-		top: 40%;
-		left: 0;
-		width: 100%;
-		text-align: center;
-		line-height: 40px;
-		font-size: 4.6em;
-	}
-	
-	.circle strong i {
-	  font-style: normal;
-	  font-size: 0.6em;
-	  font-weight: normal;
-	}
-	
-	.circle span {
-	  display: block;
-	  color: #aaa;
-	  margin-top: 12px;
-	}
     </style>
     
     
@@ -322,24 +289,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-            	<div class="panel panel-defaultt">
-	                <div class="panel-heading">
-	                  <h3 id="budgetMonth">월 예산 설정</h3>
-	                </div>
-	                <div class="panel-body">
-	                	<div class="circle"><strong></strong></div>
-		                <div class="col-sm-12">
-	                      <div class="col-sm-6">
-	                        <input type="number" value="" class="form-control" id="targetPrice">
-	                      </div>
-	                      <div class="col-sm-6 btn" style="padding: initial;">
-	                      	<button type="button" id="setBudget" class="btn btn-space btn-success" style="font-size: 14px; padding: 8px 42px;"><i class="icon icon-left s7-piggy" style="font-size: 26px;"></i> 예산 설정</button>
-	                      </div>
-	                    </div>
-	                </div>
-                </div>
-            </div>
+           
           </div>
          
          
@@ -368,8 +318,7 @@
     <script src="../assets/js/app-groupStat.js" type="text/javascript"></script>
 
 <script src="../assets/js/sojaeji.js" type="text/javascript"></script>
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="../script/circle-progress.js"></script>
+
 <script src="../assets/js/updateProfile.js" type="text/javascript"></script>
 
     <script type="text/javascript">
@@ -379,40 +328,6 @@
       });
       sojaeji('서울', '강남구', '개포1동'); 
       
-      $("div.btn").on('click', 'button#setBudget', function() {
-  	    var cust_target_price = $("#targetPrice").val();
-  	    $.ajax({
-  			url : '../customer/setBudget',
-  			type : 'post',
-  			data : {cust_target_price : cust_target_price},
-  			dataType : 'json',
-  			success : function(response) {
-  				alert("예산이 수정되었습니다.");
-
-  				$.ajax({
-  					url : '../sidebar/progressGet',
-  					type: 'post',
-  					dataType: 'json',
-  					success : function(response) {
-  						var datas = response.progressData;
-  						var d = new Date();
-  						var month = d.getMonth()+1;
-  						document.getElementById("budgetMonth").innerHTML = month+"월 예산 설정";
-  						
-  						
-  						$('.circle').circleProgress({
-  					    	value: datas.precentMonth/100
-  					      	}).on('circle-animation-progress', function(event, progress) {
-  					        	$(this).find('strong').html(parseInt(datas.precentMonth * progress) + '<i>%</i>');
-  					    	});
-  						
-  						$('#targetPrice').attr('value', datas.CUST_TARGET_PRICE);
-  					}
-  				});
-
-  			} 
-  	    });
-    });
     </script>
 	</body>
 </html>

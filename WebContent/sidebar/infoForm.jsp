@@ -305,9 +305,7 @@
 					
 					<!-- 메인 화면 대표 그래프 끝 -->
 					<div class="col-md-3">
-					
-					<div class="col-md-12">
-						<!-- 목표치 패널 시작-->
+					<!-- 목표치 패널 시작-->
 						<div class="panel panel-default">
 							<div class="panel-heading" id = "todaysMonth"></div>
 							<div class="panel-body" id="testcall">
@@ -318,11 +316,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					<!-- 목표치 패널 끝 -->
 					
-						
+					<!-- 목표치 패널 끝 -->
 					</div>
+					
+					
+					
+					
 					<div class="col-md-3" style="padding-left: initial;">
 						<div class="col-md-12">
 							<!-- 메세지 위젯1-->
