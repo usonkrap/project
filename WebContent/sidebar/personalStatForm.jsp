@@ -97,6 +97,55 @@
 		.legendLabel{
 			font-size: 1.3em;
 		}
+		
+		#checkBoxArea #check1{
+			color: #fe6f5e;
+			font-weight: bold;
+		}
+		#checkBoxArea #check2{
+			color: #ffcc33;
+			font-weight: bold;
+		}
+		#checkBoxArea #check3{
+			color: #afe313;
+			font-weight: bold;
+		}
+		#checkBoxArea #check4{
+			color: #95e0e8;
+			font-weight: bold;
+		}
+		#checkBoxArea #check5{
+			color: #7070cc;
+			font-weight: bold;
+		}
+		#checkBoxArea #check6{
+			color: #fdbaba;
+			font-weight: bold;
+		}
+		#checkBoxArea #check7{
+			color: #ff9090;
+			font-weight: bold;
+		}
+		#checkBoxArea #check8{
+			color: #cba6eb;
+			font-weight: bold;
+		}
+		#checkBoxArea #check9{
+			color: #93d8a5;
+			font-weight: bold;
+		}
+		#checkBoxArea #check10{
+			color: #add3ff;
+			font-weight: bold;
+		}
+		#checkBoxArea #check11{
+			color: #ff8800;
+			font-weight: bold;
+		}
+		#checkBoxArea #check12{
+			color: #ab2d07;
+			font-weight: bold;
+		}
 	</style>
   	
   	</head>
@@ -309,6 +358,7 @@
 								</select></span>
 							</div>
 							<div class="panel-body">
+							<div id="graph">
 								<div id="line" style="height: 300px;"></div>
 								<div class="lineIcon">
 									<div id="img_1"></div>
@@ -326,7 +376,70 @@
 									<img src="http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png" height="50px">
 								-->
 								</div>
+								</div>
+                      <label class="col-sm-3 control-label">Category Select</label>
+                        <div class="field" style="float: right"><span>Select All &nbsp;</span>
+                              <div class="pull-right">
+                                <div class="switch-button switch-button-xs">
+                                  <input type="checkbox" checked="" name="swt1" id="swt1"><span>
+                                    <label for="swt1"></label></span>
+                                </div>
+                              </div>
+                            </div>
+					<div class="form-group">
+                      <div class="col-sm-12" id="checkBoxArea">
+                        <div class="am-checkbox inline">
+                          <input id="check1" type="checkbox" checked="checked" class="box" value="0">
+                          <label for="check1" id="check1">외식</label>
+                        </div>
+                        <div class="am-checkbox inline">
+                          <input id="check2" type="checkbox" checked="checked" class="box" value="1">
+                          <label for="check2" id="check2">식음료</label>
+                        </div>
+                        <div class="am-checkbox inline">
+                          <input id="check3" type="checkbox" checked="checked" class="box" value="2">
+                          <label for="check3" id="check3">교통</label>
+                        </div>
+                        <div class="am-checkbox inline">
+                          <input id="check4" type="checkbox" checked="checked" class="box" value="3">
+                          <label for="check4" id="check4">패션/미용</label>
+                        </div>
+                        <div class="am-checkbox inline">
+                          <input id="check5" type="checkbox" checked="checked" class="box" value="4">
+                          <label for="check5" id="check5">문화생활</label>
+                        </div>
+                        <div class="am-checkbox inline">
+                          <input id="check6" type="checkbox" checked="checked" class="box" value="5">
+                          <label for="check6" id="check6">생활용품</label>
+                        </div>
+                        <div class="am-checkbox inline">
+                          <input id="check7" type="checkbox" checked="checked" class="box" value="6">
+                          <label for="check7" id="check7">사회생활</label>
+                        </div>
+                        <div class="am-checkbox inline">
+                          <input id="check8" type="checkbox" checked="checked" class="box" value="7">
+                          <label for="check8" id="check8">교육</label>
+                        </div>
+                        <div class="am-checkbox inline">
+                          <input id="check9" type="checkbox" checked="checked" class="box" value="8">
+                          <label for="check9" id="check9">주거/관리/통신</label>
+                        </div>
+                        <div class="am-checkbox inline">
+                          <input id="check10" type="checkbox" checked="checked" class="box" value="9">
+                          <label for="check10" id="check10">의료/건강</label>
+                        </div>
+                        <div class="am-checkbox inline">
+                          <input id="check11" type="checkbox" checked="checked" class="box" value="10">
+                          <label for="check11" id="check11">금융</label>
+                        </div>
+                        <div class="am-checkbox inline">
+                          <input id="check12" type="checkbox" checked="checked" class="box" value="11">
+                          <label for="check12" id="check12">기타</label>
+                        </div>
+                      </div>
+                    </div>
 							</div>
+
 						</div>
 					</div>
 				</div>
@@ -485,19 +598,6 @@
 	<script src="../assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
     
 	<script src="../assets/js/app-personalStat.js" type="text/javascript"></script>
-	
     
-    
-   
-    
-    
-
-    <script type="text/javascript">
-      $(document).ready(function(){
-      	//initialize the javascript
-      	App.init();
-      	App.personalStat();
-      });
-    </script>
 	</body>
 </html>

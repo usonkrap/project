@@ -233,6 +233,7 @@
               		GROUP by groups)
 	</select> -->
 	
+	<!-- 년도를 상정하지 않은 쿼리입니다아ㅏ -->
 	<select id="lineChart" parameterType="String" resultType="map">
 select d.month as mon
            ,nvl(sum(decode(c.name, '외식', c.price)), 0) "외식"

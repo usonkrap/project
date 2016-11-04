@@ -10169,7 +10169,7 @@ button:focus {
   color: #ffffff;
 }
 .switch-button input[type="checkbox"]:checked + span {
-  background-color: MediumSeaGreen;
+  background-color: #ef6262;
   display: block;
   position: absolute;
   top: 0;
@@ -10180,7 +10180,7 @@ button:focus {
 }
 .switch-button input[type="checkbox"]:checked + span label {
   float: right;
-  border-color: MediumSeaGreen;
+  border-color: #ef6262;
 }
 .switch-button input[type="checkbox"]:checked + span label:before {
   position: absolute;
