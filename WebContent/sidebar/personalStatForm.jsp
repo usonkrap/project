@@ -550,6 +550,31 @@
 							</div>
 						</div>
 					</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<span class="title">카테고리별 지출
+								<select class="form-control" style="width: 15%; float: right;" id="subCategory">
+										<option>외식</option>
+										<option>식음료</option>
+										<option>교통</option>
+										<option>패션/미용</option>
+										<option>문화생활</option>
+										<option>생활용품</option>
+										<option>사회생활</option>
+										<option>교육</option>
+										<option>주거/관리/통신</option>
+										<option>의료/건강</option>
+										<option>금융</option>
+										<option>기타</option>
+								</select></span>
+							</div>
+							<div class="panel-body text-center">
+				 <div>
+				     <div id="flotplaceholder" style="width:500px; height: 200px"></div>
+   					 <div id="hover" style="postion:absolute;display:none;"></div>
+				 </div>
+				</div>
+						</div>
 
 			</div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
@@ -576,6 +601,8 @@
 	<script src="../assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
     
 	<script src="../assets/js/app-personalStat.js" type="text/javascript"></script>
-    
+    <script data-require="flot@0.8.2" data-semver="0.8.2" src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.min.js"></script>
+    <script src="http://www.flotcharts.org/flot/jquery.flot.pie.js"></script>
+    <script src="../assets/js/personalStat-subcategory.js" type="text/javascript"></script>
 	</body>
 </html>

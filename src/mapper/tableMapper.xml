@@ -263,4 +263,13 @@ where d.month = c.mon(+)
 group by d.month
 order by d.month
 	</select>
+	
+	<select id="subCategory" resultType="map" parameterType="Map">
+		select s.sub_category_name as category, sum(i.price) as sum
+		from item i, major_category m, sub_category s 
+		where i.customerid= #{id} and i.category = s.sub_category_num and m.category_num = substr(i.category, 1, 3) and m.category_name = #{keyword} and m.category_num = s.category_num
+		group by s.sub_category_num, s.sub_category_name
+		order by s.sub_category_num
+	</select>
+	
 </mapper>
