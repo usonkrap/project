@@ -381,8 +381,10 @@
 								-->
 								</div>
 								</div>
-                      <label class="col-sm-3 control-label">Category Select</label>
-                        <div class="field" style="float: right"><span>Select All &nbsp;</span>
+								
+								<div style="margin-top: 3em;">
+                      <label class="col-sm-3 control-label" style="font-size: 1.5em;">카테고리 선택</label>
+                        <div class="field" style="float: right"><span>전체 선택 &nbsp;</span>
                               <div class="pull-right">
                                 <div class="switch-button switch-button-xs">
                                   <input type="checkbox" checked="" name="swt1" id="swt1"><span>
@@ -390,9 +392,10 @@
                                 </div>
                               </div>
                             </div>
+                            </div>
 					<div class="form-group">
                       <div class="col-sm-12" id="checkBoxArea">
-                      <div class="col-sm-2">
+                      	</div>
                       	<div class="col-sm-2">
                       		<div class="am-checkbox inline col-sm-12">
                           <input id="check1" type="checkbox" checked="checked" class="box" value="0">
@@ -403,8 +406,6 @@
                           <label for="check2" id="check2">식음료</label>
                         </div>
                         </div>
-                        <div class="col-sm-2">
-                      	</div>
                       	<div class="col-sm-2">
                       		<div class="am-checkbox inline col-sm-12">
                           <input id="check3" type="checkbox" checked="checked" class="box" value="2">
@@ -415,8 +416,6 @@
                           <label for="check4" id="check4">패션/미용</label>
                         </div>
                         </div>
-                        <div class="col-sm-2">
-                      	</div>
                       	<div class="col-sm-2">
                       	<div class="am-checkbox inline col-sm-12">
                           <input id="check5" type="checkbox" checked="checked" class="box" value="4">
@@ -427,8 +426,6 @@
                           <label for="check6" id="check6">생활용품</label>
                         </div>
                         </div>
-                        <div class="col-sm-2">
-                      	</div>
                       	<div class="col-sm-2">
                         <div class="am-checkbox inline col-sm-12">
                           <input id="check7" type="checkbox" checked="checked" class="box" value="6">
@@ -439,8 +436,6 @@
                           <label for="check8" id="check8">교육</label>
                         </div>
                         </div>
-                        <div class="col-sm-2">
-                      	</div>
                       	<div class="col-sm-2">
                       	<div class="am-checkbox inline col-sm-12">
                           <input id="check9" type="checkbox" checked="checked" class="box" value="8">
@@ -451,8 +446,6 @@
                           <label for="check10" id="check10">의료/건강</label>
                         </div>
                         </div>
-                        <div class="col-sm-2">
-                      	</div>
                       	<div class="col-sm-2">
                       	<div class="am-checkbox inline col-sm-12">
                           <input id="check11" type="checkbox" checked="checked" class="box" value="10">
@@ -463,7 +456,6 @@
                           <label for="check12" id="check12">기타</label>
                         </div>
                         </div>
-                      </div>
                     </div>
 							</div>
 
