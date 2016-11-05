@@ -23,7 +23,12 @@
 <link rel="stylesheet" type="text/css"
 	href="../assets/lib/jquery.magnific-popup/magnific-popup.css" />
 <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../dist/sweetalert.css">
+<script src="../dist/sweetalert.min.js"></script> 
+<script src="../assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+
 </head>
+
 
 
 <style>
@@ -272,8 +277,10 @@ i {
 							<div class="form-group" style="padding-top: 5em;">
 								<div class="col-sm-offset-2 col-sm-10">
 									<div class="text-right">
-										<button type="submit" class="btn btn-space btn-primary"
-											id="inputBtn">등록하기</button>
+										<!-- <button type="submit" class="btn btn-space btn-primary"
+											id="inputBtn">등록하기</button> -->
+										<button data-toggle="modal" data-target="#mod-success" type="submit" class="btn btn-space btn-success" id="inputBtn">
+										등록하기</button>
 										<button class="btn btn-space btn-default" id="cancel">취소</button>
 									</div>
 								</div>
@@ -291,11 +298,19 @@ i {
 		</div>
 		<!-- am 컨텐츠 끝 -->
 
+		<!-- 알림창 -->
+		 <%-- <div id="dialog-message" title="경고" class="alert alert-warning alert-icon alert-border-color alert-dismissible">
+ 		 <div class="icon"><span class="s7-attention"></span></div>
+                    <div class="message">
+                      <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true" class="s7-close"></span></button><strong> 이미지 파일만 올려주세요!</strong>
+                    </div>
+		</div>  --%>
+		
 	</div>
 
 
 
-	<script src="../assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+	
 	<script
 		src="../assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js"
 		type="text/javascript"></script>
@@ -314,6 +329,7 @@ i {
 		type="text/javascript"></script>
 	<script src="../assets/lib/jquery.nestable/jquery.nestable.js"
 		type="text/javascript"></script>
+		
 
 
 	<script
@@ -327,10 +343,19 @@ i {
 	<script src="../assets/js/app-form-elements.js" type="text/javascript"></script>
 
 	<script src="../assets/js/app-page-gallery.js" type="text/javascript"></script>
-
+	
+	<script src="assets/lib/jquery.niftymodals/dist/jquery.niftymodals.js" type="text/javascript"></script>
 
 	<script>
 		$(document).ready(function() {
+			
+			//Set Nifty Modals defaults
+		      $.fn.niftyModal('setDefaults',{
+		      	overlaySelector: '.modal-overlay',
+		      	closeSelector: '.modal-close',
+		      	classAddAfterOpen: 'modal-show',
+		      });
+			
 			//initialize the javascript
 			App.init();
 			App.formElements();
@@ -497,16 +522,36 @@ i {
 																})//each
 
 											} else {
-
-												alert("이미지 파일만 올려주세요!");
+												sweetAlert("Oops...", "이미지 파일만 올려주세요!", "error"); 
+											
+												 $( function() {
+												    $( "#dialog-message" ).dialog({
+												      modal: true,
+												      buttons: {
+												        Ok: function() {
+												          $( this ).dialog( "close" );
+												        }
+												      }
+												    });
+												  } );
 
 											}
 
 											calTotalPrice();
 											
 										}else{
-											
-											alert("영수증 사진을 올려주세요!");
+											sweetAlert("Oops...", "영수증 사진을 올려주세요!", "error"); 
+											$( function() {
+											    $( "#dialog-message" ).dialog({
+											      modal: true,
+											      buttons: {
+											        Ok: function() {
+											          $( this ).dialog( "close" );
+											        }
+											      }
+											    });
+											    
+											  } );
 											
 										}
 										}
@@ -685,5 +730,26 @@ i {
 
 		
 		</script>
+		<!-- alert() -->
+		 <div id="mod-success" tabindex="-1" role="dialog" style="" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><i class="icon s7-close"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center">
+              <div class="i-circle text-success"><i class="icon s7-check"></i></div>
+              <h4>등록성공!</h4>
+              <p>영수증이 성공적으로 등록되었습니다!</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+            <button type="button" data-dismiss="modal" class="btn btn-success">Proceed</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
