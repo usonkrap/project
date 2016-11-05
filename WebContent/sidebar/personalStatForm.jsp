@@ -529,17 +529,6 @@
 					</div>
 				 
 				<div class="row">
-					<div class="col-sm-4">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<span class="title">카테고리별 지출</span>
-							</div>
-							<div class="panel-body text-center">
-								<span id="category1" class="category"></span> 
-								<%-- <span id="category2" class="category"></span> --%>
-							</div>
-						</div>
-					</div>
 				 	<div class="col-sm-4">
 						<div class="panel panel-default">
 							<div class="panel-heading">
@@ -549,6 +538,7 @@
 								<div id="donut" style="height: 250px;"></div>
 							</div>
 						</div>
+					</div>
 					</div>
 						<div class="panel panel-default">
 							<div class="panel-heading">
