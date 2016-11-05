@@ -114,7 +114,7 @@ public class TableDAO {
 	 */
 	public List<Bill> tableList(String id,String date) {
 		List<Bill> billList = new ArrayList<>();
-		Map<String, Object>map = new HashMap<>();
+		Map<String, Object> map = new HashMap<>();
 		map.put("id", id);
 		map.put("dates", date);
 		try {
@@ -247,6 +247,24 @@ public class TableDAO {
 		try {
 			ss = factory.openSession();
 			dataList = ss.selectList("table.lineChart", customerId);
+			ss.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}//try catch finally
+		return dataList;
+	}//end of lineChart
+	
+	
+	public List<Map<String, Object>> subCategory(String customerId, String keyword) {
+		List<Map<String, Object>> dataList = null;
+		Map<String, Object> map = new HashMap<>();
+		map.put("id", customerId);
+		map.put("keyword", keyword);
+		try {
+			ss = factory.openSession();
+			dataList = ss.selectList("table.subCategory", map);
 			ss.commit();
 		} catch (Exception e) {
 			e.printStackTrace();

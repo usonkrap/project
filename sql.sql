@@ -74,6 +74,12 @@ select * from item order by itemno desc;
 select * from sub_category;
 select * from customer;
 
+select s.sub_category_name as category, sum(i.price) as sum
+from item i, major_category m, sub_category s 
+where i.customerid='master@master.com' and i.category = s.sub_category_num and m.category_num = substr(i.category, 1, 3) and m.category_name = '외식' and m.category_num = s.category_num
+group by s.sub_category_num, s.sub_category_name
+order by s.sub_category_num;
+
 create table month(
 month varchar2(6)
 );

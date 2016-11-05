@@ -35,6 +35,8 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private JSONArray lineData;
 	private ProgressData progressData;
 	private int[] paymentData;
+	private String keyword;
+	private JSONArray subCategorys;
 	
 
 	public String progressGet(){
@@ -202,9 +204,32 @@ public class TableAction extends ActionSupport implements SessionAware {
 			data.put("item12", Integer.valueOf(String.valueOf(tempData.get("기타"))));
 			lineData.add(data);
 		}
-        System.out.println(lineData);
 		return SUCCESS;
 	}//end of lineChart
+	
+	
+	public String subCategory(){
+		TableDAO dao = new TableDAO();
+		String customerId = (String) session.get("loginId");
+		List<Map<String, Object>> list = null;
+		list = dao.subCategory(customerId, keyword);
+		String[] colors = {"#fe6f5e", "#ffcc33", "#afe313", "#95e0e8", "#7070cc", "#fdbaba", "#ff9090", "#cba6eb", "#93d8a5", "#add3ff", "#ff8800", "#ab2d07"};
+		subCategorys = new JSONArray();
+		int size = list.size();
+		for(int i = 0; i < size; i++){
+			Map<String, Object> tempData = list.get(i);
+        	JSONObject data = new JSONObject();
+        	data.put("label", String.valueOf(tempData.get("CATEGORY")));
+        	int[] data2 = new int[2];
+        	data2[0] = i+1;
+        	data2[1] = Integer.valueOf(Integer.valueOf(String.valueOf(tempData.get("SUM"))));
+        	data.put("data", data2);
+        	data.put("color", colors[i]);
+			subCategorys.add(data);
+		}
+		System.out.println(subCategorys);
+		return SUCCESS;
+	}//end of subCategory
 
 	////////////////////////////
 	public Double[] getDayRecentAver() {return dayRecentAver;}
@@ -251,6 +276,12 @@ public class TableAction extends ActionSupport implements SessionAware {
 	
 	public JSONArray getLineData() {return lineData;}
 	public void setLineData(JSONArray lineData) {this.lineData = lineData;}
+	
+	public String getKeyword() {return keyword;}
+	public void setKeyword(String keyword) {this.keyword = keyword;}
+
+	public JSONArray getSubCategorys() {return subCategorys;}
+	public void setSubCategorys(JSONArray subCategorys) {this.subCategorys = subCategorys;}
 
 	@Override
 	public void setSession(Map<String, Object> session) {this.session = session;}

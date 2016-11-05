@@ -77,6 +77,10 @@
  		<action name="lineChart" class="action.TableAction" method="lineChart">
  			<result type="json"></result>
  		</action>
+ 		
+ 		<action name="subCategory" class="action.TableAction" method="subCategory">
+ 			<result type="json"></result>
+ 		</action>
 	</package>
 </struts>
 
