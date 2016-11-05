@@ -8854,6 +8854,9 @@ button:focus {
   text-align: center;
   font-size: 14px;
 }
+.am-left-sidebar .sidebar-elements > li > a.select{
+	color: #ef6262;
+}
 .am-left-sidebar .sidebar-elements > li > a .icon {
   display: block;
   font-size: 80px;

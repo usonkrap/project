@@ -131,7 +131,7 @@
 				<div class="am-logo"></div>
 				<ul class="sidebar-elements">
 
-					<li class="parent active"><a href="../sidebar/infoForm.action"><i
+					<li class="parent active"><a href="../sidebar/infoForm.action" class="select"><i
 							class="icon s7-user"></i><span><s:property value="#session.nickname" />님의 정보</span></a> <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">

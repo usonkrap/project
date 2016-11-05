@@ -281,7 +281,7 @@
             </li>
             
             
-            <li class="parent"><a href="../sidebar/personalStatForm.action"><i class="icon s7-display1"></i><span>개인 분석</span></a> 
+            <li class="parent"><a href="../sidebar/personalStatForm.action" class="select"><i class="icon s7-display1"></i><span>개인 분석</span></a> 
               <!-- <ul class="sub-menu"><li class="title">차트2</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="form-elements.html">Elements</a>

@@ -28,6 +28,7 @@
 }
 
 
+
 .circle {
 		width: 100%;
 		margin: 6px 6px 60px;
@@ -185,7 +186,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li>
               </ul> --></li>
               
-              <li class="parent"><a href="../sidebar/targetForm.action"><i
+              <li class="parent"><a href="../sidebar/targetForm.action" class="select"><i
 							class="icon s7-piggy"></i><span>목표 관리</span></a> 
 				</li>
 

@@ -188,7 +188,7 @@
             
             
             
-            <li class="parent"><a href="../sidebar/locationForm.action"><i class="icon s7-map-2"></i><span>위치 통계</span></a>
+            <li class="parent"><a href="../sidebar/locationForm.action" class="select"><i class="icon s7-map-2"></i><span>위치 통계</span></a>
               <!-- <ul class="sub-menu"><li class="title">위치 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="ui-general.html">음...</a>
