@@ -84,6 +84,7 @@ var App = (function () {
 
 		      var radarChart = new Chart( $("#rader_day").get(0).getContext("2d") ).Radar(data, {
 		        scaleShowLine : true,
+		        pointLabelFontSize: 16,
 		        responsive: true,
 		        maintainAspectRatio: true,
 		        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
@@ -114,7 +115,7 @@ var App = (function () {
 		      var color2 = tinycolor( App.color.alt4 ).lighten( 6.5 );
 
 		      var data = {
-		    		  labels: ["오전(6~12)", "오후(12~18)", "저녁(18~24)", "새벽(0~6)"],
+		    		  labels: ["22시~2시", "2시~6시", "6시~10시", "10시~14시", "14시~18시", "18시~22시"],
 				        datasets: [
 		          {
 		            label: "month",
@@ -138,7 +139,8 @@ var App = (function () {
 		      };
 
 		      var radarChart = new Chart( $("#rader_time").get(0).getContext("2d") ).Radar(data, {
-		        scaleShowLine : true,
+		    	pointLabelFontSize: 16,
+		    	scaleShowLine : true,
 		        responsive: true,
 		        maintainAspectRatio: true,
 		        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"

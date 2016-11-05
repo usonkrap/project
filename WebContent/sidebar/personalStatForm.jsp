@@ -22,8 +22,6 @@
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
   	
   	
-  	
-  	
     <style>
 		.rotate {
 			-webkit-transition-duration: 0.8s;
@@ -96,7 +94,7 @@
 		}
 		
 		.legendLabel{
-			font-size: 1.3em;
+			font-size: 18px;
 		}
 		
 		#check1{
