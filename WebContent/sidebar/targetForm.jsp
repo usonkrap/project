@@ -21,6 +21,7 @@
   	<style>
 .btn-lg, .btn-group-lg > .btn {
 	padding: 6px 40px;
+	font-size: 18px;
 }
 .btn-rounded.btn-lg {
     border-radius: 5px;
@@ -29,7 +30,7 @@
 
 
 
-.circle {
+	.circle {
 		width: 100%;
 		margin: 6px 6px 60px;
 		display: inline-block;
@@ -257,7 +258,7 @@
 								<div class="widget widget-tile widget-tile-wide">
 									<div class="tile-info">
 										<div class="icon">
-											<span class="s7-cash"></span>
+											<span class="s7-date"></span>
 										</div>
 										<div class="data-info">
 											<div class="title">이번 달 지출액</div>
@@ -277,7 +278,7 @@
 								<div class="widget widget-tile widget-tile-wide">
 									<div class="tile-info">
 										<div class="icon">
-											<span class="s7-cash"></span>
+											<span class="s7-date"></span>
 										</div>
 										<div class="data-info">
 											<div class="title">이번 달 잔액</div>
