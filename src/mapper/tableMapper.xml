@@ -190,25 +190,31 @@
 			                     ,2, second
 			                     ,3, third
 			                     ,4, fourth
+			                     ,5, fifth
+                           		 ,6, sixth
 			                 )  as val
 			  from      
 			  　	　　　(select 
 			  　	　　　<if test="type == 'all'">
-			  　	　　　   　　　　    NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 0 and 5 and customerId = #{customerId}),0) first
- 										,NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 6 and 11 and customerId = #{customerId}),0) second
-										,NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 12 and 17 and customerId = #{customerId}),0) third
-										,NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 18 and 23 and customerId = #{customerId}),0) fourth
+			  　	　　　   　　　　    NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') IN (22,23,0,1) and customerId = #{customerId}),0) first
+ 										,NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 2 and 5 and customerId = #{customerId}),0) second
+										,NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 6 and 9 and customerId = #{customerId}),0) third
+										,NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 10 and 13 and customerId = #{customerId}),0) fourth
+										,NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 14 and 17 and customerId = #{customerId}),0) fifth
+										,NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 18 and 21 and customerId = #{customerId}),0) sixth
 			  　	　　　</if>
 			  　	　　　<if test="type == 'limited'">
-			  　	　　　	 　           NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN  0 and 5 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) first
- 										, NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN  6 and 11 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) second
-										, NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 12 and 17 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) third
-										, NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 18 and 23 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) fourth
+			  　	　　　	 　           NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') IN (22,23,0,1) and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) first
+ 										, NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN  2 and 5 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) second
+										, NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 6 and 9 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) third
+										, NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 10 and 13 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) fourth
+										, NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 14 and 17 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) fifth
+										, NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24') BETWEEN 18 and 21 and customerId = #{customerId} and BILLDATE BETWEEN sysdate-14 and sysdate),0) sixth
 			  　	　　　</if>
 			  　	　　　from bill 
 			  　	　　　where CUSTOMERID = #{customerId}
 			  　	　　　group by customerid )
-			  connect by level &lt; 5)
+			  connect by level &lt; 7)
 	</select>
 	<!-- <select id = "raderChartForTime" resultType="java.util.LinkedHashMap" parameterType="map">
 		select groups

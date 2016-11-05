@@ -72,8 +72,8 @@ public class TableAction extends ActionSupport implements SessionAware {
 	public String raderChartForTime(){
 		TableDAO dao = new TableDAO();
 		List<List<Double>> lists =  dao.raderChartForTime((String) session.get("loginId"));
-		dayTotalAverForTime = new Double[4];
-		dayRecentAverForTime = new Double[4];
+		dayTotalAverForTime = new Double[6];
+		dayRecentAverForTime = new Double[6];
 		for(int i = 0; i<lists.size(); i++){
 			List<Double> littles = lists.get(i);
 			for(int ii=0; ii< littles.size(); ii++ ){
