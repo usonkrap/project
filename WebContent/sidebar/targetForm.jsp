@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
   	<style>
 .btn-lg, .btn-group-lg > .btn {
-    padding: 12px 100px;
+	padding: 6px 40px;
+	font-size: 18px;
 }
 .btn-rounded.btn-lg {
     border-radius: 5px;
@@ -28,7 +29,8 @@
 }
 
 
-.circle {
+
+	.circle {
 		width: 100%;
 		margin: 6px 6px 60px;
 		display: inline-block;
@@ -185,7 +187,7 @@
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li>
               </ul> --></li>
               
-              <li class="parent"><a href="../sidebar/targetForm.action"><i
+              <li class="parent"><a href="../sidebar/targetForm.action" class="select"><i
 							class="icon s7-piggy"></i><span>목표 관리</span></a> 
 				</li>
 
@@ -204,62 +206,21 @@
 
 					<li class="parent"><a
 						href="../sidebar/personalStatForm.action"><i
-							class="icon s7-display1"></i><span>개인 분석</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
-
-					<li class="parent"><a href="../table/personalStatForm.action"><i class="icon s7-graph"></i><span>통계
-								1</span></a> <!-- <ul class="sub-menu"><li class="title">차트2</li>
->>>>>>> branch 'master' of https://github.com/usonkrap/project.git
-                
-              <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="form-elements.html">Elements</a>
-                </li><li><a href="form-validation.html">Validation</a>
-                </li><li><a href="form-wizard.html">Wizard</a>
-                </li><li><a href="form-masks.html">Input Masks</a>
-                </li><li><a href="form-wysiwyg.html">WYSIWYG Editor</a>
-                </li><li><a href="form-upload.html">Multi Upload</a>
-                </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
+							class="icon s7-display1"></i><span>개인 분석</span></a> 
 					</li>
 
 					<li class="parent"><a href="../sidebar/groupStatForm.action"><i
-							class="icon s7-users"></i><span>비교 분석</span></a> <!-- <ul class="sub-menu"><li class="title">차트3</li>
-                
-              <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="tables-general.html">General</a>
-                </li><li><a href="tables-datatables.html">Data Tables</a>
-                </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 20px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
+							class="icon s7-users"></i><span>비교 분석</span></a>
 					</li>
 
 
 
 					<li class="parent"><a href="../sidebar/locationForm.action"><i
-							class="icon s7-map-2"></i><span>위치 통계</span></a> <!-- <ul class="sub-menu"><li class="title">위치 정보</li>
-                
-              <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="ui-general.html">음...</a>
-                </li><li><a href="ui-alerts.html">일</a>
-                </li><li><a href="ui-panels.html">단</a>
-                </li><li><a href="ui-buttons.html">메</a>
-                </li><li><a href="ui-modals.html">뉴</a>
-                </li><li><a href="ui-notifications.html">내</a>
-                </li><li><a href="ui-icons.html">비</a>
-                </li><li><a href="ui-grid.html">둠</a>
-                </li><li><a href="ui-tabs-accordions.html">여 &amp; 기</a>
-                </li><li><a href="ui-chat.html"><span class="label label-primary pull-right">New</span>에</a>
-                </li><li><a href="ui-nestable-lists.html">뭐넣을까</a>
-                </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
+							class="icon s7-map-2"></i><span>위치 통계</span></a> 
 					</li>
 
 					<li class="parent"><a href="#"><i class="icon s7-ticket"></i><span>맞춤
-								정보</span></a> <!--  <ul class="sub-menu"><li class="title">차트4</li>
-                
-              <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="pages-blank.html">Blank Page</a>
-                </li><li><a href="pages-blank-header.html">Blank Page Header</a>
-                </li><li><a href="pages-login.html">Login</a>
-                </li><li><a href="pages-404.html">404 Page</a>
-                </li><li><a href="pages-sign-up.html">Sign Up</a>
-                </li><li><a href="pages-forgot-password.html">Forgot Password</a>
-                </li><li><a href="pages-profile.html">Profile</a>
-                </li><li><a href="pages-calendar.html">Calendar</a>
-                </li><li><a href="pages-gallery.html">Gallery</a>
-                </li><li><a href="pages-pricing-tables.html"><span class="label label-primary pull-right">New</span>Pricing Tables</a>
-                </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 20px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
+								정보</span></a> 
 					</li>
 				</ul>
 				<!--Sidebar bottom content-->
@@ -274,7 +235,7 @@
           <div class="col-md-5">
             	<div class="panel panel-defaultt">
 	                <div class="panel-heading">
-	                  <h2 id="budgetMonth" style="font-size: 1.6em">월 예산</h2>
+	                  <h2 id="budgetMonth" style="font-size: 1.4em; text-align: center">월 예산</h2>
 	                </div>
 	                <div class="panel-body">
 	                	<div class="circle"><strong></strong></div>
@@ -297,7 +258,7 @@
 								<div class="widget widget-tile widget-tile-wide">
 									<div class="tile-info">
 										<div class="icon">
-											<span class="s7-cash"></span>
+											<span class="s7-date"></span>
 										</div>
 										<div class="data-info">
 											<div class="title">이번 달 지출액</div>
@@ -317,7 +278,7 @@
 								<div class="widget widget-tile widget-tile-wide">
 									<div class="tile-info">
 										<div class="icon">
-											<span class="s7-cash"></span>
+											<span class="s7-date"></span>
 										</div>
 										<div class="data-info">
 											<div class="title">이번 달 잔액</div>

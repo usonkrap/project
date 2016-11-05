@@ -30,7 +30,8 @@
 
 <style>
 .btn-lg, .btn-group-lg > .btn {
-    padding: 12px 100px;
+    padding: 6px 40px;
+    font-size: 18px;
 }
 .btn-rounded.btn-lg {
     border-radius: 5px;
@@ -114,7 +115,8 @@
 									<a href="../bill/goBillForm.action" >
 									<button type="button"
 										class="btn btn-space btn-primary btn-rounded btn-lg">
-										<i class="icon icon-left s7-cloud-upload"></i> 소비 등록
+										<i class="icon icon-left s7-cloud-upload"></i> 
+										<span class="insertBill">소비 등록</span>
 									</button>
 									</a>	
 								</li>
@@ -127,7 +129,7 @@
 				<div class="am-logo"></div>
 				<ul class="sidebar-elements">
 
-					<li class="parent active"><a href="../sidebar/infoForm.action"><i
+					<li class="parent active"><a href="../sidebar/infoForm.action" class="select"><i
 							class="icon s7-user"></i><span><s:property value="#session.nickname" />님의 정보</span></a> <!-- <ul class="sub-menu"><li class="title">소비 정보</li>
                 
               <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;">

@@ -31,12 +31,15 @@
 
 <style type="text/css">
 	.btn-lg, .btn-group-lg > .btn {
-	    padding: 12px 100px;
+		padding: 6px 40px;
+		font-size: 18px;
 	}
 	.btn-rounded.btn-lg {
 	    border-radius: 5px;
 	    border: 3px solid white;
 	}
+	
+
 
 </style>
 
@@ -119,7 +122,7 @@
 
 					<li class="parent"><a href="../sidebar/targetForm.action"><i
 							class="icon s7-piggy"></i><span>목표 관리</span></a></li>
-					<li class="parent"><a href="../sidebar/spendListForm.action" ><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
+					<li class="parent"><a href="../sidebar/spendListForm.action" class="select"><i class="icon s7-news-paper"></i><span>소비 목록</span></a>
 					</li>
 
 

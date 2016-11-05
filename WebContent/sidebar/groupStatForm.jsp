@@ -70,7 +70,8 @@
 }
 
 .btn-lg, .btn-group-lg > .btn {
-    padding: 12px 100px;
+    padding: 6px 40px;
+    font-size: 18px;
 }
 .btn-rounded.btn-lg {
     border-radius: 5px;
@@ -163,7 +164,7 @@
 						href="../sidebar/personalStatForm.action"><i
 							class="icon s7-display1"></i><span>개인 분석</span></a></li>
 
-					<li class="parent"><a href="../sidebar/groupStatForm.action"><i
+					<li class="parent"><a href="../sidebar/groupStatForm.action" class="select"><i
 							class="icon s7-users"></i><span>비교 분석</span></a></li>
 
 
