@@ -60,26 +60,6 @@
 			background-color: #58ba54;
 		}
 		
-		.payment {
-			font-size: 5em;
-		    padding-left: 1.2em;
-		    padding-top: 2%;
-		    float: right;
-		    color: #f38282;
-		    font-weight: bold;
-		}
-		
-		.cash {
-			color: #cccccc;
-		}
-		
-		.lineIcon {
-			text-align: center;
-		}
-		
-		.lineIcon img{
-			margin: 1em;
-		}
 		
 		#img_1 {
 		   background-image: url('http://icons.iconarchive.com/icons/graphicloads/food-drink/256/drink-icon.png');
@@ -544,30 +524,11 @@
 					
 					
 					<div class="row">
-					<div class="col-sm-6">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<span class="title">지불 방법</span>
-							</div>
-							<div class="panel-body text-center" style="padding-left: 10%;">
-								<div>
-								<span style="float: left; padding-bottom: 2em;">
-									<img class="rotate method" src="../img/icon/credit-card.png" id="card">
-								</span>
-								</div>
-								
-								<div>
-								<span style="float: left">
-									<img class="rotate method" src="../img/icon/money.png" id="cash">
-								</span>
-								</div>
-							</div>
-						</div>
+					
+					
+					
+					
 					</div>
-					
-					
-					
-				</div>
 				 
 				<div class="row">
 					<div class="col-sm-4">

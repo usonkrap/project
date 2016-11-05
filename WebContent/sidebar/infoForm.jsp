@@ -38,6 +38,29 @@
     border: 3px solid white;
 }
 
+
+.payment {
+	font-size: 5em;
+    padding-left: 0.6em;
+    padding-top: 5%;
+    float: right;
+    color: #f38282;
+    font-weight: bold;
+}
+
+.cash {
+	color: #cccccc;
+}
+
+.lineIcon {
+	text-align: center;
+}
+
+.lineIcon img{
+	margin: 1em;
+}
+
+
 </style>
 
 </head>
@@ -305,25 +328,48 @@
 					
 					
 					
+					
+					<div class="col-sm-8">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span class="title">지불 방법</span>
+								</div>
+								<div class="panel-body text-center">
+									<div>
+										<span style="float: left;"> <img
+											class="rotate method" src="../img/icon/credit-card.png"
+											id="card">
+										</span>
+									</div>
+
+									<div>
+										<span style="float: right;"> <img class="rotate method"
+											src="../img/icon/money.png" id="cash">
+										</span>
+									</div>
+								</div>
+							</div>
+					</div>
 					<!-- 메인 화면 대표 그래프 끝 -->
-					<div class="col-md-3">
+					<div class="col-md-4">
 					<!-- 목표치 패널 시작-->
-						<div class="panel panel-default">
-							<div class="panel-heading" id = "todaysMonth"></div>
-							<div class="panel-body" id="testcall">
-								<p></p>
-								<div class="progress">
-									<div style="width: 0%" id="showBar">
-										</div>
+						<div class="col-sm-12">
+							<div class="panel panel-default">
+								<div class="panel-heading" id = "todaysMonth"></div>
+								<div class="panel-body" id="testcall">
+									<p></p>
+									<div class="progress">
+										<div style="width: 0%" id="showBar">
+											</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					
 					<!-- 목표치 패널 끝 -->
+					
 					</div>
 					
-					
-					
+					<%-- 
 					
 					<div class="col-md-3" style="padding-left: initial;">
 						<div class="col-md-12">
@@ -369,7 +415,7 @@
 						<!-- 메세지 위젯3-->
 					
 					</div>
-					
+					 --%>
 					
 				</div>
 				<!-- 가로줄 한줄 묶음 끝 -->

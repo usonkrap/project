@@ -204,33 +204,13 @@ var App = (function () {
 		});
 
 		
-		//카드현금비율
-		 function paymentData(){
-			 $.ajax({
-		    	 url : '../sidebar/paymentData',
-		    	 type : 'post',
-		    	 dataType : 'json',
-		    	 success : function(response){
-		    		 var paymentData = response.paymentData;
-		    		 $.each(paymentData,function(index, value) {
-		    			 var data = value;
-		    			 if(index == 0){
-		    				 $('<span class="payment">' + data + '%</span>').insertAfter('#card');
-		    			 }else{
-		    				 $('<span class="payment cash">' + data + '%</span>').insertAfter('#cash');
-		    			 }
-		    			});
-		    		 
-		    	 }
-		    	 
-		     });
-		}
+		
 		
 		
 		rader_day_chart();
 		rader_time_chart();
 		donut_chart();
-		paymentData();
+		//paymentData();
 	};
 	
 	

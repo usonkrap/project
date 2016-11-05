@@ -54,6 +54,7 @@ i {
 
 .btn-lg, .btn-group-lg>.btn {
 	padding: 6px 40px;
+	font-size: 18px;
 }
 
 .btn-rounded.btn-lg {
