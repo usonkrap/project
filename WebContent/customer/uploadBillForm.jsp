@@ -524,7 +524,7 @@ i {
 																})//each
 
 											} else {
-												sweetAlert("Oops...", "이미지 파일만 올려주세요!", "error"); 
+												sweetAlert("이미지 파일만 올려주세요!", "", "error"); 
 											
 												 $( function() {
 												    $( "#dialog-message" ).dialog({
@@ -542,7 +542,7 @@ i {
 											calTotalPrice();
 											
 										}else{
-											sweetAlert("Oops...", "영수증 사진을 올려주세요!", "error"); 
+											sweetAlert("영수증 사진을 올려주세요", "", "error"); 
 											$( function() {
 											    $( "#dialog-message" ).dialog({
 											      modal: true,
