@@ -99,51 +99,51 @@
 			font-size: 1.3em;
 		}
 		
-		#checkBoxArea #check1{
+		#check1{
 			color: #fe6f5e;
 			font-weight: bold;
 		}
-		#checkBoxArea #check2{
+		#check2{
 			color: #ffcc33;
 			font-weight: bold;
 		}
-		#checkBoxArea #check3{
+		#check3{
 			color: #afe313;
 			font-weight: bold;
 		}
-		#checkBoxArea #check4{
+		#check4{
 			color: #95e0e8;
 			font-weight: bold;
 		}
-		#checkBoxArea #check5{
+		#check5{
 			color: #7070cc;
 			font-weight: bold;
 		}
-		#checkBoxArea #check6{
+		#check6{
 			color: #fdbaba;
 			font-weight: bold;
 		}
-		#checkBoxArea #check7{
+		#check7{
 			color: #ff9090;
 			font-weight: bold;
 		}
-		#checkBoxArea #check8{
+		#check8{
 			color: #cba6eb;
 			font-weight: bold;
 		}
-		#checkBoxArea #check9{
+		#check9{
 			color: #93d8a5;
 			font-weight: bold;
 		}
-		#checkBoxArea #check10{
+		#check10{
 			color: #add3ff;
 			font-weight: bold;
 		}
-		#checkBoxArea #check11{
+		#check11{
 			color: #ff8800;
 			font-weight: bold;
 		}
-		#checkBoxArea #check12{
+		#check12{
 			color: #ab2d07;
 			font-weight: bold;
 		}

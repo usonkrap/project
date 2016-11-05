@@ -131,9 +131,8 @@ i {
 							class="icon s7-user"></i><span><s:property
 									value="#session.nickname" />님의 정보</span></a></li>
 
-<li class="parent"><a href="../sidebar/targetForm.action"><i
-							class="icon s7-piggy"></i><span>목표 관리</span></a> 
-				</li>
+					<li class="parent"><a href="../sidebar/targetForm.action"><i
+							class="icon s7-piggy"></i><span>목표 관리</span></a></li>
 
 					<li class="parent"><a href="../sidebar/spendListForm.action"><i
 							class="icon s7-news-paper"></i><span>소비 목록</span></a></li>
@@ -169,34 +168,16 @@ i {
 						<div class="panel-heading">
 							<h3 style="text-align: center">영수증 사진 등록</h3>
 						</div>
-						<div class="panel-body" style="height: 450px; border: 3px dashed #eaeaea; margin: 20px;">
-							<div class="dragContext" style="height: 100%;">
-								<div class='fileDrop' align="center" id="file-drop" style="height: 100%;">
+						<div class="panel-body" id="imgSize"
+							style="height: 460px; border: 3px dashed #eaeaea; width: 100%;">
+							<div class="dragContext" style="height: 100%; width: 100%;">
+								<div class='fileDrop' align="center" id="file-drop"
+									style="height: 100%;">
 									<div class="dz-message" style="padding-top: 6em;">
-						              <div class="icon" style="font-size: 8em;"><span class="s7-cloud-upload"></span></div>
-						              <h2 style="font-weight: 700;">Drag and Drop files here</h2>
-						            </div>
-								</div>
-								<div class='uploadedList'></div>
-								<div class="main-content">
-
-									<div class="gallery-container">
-										<div class="item w2">
-
-											<div class="photo">
-												<div class="img" align="center">
-
-													<!-- 여기로 이미지가 들어옴-->
-													<div class="over">
-														<div class="func">
-															<a href="#" class="delImg"><i class="icon s7-link"></i></a><a
-																href="#" class="image-zoom"><i
-																class="icon s7-search"></i></a>
-														</div>
-													</div>
-												</div>
-											</div>
+										<div class="icon" style="font-size: 8em;">
+											<span class="s7-cloud-upload"></span>
 										</div>
+										<h2 style="font-weight: 700;">Drag and Drop files here</h2>
 									</div>
 								</div>
 							</div>
@@ -339,7 +320,8 @@ i {
 		$(document).ready(function() {
 			//initialize the javascript
 			App.init();
-			App.formElements();
+			App.formElements();			
+			
 			
 			var con = "%{confirm}";
 			
@@ -372,6 +354,10 @@ i {
 
 		$(window).load(function() {
 			App.pageGallery();
+			
+	
+
+			
 
 		});
 
@@ -423,10 +409,10 @@ i {
 												$(".dragContext").children()
 														.hide();
 
-												var str2 = "<div class='gallery-container' style='height: 100%;'>"
-														+ "<div class='item w2'>"
-														+ "<div class='photo' >"
-														+ "<div class='img' align='center' >"
+												var str2 = "<div class='gallery-container' style='width: 100%;'>"
+														+ "<div class='item w2' style='width: 100%;'>"
+														+ "<div class='photo' style='width: 100%;' >"
+														+ "<div class='img' style='width: 100%;' >"
 														+ "<div class='over'>"
 														+ "<div class='func'>"
 														+ "<a href='#' class='del-img'>"
@@ -441,12 +427,22 @@ i {
 
 												var str = "";
 
-												str = "<img src='../" + imagePath + "'>";
+												str = "<img src='../" + imagePath + "' class='imgOri'>";
 
 												$(".img").append(str);
 												$(".image-zoom").attr("href",
 														"../" + imagePath);
-
+												
+												
+												var img_height = $(".imgOri").getBoundingClientRect().height;
+												alert(img_height);
+												//$("#imgSize").attr("style", "height:" + (img_height + 100) +"px;");
+												$(".imgSize").attr("style", "height:100%;");
+												
+												
+												
+												
+												
 												var itemList = data.bill.itemList;
 
 												/////////bill에서 데이터 꺼내오기
