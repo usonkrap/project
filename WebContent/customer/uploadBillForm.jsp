@@ -24,7 +24,7 @@
 	href="../assets/lib/jquery.magnific-popup/magnific-popup.css" />
 <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="../dist/sweetalert.css">
-<script src="../dist/sweetalert.min.js"></script> 
+<script src="../dist/sweetalert.min.js"></script>
 <script src="../assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
 
 </head>
@@ -54,7 +54,6 @@ i {
 
 .btn-lg, .btn-group-lg>.btn {
 	padding: 6px 40px;
-	font-size: 18px;
 }
 
 .btn-rounded.btn-lg {
@@ -79,16 +78,17 @@ i {
 					</a> <a href="../sidebar/main.action" class="navbar-brand"> <!-- 메인 페이지 링크 및 로고 표시 -->
 					</a>
 				</div>
-
 				<a href="#" data-toggle="collapse" data-target="#am-navbar-collapse"
 					class="am-toggle-top-header-menu collapsed"> <span
 					class="icon s7-angle-down"></span> <!-- ??? -->
 				</a>
 				<div id="am-navbar-collapse" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right am-user-nav">
-						<li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
+						<li class="dropdown"><a href="#" data-toggle="dropdown"
+							role="button" aria-expanded="false" class="dropdown-toggle">
 								<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 -->
-								<span class="user-name"><s:property value="#session.nickname" /></span> <span
+								<span class="user-name"><s:property
+										value="#session.nickname" /></span> <span
 								class="angle-down s7-angle-down"></span>
 						</a>
 							<ul role="menu" class="dropdown-menu">
@@ -172,9 +172,14 @@ i {
 						<div class="panel-heading">
 							<h3 style="text-align: center">영수증 사진 등록</h3>
 						</div>
-						<div class="panel-body panel-bill" id="imgSize" style="border: 3px dashed #eaeaea; width: 100%;">
+						<div class="panel-body panel-bill" id="imgSize"
+							style="border: 3px dashed #eaeaea; width: 100%;">
 							<div class="dragContext" style="height: 100%; width: 100%;">
-								<div class='fileDrop' align="center" id="file-drop" style="height: 100%;">
+
+								<input type="file" style="visibility: hidden;" id="file_select">
+
+								<div class='fileDrop' align="center" id="file-drop"
+									style="height: 100%;">
 									<div class="dz-message" style="padding-top: 6em;">
 										<div class="icon" style="font-size: 8em;">
 											<span class="s7-cloud-upload"></span>
@@ -263,8 +268,9 @@ i {
 									<div class="text-right">
 										<!-- <button type="submit" class="btn btn-space btn-primary"
 											id="inputBtn">등록하기</button> -->
-										<button data-toggle="modal" data-target="#mod-success" type="submit" class="btn btn-space btn-success" id="inputBtn">
-										등록하기</button>
+										<button data-toggle="modal" data-target="#mod-success"
+											type="submit" class="btn btn-space btn-success" id="inputBtn">
+											등록하기</button>
 										<button class="btn btn-space btn-default" id="cancel">취소</button>
 									</div>
 								</div>
@@ -283,18 +289,18 @@ i {
 		<!-- am 컨텐츠 끝 -->
 
 		<!-- 알림창 -->
-		 <%-- <div id="dialog-message" title="경고" class="alert alert-warning alert-icon alert-border-color alert-dismissible">
+		<%-- <div id="dialog-message" title="경고" class="alert alert-warning alert-icon alert-border-color alert-dismissible">
  		 <div class="icon"><span class="s7-attention"></span></div>
                     <div class="message">
                       <button type="button" data-dismiss="alert" aria-label="Close" class="close"><span aria-hidden="true" class="s7-close"></span></button><strong> 이미지 파일만 올려주세요!</strong>
                     </div>
 		</div>  --%>
-		
+
 	</div>
 
 
+	<img alt="" src="" style="padding: 30%">
 
-	
 	<script
 		src="../assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js"
 		type="text/javascript"></script>
@@ -313,7 +319,7 @@ i {
 		type="text/javascript"></script>
 	<script src="../assets/lib/jquery.nestable/jquery.nestable.js"
 		type="text/javascript"></script>
-		
+
 
 
 	<script
@@ -327,11 +333,14 @@ i {
 	<script src="../assets/js/app-form-elements.js" type="text/javascript"></script>
 
 	<script src="../assets/js/app-page-gallery.js" type="text/javascript"></script>
-	
-	<script src="assets/lib/jquery.niftymodals/dist/jquery.niftymodals.js" type="text/javascript"></script>
+
+	<script src="assets/lib/jquery.niftymodals/dist/jquery.niftymodals.js"
+		type="text/javascript"></script>
 
 	<script>
 		$(document).ready(function() {
+			
+			
 			
 			//Set Nifty Modals defaults
 		      $.fn.niftyModal('setDefaults',{
@@ -386,8 +395,8 @@ i {
 		$(".fileDrop").on("dragenter dragover", function(event) {
 			event.preventDefault();
 		});
-
-		$(".fileDrop")
+		
+	$(".fileDrop")
 				.on(
 						"drop",
 						function(event) {
@@ -395,6 +404,8 @@ i {
 
 							intiForm();
 
+							var pro_int="";
+							
 							var files = event.originalEvent.dataTransfer.files;
 
 							var file = files[0];
@@ -403,6 +414,8 @@ i {
 
 							formData.append("billImg", file);
 
+							
+							
 							$
 									.ajax({
 										url : '../bill/uploadBill',
@@ -415,11 +428,51 @@ i {
 											$("#file-drop").children().hide();
 											$("#file-drop")
 													.append(
-															"<img src='../img/img-loading.gif' id='lodingImg'/>"
+															"<div class='progress' >"
+															+"<div style='width:0%' id='showBar'></div>"
+															+"</div>"
 															); 
+											
+											
+											
+											setTimeout(function() {
+												var per = 0;
+											
+											pro_int = setInterval(function() {
+												per = per + 1;
+												
+												var aa = per +"%";
+												
+												$("#showBar").attr("style", "width:"+aa);  
+												$("#showBar").html(function () {
+													
+													return '';
+												});
+												$("#showBar").append(aa);
+												if(parseInt(per)<70){
+													$("#showBar").attr('class','progress-bar progress-bar-success progress-bar-striped active');
+												}else if(parseInt(per)<90){
+													$("#showBar").attr('class','progress-bar progress-bar-warning progress-bar-striped active');
+												}else if(parseInt(per)<=100){
+													$("#showBar").attr('class','progress-bar progress-bar-danger progress-bar-striped active');
+												}else{
+													$("#showBar").attr('class','progress-bar progress-bar-danger progress-bar-striped active');
+													$("#showBar").css("width","100%");
+												}		
+												
+												if(per == 100){
+													alert("영수증등록에 실패하였습니다");
+													 clearInterval(pro_int);
+													 return false;
+												}
+												
+											}, 80)
+
+											}, 10);
 										},
 										success : function(data) {
-
+											
+											clearInterval(pro_int);
 											$("#lodingImg").remove();
 											
 											if(data.bill.payment != "wrongPic"){
@@ -449,26 +502,19 @@ i {
 
 												var str = "";
 
-												str = "<img src='../" + imagePath + "' id='imgOri'>";
+												str = "<img src='../" + imagePath + "' class='imgOri'>";
 
 											 	$(".img").append(str);
 												$(".image-zoom").attr("href",
 														"../" + imagePath);
-												
-												
-												/* var img_height = $(".imgOri").getBoundingClientRect().height;
-												alert(img_height);
-												//$("#imgSize").attr("style", "height:" + (img_height + 100) +"px;");
-												$(".imgSize").attr("style", "height:100%;"); */
-												
-
-												
+									
+			
 												setTimeout(function() {
-													//alert();
-													$(".panel-bill").height($("#imgOri").height());		
+											
+													$(".panel-bill").height($(".imgOri").height());		
 
-												}, 100)
-												
+												}, 30)
+											    
 												
 												var itemList = data.bill.itemList;
 
@@ -736,26 +782,32 @@ i {
 
 		
 		</script>
-		<!-- alert() -->
-		 <div id="mod-success" tabindex="-1" role="dialog" style="" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" data-dismiss="modal" aria-hidden="true" class="close"><i class="icon s7-close"></i></button>
-          </div>
-          <div class="modal-body">
-            <div class="text-center">
-              <div class="i-circle text-success"><i class="icon s7-check"></i></div>
-              <h4>등록성공!</h4>
-              <p>영수증이 성공적으로 등록되었습니다!</p>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
-            <button type="button" data-dismiss="modal" class="btn btn-success">Proceed</button>
-          </div>
-        </div>
-      </div>
-    </div>
+	<!-- alert() -->
+	<div id="mod-success" tabindex="-1" role="dialog" style=""
+		class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" data-dismiss="modal" aria-hidden="true"
+						class="close">
+						<i class="icon s7-close"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="text-center">
+						<div class="i-circle text-success">
+							<i class="icon s7-check"></i>
+						</div>
+						<h4>등록성공!</h4>
+						<p>영수증이 성공적으로 등록되었습니다!</p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+					<button type="button" data-dismiss="modal" class="btn btn-success">Proceed</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
