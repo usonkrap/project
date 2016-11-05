@@ -31,13 +31,11 @@
 <style>
 .btn-lg, .btn-group-lg > .btn {
     padding: 6px 40px;
+    font-size: 18px;
 }
 .btn-rounded.btn-lg {
     border-radius: 5px;
     border: 3px solid white;
-}
-.btn-lg, .btn-group-lg > .btn {
-	font-size: 18px;
 }
 
 </style>
