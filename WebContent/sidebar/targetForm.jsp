@@ -360,10 +360,10 @@
 								<div class="widget widget-tile">
 									<div class="data-info">
 										<div data-toggle="counter" data-end="156" class="value">0</div>
-										<div class="desc">일 평균 지출</div>
+										<div class="desc">최고 지출액</div>
 									</div>
 									<div class="icon">
-										<span class="s7-graph1"></span>
+										<span class="s7-cash"></span>
 									</div>
 								</div>
 							</div>
@@ -372,10 +372,10 @@
 									<div class="data-info">
 										<div data-toggle="counter" data-decimals="1" data-end="7.5"
 											data-suffix="K" class="value">0</div>
-										<div class="desc">월 평균 지출</div>
+										<div class="desc">최대 소비날</div>
 									</div>
 									<div class="icon">
-										<span class="s7-like2"></span>
+										<span class="s7-wallet"></span>
 									</div>
 								</div>
 							</div>

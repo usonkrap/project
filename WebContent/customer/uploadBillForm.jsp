@@ -80,11 +80,9 @@ i {
 				</a>
 				<div id="am-navbar-collapse" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right am-user-nav">
-						<li class="dropdown"><a href="#" data-toggle="dropdown"
-							role="button" aria-expanded="false" class="dropdown-toggle">
+						<li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle">
 								<img src="../assets/img/janzani.jpg"> <!-- 오른쪽 상단 프로필 사진 -->
-								<span class="user-name"><s:property
-										value="#session.nickname" /></span> <span
+								<span class="user-name"><s:property value="#session.nickname" /></span> <span
 								class="angle-down s7-angle-down"></span>
 						</a>
 							<ul role="menu" class="dropdown-menu">
@@ -168,11 +166,9 @@ i {
 						<div class="panel-heading">
 							<h3 style="text-align: center">영수증 사진 등록</h3>
 						</div>
-						<div class="panel-body" id="imgSize"
-							style="height: 460px; border: 3px dashed #eaeaea; width: 100%;">
+						<div class="panel-body panel-bill" id="imgSize" style="border: 3px dashed #eaeaea; width: 100%;">
 							<div class="dragContext" style="height: 100%; width: 100%;">
-								<div class='fileDrop' align="center" id="file-drop"
-									style="height: 100%;">
+								<div class='fileDrop' align="center" id="file-drop" style="height: 100%;">
 									<div class="dz-message" style="padding-top: 6em;">
 										<div class="icon" style="font-size: 8em;">
 											<span class="s7-cloud-upload"></span>
@@ -408,7 +404,7 @@ i {
 
 												$(".dragContext").children()
 														.hide();
-
+									
 												var str2 = "<div class='gallery-container' style='width: 100%;'>"
 														+ "<div class='item w2' style='width: 100%;'>"
 														+ "<div class='photo' style='width: 100%;' >"
@@ -427,20 +423,25 @@ i {
 
 												var str = "";
 
-												str = "<img src='../" + imagePath + "' class='imgOri'>";
+												str = "<img src='../" + imagePath + "' id='imgOri'>";
 
-												$(".img").append(str);
+											 	$(".img").append(str);
 												$(".image-zoom").attr("href",
 														"../" + imagePath);
 												
 												
-												var img_height = $(".imgOri").getBoundingClientRect().height;
+												/* var img_height = $(".imgOri").getBoundingClientRect().height;
 												alert(img_height);
 												//$("#imgSize").attr("style", "height:" + (img_height + 100) +"px;");
-												$(".imgSize").attr("style", "height:100%;");
+												$(".imgSize").attr("style", "height:100%;"); */
 												
+
 												
-												
+												setTimeout(function() {
+													//alert();
+													$(".panel-bill").height($("#imgOri").height());		
+
+												}, 100)
 												
 												
 												var itemList = data.bill.itemList;
@@ -472,8 +473,7 @@ i {
 												$(".itemMenu tr:gt(0)")
 														.remove();
 
-												$
-														.each(
+												$.each(
 																itemList,
 																function(index,
 																		item) {
@@ -497,6 +497,7 @@ i {
 																					);
 
 																})//each
+																
 
 											} else {
 
@@ -516,7 +517,9 @@ i {
 						});
 
 		///////////////////////////////////////////////////////////////////
-
+		
+		
+			
 		//////////////////이미지 삭제///////////////////
 		$('.dragContext').on('click', '.del-img', function() {
 			intiForm();
