@@ -565,7 +565,23 @@
 						</div>
 					</div>
 					
+					
+					
+				</div>
+				 
+				<div class="row">
 					<div class="col-sm-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<span class="title">카테고리별 지출</span>
+							</div>
+							<div class="panel-body text-center">
+								<span id="category1" class="category"></span> 
+								<%-- <span id="category2" class="category"></span> --%>
+							</div>
+						</div>
+					</div>
+				 	<div class="col-sm-4">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<span class="title">자주 간 매장 TOP5</span>
@@ -575,22 +591,6 @@
 							</div>
 						</div>
 					</div>
-					
-				</div>
-				<%-- 
-				<div class="row">
-					<div class="col-sm-8">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<span class="title">카테고리별 지출</span>
-							</div>
-							<div class="panel-body text-center">
-								<span id="category1" class="category"></span> <span
-									id="category2" class="category"></span>
-							</div>
-						</div>
-					</div>
-				 --%>
 
 			</div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->

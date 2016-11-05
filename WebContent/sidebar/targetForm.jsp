@@ -329,7 +329,7 @@
 						
 						
 
-						<div class="row">
+						<%-- <div class="row">
 							<div class="col-md-6">
 								<div class="widget widget-tile">
 									<div class="data-info">
@@ -352,9 +352,9 @@
 										<span class="s7-date"></span>
 									</div>
 								</div>
-							</div>
+							</div> 
 							
-						</div>
+						</div>--%>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="widget widget-tile">
