@@ -11186,7 +11186,7 @@ li.L9 {
 .widget-calendar .cal-container .cal-notes {
   display: table-cell;
   width: 40%;
-  background-color: #56c3e7;
+  background-color: #ef6262;
   padding: 25px;
 }
 .widget-calendar .cal-container .cal-notes span {
@@ -11325,7 +11325,7 @@ li.L9 {
   border-radius: 50%;
 }
 .widget-calendar .cal-container .cal-calendar .ui-datepicker table.ui-datepicker-calendar tr td a.ui-state-highlight {
-  background-color: #56c3e7;
+  background-color: #ef6262;
   color: #ffffff;
 }
 @media (max-width: 767px) {

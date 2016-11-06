@@ -60,9 +60,14 @@
 	margin: 1em;
 }
 #progressbarValue{
-	font-size: 1.5em;
-    text-align: center;
-    margin-top: 40px;
+	font-size: 2em;
+	font-weight: 700;
+	margin: 20px;
+	line-height: 2em;
+	color: #ef6262;
+	
+    /* text-align: center;
+    margin-top: 40px; */
 }
 
 
@@ -365,8 +370,10 @@
 									<p></p>
 									<div class="progress">
 										<div style="width: 0%" id="showBar">
-											</div>
-									</div>
+										</div>
+									</div><span id="moneyBag">
+									<img class="rotate method" src="../img/icon/money-bag.png" style="width: 50px;">
+									</span>
 								</div>
 							</div>
 						</div>
