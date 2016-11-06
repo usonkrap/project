@@ -18,6 +18,7 @@ function budgetCall(){
 				
 				$('#targetPrice').attr('data-end', data.CUST_TARGET_PRICE);
 				$("#spendMonth").attr("data-end", data.spendMonth);
+				$("#averMonth").attr("data-end", data.averMonth);
 				$("#leftMonth").attr("data-end", data.leftMonth);
 				$("#canMonth").attr("data-end", data.canMonth);
 				//$("#spendMonth").attr("data-end", data.averTotal);
@@ -25,7 +26,6 @@ function budgetCall(){
 				$("#mostSpendItem").append(data.mostSpendItem);
 				$("#mostSpendDay").attr("data-end", data.mostSpendDayPrice);
 				$("#mostSpendDayPrice").append(data.mostSpendDay);
-				$("#averMonth").attr("data-end", data.averMonth);
 				
 			}
 		});
