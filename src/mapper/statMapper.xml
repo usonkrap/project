@@ -14,12 +14,41 @@
 		and i.CUSTOMERID =
 		#{id}
 
-		) self, round((select (sum(i.price)) from item i,
-		bill
-		b, customer c where
-		substr(i.category,1,3) like m.category_num and
-		i.billno = b.billno and
-		c.cust_email = i.customerid
+		) self
+		<if test="count != 0">
+			, round((select (sum(i.price)) from item i,
+			bill
+			b, customer c where
+			substr(i.category,1,3) like m.category_num and
+			i.billno = b.billno and
+			c.cust_email = i.customerid
+
+			<if test="!gender.equals('all')">
+				and c.CUST_GENDER = #{gender}
+			</if>
+			<if test="!age.equals('all')">
+		<![CDATA[
+		   and #{age} <= TRUNC(MONTHS_BETWEEN(SYSDATE, c.cust_birthday) / 12) 
+		]]>
+				<if test="!age.equals('60')">		
+		<![CDATA[
+		  and TRUNC(MONTHS_BETWEEN(SYSDATE, c.cust_birthday) / 12) <  #{age} + 10
+		 ]]>
+				</if>
+			</if>
+			<if test="!address.equals('all')">
+				and c.cust_address like '${address}%' </if>
+
+			) / #{count}) average
+		</if>
+		from major_category m
+
+
+	</select>
+
+	<select id="getCount" resultType="int" parameterType="Comparison">
+
+		select COUNT(*) from customer c where c.cust_activity = 'T'
 
 		<if test="!gender.equals('all')">
 			and c.CUST_GENDER = #{gender}
@@ -28,32 +57,14 @@
 		<![CDATA[
 		   and #{age} <= TRUNC(MONTHS_BETWEEN(SYSDATE, c.cust_birthday) / 12) 
 		]]>
-			<if test="age.equals('60')">		
-			<![CDATA[
+			<if test="!age.equals('60')">		
+		<![CDATA[
 		  and TRUNC(MONTHS_BETWEEN(SYSDATE, c.cust_birthday) / 12) <  #{age} + 10
-		 	]]>
+		 ]]>
 			</if>
 		</if>
 		<if test="!address.equals('all')">
 			and c.cust_address like '${address}%' </if>
-
-		) / (select COUNT(*) from customer c where c.cust_activity = 'T'
-
-		<if test="!gender.equals('all')">
-			and c.CUST_GENDER = #{gender}
-		</if>
-		<if test="!age.equals('all')">
-		<![CDATA[
-		   and #{age} <= TRUNC(MONTHS_BETWEEN(SYSDATE, c.cust_birthday) / 12) 
-		   and TRUNC(MONTHS_BETWEEN(SYSDATE, c.cust_birthday) / 12) <  #{age} + 10
-		]]>
-		</if>
-		<if test="!address.equals('all')">
-			and c.cust_address like '${address}%' </if>
-
-
-		)) average from major_category m
-
 
 	</select>
 

@@ -7,18 +7,20 @@ public class Comparison {
 	private String age;
 	private String address;
 	private String time;
+	private int count;
 
 	public Comparison() {
 
 	}
-	
-	public Comparison(String id, String gender, String age, String address, String time) {
+
+	public Comparison(String id, String gender, String age, String address, String time, int count) {
 		super();
 		this.id = id;
 		this.gender = gender;
 		this.age = age;
 		this.address = address;
 		this.time = time;
+		this.count = count;
 	}
 
 	public String getId() {
@@ -61,10 +63,20 @@ public class Comparison {
 		this.time = time;
 	}
 
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+
 	@Override
 	public String toString() {
 		return "Comparison [id=" + id + ", gender=" + gender + ", age=" + age + ", address=" + address + ", time="
-				+ time + "]";
+				+ time + ", count=" + count + "]";
 	}
+	
+	
 
 }

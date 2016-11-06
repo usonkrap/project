@@ -176,8 +176,6 @@ i {
 							style="border: 5px dashed #eaeaea; width: 100%;">
 							<div class="dragContext" style="height: 100%; width: 100%;">
 
-								<input type="file" style="visibility: hidden;" id="file_select">
-
 								<div class='fileDrop' align="center" id="file-drop"
 									style="height: 100%;">
 									<div class="dz-message" style="padding-top: 6em;">
@@ -334,8 +332,7 @@ i {
 
 	<script src="../assets/js/app-page-gallery.js" type="text/javascript"></script>
 
-	<script src="assets/lib/jquery.niftymodals/dist/jquery.niftymodals.js"
-		type="text/javascript"></script>
+
 
 	<script>
 		$(document).ready(function() {
@@ -343,12 +340,7 @@ i {
 			
 			
 			//Set Nifty Modals defaults
-		      $.fn.niftyModal('setDefaults',{
-		      	overlaySelector: '.modal-overlay',
-		      	closeSelector: '.modal-close',
-		      	classAddAfterOpen: 'modal-show',
-		      });
-			
+		   
 			//initialize the javascript
 			App.init();
 			App.formElements();			

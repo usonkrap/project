@@ -1,5 +1,6 @@
 package dao;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,7 +24,16 @@ public class StatDAO {
 
 		try {
 			ss = factory.openSession();
+			
+			int count = ss.selectOne("stat.getCount", vo);
+			
+			System.out.println("count: " + count);
+			
+			vo.setCount(count);
+
 			statList = ss.selectList("stat.allSelect", vo);
+			
+			System.out.println("vo: " + vo);
 			
 		} catch (Exception e) {
 			e.printStackTrace();

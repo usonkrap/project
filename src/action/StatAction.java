@@ -39,7 +39,7 @@ public class StatAction extends ActionSupport implements SessionAware {
 
 			JSONObject statObject = new JSONObject();
 
-			statObject.put("average", statList.get(i).get("AVERAGE"));
+		    statObject.put("average", statList.get(i).get("AVERAGE"));
 			statObject.put("self", statList.get(i).get("SELF"));
 			statObject.put("category", statList.get(i).get("CATEGORY"));
 
