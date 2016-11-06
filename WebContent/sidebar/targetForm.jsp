@@ -14,6 +14,8 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+		<link rel="stylesheet" type="text/css" href="../dist/sweetalert.css">
+<script src="../dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../assets/lib/select2/css/select2.min.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/bootstrap-slider/css/bootstrap-slider.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
@@ -417,18 +419,30 @@
       });
       budgetCall();
 
-      $("div.btn").on('click', 'button#setBudget', function() {
-  	    var cust_target_price = $("#targetPrice").val();
-  	    $.ajax({
-  			url : '../customer/setBudget',
-  			type : 'post',
-  			data : {cust_target_price : cust_target_price},
-  			dataType : 'json',
-  			success : function(response) {
-  				alert("예산이 수정되었습니다.");
-  				window.location.reload(true);
-  			} 
-  	    });
+  $("div.btn").on('click', 'button#setBudget', function() {
+			var cust_target_price = $("#targetPrice").val();
+			$.ajax({
+				url : '../customer/setBudget',
+				type : 'post',
+				data : {
+					cust_target_price : cust_target_price
+				},
+				dataType : 'json',
+				success : function(response) {
+					swal({
+						title : "예산이 수정되었습니다!",
+						text : "",
+						type : "info",
+						showCancelButton : false,
+						closeOnConfirm : false,
+						showLoaderOnConfirm : true,
+					}, function() {
+						setTimeout(function() {
+							window.location.reload(true);
+						}, 1000);
+					});
+				}
+			});
   	  	
     });
     </script>
