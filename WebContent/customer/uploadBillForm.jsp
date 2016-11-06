@@ -173,7 +173,7 @@ i {
 							<h3 style="text-align: center">영수증 사진 등록</h3>
 						</div>
 						<div class="panel-body panel-bill" id="imgSize"
-							style="border: 3px dashed #eaeaea; width: 100%;">
+							style="border: 5px dashed #eaeaea; width: 100%;">
 							<div class="dragContext" style="height: 100%; width: 100%;">
 
 								<input type="file" style="visibility: hidden;" id="file_select">

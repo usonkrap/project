@@ -48,7 +48,7 @@ $(document).ready(function() {
 				}else if(parseInt(datas.precentMonth)<=100){
 					$("#showBar").attr('class','progress-bar progress-bar-danger progress-bar-striped active');
 				}
-				//$("#testcall").append("<span id='progressbarValue'> "+datas.spendMonth+"원 / "+datas.CUST_TARGET_PRICE+"원</span>");
+				$("#testcall").append("<div id='progressbarValue'> "+datas.spendMonth+"원 / "+datas.CUST_TARGET_PRICE+"원</div>");
 				
 				
 				

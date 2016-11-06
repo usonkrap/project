@@ -5752,7 +5752,8 @@ a.thumbnail.active {
   height: 100%;
   font-size: 18px;
   line-height: 18px;
-  color: #ffffff;
+  /* color: #ffffff; */
+  font-weight: 700;
   text-align: center;
   background-color: #ef6262;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
