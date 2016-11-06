@@ -520,16 +520,9 @@
 	</div>				
 					
 					
-					
 					<div class="row">
-					
-					
-					
-					
-					</div>
-				 
-				<div class="row">
-				 	<div class="col-sm-4">
+	
+				 	<div class="col-sm-6">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<span class="title">자주 간 매장 TOP5</span>
@@ -539,11 +532,13 @@
 							</div>
 						</div>
 					</div>
-					</div>
-						<div class="panel panel-default">
+					
+					<div style="width:50%; float:right;">
+					
+					<div class="panel panel-default">
 							<div class="panel-heading">
 								<span class="title">카테고리별 지출
-								<select class="form-control" style="width: 15%; float: right;" id="subCategory">
+									<select class="form-control" style="width: 25%; float: right;" id="subCategory">
 										<option>외식</option>
 										<option>식음료</option>
 										<option>교통</option>
@@ -556,16 +551,17 @@
 										<option>의료/건강</option>
 										<option>금융</option>
 										<option>기타</option>
-								</select></span>
+									</select>
+								</span>
 							</div>
-							<div class="panel-body text-center">
-				 <div>
-				     <div id="flotplaceholder" style="width:500px; height: 200px"></div>
-   					 <div id="hover" style="postion:absolute;display:none;"></div>
-				 </div>
-				</div>
+							<div class="panel-body">
+				 				<div id="flotplaceholder" style="height: 250px"></div>
+   					 			<div id="hover" style="postion:absolute;display:none;"></div>
+							</div>
 						</div>
-
+					</div>
+					</div>
+						
 			</div><!-- 메인 컨텐츠 끝 -->
       </div><!-- am 컨텐츠 끝 -->
  
