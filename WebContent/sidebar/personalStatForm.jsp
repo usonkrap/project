@@ -373,7 +373,6 @@
                             </div>
 					<div class="form-group">
                       <div class="col-sm-12" id="checkBoxArea">
-                      	</div>
                       	<div class="col-sm-2">
                       		<div class="am-checkbox inline col-sm-12">
                           <input id="check1" type="checkbox" checked="checked" class="box" value="0">
@@ -432,6 +431,7 @@
                         <div class="am-checkbox inline col-sm-12">
                           <input id="check12" type="checkbox" checked="checked" class="box" value="11">
                           <label for="check12" id="check12">기타</label>
+                        </div>
                         </div>
                         </div>
                     </div>
