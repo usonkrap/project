@@ -72,7 +72,9 @@
 
 
 </style>
-
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
 	<div class="am-wrapper">
@@ -336,9 +338,14 @@
 						</div>
 					</div>
 					
+					<div class="col-md-6">
+						<div id="containeraa" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+						<script src="../assets/js/new-pie.js" type="text/javascript"></script>
+					</div>
+				</div><!--  row 끝 -->
 					
 					
-					
+				<div class = "row">
 					<div class="col-sm-8">
 							<div class="panel panel-default" style="height: 224px">
 								<div class="panel-heading">
@@ -574,6 +581,8 @@
 			//initialize the javascript
 			App.init();
 			App.dashboard();
+		
+			
 		});
 	</script>
 </body>
