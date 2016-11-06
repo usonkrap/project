@@ -461,9 +461,22 @@ i {
 												}		
 												
 												if(per == 100){
-													alert("영수증등록에 실패하였습니다");
-													 clearInterval(pro_int);
-													 return false;
+													
+													swal({
+														title : "영수증등록에 실패하였습니다",
+														text : "",
+														type : "error",
+														showCancelButton : false,
+														closeOnConfirm : false,
+														showLoaderOnConfirm : true,
+													}, function() {
+														clearInterval(pro_int);
+														intiForm();
+														setTimeout(function() {
+															window.location.reload(true);
+														}, 1000);
+													});
+													
 												}
 												
 											}, 80)

@@ -87,8 +87,18 @@ var App = (function () {
   		    	hoverable: true
   		    },
   		    legend:{
-  		    	container: legendContainer
+  		    	container: legendContainer,
+  		    	noColumns: 2		    
   		    },
+  		    tooltip: {
+	  	        show: true,
+	  	        content: "%s, %p.0%", // show percentages, rounding to 2 decimal places
+	  	        shifts: {
+	  	          x: 20,
+	  	          y: 0
+  	        },
+  	        defaultTheme: false
+  	      },
   		    colors: [ color1, color2, color3, color4, color5, color6, color7, color8, color9, color10, color11, color12, color13]  
   			});
     }

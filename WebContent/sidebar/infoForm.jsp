@@ -70,6 +70,22 @@
     margin-top: 40px; */
 }
 
+.flotTip 
+    {
+      padding: 3px 5px;
+      background-color: #000;
+      z-index: 100;
+      color: #fff;
+      box-shadow: 0 0 10px #555;
+      opacity: .7;
+      filter: alpha(opacity=70);
+      border: 2px solid #fff;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      font-size: 1.6em;
+    }
+
 
 </style>
 <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -220,37 +236,11 @@
 
 
 
-					<li class="parent"><a href="../sidebar/locationForm.action"><i
-							class="icon s7-map-2"></i><span>위치 통계</span></a> <!-- <ul class="sub-menu"><li class="title">위치 정보</li>
-                
-              <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="ui-general.html">음...</a>
-                </li><li><a href="ui-alerts.html">일</a>
-                </li><li><a href="ui-panels.html">단</a>
-                </li><li><a href="ui-buttons.html">메</a>
-                </li><li><a href="ui-modals.html">뉴</a>
-                </li><li><a href="ui-notifications.html">내</a>
-                </li><li><a href="ui-icons.html">비</a>
-                </li><li><a href="ui-grid.html">둠</a>
-                </li><li><a href="ui-tabs-accordions.html">여 &amp; 기</a>
-                </li><li><a href="ui-chat.html"><span class="label label-primary pull-right">New</span>에</a>
-                </li><li><a href="ui-nestable-lists.html">뭐넣을까</a>
-                </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 876px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
+					<li class="parent"><a href="../sidebar/locationForm.action">
+					<i class="icon s7-map-2"></i><span>위치 통계</span></a> 
 					</li>
 
-					<li class="parent"><a href="#"><i class="icon s7-ticket"></i><span>맞춤
-								정보</span></a> <!--  <ul class="sub-menu"><li class="title">차트4</li>
-                
-              <li class="nav-items"><div class="am-scroller nano has-scrollbar"><div class="content nano-content" style="margin-right: 0px; right: -17px;"><ul><li><a href="pages-blank.html">Blank Page</a>
-                </li><li><a href="pages-blank-header.html">Blank Page Header</a>
-                </li><li><a href="pages-login.html">Login</a>
-                </li><li><a href="pages-404.html">404 Page</a>
-                </li><li><a href="pages-sign-up.html">Sign Up</a>
-                </li><li><a href="pages-forgot-password.html">Forgot Password</a>
-                </li><li><a href="pages-profile.html">Profile</a>
-                </li><li><a href="pages-calendar.html">Calendar</a>
-                </li><li><a href="pages-gallery.html">Gallery</a>
-                </li><li><a href="pages-pricing-tables.html"><span class="label label-primary pull-right">New</span>Pricing Tables</a>
-                </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 20px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
+					<li class="parent"><a href="#"><i class="icon s7-ticket"></i><span>맞춤 정보</span></a>
 					</li>
 				</ul>
 				<!--Sidebar bottom content-->
@@ -267,7 +257,7 @@
 
 				<div class="row">
 					<!-- 가로줄 한줄 묶음 시작 -->
-					<div class="col-md-6">
+					<div class="col-md-12">
 						<div class="widget widget-pie">
 							<!-- 메인 화면 대표 그래프 -->
 							<div class="widget-head">
@@ -283,7 +273,7 @@
 											style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 102px; height: 125px;"></canvas>
 									</div>
 								</div>
-								<div class="col-md-6" style="padding-left: 15%;">
+								<div class="col-md-6" style="padding-left: 2em;">
 									<div class="legend">
 										<table style="font-size: smaller; color: #545454">
 											<tbody>
@@ -575,7 +565,10 @@
 	<script src="../assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
 	<script src="../assets/js/app-dashboard.js" type="text/javascript"></script>
 	<script src="../assets/js/main-statistics.js" type="text/javascript"></script>
+	<script src="../script/jquery.flot.tooltip.js"></script>
 
+
+	
 	<script type="text/javascript">
 		$(document).ready(function() {
 			//initialize the javascript
