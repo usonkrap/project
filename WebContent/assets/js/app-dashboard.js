@@ -87,7 +87,8 @@ var App = (function () {
   		    	hoverable: true
   		    },
   		    legend:{
-  		    	container: legendContainer
+  		    	container: legendContainer,
+  		    	noColumns: 2		    
   		    },
   		    tooltip: {
 	  	        show: true,
