@@ -21,7 +21,10 @@ function budgetCall(){
 				$("#leftMonth").attr("data-end", data.leftMonth);
 				$("#canMonth").attr("data-end", data.canMonth);
 				//$("#spendMonth").attr("data-end", data.averTotal);
+				$("#mostSpendItem").attr("data-end", data.mostSpendItem);
+				$("#mostSpendDay").append(data.mostSpendDay);
 				$("#averMonth").attr("data-end", data.averMonth);
+				
 			}
 		});
 		
