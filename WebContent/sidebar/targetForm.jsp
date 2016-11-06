@@ -376,8 +376,9 @@
 						<div class="col-md-6">
 							<div class="widget widget-tile">
 								<div class="data-info">
+									<div id="mostSpendItem"></div>
 									<div data-toggle="counter" data-prefix="&#8361 " data-end="0"
-										class="value" id="mostSpendItem">0</div>
+										class="value" id="mostSpendItemPrice">0</div>
 									<div class="desc">최고 지출액</div>
 								</div>
 								<div class="icon">
@@ -388,8 +389,9 @@
 						<div class="col-md-6">
 							<div class="widget widget-tile">
 								<div class="data-info">
-									<div vdata-suffix="일"  class="value"
-										id="mostSpendDay"></div>
+									<div id="mostSpendDayPrice"></div>
+									<div data-prefix="&#8361 " data-toggle="counter" data-end=""
+										class="value" id="mostSpendDay"></div>
 									<div class="desc">최대 소비날</div>
 								</div>
 								<div class="icon">
@@ -453,14 +455,13 @@
 
 		});
 
-		
 		/*
 		$("#targetPrice").blur(function() {
 
 			$("#targetPrice").val(tempPrice);
 
 		});
-		*/
+		 */
 
 		$("div.btn").on('click', 'button#setBudget', function() {
 			var cust_target_price = $("#targetPrice").val();

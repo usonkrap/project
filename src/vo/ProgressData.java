@@ -11,20 +11,19 @@ public class ProgressData {
 	private int spendMonth;
 	private int leftMonth;
 	private int canMonth;
-	
-	// private int averTotal;
 	private int averMonth;
 	private String precentMonth;
-	private int mostSpendItem;
+	private String mostSpendItem;
+	private int mostSpendItemPrice;
 	private String mostSpendDay;
-	
-	
+	private int mostSpendDayPrice;
+
 	public ProgressData() {
 	}
 
-	
 	public ProgressData(int cUST_TARGET_PRICE, int spendMonth, int leftMonth, int canMonth, int averMonth,
-			String precentMonth, int mostSpendItem, String mostSpendDay) {
+			String precentMonth, String mostSpendItem, int mostSpendItemPrice, String mostSpendDay,
+			int mostSpendDayPrice) {
 		super();
 		CUST_TARGET_PRICE = cUST_TARGET_PRICE;
 		this.spendMonth = spendMonth;
@@ -33,10 +32,11 @@ public class ProgressData {
 		this.averMonth = averMonth;
 		this.precentMonth = precentMonth;
 		this.mostSpendItem = mostSpendItem;
+		this.mostSpendItemPrice = mostSpendItemPrice;
 		this.mostSpendDay = mostSpendDay;
+		this.mostSpendDayPrice = mostSpendDayPrice;
 	}// constructor
 
-	// getter setter
 	public int getCUST_TARGET_PRICE() {
 		return CUST_TARGET_PRICE;
 	}
@@ -85,6 +85,22 @@ public class ProgressData {
 		this.precentMonth = precentMonth;
 	}
 
+	public String getMostSpendItem() {
+		return mostSpendItem;
+	}
+
+	public void setMostSpendItem(String mostSpendItem) {
+		this.mostSpendItem = mostSpendItem;
+	}
+
+	public int getMostSpendItemPrice() {
+		return mostSpendItemPrice;
+	}
+
+	public void setMostSpendItemPrice(int mostSpendItemPrice) {
+		this.mostSpendItemPrice = mostSpendItemPrice;
+	}
+
 	public String getMostSpendDay() {
 		return mostSpendDay;
 	}
@@ -93,19 +109,21 @@ public class ProgressData {
 		this.mostSpendDay = mostSpendDay;
 	}
 
-	public int getMostSpendItem() {
-		return mostSpendItem;
+	public int getMostSpendDayPrice() {
+		return mostSpendDayPrice;
 	}
 
-	public void setMostSpendItem(int mostSpendItem) {
-		this.mostSpendItem = mostSpendItem;
+	public void setMostSpendDayPrice(int mostSpendDayPrice) {
+		this.mostSpendDayPrice = mostSpendDayPrice;
 	}
+	// getter setter
 
 	@Override
 	public String toString() {
 		return "ProgressData [CUST_TARGET_PRICE=" + CUST_TARGET_PRICE + ", spendMonth=" + spendMonth + ", leftMonth="
-				+ leftMonth + ", canMonth=" + canMonth + ", mostSpendDay=" + mostSpendDay + ", mostSpendItem="
-				+ mostSpendItem + ", averMonth=" + averMonth + ", precentMonth=" + precentMonth + "]";
+				+ leftMonth + ", canMonth=" + canMonth + ", averMonth=" + averMonth + ", precentMonth=" + precentMonth
+				+ ", mostSpendItem=" + mostSpendItem + ", mostSpendItemPrice=" + mostSpendItemPrice + ", mostSpendDay="
+				+ mostSpendDay + ", mostSpendDayPrice=" + mostSpendDayPrice + "]";
 	}
 
 }// end of ProgressData

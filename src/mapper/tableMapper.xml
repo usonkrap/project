@@ -215,7 +215,8 @@
 	<select id="progressGet" resultType="progressData"
 		parameterType="string">
 
-		select
+			
+  select
 
 		target as CUST_TARGET_PRICE
 
@@ -230,13 +231,20 @@
 
 		,round((sums/target)*100) as precentMonth
 
+    ,(select *
+		from (select name from item
+		where customerId =
+		#{customerid}
+		order by price desc)
+		where rownum = 1) mostSpendItem
+
 		,(select * from (select price
 		from item
 		where customerId = #{customerid}
 		order by price desc)
 		where rownum
 		= 1)
-		mostSpendItem
+		mostSpendItemPrice
 
 		,(select *
 		from (select b.billdate billdate
@@ -253,8 +261,19 @@
 		sum(b.totalprice)
 		desc)
 		where rownum = 1) mostSpendDay
-
-
+    ,(select *
+		from (select sum(b.totalprice)
+		from (select
+		to_char(billDate, 'YYYY-MM-DD') billDate
+		,totalprice
+		from bill
+		where
+		customerId = #{customerid}) b
+		group by b.billdate
+		order by
+		sum(b.totalprice) desc)
+		where rownum = 1) mostSpendDayPrice
+  
 		FROM
 		(select
 		sum(TOTALPRICE) sums
@@ -277,7 +296,6 @@
 		bill
 		where CUSTOMERID =
 		#{customerid})
-
 	</select>
 
 	<select id="paymentData" parameterType="String" resultType="map">
