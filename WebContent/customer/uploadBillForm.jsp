@@ -266,11 +266,11 @@ i {
 							<div class="form-group" style="padding-top: 5em;">
 								<div class="col-sm-offset-2 col-sm-10">
 									<div class="text-right">
-										<!-- <button type="submit" class="btn btn-space btn-primary"
-											id="inputBtn">등록하기</button> -->
-										<button data-toggle="modal" data-target="#mod-success"
+										<button type="submit" class="btn btn-space btn-primary"
+											id="inputBtn">등록하기</button>
+										<!-- <button data-toggle="modal" data-target="#mod-success"
 											type="submit" class="btn btn-space btn-success" id="inputBtn">
-											등록하기</button>
+											등록하기</button> -->
 										<button class="btn btn-space btn-default" id="cancel">취소</button>
 									</div>
 								</div>
@@ -572,36 +572,38 @@ i {
 																
 
 											} else {
-												sweetAlert("Oops...", "이미지 파일만 올려주세요!", "error"); 
-											
-												 $( function() {
-												    $( "#dialog-message" ).dialog({
-												      modal: true,
-												      buttons: {
-												        Ok: function() {
-												          $( this ).dialog( "close" );
-												        }
-												      }
-												    });
-												  } );
+												swal({
+													title : "이미지파일만 올려주세요!",
+													text : "",
+													type : "error",
+													showCancelButton : false,
+													closeOnConfirm : false,
+													showLoaderOnConfirm : true,
+												}, function() {
+													intiForm();
+													setTimeout(function() {
+														window.location.reload(true);
+													}, 1000);
+												});
 
 											}
 
 											calTotalPrice();
 											
 										}else{
-											sweetAlert("Oops...", "영수증 사진을 올려주세요!", "error"); 
-											$( function() {
-											    $( "#dialog-message" ).dialog({
-											      modal: true,
-											      buttons: {
-											        Ok: function() {
-											          $( this ).dialog( "close" );
-											        }
-											      }
-											    });
-											    
-											  } );
+											swal({
+												title : "영수증사진을 올려주세요!",
+												text : "",
+												type : "error",
+												showCancelButton : false,
+												closeOnConfirm : false,
+												showLoaderOnConfirm : true,
+											}, function() {
+												intiForm();
+												setTimeout(function() {
+													window.location.reload(true);
+												}, 1000);
+											});
 											
 										}
 										}
@@ -650,14 +652,38 @@ i {
 		
 		
 		 function responseCtl(html, status){
-			 
+			
 			 if(status=='success'){
-				alert("성공적으로 등록했습니다");
+					
+				 swal({
+						title : "성공적으로 등록했습니다!",
+						text : "",
+						type : "success",
+						showCancelButton : false,
+						closeOnConfirm : false,
+						showLoaderOnConfirm : true,
+					}, function() {
+						intiForm();
+						setTimeout(function() {
+							window.location.reload(true);
+						}, 1000);
+					});
 			 }else{
-				 alert("등록에 실패하였습니다");
+				 swal({
+						title : "등록에 실패하였습니다!",
+						text : "",
+						type : "success",
+						showCancelButton : false,
+						closeOnConfirm : false,
+						showLoaderOnConfirm : true,
+					}, function() {
+						intiForm();
+						setTimeout(function() {
+							window.location.reload(true);
+						}, 1000);
+					});
 			 }
 				
-				location.reload(); 
 		 };
 
 		///////////////아이템 등록/////////////////////
