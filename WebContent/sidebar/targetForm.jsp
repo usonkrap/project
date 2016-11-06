@@ -455,16 +455,35 @@
 
 		});
 
-		/*
-		$("#targetPrice").blur(function() {
+		/* $("#targetPrice").blur(function() {
 
-			$("#targetPrice").val(tempPrice);
+			if ($("#targetPrice").val() == "") {
+				$("#targetPrice").val(tempPrice);
+			}
+		}); */
+
+		$('#targetPrice').on('keyup', function() {
+
+			if (isNaN($(this).val())) {
+				swal({
+					title : "금액만 입력가능합니다!",
+					text : "",
+					type : "error",
+					showCancelButton : false,
+					closeOnConfirm : true,
+					showLoaderOnConfirm : false,
+				}, function() {
+					$("#targetPrice").val("");
+				});
+
+			}
 
 		});
-		 */
 
 		$("div.btn").on('click', 'button#setBudget', function() {
+
 			var cust_target_price = $("#targetPrice").val();
+
 			$.ajax({
 				url : '../customer/setBudget',
 				type : 'post',
