@@ -59,6 +59,16 @@
 .lineIcon img{
 	margin: 1em;
 }
+#progressbarValue{
+	font-size: 2em;
+	font-weight: 700;
+	margin: 20px;
+	line-height: 2em;
+	color: #ef6262;
+	
+    /* text-align: center;
+    margin-top: 40px; */
+}
 
 
 </style>
@@ -330,20 +340,20 @@
 					
 					
 					<div class="col-sm-8">
-							<div class="panel panel-default">
+							<div class="panel panel-default" style="height: 224px">
 								<div class="panel-heading">
 									<span class="title">지불 방법</span>
 								</div>
 								<div class="panel-body text-center">
 									<div>
-										<span style="float: left;"> <img
+										<span style="float: left; margin: 0 15px"> <img
 											class="rotate method" src="../img/icon/credit-card.png"
 											id="card">
 										</span>
 									</div>
 
 									<div>
-										<span style="float: right;"> <img class="rotate method"
+										<span style="float: left;"> <img class="rotate method"
 											src="../img/icon/money.png" id="cash">
 										</span>
 									</div>
@@ -354,14 +364,16 @@
 					<div class="col-md-4">
 					<!-- 목표치 패널 시작-->
 						<div class="col-sm-12">
-							<div class="panel panel-default">
+							<div class="panel panel-default" style="height: 224px;">
 								<div class="panel-heading" id = "todaysMonth"></div>
 								<div class="panel-body" id="testcall">
 									<p></p>
 									<div class="progress">
 										<div style="width: 0%" id="showBar">
-											</div>
-									</div>
+										</div>
+									</div><span id="moneyBag">
+									<img class="rotate method" src="../img/icon/money-bag.png" style="width: 50px;">
+									</span>
 								</div>
 							</div>
 						</div>

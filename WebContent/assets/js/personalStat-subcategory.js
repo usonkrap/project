@@ -57,8 +57,8 @@ $(flotplaceholder).bind("plothover", function(event, pos, obj) {
     var percent = parseFloat(obj.series.percent).toFixed(2);
     var price = new String(obj.series.data);
     price = price.substring(2, price.length);
-    $("#hover").html("<span style='font-weight:bold; color:" + obj.series.color + "'>" + obj.series.label + " (총액: " + price + "원 / " + percent + "%)</span>");
-    $('#hover').css({'position':'absolute','display':'block','left':pos.pageX - 100,'top':pos.pageY - 100});
+    $("#hover").html("<span style='font-size:1.2em; font-weight: 600; color:#1a1a1a;'>" + obj.series.label + " (총액: " + price + "원 / " + percent + "%)</span>");
+    $('#hover').css({'position':'absolute','display':'block','left':pos.pageX - 200,'top':pos.pageY - 120});
   }
   else {
     $('#hover').css('display','none');
