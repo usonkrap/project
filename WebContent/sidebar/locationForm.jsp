@@ -188,7 +188,7 @@
             </li>
             
             
-            
+            <%-- 
             <li class="parent"><a href="../sidebar/locationForm.action" class="select"><i class="icon s7-map-2"></i><span>위치 통계</span></a>
               <!-- <ul class="sub-menu"><li class="title">위치 정보</li>
                 
@@ -220,7 +220,7 @@
                 </li><li><a href="pages-gallery.html">Gallery</a>
                 </li><li><a href="pages-pricing-tables.html"><span class="label label-primary pull-right">New</span>Pricing Tables</a>
                 </li></ul></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 20px; transform: translate(0px, 0px);"></div></div></div></li></ul> -->
-            </li>
+            </li> --%>
           </ul>
           <!--Sidebar bottom content-->
     	</div>
