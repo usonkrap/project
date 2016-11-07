@@ -168,12 +168,13 @@
 							class="icon s7-users"></i><span>비교 분석</span></a></li>
 
 
-
+<%-- 
 					<li class="parent"><a href="../sidebar/locationForm.action"><i
 							class="icon s7-map-2"></i><span>위치 통계</span></a></li>
 
 					<li class="parent"><a href="#"><i class="icon s7-ticket"></i><span>맞춤
 								정보</span></a></li>
+								 --%>
 				</ul>
 				<!--Sidebar bottom content-->
 			</div>
