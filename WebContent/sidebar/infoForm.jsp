@@ -274,30 +274,6 @@
 									<div class="legend">
 										<table style="font-size: smaller; color: #545454">
 											<tbody>
-												<tr>
-													<td class="legendColorBox"><div
-															style="border: 1px solid #ccc; padding: 1px">
-															<div
-																style="width: 4px; height: 0; border: 5px solid rgb(241, 121, 121); overflow: hidden"></div>
-														</div></td>
-													<td class="legendLabel">Premium Purchases</td>
-												</tr>
-												<tr>
-													<td class="legendColorBox"><div
-															style="border: 1px solid #ccc; padding: 1px">
-															<div
-																style="width: 4px; height: 0; border: 5px solid rgb(255, 220, 122); overflow: hidden"></div>
-														</div></td>
-													<td class="legendLabel">Standard Plans</td>
-												</tr>
-												<tr>
-													<td class="legendColorBox"><div
-															style="border: 1px solid #ccc; padding: 1px">
-															<div
-																style="width: 4px; height: 0; border: 5px solid rgb(149, 217, 240); overflow: hidden"></div>
-														</div></td>
-													<td class="legendLabel">Services</td>
-												</tr>
 											</tbody>
 										</table>
 									</div>
