@@ -80,15 +80,21 @@
 }
 
 .widget.widget-tile .data-info .desc {
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 18px;
-	padding-top: 1em;
 	float: right;
+	padding-top: 0.5em;
 }
 
 .widget.widget-tile.widget-tile-wide .tile-value .ave {
 	font-size: 20px;
 	padding-top: 16px;
+}
+
+.most {
+	font-weight: 600;
+	font-size: 1.5em;
+	padding-top: 2em;
 }
 </style>
 </head>
@@ -272,7 +278,7 @@
 							<div class="widget widget-tile widget-tile-wide">
 								<div class="tile-info">
 									<div class="icon">
-										<span class="s7-date"></span>
+										<span class="s7-cash"></span>
 									</div>
 									<div class="data-info">
 										<div class="title">이번 달 지출액</div>
@@ -293,7 +299,7 @@
 							<div class="widget widget-tile widget-tile-wide">
 								<div class="tile-info">
 									<div class="icon">
-										<span class="s7-date"></span>
+										<span class="s7-wallet"></span>
 									</div>
 									<div class="data-info">
 										<div class="title">이번 달 잔액</div>
@@ -376,26 +382,24 @@
 						<div class="col-md-6">
 							<div class="widget widget-tile">
 								<div class="data-info">
-									<div id="mostSpendItem"></div>
-									<div data-toggle="counter" data-prefix="&#8361 " data-end="0"
-										class="value" id="mostSpendItemPrice">0</div>
 									<div class="desc">최고 지출액</div>
+									<div id="mostSpendItem" class="most"></div>
+									<div data-toggle="counter" data-prefix="&#8361 " data-end="0" class="value" id="mostSpendItemPrice">0</div>
 								</div>
 								<div class="icon">
-									<span class="s7-cash"></span>
+									<span class="s7-diamond"></span>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="widget widget-tile">
 								<div class="data-info">
-									<div id="mostSpendDayPrice"></div>
-									<div data-prefix="&#8361 " data-toggle="counter" data-end=""
-										class="value" id="mostSpendDay"></div>
 									<div class="desc">최대 소비날</div>
+									<div id="mostSpendDayPrice" class="most"></div>
+									<div data-prefix="&#8361 " data-toggle="counter" data-end="" class="value" id="mostSpendDay"></div>
 								</div>
 								<div class="icon">
-									<span class="s7-wallet"></span>
+									<span class="s7-date"></span>
 								</div>
 							</div>
 						</div>

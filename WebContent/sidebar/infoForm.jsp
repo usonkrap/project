@@ -101,7 +101,7 @@
 					<!--  ??? -->
 					<div class="page-title">
 						<!--  페이지 축소 title -->
-						<span>Janzani</span>
+						<span>PACHIRIS</span>
 					</div>
 					<a href="#" class="am-toggle-left-sidebar navbar-toggle collapsed">
 					</a> <a href="../sidebar/main.action" class="navbar-brand"><!-- <img src="../assets/img/newLogo1.png" alt="logo" width="100px" height="70px" class="logo-img"> --> <!-- 메인 페이지 링크 및 로고 표시 -->
@@ -258,7 +258,7 @@
 						<div class="widget widget-pie">
 							<!-- 메인 화면 대표 그래프 -->
 							<div class="widget-head">
-								<span class="title" style="font-size: 28px;">Top Sales</span>
+								<span class="title" style="font-size: 24px;">지출 비율</span>
 							</div>
 							<div class="row chart-container">
 								<div class="col-md-6">

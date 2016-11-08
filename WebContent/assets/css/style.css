@@ -11020,7 +11020,7 @@ li.L9 {
 }
 .widget-pie .chart-container .legend table tr .legendLabel {
   padding-left: 8px;
-  font-size: 24px;
+  font-size: 20px;
 }
 .widget-pie .chart-container .legend table tr .legendData {
   text-align: right;
@@ -11354,8 +11354,9 @@ li.L9 {
   display: inline-block;
 }
 .widget.widget-tile .data-info .value {
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 300;
+  padding-top: 0.5em;
 }
 .widget.widget-tile .data-info .desc {
   font-size: 14px;
@@ -11397,6 +11398,7 @@ li.L9 {
   padding-right: 10px;
   font-weight: 300;
   font-size: 31px;
+  font-weight: 600;
 }
 .widget.widget-tile.widget-tile-wide .icon {
   float: none;
