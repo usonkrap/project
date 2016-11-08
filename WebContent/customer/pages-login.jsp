@@ -28,12 +28,12 @@
                   <div class="login-form">
                     <div class="form-group">
                       <div id="email-handler" class="input-group"><span class="input-group-addon"><i class="icon s7-mail"></i></span>
-                        <input type="email" value="master@master.com" name="customer.cust_email" data-parsley-trigger="change" data-parsley-errors-messages-disabled="true" data-parsley-class-handler="#email-handler" required="" placeholder="E-mail" autocomplete="off" class="form-control">
+                        <input type="email" value="" name="customer.cust_email" data-parsley-trigger="change" data-parsley-errors-messages-disabled="true" data-parsley-class-handler="#email-handler" required="" placeholder="E-mail" autocomplete="off" class="form-control">
                       </div>
                     </div>
                     <div class="form-group">
                       <div class="input-group"><span class="input-group-addon"><i class="icon s7-lock"></i></span>
-                        <input id="password" value="master" name="customer.cust_password" type="password" placeholder="Password" class="form-control">
+                        <input id="password" value="" name="customer.cust_password" type="password" placeholder="Password" class="form-control">
                       </div>
                     </div>
                     <div class="form-group login-submit">
