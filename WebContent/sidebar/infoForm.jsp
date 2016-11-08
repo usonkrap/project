@@ -330,7 +330,7 @@
 					<!-- 목표치 패널 시작-->
 						<div class="col-sm-12">
 							<div class="panel panel-default" style="height: 224px;">
-								<div class="panel-heading" id = "todaysMonth"></div>
+								<div class="panel-heading" id = "todaysMonth">이번 달 예산</div>
 								<div class="panel-body" id="testcall">
 									<p></p>
 									<div class="progress">

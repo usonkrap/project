@@ -332,12 +332,8 @@ i {
 
 	<script src="../assets/js/app-page-gallery.js" type="text/javascript"></script>
 
-<<<<<<< HEAD
-
-=======
 	<script src="../assets/lib/jquery.niftymodals/dist/jquery.niftymodals.js"
 		type="text/javascript"></script>
->>>>>>> refs/heads/nosu
 
 	<script>
 		$(document).ready(function() {
