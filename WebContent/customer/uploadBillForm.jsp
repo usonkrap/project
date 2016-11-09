@@ -9,7 +9,7 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>JanZani</title>
+<title>PACHIRIS</title>
 <link rel="stylesheet" type="text/css"
 	href="../assets/lib/stroke-7/style.css" />
 <link rel="stylesheet" type="text/css"
@@ -332,12 +332,8 @@ i {
 
 	<script src="../assets/js/app-page-gallery.js" type="text/javascript"></script>
 
-<<<<<<< HEAD
-
-=======
 	<script src="../assets/lib/jquery.niftymodals/dist/jquery.niftymodals.js"
 		type="text/javascript"></script>
->>>>>>> refs/heads/nosu
 
 	<script>
 		$(document).ready(function() {
