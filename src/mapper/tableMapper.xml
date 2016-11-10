@@ -215,8 +215,8 @@
 	<select id="progressGet" resultType="progressData"
 		parameterType="string">
 
-			
-  select
+
+		select
 
 		target as CUST_TARGET_PRICE
 
@@ -231,16 +231,22 @@
 
 		,round((sums/target)*100) as precentMonth
 
-    ,(select *
-		from (select name from item
-		where customerId =
-		#{customerid}
+		,(select *
+		from (select i.name from item i, bill b
+		where
+		i.billno = b.billno and
+		i.customerId =#{customerid} and
+		to_char(b.billdate, 'YY/MM') = to_char(sysdate, 'YY/MM')
 		order by price desc)
-		where rownum = 1) mostSpendItem
+		where rownum
+		= 1) mostSpendItem
 
 		,(select * from (select price
-		from item
-		where customerId = #{customerid}
+		from item i , bill b
+		where
+		i.billno = b.billno and
+		i.customerId =#{customerid} and
+		to_char(b.billdate, 'YY/MM') = to_char(sysdate, 'YY/MM')
 		order by price desc)
 		where rownum
 		= 1)
@@ -248,32 +254,35 @@
 
 		,(select *
 		from (select b.billdate billdate
+		from
+		(select
+		to_char(billDate,
+		'YYYY-MM-DD') billDate
+		,totalprice
+		from bill
+		where
+		customerId = #{customerid} and
+		to_char(billdate, 'YY/MM') = to_char(sysdate, 'YY/MM')) b
+		group by b.billdate
+		order by
+		sum(b.totalprice)
+		desc) where rownum = 1) mostSpendDay
+		
+		,(select *
+		from (select sum(b.totalprice)
 		from (select
 		to_char(billDate,
 		'YYYY-MM-DD') billDate
 		,totalprice
 		from bill
 		where
-		customerId =
-		#{customerid}) b
+		customerId = #{customerid} and
+		to_char(billdate, 'YY/MM') = to_char(sysdate, 'YY/MM')) b
 		group by b.billdate
 		order by
 		sum(b.totalprice)
-		desc)
-		where rownum = 1) mostSpendDay
-    ,(select *
-		from (select sum(b.totalprice)
-		from (select
-		to_char(billDate, 'YYYY-MM-DD') billDate
-		,totalprice
-		from bill
-		where
-		customerId = #{customerid}) b
-		group by b.billdate
-		order by
-		sum(b.totalprice) desc)
-		where rownum = 1) mostSpendDayPrice
-  
+		desc) where rownum = 1) mostSpendDayPrice
+
 		FROM
 		(select
 		sum(TOTALPRICE) sums
@@ -290,7 +299,8 @@
 		#{customerid})
 		,(select (LAST_DAY(SYSDATE)+1 -
 		SYSDATE) as leftdays
-		from dual)
+		from
+		dual)
 		,(select sum(TOTALPRICE) totalsum
 		from
 		bill
