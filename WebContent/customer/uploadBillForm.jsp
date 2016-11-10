@@ -253,8 +253,7 @@ i {
 											<option value='카드'>카드</option>
 										</select>
 									</div>
-									<label for="storeName" class="col-sm-2 control-label">총
-										액</label>
+									<label for="storeName" class="col-sm-2 control-label">총 액</label>
 									<div class="col-sm-4">
 										<input id="totalPrice" name="bill.totalPrice" type="text"
 											class="form-control" readonly="readonly">
