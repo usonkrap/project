@@ -226,7 +226,7 @@
 					   from  item i
 					        ,bill b
 					   where i.billno = b.billno
-					   and i.customerId =# {customerid}
+					   and i.customerId =#{customerid}
 					   and to_char(b.billdate, 'YY/MM') = to_char(sysdate,'YY/MM')
 					   order by price desc)
 				 where rownum = 1) mostSpendItem
@@ -235,7 +235,7 @@
 					   from item i
 					        ,bill b
 					   where i.billno = b.billno
-					   and i.customerId =# {customerid}
+					   and i.customerId =#{customerid}
 					   and to_char(b.billdate, 'YY/MM') = to_char(sysdate, 'YY/MM')
 					   order by price desc)
 				 where rownum = 1) mostSpendItemPrice
