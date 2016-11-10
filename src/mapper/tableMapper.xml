@@ -163,35 +163,35 @@
 		<if test="type == 'limited'">
 			(select SUM(totalprice) from bill where
 			to_char(billdate,'day') = '월요일' and
-			BILLDATE BETWEEN sysdate-14 and
+			BILLDATE BETWEEN sysdate-30 and
 			sysdate and CUSTOMERID =
 			#{customerId}) monday
 			,(select SUM(totalprice)
 			from bill where to_char(billdate,'day') = '화요일' and
 			BILLDATE BETWEEN
-			sysdate-14 and sysdate and CUSTOMERID =
+			sysdate-30 and sysdate and CUSTOMERID =
 			#{customerId}) tuesday
 			,(select SUM(totalprice) from bill where to_char(billdate,'day') =
 			'수요일' and
-			BILLDATE BETWEEN sysdate-14 and sysdate and CUSTOMERID =
+			BILLDATE BETWEEN sysdate-30 and sysdate and CUSTOMERID =
 			#{customerId}) wednesday
 			,(select SUM(totalprice) from bill where
 			to_char(billdate,'day') = '목요일' and
-			BILLDATE BETWEEN sysdate-14 and
+			BILLDATE BETWEEN sysdate-30 and
 			sysdate and CUSTOMERID =
 			#{customerId}) thursday
 			,(select
 			SUM(totalprice) from bill where to_char(billdate,'day') = '금요일' and
-			BILLDATE BETWEEN sysdate-14 and sysdate and CUSTOMERID =
+			BILLDATE BETWEEN sysdate-30 and sysdate and CUSTOMERID =
 			#{customerId}) friday
 			,(select SUM(totalprice) from bill where
 			to_char(billdate,'day') = '토요일' and
-			BILLDATE BETWEEN sysdate-14 and
+			BILLDATE BETWEEN sysdate-30 and
 			sysdate and CUSTOMERID =
 			#{customerId}) saturday
 			,(select
 			SUM(totalprice) from bill where to_char(billdate,'day') = '일요일' and
-			BILLDATE BETWEEN sysdate-14 and sysdate and CUSTOMERID =
+			BILLDATE BETWEEN sysdate-30 and sysdate and CUSTOMERID =
 			#{customerId}) sunday
 		</if>
 		from bill
@@ -212,82 +212,59 @@
 		rownum between 1 and 5
 	</select>
 
-	<select id="progressGet" resultType="progressData"
-		parameterType="string">
-
+	<select id="progressGet" resultType="progressData" parameterType="string">
 
 		select
-
-		target as CUST_TARGET_PRICE
-
-		,sums as spendMonth
-
-		,target-sums as
-		leftMonth
-
-		,round((target-sums)/leftdays,0) as canMonth
-
-		,round(sums/TRUNC(sysdate+1 - TRUNC(SYSDATE,'MM')),0) as averMonth
-
-		,round((sums/target)*100) as precentMonth
-
-		,(select *
-		from (select i.name from item i, bill b
-		where
-		i.billno = b.billno and
-		i.customerId =#{customerid} and
-		to_char(b.billdate, 'YY/MM') = to_char(sysdate, 'YY/MM')
-		order by price desc)
-		where rownum
-		= 1) mostSpendItem
-
-		,(select * from (select price
-		from item i , bill b
-		where
-		i.billno = b.billno and
-		i.customerId =#{customerid} and
-		to_char(b.billdate, 'YY/MM') = to_char(sysdate, 'YY/MM')
-		order by price desc)
-		where rownum
-		= 1)
-		mostSpendItemPrice
-
-		,(select *
-		from (select b.billdate billdate
-		from
-		(select
-		to_char(billDate,
-		'YYYY-MM-DD') billDate
-		,totalprice
-		from bill
-		where
-		customerId = #{customerid} and
-		to_char(billdate, 'YY/MM') = to_char(sysdate, 'YY/MM')) b
-		group by b.billdate
-		order by
-		sum(b.totalprice)
-		desc) where rownum = 1) mostSpendDay
-		
-		,(select *
-		from (select sum(b.totalprice)
-		from (select
-		to_char(billDate,
-		'YYYY-MM-DD') billDate
-		,totalprice
-		from bill
-		where
-		customerId = #{customerid} and
-		to_char(billdate, 'YY/MM') = to_char(sysdate, 'YY/MM')) b
-		group by b.billdate
-		order by
-		sum(b.totalprice)
-		desc) where rownum = 1) mostSpendDayPrice
-
+			   target                                                as CUST_TARGET_PRICE
+	     	   ,sums                                                 as spendMonth
+       		   ,target-sums                                          as leftMonth
+			   ,round((target-sums)/leftdays,0)                      as canMonth
+		       ,round(sums/TRUNC(sysdate+1 - TRUNC(SYSDATE,'MM')),0) as averMonth
+		       ,round((sums/target)*100)							 as precentMonth
+			   ,(select *
+		         from (select i.name
+					   from  item i
+					        ,bill b
+					   where i.billno = b.billno
+					   and i.customerId =# {customerid}
+					   and to_char(b.billdate, 'YY/MM') = to_char(sysdate,'YY/MM')
+					   order by price desc)
+				 where rownum = 1) mostSpendItem
+			   ,(select *
+			   	 from (select price
+					   from item i
+					        ,bill b
+					   where i.billno = b.billno
+					   and i.customerId =# {customerid}
+					   and to_char(b.billdate, 'YY/MM') = to_char(sysdate, 'YY/MM')
+					   order by price desc)
+				 where rownum = 1) mostSpendItemPrice
+			  ,(select *
+				from (select b.billdate  billdate
+					  from (select to_char(billDate,'YYYY-MM-DD') billDate
+								   ,totalprice
+							from bill
+							where customerId = #{customerid}
+							and to_char(billdate, 'YY/MM') = to_char(sysdate, 'YY/MM')) b
+					  group by b.billdate
+					  order by sum(b.totalprice) desc)
+				where rownum = 1) mostSpendDay
+			  ,(select *
+				from(select sum(b.totalprice)
+				     from (select to_char(billDate,'YYYY-MM-DD') billDate
+								  ,totalprice
+						   from bill
+						   where customerId = #{customerid}
+						   and to_char(billdate, 'YY/MM') = to_char(sysdate,'YY/MM')) b
+						   group by	b.billdate
+						   order by sum(b.totalprice) desc)
+					 where rownum = 1) mostSpendDayPrice
 		FROM
 		(select
 		sum(TOTALPRICE) sums
 		from bill
-		where billdate
+		where
+		billdate
 		BETWEEN
 		TO_CHAR(TRUNC(SYSDATE,'MM'),'YYYY/MM/DD') and
 		TO_CHAR(LAST_DAY(SYSDATE),'YYYY/MM/DD')
@@ -313,83 +290,91 @@
 		bill where customerid = #{customerid} group by payment
 	</select>
 
-	<select id="raderChartForTime" resultType="Double"
-		parameterType="map">
-		select
-		round((RATIO_TO_REPORT(val) OVER ())*100,2)
-		from
-		(select
-		DECODE(rownum,1, first
-		,2, second
-		,3, third
-		,4, fourth
-		,5, fifth
-		,6, sixth
-		) as val
-		from
-		(select
-		<if test="type == 'all'">
-			NVL((select SUM(totalprice) from bill where
-			to_char(billdate,'hh24') IN
-			(22,23,0,1) and customerId =
-			#{customerId}),0) first
-			,NVL((select SUM(totalprice) from bill where
-			to_char(billdate,'hh24') BETWEEN 2
-			and 5 and customerId =
-			#{customerId}),0) second
-			,NVL((select SUM(totalprice) from bill where
-			to_char(billdate,'hh24') BETWEEN 6
-			and 9 and customerId =
-			#{customerId}),0) third
-			,NVL((select SUM(totalprice) from bill where
-			to_char(billdate,'hh24') BETWEEN 10
-			and 13 and customerId =
-			#{customerId}),0) fourth
-			,NVL((select SUM(totalprice) from bill where
-			to_char(billdate,'hh24') BETWEEN 14
-			and 17 and customerId =
-			#{customerId}),0) fifth
-			,NVL((select SUM(totalprice) from bill where
-			to_char(billdate,'hh24') BETWEEN 18
-			and 21 and customerId =
-			#{customerId}),0) sixth
-		</if>
-		<if test="type == 'limited'">
-			NVL((select SUM(totalprice) from bill where
-			to_char(billdate,'hh24') IN
-			(22,23,0,1) and customerId = #{customerId}
-			and BILLDATE BETWEEN
-			sysdate-14 and sysdate),0) first
-			, NVL((select
-			SUM(totalprice) from bill where to_char(billdate,'hh24')
-			BETWEEN 2 and
-			5 and customerId = #{customerId} and BILLDATE BETWEEN
-			sysdate-14 and
-			sysdate),0) second
-			, NVL((select SUM(totalprice) from bill where
-			to_char(billdate,'hh24')
-			BETWEEN 6 and 9 and customerId =
-			#{customerId} and BILLDATE BETWEEN
-			sysdate-14 and sysdate),0) third
-			,
-			NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24')
-			BETWEEN 10 and 13 and customerId = #{customerId} and BILLDATE BETWEEN
-			sysdate-14 and sysdate),0) fourth
-			, NVL((select SUM(totalprice) from
-			bill where to_char(billdate,'hh24')
-			BETWEEN 14 and 17 and customerId =
-			#{customerId} and BILLDATE BETWEEN
-			sysdate-14 and sysdate),0) fifth
-			,
-			NVL((select SUM(totalprice) from bill where to_char(billdate,'hh24')
-			BETWEEN 18 and 21 and customerId = #{customerId} and BILLDATE BETWEEN
-			sysdate-14 and sysdate),0) sixth
-		</if>
-		from bill
-		where CUSTOMERID = #{customerId}
-		group by customerid )
-		connect
-		by level &lt; 7)
+	<select id="raderChartForTime" resultType="Double" parameterType="map">
+		select round((RATIO_TO_REPORT(val) OVER ())*100,2)
+		from (select DECODE(rownum,1, first
+		                          ,2, second
+		                          ,3, third
+		                          ,4, fourth
+		                          ,5, fifth
+		                          ,6, sixth
+							) as val
+			  from
+			  (select
+				<if test="type == 'all'">
+					NVL((select SUM(totalprice) 
+						 from bill
+						 where to_char(billdate,'hh24') IN (22,23,0,1)
+						 and customerId = #{customerId})
+					     ,0) first
+					,NVL((select SUM(totalprice)
+					      from bill
+					      where to_char(billdate,'hh24') BETWEEN 2 and 5
+					      and customerId =#{customerId})
+					      ,0) second
+					,NVL((select SUM(totalprice)
+					      from bill
+					      where to_char(billdate,'hh24') BETWEEN 6 and 9
+					      and customerId =#{customerId})
+					      ,0) third
+					,NVL((select SUM(totalprice)
+					      from bill
+					      where to_char(billdate,'hh24') BETWEEN 10 and 13
+					      and customerId =#{customerId})
+					      ,0) fourth 
+					,NVL((select SUM(totalprice)
+						  from bill
+						  where to_char(billdate,'hh24') BETWEEN 14	and 17
+						  and customerId =#{customerId})
+						  ,0) fifth
+					,NVL((select SUM(totalprice)
+						  from bill
+						  where	to_char(billdate,'hh24') BETWEEN 18	and 21
+						  and customerId =#{customerId})
+						  ,0) sixth
+				</if>
+				<if test="type == 'limited'">
+					NVL((select SUM(totalprice)
+						 from bill
+						 where to_char(billdate,'hh24') IN (22,23,0,1)
+						 and customerId = #{customerId}
+						 and BILLDATE BETWEEN sysdate-30 and sysdate)
+						 ,0) first
+					,NVL((select SUM(totalprice)
+						  from bill
+						  where to_char(billdate,'hh24') BETWEEN 2 and 5
+						  and customerId = #{customerId}
+						  and BILLDATE BETWEEN sysdate-30 and sysdate)
+						  ,0) second
+					,NVL((select SUM(totalprice)
+						  from bill
+						  where to_char(billdate,'hh24') BETWEEN 6 and 9
+						  and customerId =#{customerId}
+						  and BILLDATE BETWEEN sysdate-30 and sysdate)
+						  ,0) third
+					,NVL((select SUM(totalprice)
+					      from bill
+					      where to_char(billdate,'hh24') BETWEEN 10 and 13
+					      and customerId = #{customerId}
+					      and BILLDATE BETWEEN sysdate-30 and sysdate)
+					      ,0) fourth
+					,NVL((select SUM(totalprice)
+						  from bill
+						  where to_char(billdate,'hh24') BETWEEN 14 and 17
+						  and customerId =#{customerId}
+						  and BILLDATE BETWEEN sysdate-30 and sysdate)
+						  ,0) fifth
+					,NVL((select SUM(totalprice)
+						  from bill
+						  where to_char(billdate,'hh24') BETWEEN 18 and 21
+						  and customerId = #{customerId}
+						  and BILLDATE BETWEEN sysdate-30 and sysdate)
+						  ,0) sixth
+				</if>
+				from bill
+				where CUSTOMERID = #{customerId}
+				group by customerid )
+				connect	by level &lt; 7)
 	</select>
 	<!-- <select id = "raderChartForTime" resultType="java.util.LinkedHashMap" 
 		parameterType="map"> select groups ,round((RATIO_TO_REPORT(val) OVER ())*100,2) 

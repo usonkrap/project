@@ -42,7 +42,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 	public String progressGet(){
 		TableDAO dao = new TableDAO();
 		progressData = dao.progressGet((String)session.get("loginId"));
-		System.out.println(progressData);
+		//System.out.println(progressData);
 		raderChartForTime();
 		return SUCCESS;
 	}//progressGet
@@ -74,6 +74,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 	public String raderChartForTime(){
 		TableDAO dao = new TableDAO();
 		List<List<Double>> lists =  dao.raderChartForTime((String) session.get("loginId"));
+		System.out.println(lists);
 		dayTotalAverForTime = new Double[6];
 		dayRecentAverForTime = new Double[6];
 		for(int i = 0; i<lists.size(); i++){

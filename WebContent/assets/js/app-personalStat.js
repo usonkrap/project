@@ -62,22 +62,22 @@ var App = (function () {
 		        labels: ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"],
 		        datasets: [
 		          {
-		            label: "month",
+		            label: "all",
 		            fillColor: color2.setAlpha(.5).toString(),
 		            pointColor: color2.setAlpha(.8).toString(),
 		            strokeColor: color2.setAlpha(.8).toString(),
 		            highlightFill: color2.setAlpha(.75).toString(),
 		            highlightStroke: color2.toString(),
-		            data: dayRecentAver
+		            data: dayTotalAver
 		          },
 		          {
-		            label: "all",
+		            label: "month",
 		            fillColor: color1.setAlpha(.5).toString(),
 		            pointColor: color1.setAlpha(.8).toString(),
 		            strokeColor: color1.setAlpha(.8).toString(),
 		            highlightFill: color1.setAlpha(.75).toString(),
 		            highlightStroke: color1.toString(),
-		            data: dayTotalAver
+		            data: dayRecentAver
 		          }
 		        ]
 		      };
@@ -118,22 +118,22 @@ var App = (function () {
 		    		  labels: ["22시~2시", "2시~6시", "6시~10시", "10시~14시", "14시~18시", "18시~22시"],
 				        datasets: [
 		          {
-		            label: "month",
+		            label: "all",
 		            fillColor: color2.setAlpha(.5).toString(),
 		            pointColor: color2.setAlpha(.8).toString(),
 		            strokeColor: color2.setAlpha(.8).toString(),
 		            highlightFill: color2.setAlpha(.75).toString(),
 		            highlightStroke: color2.toString(),
-		            data: dayRecentAverForTime
+		            data: dayTotalAverForTime
 		          },
 		          {
-		            label: "all",
+		            label: "month",
 		            fillColor: color1.setAlpha(.5).toString(),
 		            pointColor: color1.setAlpha(.8).toString(),
 		            strokeColor: color1.setAlpha(.8).toString(),
 		            highlightFill: color1.setAlpha(.75).toString(),
 		            highlightStroke: color1.toString(),
-		            data: dayTotalAverForTime
+		            data: dayRecentAverForTime
 		          }
 		        ]
 		      };
