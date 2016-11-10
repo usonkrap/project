@@ -22,6 +22,7 @@ public class CustomerAction extends ActionSupport implements SessionAware {
 	public String join(){
 		CustomerDAO dao = new CustomerDAO();
 		customer.setCust_address(sido+" "+gugun+" "+dong);
+		customer.setCust_birthday(customer.getCust_birthday().substring(0, 10));
 		dao.join(customer);
 		return SUCCESS;
 	}

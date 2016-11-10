@@ -70,9 +70,26 @@ insert into bill values(bill_seq.nextval, 'master@master.com', to_date('2016-11-
 insert into item values(item_seq.nextval, 142, 'master@master.com', 'L01M03', '챠슈동', 7900);
 
 select * from bill order by billno desc;
+select * from sub_category order by sub_category_num;
+select * from CATEGORY_DATA;
+select * from major_category;
+select * from customer order by cust_signup_date desc;
+select * from bill where customerid = '4@4.com';
 select * from item order by itemno desc;
-select * from sub_category;
-select * from customer;
+
+select billno, price, itemno from item where customerid != 'master@master.com' order by billno desc;
+select billno, totalprice from bill where customerid != 'master@master.com' order by billno desc;
+
+UPDATE item SET price = 58300 WHERE itemno = 157;
+
+select * from bill where billno = 299;
+insert into item values(item_seq.nextval, 299, 'test2@test.com', 'L04M04', '파마', 5500000);
+
+
+delete from item where billno = 141;
+delete from bill where billno = 303;
+
+
 
 select s.sub_category_name as category, sum(i.price) as sum
 from item i, major_category m, sub_category s 
