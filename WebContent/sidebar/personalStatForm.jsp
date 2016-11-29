@@ -431,7 +431,7 @@
 															style="width: 4px; height: 0; border: 5px solid #b3e8ed; overflow: hidden"></div>
 													</div>
 												</td>
-												<td class="legendLabel">전체</td>
+												<td class="legendLabel">전체 기간</td>
 											</tr>
 											<tr>
 												<td class="legendColorBox">
@@ -469,7 +469,7 @@
 															style="width: 4px; height: 0; border: 5px solid #b3e8ed; overflow: hidden"></div>
 													</div>
 												</td>
-												<td class="legendLabel">전체</td>
+												<td class="legendLabel">전체 기간</td>
 											</tr>
 											<tr>
 												<td class="legendColorBox">

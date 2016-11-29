@@ -21,7 +21,7 @@
 		</global-results>
 
 		<action name="index">
-			<result>/customer/index.jsp</result>
+			<result>/customer/index_jp.jsp</result>
 		</action>
 
 
