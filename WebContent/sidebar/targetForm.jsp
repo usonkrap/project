@@ -382,7 +382,7 @@
 						<div class="col-md-6">
 							<div class="widget widget-tile">
 								<div class="data-info">
-									<div class="desc">최고 지출액</div>
+									<div class="desc">최고 지출</div>
 									<div id="mostSpendItem" class="most"></div>
 									<div data-toggle="counter" data-prefix="&#8361 " data-end="0" class="value" id="mostSpendItemPrice">0</div>
 								</div>
@@ -394,7 +394,7 @@
 						<div class="col-md-6">
 							<div class="widget widget-tile">
 								<div class="data-info">
-									<div class="desc">최대 소비날</div>
+									<div class="desc">최대 소비  날</div>
 									<div id="mostSpendDayPrice" class="most"></div>
 									<div data-prefix="&#8361 " data-toggle="counter" data-end="" class="value" id="mostSpendDay"></div>
 								</div>
