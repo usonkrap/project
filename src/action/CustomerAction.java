@@ -105,6 +105,5 @@ public class CustomerAction extends ActionSupport implements SessionAware {
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-
 	
 }
