@@ -49,7 +49,6 @@ public class StatAction extends ActionSupport implements SessionAware {
 
 		}
 
-		System.out.println("dddd" + statArray.get(1).toString());
 
 		return SUCCESS;
 	}

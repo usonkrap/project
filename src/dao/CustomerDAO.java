@@ -16,6 +16,7 @@ public class CustomerDAO {
 	public void join(Customer c) {
 
 		try {
+			System.out.println(c);
 			ss = factory.openSession();
 			ss.insert("customer.join", c);
 			ss.commit();

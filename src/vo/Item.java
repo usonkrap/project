@@ -7,6 +7,7 @@ public class Item {
 	String customerId;
 	String name;
 	String category;
+	int unitPrice;
 	int price;
 
 	public Item() {
@@ -16,6 +17,14 @@ public class Item {
 	public Item(String name, int price) {
 		super();
 		this.name = name;
+		this.price = price;
+	}
+	
+
+	public Item(String name, int unitPrice, int price) {
+		super();
+		this.name = name;
+		this.unitPrice = unitPrice;
 		this.price = price;
 	}
 
@@ -77,10 +86,18 @@ public class Item {
 		this.price = price;
 	}
 
+	public int getUnitPrice() {
+		return unitPrice;
+	}
+
+	public void setUnitPrice(int unitPrice) {
+		this.unitPrice = unitPrice;
+	}
+
 	@Override
 	public String toString() {
 		return "Item [itemNo=" + itemNo + ", billNo=" + billNo + ", customerId=" + customerId + ", name=" + name
-				+ ", category=" + category + ", price=" + price + "]";
+				+ ", category=" + category + ", unitPrice=" + unitPrice + ", price=" + price + "]";
 	}
 
 }

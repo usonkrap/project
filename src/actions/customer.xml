@@ -29,8 +29,8 @@
 		</action>
 
 		<action name="join" class="action.CustomerAction" method="join">
-			<result name="success">
-				/sidebar/infoForm.jsp
+			<result name="success" type="redirect">
+				/login.action
 			</result>
 		</action>
 
