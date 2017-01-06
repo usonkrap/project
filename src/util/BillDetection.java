@@ -360,7 +360,6 @@ public class BillDetection {
 
 					// 반환할 리스트에 아이템 추가
 					itemList.add(new Item(nameList.get(i), Integer.parseInt(editPrice)));
-					System.out.println("들어오나요?2");
 				} // if
 			} // for
 		} // if

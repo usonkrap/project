@@ -6,30 +6,44 @@ $(document).ready(function(){
       	App.personalStat();
 //     	App.lineChart(data);
       	
+      	
+      	$('#year').on('change', function(){
+      		var number = [];
+      		var year = "";
+      		year = $('#year > option:selected').val();
+      		
+      		$("#checkBoxArea input[type='checkbox']:checked").each(function(index, item){
+      			number[index] = $(this).val();
+      		});
+      		App.lineChart(number, year)
+      	});
+      	
       	$('#swt1').on('click', function(){
       		var swt = document.getElementById("swt1");
       		var number = [];
+      		var year = $('#year > option:selected').val();
       		if(swt.checked){
       			$("#checkBoxArea input[type='checkbox']").each(function(index, item){
       				number[index] = $(this).val();
       				item.checked = true;
       			});
-      			App.lineChart(number);
+      			App.lineChart(number, year);
       		}else{
       			$("#checkBoxArea input[type='checkbox']:checked").each(function(index, item){
       				item.checked = false;
       			});
-      			App.lineChart(number);
+      			App.lineChart(number, year);
       		}
       		
       	});
       	
       	$("#checkBoxArea input[type='checkbox']").on('click', function(){
       		var number = [];
+      		var year = $('#year > option:selected').val();
       		$("#checkBoxArea input[type='checkbox']:checked").each(function(index, item){
       			number[index] = $(this).val();
       		});
-      		App.lineChart(number);
+      		App.lineChart(number, year);
       	});
       	
       });
@@ -219,11 +233,12 @@ var App = (function () {
 	
 	
 	//월별 지출 비교
-	App.lineChart = function(category){
+	App.lineChart = function(category, year){
 		 function line_chart(){
 			 $.ajax({
 		    	 url : '../sidebar/lineChart',
 		    	 type : 'post',
+		    	 data : {"year" : year},
 		    	 dataType : 'json',
 		    	 success : function(response){
 		    		 var lineData = response.lineData;

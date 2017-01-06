@@ -66,8 +66,8 @@ insert into item values(9, 3 ,'외식' ,'된장찌게',7000);
 insert into bill values(bill_seq.nextval, 'master@master.com', to_date('2016-08-28 15:47:01', 'YYYY-MM-DD HH24:MI:SS'), null, '축의금', 50000, '현금', null);
 insert into item values(item_seq.nextval, 247, 'master@master.com', 'L07M01', '축의금', 50000);
 
-insert into bill values(bill_seq.nextval, 'master@master.com', to_date('2016-11-01 12:50:01', 'YYYY-MM-DD HH24:MI:SS'), '서울 강남구 삼성로104길', '마시타야', 7900, '현금', null);
-insert into item values(item_seq.nextval, 142, 'master@master.com', 'L01M03', '챠슈동', 7900);
+insert into bill values(bill_seq.nextval, 'master@master.com', to_date('2017-01-14 13:02:01', 'YYYY-MM-DD HH24:MI:SS'), '서울시 강남구 삼성로', 'KFC 코엑스몰', 5000, '카드', null);
+insert into item values(item_seq.nextval, 490, 'master@master.com', 'L01M05', '치즈멜츠타워버거 콤보', 5000);
 
 select * from bill order by billno desc;
 select * from sub_category order by sub_category_num;
@@ -80,14 +80,16 @@ select * from item order by itemno desc;
 select billno, price, itemno from item where customerid != 'master@master.com' order by billno desc;
 select billno, totalprice from bill where customerid != 'master@master.com' order by billno desc;
 
-UPDATE item SET price = 58300 WHERE itemno = 157;
+update bill set totalprice = 30000 where billno = 180;
+UPDATE item SET price = 30000 WHERE itemno = 177;
 
 select * from bill where billno = 299;
 insert into item values(item_seq.nextval, 299, 'test2@test.com', 'L04M04', '파마', 5500000);
 
+delete from customer where cust_email = 'sntq3sk@naver.com';
 
-delete from item where billno = 141;
-delete from bill where billno = 303;
+delete from item where itemno = 492;
+delete from bill where billno = 481;
 
 
 
