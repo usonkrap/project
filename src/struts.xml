@@ -31,4 +31,5 @@
 	<include file="actions/customer.xml" />
 	<include file="actions/bill.xml" />
 	<include file="actions/stat.xml" />
+	<include file="actions/android.xml" />
 </struts>
