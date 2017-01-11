@@ -37,6 +37,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 	private int[] paymentData;
 	private String keyword;
 	private JSONArray subCategorys;
+	private String year;
 	
 
 	public String progressGet(){
@@ -74,7 +75,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 	public String raderChartForTime(){
 		TableDAO dao = new TableDAO();
 		List<List<Double>> lists =  dao.raderChartForTime((String) session.get("loginId"));
-		System.out.println(lists);
+//		System.out.println(lists);
 		dayTotalAverForTime = new Double[6];
 		dayRecentAverForTime = new Double[6];
 		for(int i = 0; i<lists.size(); i++){
@@ -185,7 +186,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 		TableDAO dao = new TableDAO();
 		String customerId = (String) session.get("loginId");
 		List<Map<String, Object>> list = null;
-		list = dao.lineChart(customerId);
+		list = dao.lineChart(customerId, year);
 		lineData = new JSONArray();
         for (int i = 0; i < list.size(); i++) {
         	Map<String, Object> tempData = list.get(i);
@@ -205,6 +206,7 @@ public class TableAction extends ActionSupport implements SessionAware {
 			data.put("item12", Integer.valueOf(String.valueOf(tempData.get("기타"))));
 			lineData.add(data);
 		}
+//        System.out.println(lineData);
 		return SUCCESS;
 	}//end of lineChart
 	
@@ -228,7 +230,7 @@ public class TableAction extends ActionSupport implements SessionAware {
         	data.put("color", colors[i]);
 			subCategorys.add(data);
 		}
-		System.out.println(subCategorys);
+//		System.out.println(subCategorys);
 		return SUCCESS;
 	}//end of subCategory
 
@@ -283,6 +285,9 @@ public class TableAction extends ActionSupport implements SessionAware {
 
 	public JSONArray getSubCategorys() {return subCategorys;}
 	public void setSubCategorys(JSONArray subCategorys) {this.subCategorys = subCategorys;}
+	
+	public String getYear() {return year;}
+	public void setYear(String year) {this.year = year;}
 
 	@Override
 	public void setSession(Map<String, Object> session) {this.session = session;}

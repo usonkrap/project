@@ -385,8 +385,7 @@
 		hours from bill where CUSTOMERID = #{customerId} <if test = "type == 'limited'"> 
 		and BILLDATE BETWEEN sysdate-14 and sysdate </if> )) GROUP by groups) </select> -->
 
-	<!-- 년도를 상정하지 않은 쿼리입니다아ㅏ -->
-	<select id="lineChart" parameterType="String" resultType="map">
+	<select id="lineChart" parameterType="map" resultType="map">
 		select
 		d.month as mon
 		,nvl(sum(decode(c.name, '외식', c.price)), 0) "외식"
@@ -412,7 +411,7 @@
 		and substr(i.category, 1, 3) =
 		m.category_num) a, bill b
 		where b.billno
-		= a.billno) c, month d
+		= a.billno and to_char(b.billdate, 'YY') = #{year}) c, month d
 		where d.month = c.mon(+)
 		group by d.month
 		order by

@@ -76,11 +76,11 @@ public class TableDAO {
 			ss = factory.openSession();
 			receive = ss.selectList("table.raderChartForTime", dateType);
 			list.add(receive);
-			System.out.println(receive);
+//			System.out.println(receive);
 			receive = new ArrayList<>();
 			dateType.put("type", "limited");
 			receive = ss.selectList("table.raderChartForTime", dateType);
-			System.out.println(receive);
+//			System.out.println(receive);
 			list.add(receive);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -242,11 +242,14 @@ public class TableDAO {
 	}//end of paymentData
 	
 	
-	public List<Map<String, Object>> lineChart(String customerId) {
+	public List<Map<String, Object>> lineChart(String customerId, String year) {
 		List<Map<String, Object>> dataList = null;
+		Map<String, Object> map = new HashMap<>();
+		map.put("customer", customerId);
+		map.put("year", year);
 		try {
 			ss = factory.openSession();
-			dataList = ss.selectList("table.lineChart", customerId);
+			dataList = ss.selectList("table.lineChart", map);
 			ss.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
